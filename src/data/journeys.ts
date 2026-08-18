@@ -1,4 +1,4 @@
-import type { Journey } from "@/lib/storage"
+import type { Journey, JourneyCategory } from "@/lib/storage"
 
 export const journeys: Journey[] = [
   {
@@ -26,8 +26,8 @@ export const journeys: Journey[] = [
     title: "Arabic for Real Life",
     description: "Complete everyday missions using the words around you.",
     category: "arabic",
-    progress: 12,
-    status: "in-progress",
+    progress: 0,
+    status: "coming-soon",
     estimatedMinutes: 30,
     accent: "sage",
   },
@@ -36,12 +36,19 @@ export const journeys: Journey[] = [
     title: "Quranic Vocabulary Adventures",
     description: "Discover words through gardens, animals, homes, and motion.",
     category: "quran",
-    progress: 8,
-    status: "not-started",
+    progress: 0,
+    status: "coming-soon",
     estimatedMinutes: 25,
     accent: "sky",
   },
 ]
+
+/** Journeys available in the preview release. Expand as content ships. */
+const PREVIEW_RELEASED_JOURNEY_IDS = new Set<JourneyCategory>(["umrah"])
+
+export function isJourneyReleased(id: string) {
+  return PREVIEW_RELEASED_JOURNEY_IDS.has(id as JourneyCategory)
+}
 
 export function getJourney(id: string) {
   return journeys.find((journey) => journey.id === id)

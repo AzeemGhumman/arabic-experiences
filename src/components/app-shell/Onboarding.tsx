@@ -1,5 +1,5 @@
-import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import { isJourneyReleased } from "@/data/journeys"
 import { useAppState } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
 import type { JourneyCategory } from "@/lib/storage"
@@ -10,7 +10,6 @@ const journeyIds: JourneyCategory[] = ["umrah", "hajj", "arabic", "quran"]
 export function Onboarding() {
   const { state, completeOnboarding } = useAppState()
   const { t, journey } = useI18n()
-  const [journeyId, setJourneyId] = useState<JourneyCategory>("umrah")
 
   if (state.onboardingComplete) return null
 
@@ -22,27 +21,34 @@ export function Onboarding() {
         <p className="mt-2 text-sm text-muted-foreground">{t("onboarding.body")}</p>
         <div className="mt-5 space-y-2">
           {journeyIds.map((id) => {
-            const selected = journeyId === id
+            const released = isJourneyReleased(id)
+            const selected = released
             const copy = journey(id)
             return (
-              <button
+              <div
                 key={id}
-                type="button"
-                onClick={() => setJourneyId(id)}
+                aria-disabled={!released}
                 className={cn(
-                  "w-full rounded-2xl border px-4 py-3 text-start transition",
+                  "w-full rounded-2xl border px-4 py-3 text-start",
                   selected
                     ? "border-terracotta bg-terracotta/10"
-                    : "border-border bg-cream hover:border-terracotta/40",
+                    : "border-border bg-cream opacity-70",
                 )}
               >
-                <p className="font-semibold">{copy.onboardingLabel}</p>
+                <p className="flex items-center justify-between gap-2 font-semibold">
+                  <span>{copy.onboardingLabel}</span>
+                  {released ? null : (
+                    <span className="shrink-0 text-[11px] font-semibold text-muted-foreground">
+                      {t("journeys.statusComingSoon")}
+                    </span>
+                  )}
+                </p>
                 <p className="text-sm text-muted-foreground">{copy.onboardingHint}</p>
-              </button>
+              </div>
             )
           })}
         </div>
-        <Button className="mt-5 w-full" size="lg" onClick={() => completeOnboarding(journeyId)}>
+        <Button className="mt-5 w-full" size="lg" onClick={() => completeOnboarding("umrah")}>
           {t("common.enter")}
         </Button>
       </section>

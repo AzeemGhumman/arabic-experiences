@@ -77,6 +77,7 @@ export const ur: LanguagePack = {
       switchConfirmTitle: "{journey} پر جائیں؟",
       switchConfirmBody:
         "{current} کی ترقی ختم نہیں ہوگی۔ {journey} کا اپنا الگ ریکارڈ ہے۔",
+      comingSoonBody: "یہ سفر ابھی پیش نظر میں نہیں ہے۔ فی الحال عمرہ کی تیاری منتخب کریں۔",
       cardCurrent: "موجودہ سفر",
       cardJourney: "سفر",
       onThisJourney: "آپ اس سفر پر ہیں",

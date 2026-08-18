@@ -1,6 +1,6 @@
 import { createContext, createElement, useContext, useEffect, useMemo, useState } from "react"
 import type { ReactNode } from "react"
-import { getJourney, journeys } from "@/data/journeys"
+import { getJourney, isJourneyReleased, journeys } from "@/data/journeys"
 import { graphForJourney } from "@/data/learning/mission-graph"
 import type { CapabilityId } from "@/lib/learning-types"
 import type { AppState, Confidence, JourneyCategory, JourneyProgress } from "@/lib/storage"
@@ -78,6 +78,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
     () => ({
       state,
       completeOnboarding: (journeyId) => {
+        if (!isJourneyReleased(journeyId)) return
         setState((current) => ({
           ...current,
           onboardingComplete: true,
@@ -90,6 +91,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
         }))
       },
       setActiveJourney: (journeyId) => {
+        if (!isJourneyReleased(journeyId)) return
         setState((current) => ({
           ...current,
           activeJourneyId: journeyId,

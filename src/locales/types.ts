@@ -108,6 +108,7 @@ export type LanguagePack = {
       switchToOtherBody: string
       switchConfirmTitle: string
       switchConfirmBody: string
+      comingSoonBody: string
       cardCurrent: string
       cardJourney: string
       onThisJourney: string

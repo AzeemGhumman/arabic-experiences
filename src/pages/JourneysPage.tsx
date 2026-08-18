@@ -11,7 +11,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog"
-import { journeys } from "@/data/journeys"
+import { isJourneyReleased, journeys } from "@/data/journeys"
 import { useActiveJourney } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
 import type { Journey } from "@/lib/storage"
@@ -21,6 +21,7 @@ export function JourneySwitchPage() {
   const { t, journey: journeyCopy } = useI18n()
   const navigate = useNavigate()
   const [pending, setPending] = useState<Journey | null>(null)
+  const [soonOpen, setSoonOpen] = useState(false)
   const others = journeys.filter((item) => item.id !== journey.id)
   const currentCopy = journeyCopy(journey.category)
   const pendingCopy = pending ? journeyCopy(pending.category) : null
@@ -56,7 +57,16 @@ export function JourneySwitchPage() {
           <p className="mt-1 text-sm leading-relaxed text-muted-foreground">{t("journeys.switchToOtherBody")}</p>
         </div>
         {others.map((item) => (
-          <JourneyCard key={item.id} journey={item} featured onSelect={() => setPending(item)} />
+          <JourneyCard
+            key={item.id}
+            journey={item}
+            featured
+            onSelect={
+              isJourneyReleased(item.category)
+                ? () => setPending(item)
+                : () => setSoonOpen(true)
+            }
+          />
         ))}
       </section>
 
@@ -81,6 +91,20 @@ export function JourneySwitchPage() {
               {t("common.switchJourney")}
             </Button>
           </div>
+        </DialogContent>
+      </Dialog>
+
+      <Dialog open={soonOpen} onOpenChange={setSoonOpen}>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>{t("journeys.statusComingSoon")}</DialogTitle>
+            <DialogDescription>{t("journeys.comingSoonBody")}</DialogDescription>
+          </DialogHeader>
+          <DialogClose asChild>
+            <Button className="mt-4 w-full" variant="terracotta">
+              {t("mission.comingSoonDismiss")}
+            </Button>
+          </DialogClose>
         </DialogContent>
       </Dialog>
     </div>

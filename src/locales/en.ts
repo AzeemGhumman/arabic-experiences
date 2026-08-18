@@ -77,6 +77,7 @@ export const en: LanguagePack = {
       switchConfirmTitle: "Switch to {journey}?",
       switchConfirmBody:
         "Your progress on {current} will not be reset. {journey} keeps its own record, separate from this one.",
+      comingSoonBody: "This journey is not in the preview yet. For now, choose Prepare for Umrah.",
       cardCurrent: "Current journey",
       cardJourney: "Journey",
       onThisJourney: "You're on this journey",

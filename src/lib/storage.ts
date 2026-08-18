@@ -1,5 +1,6 @@
 import { supportedLanguages } from "@/locales"
 import type { SupportedLanguage } from "@/locales"
+import { isJourneyReleased } from "@/data/journeys"
 
 export type JourneyCategory = "umrah" | "hajj" | "arabic" | "quran"
 
@@ -174,6 +175,7 @@ export function migrateState(parsed: LegacyState): AppState {
   }
 
   if (!base.activeJourneyId) base.activeJourneyId = "umrah"
+  if (!isJourneyReleased(base.activeJourneyId)) base.activeJourneyId = "umrah"
   if (!supportedLanguages.includes(base.language)) base.language = "en"
   if (!base.journeyProgress[base.activeJourneyId]) {
     base.journeyProgress = {
