@@ -10,6 +10,8 @@ ACCOUNT_ID="$(aws sts get-caller-identity --profile "$AWS_PROFILE" --query Accou
 OIDC_ARN="arn:aws:iam::${ACCOUNT_ID}:oidc-provider/token.actions.githubusercontent.com"
 ROLE_NAME="github-actions-arabic-experiences"
 GITHUB_REPO="AzeemGhumman/arabic-experiences"
+# Repos created after 2026-07-15 use immutable sub: repo:OWNER@OWNER_ID/REPO@REPO_ID:...
+GITHUB_OIDC_SUB="repo:AzeemGhumman@7007178/arabic-experiences@1335647533:*"
 
 echo "Using AWS account $ACCOUNT_ID (profile: $AWS_PROFILE)"
 
@@ -39,8 +41,8 @@ cat >"$TRUST" <<EOF
       },
       "StringLike": {
         "token.actions.githubusercontent.com:sub": [
-          "repo:${GITHUB_REPO}:*",
-          "repo:azeemghumman/arabic-experiences:*"
+          "${GITHUB_OIDC_SUB}",
+          "repo:${GITHUB_REPO}:*"
         ]
       }
     }
