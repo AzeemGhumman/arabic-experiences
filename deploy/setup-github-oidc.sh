@@ -32,13 +32,16 @@ cat >"$TRUST" <<EOF
   "Statement": [{
     "Effect": "Allow",
     "Principal": { "Federated": "$OIDC_ARN" },
-    "Action": "sts:AssumeRoleWithWebIdentity",
+    "Action": ["sts:AssumeRoleWithWebIdentity", "sts:TagSession"],
     "Condition": {
       "StringEquals": {
         "token.actions.githubusercontent.com:aud": "sts.amazonaws.com"
       },
       "StringLike": {
-        "token.actions.githubusercontent.com:sub": "repo:${GITHUB_REPO}:*"
+        "token.actions.githubusercontent.com:sub": [
+          "repo:${GITHUB_REPO}:*",
+          "repo:azeemghumman/arabic-experiences:*"
+        ]
       }
     }
   }]

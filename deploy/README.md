@@ -3,7 +3,8 @@
 Same pattern as [chess.azeemghumman.com](https://chess.azeemghumman.com):
 
 - **AWS profile:** `personal` (account `711609367175`)
-- **S3 bucket:** `arabic-azeemghumman` (private, CloudFront OAC)
+- **S3 bucket:** `arabic-azeemghumman` (private)
+- **CloudFront OAC:** `arabic-s3-oac` (this site only; not shared with chess)
 - **CloudFront** with HTTPS cert and SPA fallback (`403 → /index.html`)
 - **Route53** CNAME in `azeemghumman.com` hosted zone
 
