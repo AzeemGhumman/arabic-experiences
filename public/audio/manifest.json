@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "voice": "ar-SA-HamedNeural",
+  "register": "msa",
+  "generatedAt": "2026-08-18T09:48:00.530389+00:00",
+  "packs": {
+    "master-navigation": {
+      "clips": {
+        "hotel": {
+          "src": "/audio/packs/master-navigation/hotel.mp3",
+          "arabic": "فندق"
+        },
+        "please": {
+          "src": "/audio/packs/master-navigation/please.mp3",
+          "arabic": "لو سمحت"
+        },
+        "stop-here": {
+          "src": "/audio/packs/master-navigation/stop-here.mp3",
+          "arabic": "وقف هنا"
+        },
+        "how-much": {
+          "src": "/audio/packs/master-navigation/how-much.mp3",
+          "arabic": "كم؟"
+        },
+        "right": {
+          "src": "/audio/packs/master-navigation/right.mp3",
+          "arabic": "يمين"
+        },
+        "left": {
+          "src": "/audio/packs/master-navigation/left.mp3",
+          "arabic": "يسار"
+        },
+        "opposite": {
+          "src": "/audio/packs/master-navigation/opposite.mp3",
+          "arabic": "مقابل"
+        },
+        "behind": {
+          "src": "/audio/packs/master-navigation/behind.mp3",
+          "arabic": "خلف"
+        },
+        "signal": {
+          "src": "/audio/packs/master-navigation/signal.mp3",
+          "arabic": "إشارة"
+        },
+        "continue-straight": {
+          "src": "/audio/packs/master-navigation/continue-straight.mp3",
+          "arabic": "استمر مباشرةً"
+        },
+        "turn-right": {
+          "src": "/audio/packs/master-navigation/turn-right.mp3",
+          "arabic": "انعطف يمينًا"
+        },
+        "you-arrived": {
+          "src": "/audio/packs/master-navigation/you-arrived.mp3",
+          "arabic": "لقد وصلت إلى وجهتك"
+        }
+      }
+    },
+    "numbers-everywhere": {
+      "clips": {
+        "n1": {
+          "src": "/audio/packs/numbers-everywhere/n1.mp3",
+          "arabic": "واحد"
+        },
+        "n2": {
+          "src": "/audio/packs/numbers-everywhere/n2.mp3",
+          "arabic": "اثنان"
+        },
+        "n3": {
+          "src": "/audio/packs/numbers-everywhere/n3.mp3",
+          "arabic": "ثلاثة"
+        },
+        "n4": {
+          "src": "/audio/packs/numbers-everywhere/n4.mp3",
+          "arabic": "أربعة"
+        },
+        "n5": {
+          "src": "/audio/packs/numbers-everywhere/n5.mp3",
+          "arabic": "خمسة"
+        },
+        "n6": {
+          "src": "/audio/packs/numbers-everywhere/n6.mp3",
+          "arabic": "ستة"
+        },
+        "n7": {
+          "src": "/audio/packs/numbers-everywhere/n7.mp3",
+          "arabic": "سبعة"
+        },
+        "n8": {
+          "src": "/audio/packs/numbers-everywhere/n8.mp3",
+          "arabic": "ثمانية"
+        },
+        "n9": {
+          "src": "/audio/packs/numbers-everywhere/n9.mp3",
+          "arabic": "تسعة"
+        },
+        "n10": {
+          "src": "/audio/packs/numbers-everywhere/n10.mp3",
+          "arabic": "عشرة"
+        },
+        "first": {
+          "src": "/audio/packs/numbers-everywhere/first.mp3",
+          "arabic": "أول"
+        },
+        "second": {
+          "src": "/audio/packs/numbers-everywhere/second.mp3",
+          "arabic": "ثاني"
+        },
+        "third": {
+          "src": "/audio/packs/numbers-everywhere/third.mp3",
+          "arabic": "ثالث"
+        },
+        "n11": {
+          "src": "/audio/packs/numbers-everywhere/n11.mp3",
+          "arabic": "أحد عشر"
+        },
+        "n12": {
+          "src": "/audio/packs/numbers-everywhere/n12.mp3",
+          "arabic": "اثنا عشر"
+        },
+        "n13": {
+          "src": "/audio/packs/numbers-everywhere/n13.mp3",
+          "arabic": "ثلاثة عشر"
+        },
+        "n14": {
+          "src": "/audio/packs/numbers-everywhere/n14.mp3",
+          "arabic": "أربعة عشر"
+        },
+        "n15": {
+          "src": "/audio/packs/numbers-everywhere/n15.mp3",
+          "arabic": "خمسة عشر"
+        },
+        "n16": {
+          "src": "/audio/packs/numbers-everywhere/n16.mp3",
+          "arabic": "ستة عشر"
+        },
+        "n17": {
+          "src": "/audio/packs/numbers-everywhere/n17.mp3",
+          "arabic": "سبعة عشر"
+        },
+        "n18": {
+          "src": "/audio/packs/numbers-everywhere/n18.mp3",
+          "arabic": "ثمانية عشر"
+        },
+        "n19": {
+          "src": "/audio/packs/numbers-everywhere/n19.mp3",
+          "arabic": "تسعة عشر"
+        },
+        "n20": {
+          "src": "/audio/packs/numbers-everywhere/n20.mp3",
+          "arabic": "عشرون"
+        }
+      }
+    },
+    "taxi-hotel": {
+      "clips": {
+        "right": {
+          "src": "/audio/packs/taxi-hotel/right.mp3",
+          "arabic": "يمين"
+        },
+        "left": {
+          "src": "/audio/packs/taxi-hotel/left.mp3",
+          "arabic": "يسار"
+        },
+        "gps-continue-straight": {
+          "src": "/audio/packs/taxi-hotel/gps-continue-straight.mp3",
+          "arabic": "استمر مباشرةً"
+        },
+        "gps-second-left": {
+          "src": "/audio/packs/taxi-hotel/gps-second-left.mp3",
+          "arabic": "بعد ٢٠٠ متر، خذ ثاني يسار"
+        },
+        "gps-stop-opposite-hotel": {
+          "src": "/audio/packs/taxi-hotel/gps-stop-opposite-hotel.mp3",
+          "arabic": "قف مقابل الفندق"
+        },
+        "gps-arrived": {
+          "src": "/audio/packs/taxi-hotel/gps-arrived.mp3",
+          "arabic": "لقد وصلت إلى وجهتك"
+        },
+        "decision-stop-here": {
+          "src": "/audio/packs/taxi-hotel/decision-stop-here.mp3",
+          "arabic": "وقف هنا لو سمحت"
+        }
+      }
+    }
+  }
+}

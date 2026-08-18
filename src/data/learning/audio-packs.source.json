@@ -1,0 +1,63 @@
+{
+  "voice": "ar-SA-HamedNeural",
+  "register": "msa",
+  "packs": {
+    "master-navigation": {
+      "kind": "prep",
+      "clips": {
+        "hotel": "فندق",
+        "please": "لو سمحت",
+        "stop-here": "وقف هنا",
+        "how-much": "كم؟",
+        "right": "يمين",
+        "left": "يسار",
+        "opposite": "مقابل",
+        "behind": "خلف",
+        "signal": "إشارة",
+        "continue-straight": "استمر مباشرةً",
+        "turn-right": "انعطف يمينًا",
+        "you-arrived": "لقد وصلت إلى وجهتك"
+      }
+    },
+    "numbers-everywhere": {
+      "kind": "prep",
+      "clips": {
+        "n1": "واحد",
+        "n2": "اثنان",
+        "n3": "ثلاثة",
+        "n4": "أربعة",
+        "n5": "خمسة",
+        "n6": "ستة",
+        "n7": "سبعة",
+        "n8": "ثمانية",
+        "n9": "تسعة",
+        "n10": "عشرة",
+        "first": "أول",
+        "second": "ثاني",
+        "third": "ثالث",
+        "n11": "أحد عشر",
+        "n12": "اثنا عشر",
+        "n13": "ثلاثة عشر",
+        "n14": "أربعة عشر",
+        "n15": "خمسة عشر",
+        "n16": "ستة عشر",
+        "n17": "سبعة عشر",
+        "n18": "ثمانية عشر",
+        "n19": "تسعة عشر",
+        "n20": "عشرون"
+      }
+    },
+    "taxi-hotel": {
+      "kind": "mission",
+      "clips": {
+        "right": "يمين",
+        "left": "يسار",
+        "gps-continue-straight": "استمر مباشرةً",
+        "gps-second-left": "بعد ٢٠٠ متر، خذ ثاني يسار",
+        "gps-stop-opposite-hotel": "قف مقابل الفندق",
+        "gps-arrived": "لقد وصلت إلى وجهتك",
+        "decision-stop-here": "وقف هنا لو سمحت"
+      }
+    }
+  }
+}

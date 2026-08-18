@@ -1,0 +1,5340 @@
+{
+  "id": "scene-lexicon",
+  "title": "Merged lexicon for experiences",
+  "generatedAt": "2026-08-16",
+  "description": "Swadesh, Quran lemma frequencies, MSA gloss ranks, and Wikivoyage phrases joined on undiacritized Arabic.",
+  "sources": [
+    "dataset/wiktionary-arabic-swadesh.json",
+    "dataset/wiktionary-quran-lemmas.json",
+    "dataset/msa-top-5000-with-glosses.json",
+    "dataset/wikivoyage-msa-phrasebook.json",
+    "src/data/vocabulary.ts"
+  ],
+  "wordCount": 244,
+  "entries": [
+    {
+      "id": "طائر",
+      "arabic": "طَائِر",
+      "arabicBare": "طائر",
+      "meaning": "bird",
+      "transliteration": "ṭāʔir",
+      "ipa": "/tˤaː.ʔir/",
+      "sceneIds": [
+        "bird"
+      ],
+      "swadeshNo": 46,
+      "quranFrequency": 19,
+      "quranPos": "noun",
+      "quranLemma": "طَيْر",
+      "msaRank": 2627,
+      "msaGloss": "bird; flying, airborne",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "شجرة",
+      "arabic": "شَجَرَة",
+      "arabicBare": "شجرة",
+      "meaning": "tree",
+      "transliteration": "šajara",
+      "ipa": "/ʃa.d͡ʒa.ra/",
+      "sceneIds": [
+        "tree"
+      ],
+      "swadeshNo": 51,
+      "quranFrequency": 19,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "فاكهة",
+      "arabic": "فَاكِهَة",
+      "arabicBare": "فاكهة",
+      "meaning": "fruit",
+      "transliteration": "fākiha",
+      "ipa": "/faː.ki.ha/",
+      "sceneIds": [
+        "fruit"
+      ],
+      "swadeshNo": 54,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 3275,
+      "msaGloss": "fruit",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses",
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "شمس",
+      "arabic": "شَمْس",
+      "arabicBare": "شمس",
+      "meaning": "sun",
+      "transliteration": "šams",
+      "ipa": "/ʃams/",
+      "sceneIds": [
+        "sun"
+      ],
+      "swadeshNo": 147,
+      "quranFrequency": 33,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 827,
+      "msaGloss": "(feminine) sun",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "قمر",
+      "arabic": "قَمَر",
+      "arabicBare": "قمر",
+      "meaning": "moon",
+      "transliteration": "qamar",
+      "ipa": "/qa.mar/",
+      "sceneIds": [
+        "moon"
+      ],
+      "swadeshNo": 148,
+      "quranFrequency": 27,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1255,
+      "msaGloss": "satellite",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "ماء",
+      "arabic": "مَاء",
+      "arabicBare": "ماء",
+      "meaning": "water",
+      "transliteration": "māʔ",
+      "ipa": "/maːʔ/",
+      "sceneIds": [
+        "water",
+        "water-garden"
+      ],
+      "swadeshNo": 150,
+      "quranFrequency": 63,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "أريد ماء",
+          "transliteration": "ureed māʔ",
+          "meaning": "I want water.",
+          "category": "eating"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "scene-seed",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "ارض",
+      "arabic": "أَرْض",
+      "arabicBare": "ارض",
+      "meaning": "earth",
+      "transliteration": "ʔarḍ",
+      "ipa": "/ʔardˤ/",
+      "sceneIds": [
+        "earth"
+      ],
+      "swadeshNo": 159,
+      "quranFrequency": 461,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "سماء",
+      "arabic": "سَمَاء",
+      "arabicBare": "سماء",
+      "meaning": "sky",
+      "transliteration": "samāʔ",
+      "ipa": "/sa.maːʔ/",
+      "sceneIds": [
+        "sky"
+      ],
+      "swadeshNo": 162,
+      "quranFrequency": 310,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "بارد",
+      "arabic": "بَارِد",
+      "arabicBare": "بارد",
+      "meaning": "cold",
+      "transliteration": "bārid",
+      "ipa": "/baː.rid/",
+      "sceneIds": [
+        "cold"
+      ],
+      "swadeshNo": 181,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1569,
+      "msaGloss": "cold, frigid; (food) dull, flat, bland",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "طاولة",
+      "arabic": "طاولة",
+      "arabicBare": "طاولة",
+      "meaning": "table",
+      "transliteration": "taawila",
+      "ipa": null,
+      "sceneIds": [
+        "table"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2050,
+      "msaGloss": "table",
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "خبز",
+      "arabic": "خبز",
+      "arabicBare": "خبز",
+      "meaning": "bread",
+      "transliteration": "khubz",
+      "ipa": null,
+      "sceneIds": [
+        "bread"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 2361,
+      "msaGloss": "bread",
+      "phrases": [
+        {
+          "arabic": "أريد خبز",
+          "transliteration": "ureed khubz",
+          "meaning": "I want bread.",
+          "category": "eating"
+        }
+      ],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "حار",
+      "arabic": "حار",
+      "arabicBare": "حار",
+      "meaning": "hot",
+      "transliteration": "haar",
+      "ipa": null,
+      "sceneIds": [
+        "hot"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2690,
+      "msaGloss": "hot, fervent, passionate (kisses), warm (greetings), heartfelt (condolences), spicy (condiments)",
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "دجاج",
+      "arabic": "دجاج",
+      "arabicBare": "دجاج",
+      "meaning": "chicken",
+      "transliteration": "dajaaj",
+      "ipa": null,
+      "sceneIds": [
+        "chicken"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2901,
+      "msaGloss": "(coll) chicken",
+      "phrases": [
+        {
+          "arabic": "أريد دجاج",
+          "transliteration": "ureed dajaaj",
+          "meaning": "I want chicken.",
+          "category": "eating"
+        }
+      ],
+      "sources": [
+        "scene-seed",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "حصان",
+      "arabic": "حصان",
+      "arabicBare": "حصان",
+      "meaning": "horse",
+      "transliteration": "hisaan",
+      "ipa": null,
+      "sceneIds": [
+        "horse"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 3597,
+      "msaGloss": "horse",
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "لباس",
+      "arabic": "لباس",
+      "arabicBare": "لباس",
+      "meaning": "clothing",
+      "transliteration": "libaas",
+      "ipa": null,
+      "sceneIds": [
+        "clothing"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 10,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 4243,
+      "msaGloss": "clothes, dress, attire",
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "ارز",
+      "arabic": "أرز",
+      "arabicBare": "ارز",
+      "meaning": "rice",
+      "transliteration": "ruzz / aruzz",
+      "ipa": null,
+      "sceneIds": [
+        "rice"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 4339,
+      "msaGloss": "rice",
+      "phrases": [
+        {
+          "arabic": "أريد أرز",
+          "transliteration": "ureed ruzz",
+          "meaning": "I want rice.",
+          "category": "eating"
+        }
+      ],
+      "sources": [
+        "scene-seed",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "عنب",
+      "arabic": "عنب",
+      "arabicBare": "عنب",
+      "meaning": "grape",
+      "transliteration": "inab",
+      "ipa": null,
+      "sceneIds": [
+        "grape"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 11,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 4462,
+      "msaGloss": "(coll) grapes",
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "شوكة",
+      "arabic": "شوكة",
+      "arabicBare": "شوكة",
+      "meaning": "fork",
+      "transliteration": "shawka",
+      "ipa": null,
+      "sceneIds": [
+        "fork"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 4669,
+      "msaGloss": "fork",
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "نور",
+      "arabic": "نور",
+      "arabicBare": "نور",
+      "meaning": "light",
+      "transliteration": "noor",
+      "ipa": null,
+      "sceneIds": [
+        "light"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 43,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 4728,
+      "msaGloss": "to illuminate; to enlighten; (fig) to brighten (a home, a Web forum, by one’s visit)",
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "تمر",
+      "arabic": "تمر",
+      "arabicBare": "تمر",
+      "meaning": "date (fruit)",
+      "transliteration": "tamr",
+      "ipa": null,
+      "sceneIds": [
+        "date"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 5008,
+      "msaGloss": "(coll) dates",
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "نمل",
+      "arabic": "نمل",
+      "arabicBare": "نمل",
+      "meaning": "ant",
+      "transliteration": "naml",
+      "ipa": null,
+      "sceneIds": [
+        "ant"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 5075,
+      "msaGloss": "(coll) ants",
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "قائمة",
+      "arabic": "قائمة",
+      "arabicBare": "قائمة",
+      "meaning": "menu / list",
+      "transliteration": "qaa'ima",
+      "ipa": null,
+      "sceneIds": [
+        "menu"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 4,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "أريد قائمة",
+          "transliteration": "ureed qaa'ima",
+          "meaning": "I want menu / list.",
+          "category": "eating"
+        }
+      ],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "كرسي",
+      "arabic": "كرسي",
+      "arabicBare": "كرسي",
+      "meaning": "chair",
+      "transliteration": "kursi",
+      "ipa": null,
+      "sceneIds": [
+        "chair"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "كوب",
+      "arabic": "كوب",
+      "arabicBare": "كوب",
+      "meaning": "cup",
+      "transliteration": "kuub",
+      "ipa": null,
+      "sceneIds": [
+        "cup"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "ملعقة",
+      "arabic": "ملعقة",
+      "arabicBare": "ملعقة",
+      "meaning": "spoon",
+      "transliteration": "mil'aqa",
+      "ipa": null,
+      "sceneIds": [
+        "spoon"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "جمل",
+      "arabic": "جمل",
+      "arabicBare": "جمل",
+      "meaning": "camel",
+      "transliteration": "jamal",
+      "ipa": null,
+      "sceneIds": [
+        "camel"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "بقرة",
+      "arabic": "بقرة",
+      "arabicBare": "بقرة",
+      "meaning": "cow",
+      "transliteration": "baqara",
+      "ipa": null,
+      "sceneIds": [
+        "cow"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 4,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "نحل",
+      "arabic": "نحل",
+      "arabicBare": "نحل",
+      "meaning": "bee",
+      "transliteration": "nahl",
+      "ipa": null,
+      "sceneIds": [
+        "bee"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "عنكبوت",
+      "arabic": "عنكبوت",
+      "arabicBare": "عنكبوت",
+      "meaning": "spider",
+      "transliteration": "ankaboot",
+      "ipa": null,
+      "sceneIds": [
+        "spider"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "يمشي",
+      "arabic": "يمشي",
+      "arabicBare": "يمشي",
+      "meaning": "walk / he walks",
+      "transliteration": "yamshi",
+      "ipa": null,
+      "sceneIds": [
+        "walk"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "يجري",
+      "arabic": "يجري",
+      "arabicBare": "يجري",
+      "meaning": "run / he runs",
+      "transliteration": "yajri",
+      "ipa": null,
+      "sceneIds": [
+        "run"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "يجلس",
+      "arabic": "يجلس",
+      "arabicBare": "يجلس",
+      "meaning": "sit / he sits",
+      "transliteration": "yajlis",
+      "ipa": null,
+      "sceneIds": [
+        "sit"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "يقف",
+      "arabic": "يقف",
+      "arabicBare": "يقف",
+      "meaning": "stand / he stands",
+      "transliteration": "yaqif",
+      "ipa": null,
+      "sceneIds": [
+        "stand"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "يفتح",
+      "arabic": "يفتح",
+      "arabicBare": "يفتح",
+      "meaning": "open / he opens",
+      "transliteration": "yaftah",
+      "ipa": null,
+      "sceneIds": [
+        "open"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "يغلق",
+      "arabic": "يغلق",
+      "arabicBare": "يغلق",
+      "meaning": "close / he closes",
+      "transliteration": "yughliq",
+      "ipa": null,
+      "sceneIds": [
+        "close"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "ياكل",
+      "arabic": "يأكل",
+      "arabicBare": "ياكل",
+      "meaning": "eat / he eats",
+      "transliteration": "ya'kul",
+      "ipa": null,
+      "sceneIds": [
+        "eat"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "يشرب",
+      "arabic": "يشرب",
+      "arabicBare": "يشرب",
+      "meaning": "drink / he drinks",
+      "transliteration": "yashrab",
+      "ipa": null,
+      "sceneIds": [
+        "drink"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "يتكلم",
+      "arabic": "يتكلم",
+      "arabicBare": "يتكلم",
+      "meaning": "speak / he speaks",
+      "transliteration": "yatakallam",
+      "ipa": null,
+      "sceneIds": [
+        "speak"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "هل هنا اي شخص يتكلم الانجليزية؟",
+          "transliteration": "hal hunaa ayy shakhS yatakallam al-ingliziyya?",
+          "meaning": "Is there someone here who speaks English?",
+          "category": "basics"
+        }
+      ],
+      "sources": [
+        "scene-seed",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "يسمع",
+      "arabic": "يسمع",
+      "arabicBare": "يسمع",
+      "meaning": "hear / he hears",
+      "transliteration": "yasma'",
+      "ipa": null,
+      "sceneIds": [
+        "hear"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "يرى",
+      "arabic": "يرى",
+      "arabicBare": "يرى",
+      "meaning": "see / he sees",
+      "transliteration": "yaraa",
+      "ipa": null,
+      "sceneIds": [
+        "see"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "يعطي",
+      "arabic": "يعطي",
+      "arabicBare": "يعطي",
+      "meaning": "give / he gives",
+      "transliteration": "yu'ti",
+      "ipa": null,
+      "sceneIds": [
+        "give"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "ياخذ",
+      "arabic": "يأخذ",
+      "arabicBare": "ياخذ",
+      "meaning": "take / he takes",
+      "transliteration": "ya'khudh",
+      "ipa": null,
+      "sceneIds": [
+        "take"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "باب",
+      "arabic": "باب",
+      "arabicBare": "باب",
+      "meaning": "door",
+      "transliteration": "baab",
+      "ipa": null,
+      "sceneIds": [
+        "door"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 27,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "بيت",
+      "arabic": "بيت",
+      "arabicBare": "بيت",
+      "meaning": "house / home",
+      "transliteration": "bayt",
+      "ipa": null,
+      "sceneIds": [
+        "house"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 65,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "غرفة",
+      "arabic": "غرفة",
+      "arabicBare": "غرفة",
+      "meaning": "room",
+      "transliteration": "ghurfa",
+      "ipa": null,
+      "sceneIds": [
+        "room"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 5,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "طعام",
+      "arabic": "طعام",
+      "arabicBare": "طعام",
+      "meaning": "food",
+      "transliteration": "ta'aam",
+      "ipa": null,
+      "sceneIds": [
+        "food"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": 24,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "أريد طعام",
+          "transliteration": "ureed ta'aam",
+          "meaning": "I want food.",
+          "category": "eating"
+        },
+        {
+          "arabic": "أكل طعام",
+          "transliteration": "akl; Ta`aam",
+          "meaning": "food",
+          "category": "things"
+        }
+      ],
+      "sources": [
+        "scene-seed",
+        "quran-lemmas",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "اسرة",
+      "arabic": "أسرة",
+      "arabicBare": "اسرة",
+      "meaning": "family",
+      "transliteration": "usra",
+      "ipa": null,
+      "sceneIds": [
+        "family"
+      ],
+      "swadeshNo": null,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "scene-seed"
+      ]
+    },
+    {
+      "id": "انا",
+      "arabic": "أَنَا",
+      "arabicBare": "انا",
+      "meaning": "I ( 1sg)",
+      "transliteration": "ʔanā",
+      "ipa": "/ʔa.naː/",
+      "sceneIds": [],
+      "swadeshNo": 1,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 40,
+      "msaGloss": "I",
+      "phrases": [
+        {
+          "arabic": "انا اسفه انا اسف",
+          "transliteration": "/ ana aasif (male) / ana aasifah (female",
+          "meaning": "I'm sorry.",
+          "category": "basics"
+        },
+        {
+          "arabic": "انا مريض انا مريضة",
+          "transliteration": "/ ana mariiD (male) / ana mariiDah (female",
+          "meaning": "I'm sick.",
+          "category": "problems"
+        },
+        {
+          "arabic": "أنا ما فاهم أنا لا أفهم أنا مش فاهم",
+          "transliteration": "Ana ma fehim / ana laa afham / Ana mesh fahem",
+          "meaning": "I don't understand",
+          "category": "useful \"i\"s"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "انت",
+      "arabic": "أَنْتَ",
+      "arabicBare": "انت",
+      "meaning": "you ( 2sg)",
+      "transliteration": "ʔanta",
+      "ipa": "/ʔan.ta/",
+      "sceneIds": [],
+      "swadeshNo": 2,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 90,
+      "msaGloss": "you (masc)",
+      "phrases": [
+        {
+          "arabic": "من اين انت",
+          "transliteration": "min ayn anta",
+          "meaning": "Where are you from?",
+          "category": "asking questions"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "هو",
+      "arabic": "هُوَ",
+      "arabicBare": "هو",
+      "meaning": "he, she, it ( 3sg)",
+      "transliteration": "huwa",
+      "ipa": "/hu.wa/",
+      "sceneIds": [],
+      "swadeshNo": 3,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 35,
+      "msaGloss": "he, it",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "نحن",
+      "arabic": "نَحْنُ",
+      "arabicBare": "نحن",
+      "meaning": "we ( 1pl)",
+      "transliteration": "naḥnu",
+      "ipa": "/naħ.nu/",
+      "sceneIds": [],
+      "swadeshNo": 4,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 164,
+      "msaGloss": "we",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "انتم",
+      "arabic": "أَنْتُمْ",
+      "arabicBare": "انتم",
+      "meaning": "you ( 2pl)",
+      "transliteration": "ʔantum",
+      "ipa": "/ʔan.tum/",
+      "sceneIds": [],
+      "swadeshNo": 5,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "هم",
+      "arabic": "هُمْ",
+      "arabicBare": "هم",
+      "meaning": "they ( 3pl)",
+      "transliteration": "hum",
+      "ipa": "/hum/",
+      "sceneIds": [],
+      "swadeshNo": 6,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "هذا",
+      "arabic": "هٰذَا",
+      "arabicBare": "هذا",
+      "meaning": "this",
+      "transliteration": "hāḏā",
+      "ipa": "/haː.ðaː/",
+      "sceneIds": [],
+      "swadeshNo": 7,
+      "quranFrequency": 317,
+      "quranPos": "demonstrative pronoun",
+      "quranLemma": null,
+      "msaRank": 23,
+      "msaGloss": "this (masc sing)",
+      "phrases": [
+        {
+          "arabic": "بكم هذا",
+          "transliteration": "biKam Hadha",
+          "meaning": "How much is this?",
+          "category": "asking questions"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "ذلك",
+      "arabic": "ذٰلِكَ",
+      "arabicBare": "ذلك",
+      "meaning": "that",
+      "transliteration": "ḏālika",
+      "ipa": "/ðaː.li.ka/",
+      "sceneIds": [],
+      "swadeshNo": 8,
+      "quranFrequency": 520,
+      "quranPos": "demonstrative pronoun",
+      "quranLemma": null,
+      "msaRank": 56,
+      "msaGloss": "(masc sing) that",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "هنا",
+      "arabic": "هُنَا",
+      "arabicBare": "هنا",
+      "meaning": "here",
+      "transliteration": "hunā",
+      "ipa": "/hu.naː/",
+      "sceneIds": [],
+      "swadeshNo": 9,
+      "quranFrequency": 4,
+      "quranPos": "demonstrative pronoun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "هل هنا اي شخص يتكلم الانجليزية؟",
+          "transliteration": "hal hunaa ayy shakhS yatakallam al-ingliziyya?",
+          "meaning": "Is there someone here who speaks English?",
+          "category": "basics"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "هناك",
+      "arabic": "هُنَاكَ",
+      "arabicBare": "هناك",
+      "meaning": "there",
+      "transliteration": "hunāka",
+      "ipa": "/hu.naː.ka/",
+      "sceneIds": [],
+      "swadeshNo": 10,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 132,
+      "msaGloss": "there, over there; there is, there are",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "من",
+      "arabic": "مَنْ",
+      "arabicBare": "من",
+      "meaning": "who",
+      "transliteration": "man",
+      "ipa": "/man/",
+      "sceneIds": [],
+      "swadeshNo": 11,
+      "quranFrequency": 3226,
+      "quranPos": "preposition",
+      "quranLemma": null,
+      "msaRank": 4,
+      "msaGloss": "from; (with following verb or masdar) since",
+      "phrases": [
+        {
+          "arabic": "من فضلك",
+          "transliteration": "min faDlak) (male",
+          "meaning": "Please.",
+          "category": "basics"
+        },
+        {
+          "arabic": "وانت من اهل الخير",
+          "transliteration": "wa anta min ahl al-khair",
+          "meaning": "Good night (in response)",
+          "category": "basics"
+        },
+        {
+          "arabic": "من اين انت",
+          "transliteration": "min ayn anta",
+          "meaning": "Where are you from?",
+          "category": "asking questions"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "ما",
+      "arabic": "مَا",
+      "arabicBare": "ما",
+      "meaning": "what",
+      "transliteration": "mā",
+      "ipa": "/maː/",
+      "sceneIds": [],
+      "swadeshNo": 12,
+      "quranFrequency": 1266,
+      "quranPos": "relative pronoun",
+      "quranLemma": null,
+      "msaRank": 47,
+      "msaGloss": "not",
+      "phrases": [
+        {
+          "arabic": "ما اسمك؟",
+          "transliteration": "",
+          "meaning": "What is your name?",
+          "category": "basics"
+        },
+        {
+          "arabic": "ما تلمسني",
+          "transliteration": "ma tilmisni",
+          "meaning": "Don't touch me!",
+          "category": "problems"
+        },
+        {
+          "arabic": "ما ماذا",
+          "transliteration": "/ ma/madha",
+          "meaning": "What?",
+          "category": "asking questions"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "اين",
+      "arabic": "أَيْن",
+      "arabicBare": "اين",
+      "meaning": "where",
+      "transliteration": "ʔayn",
+      "ipa": "/ʔajn/",
+      "sceneIds": [],
+      "swadeshNo": 13,
+      "quranFrequency": 12,
+      "quranPos": "interogative particle",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "اين الحمام؟",
+          "transliteration": "ayn al-Hammaam?",
+          "meaning": "Where is the toilet?",
+          "category": "basics"
+        },
+        {
+          "arabic": "من اين انت",
+          "transliteration": "min ayn anta",
+          "meaning": "Where are you from?",
+          "category": "asking questions"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "متى",
+      "arabic": "مَتَى",
+      "arabicBare": "متى",
+      "meaning": "when",
+      "transliteration": "matā",
+      "ipa": "/ma.taː/",
+      "sceneIds": [],
+      "swadeshNo": 14,
+      "quranFrequency": 9,
+      "quranPos": "interogative particle",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "كيف",
+      "arabic": "كَيْف",
+      "arabicBare": "كيف",
+      "meaning": "how",
+      "transliteration": "kayf",
+      "ipa": "/kajf/",
+      "sceneIds": [],
+      "swadeshNo": 15,
+      "quranFrequency": 80,
+      "quranPos": "interogative particle",
+      "quranLemma": null,
+      "msaRank": 111,
+      "msaGloss": "how",
+      "phrases": [
+        {
+          "arabic": "كيف حالك؟",
+          "transliteration": "",
+          "meaning": "How are you?",
+          "category": "basics"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "لا",
+      "arabic": "لَا",
+      "arabicBare": "لا",
+      "meaning": "not",
+      "transliteration": "lā",
+      "ipa": "/laː/",
+      "sceneIds": [],
+      "swadeshNo": 16,
+      "quranFrequency": 1364,
+      "quranPos": "negative particle",
+      "quranLemma": null,
+      "msaRank": 12,
+      "msaGloss": "no; not, non-",
+      "phrases": [
+        {
+          "arabic": "لا يهم",
+          "transliteration": "laa yahummu",
+          "meaning": "Never mind.",
+          "category": "basics"
+        },
+        {
+          "arabic": "لا شيء",
+          "transliteration": "laa shay",
+          "meaning": "Nothing.",
+          "category": "basics"
+        },
+        {
+          "arabic": "لا اتكلم العربية جيدا",
+          "transliteration": "[ [ laa atakallam al-`arabiyyah [jayyidan]",
+          "meaning": "I can't speak Arabic [well].",
+          "category": "basics"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "كل",
+      "arabic": "كُلّ",
+      "arabicBare": "كل",
+      "meaning": "all",
+      "transliteration": "kull",
+      "ipa": "/kull/",
+      "sceneIds": [],
+      "swadeshNo": 17,
+      "quranFrequency": 358,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 28,
+      "msaGloss": "each; every; all (of)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "كثير",
+      "arabic": "كَثِير",
+      "arabicBare": "كثير",
+      "meaning": "many",
+      "transliteration": "kaṯīr",
+      "ipa": "/ka.θiːr/",
+      "sceneIds": [],
+      "swadeshNo": 18,
+      "quranFrequency": 42,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 91,
+      "msaGloss": "many, much, numerous",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "بعض",
+      "arabic": "بَعْض",
+      "arabicBare": "بعض",
+      "meaning": "some",
+      "transliteration": "baʕḍ",
+      "ipa": "/baʕdˤ/",
+      "sceneIds": [],
+      "swadeshNo": 19,
+      "quranFrequency": 157,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 79,
+      "msaGloss": "some, several",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "قليل",
+      "arabic": "قَلِيل",
+      "arabicBare": "قليل",
+      "meaning": "few",
+      "transliteration": "qalīl",
+      "ipa": "/qa.liːl/",
+      "sceneIds": [],
+      "swadeshNo": 20,
+      "quranFrequency": 43,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 472,
+      "msaGloss": "few, small amount",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "اخر",
+      "arabic": "آخَر",
+      "arabicBare": "اخر",
+      "meaning": "other",
+      "transliteration": "ʔāḵar",
+      "ipa": "/ʔaː.xar/",
+      "sceneIds": [],
+      "swadeshNo": 21,
+      "quranFrequency": 133,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "واحد",
+      "arabic": "وَاحِد",
+      "arabicBare": "واحد",
+      "meaning": "one",
+      "transliteration": "wāḥid",
+      "ipa": "/waː.ħid/",
+      "sceneIds": [],
+      "swadeshNo": 22,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 94,
+      "msaGloss": "one, single",
+      "phrases": [
+        {
+          "arabic": "واحد وعشرون",
+          "transliteration": "waaHid wa-`ashruun",
+          "meaning": "21",
+          "category": "numbers"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "اثنان",
+      "arabic": "اِثْنَان",
+      "arabicBare": "اثنان",
+      "meaning": "two",
+      "transliteration": "iṯnān",
+      "ipa": "/iθ.naːn/",
+      "sceneIds": [],
+      "swadeshNo": 23,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "اثنان وعشرون",
+          "transliteration": "ithnaan wa-`ashruun",
+          "meaning": "22",
+          "category": "numbers"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "ثلاثة",
+      "arabic": "ثَلَاثَة",
+      "arabicBare": "ثلاثة",
+      "meaning": "three",
+      "transliteration": "ṯalāṯa",
+      "ipa": "/θa.laː.θa/",
+      "sceneIds": [],
+      "swadeshNo": 24,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "ثلاثة عشر",
+          "transliteration": "thalaathata `ashar",
+          "meaning": "13",
+          "category": "numbers"
+        },
+        {
+          "arabic": "ثلاثة وعشرون",
+          "transliteration": "thalaatha wa-`ashruun",
+          "meaning": "23",
+          "category": "numbers"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "اربعة",
+      "arabic": "أَرْبَعَة",
+      "arabicBare": "اربعة",
+      "meaning": "four",
+      "transliteration": "ʔarbaʕa",
+      "ipa": "/ʔar.ba.ʕa/",
+      "sceneIds": [],
+      "swadeshNo": 25,
+      "quranFrequency": 9,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "اربعة عشر",
+          "transliteration": "arba`ata `ashar",
+          "meaning": "14",
+          "category": "numbers"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "خمسة",
+      "arabic": "خَمْسَة",
+      "arabicBare": "خمسة",
+      "meaning": "five",
+      "transliteration": "ḵamsa",
+      "ipa": "/xam.sa/",
+      "sceneIds": [],
+      "swadeshNo": 26,
+      "quranFrequency": 3,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "خمسة عشر",
+          "transliteration": "khamsata `ashar",
+          "meaning": "15",
+          "category": "numbers"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "كبير",
+      "arabic": "كَبِير",
+      "arabicBare": "كبير",
+      "meaning": "big",
+      "transliteration": "kabīr",
+      "ipa": "/ka.biːr/",
+      "sceneIds": [],
+      "swadeshNo": 27,
+      "quranFrequency": 32,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "طويل",
+      "arabic": "طَوِيل",
+      "arabicBare": "طويل",
+      "meaning": "long",
+      "transliteration": "ṭawīl",
+      "ipa": "/tˤa.wiːl/",
+      "sceneIds": [],
+      "swadeshNo": 28,
+      "quranFrequency": 2,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "رحب",
+      "arabic": "رَحْب",
+      "arabicBare": "رحب",
+      "meaning": "wide",
+      "transliteration": "raḥb",
+      "ipa": "/raħb/",
+      "sceneIds": [],
+      "swadeshNo": 29,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2220,
+      "msaGloss": "to welcome, receive ب sth/sb",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "سميك",
+      "arabic": "سَمِيك",
+      "arabicBare": "سميك",
+      "meaning": "thick",
+      "transliteration": "samīk",
+      "ipa": "/sa.miːk/",
+      "sceneIds": [],
+      "swadeshNo": 30,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "ثقيل",
+      "arabic": "ثَقِيل",
+      "arabicBare": "ثقيل",
+      "meaning": "heavy",
+      "transliteration": "ṯaqīl",
+      "ipa": "/θa.qiːl/",
+      "sceneIds": [],
+      "swadeshNo": 31,
+      "quranFrequency": 4,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": 1775,
+      "msaGloss": "heavy, cumbersome",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "صغير",
+      "arabic": "صَغِير",
+      "arabicBare": "صغير",
+      "meaning": "small",
+      "transliteration": "ṣaḡīr",
+      "ipa": "/sˤa.ɣiːr/",
+      "sceneIds": [],
+      "swadeshNo": 32,
+      "quranFrequency": 3,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "قصير",
+      "arabic": "قَصِير",
+      "arabicBare": "قصير",
+      "meaning": "short",
+      "transliteration": "qaṣīr",
+      "ipa": "/qa.sˤiːr/",
+      "sceneIds": [],
+      "swadeshNo": 33,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 1236,
+      "msaGloss": "short, small (of stature)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "ضيق",
+      "arabic": "ضَيِّق",
+      "arabicBare": "ضيق",
+      "meaning": "narrow",
+      "transliteration": "ḍayyiq",
+      "ipa": "/dˤaj.jiq/",
+      "sceneIds": [],
+      "swadeshNo": 34,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 2002,
+      "msaGloss": "narrow, restricted, tight",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "رقيق",
+      "arabic": "رَقِيق",
+      "arabicBare": "رقيق",
+      "meaning": "thin",
+      "transliteration": "raqīq",
+      "ipa": "/ra.qiːq/",
+      "sceneIds": [],
+      "swadeshNo": 35,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2932,
+      "msaGloss": "gentle, delicate; slender; (coll) slaves",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "امراة",
+      "arabic": "اِمْرَأَة",
+      "arabicBare": "امراة",
+      "meaning": "woman",
+      "transliteration": "imraʔa",
+      "ipa": "/im.ra.ʔa/",
+      "sceneIds": [],
+      "swadeshNo": 36,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 410,
+      "msaGloss": "woman, wife",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "انسان",
+      "arabic": "إِنْسَان",
+      "arabicBare": "انسان",
+      "meaning": "man (human being)",
+      "transliteration": "ʔinsān",
+      "ipa": "/ʔin.saːn/",
+      "sceneIds": [],
+      "swadeshNo": 38,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "طفل",
+      "arabic": "طِفْل",
+      "arabicBare": "طفل",
+      "meaning": "child",
+      "transliteration": "ṭifl",
+      "ipa": "/tˤifl/",
+      "sceneIds": [],
+      "swadeshNo": 39,
+      "quranFrequency": 4,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "زوجة",
+      "arabic": "زَوْجَة",
+      "arabicBare": "زوجة",
+      "meaning": "wife",
+      "transliteration": "zawja",
+      "ipa": "/zaw.d͡ʒa/",
+      "sceneIds": [],
+      "swadeshNo": 40,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 613,
+      "msaGloss": "wife",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "زوج",
+      "arabic": "زَوْج",
+      "arabicBare": "زوج",
+      "meaning": "husband",
+      "transliteration": "zawj",
+      "ipa": "/zawd͡ʒ/",
+      "sceneIds": [],
+      "swadeshNo": 41,
+      "quranFrequency": 76,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "ام",
+      "arabic": "أُمّ",
+      "arabicBare": "ام",
+      "meaning": "mother",
+      "transliteration": "ʔumm",
+      "ipa": "/ʔumm/",
+      "sceneIds": [],
+      "swadeshNo": 42,
+      "quranFrequency": 137,
+      "quranPos": "coordinating conjunction",
+      "quranLemma": null,
+      "msaRank": 357,
+      "msaGloss": "or (in questions)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "اب",
+      "arabic": "أَب",
+      "arabicBare": "اب",
+      "meaning": "father",
+      "transliteration": "ʔab",
+      "ipa": "/ʔab/",
+      "sceneIds": [],
+      "swadeshNo": 43,
+      "quranFrequency": 46,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "حيوان",
+      "arabic": "حَيَوَان",
+      "arabicBare": "حيوان",
+      "meaning": "animal",
+      "transliteration": "ḥayawān",
+      "ipa": "/ħa.ja.waːn/",
+      "sceneIds": [],
+      "swadeshNo": 44,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1507,
+      "msaGloss": "animal, creature",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "سمك",
+      "arabic": "سَمَك",
+      "arabicBare": "سمك",
+      "meaning": "fish",
+      "transliteration": "samak",
+      "ipa": "/sa.mak/",
+      "sceneIds": [],
+      "swadeshNo": 45,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 2110,
+      "msaGloss": "(collective) fish",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "كلب",
+      "arabic": "كَلْب",
+      "arabicBare": "كلب",
+      "meaning": "dog",
+      "transliteration": "kalb",
+      "ipa": "/kalb/",
+      "sceneIds": [],
+      "swadeshNo": 47,
+      "quranFrequency": 5,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "قمل",
+      "arabic": "قَمْل",
+      "arabicBare": "قمل",
+      "meaning": "louse",
+      "transliteration": "qaml",
+      "ipa": "/qaml/",
+      "sceneIds": [],
+      "swadeshNo": 48,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "حنش",
+      "arabic": "حَنَش",
+      "arabicBare": "حنش",
+      "meaning": "snake",
+      "transliteration": "ḥanaš",
+      "ipa": "/ħa.naʃ/",
+      "sceneIds": [],
+      "swadeshNo": 49,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "دود",
+      "arabic": "دُود",
+      "arabicBare": "دود",
+      "meaning": "worm",
+      "transliteration": "dūd",
+      "ipa": "/duːd/",
+      "sceneIds": [],
+      "swadeshNo": 50,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "غابة",
+      "arabic": "غَابَة",
+      "arabicBare": "غابة",
+      "meaning": "forest",
+      "transliteration": "ḡāba",
+      "ipa": "/ɣaː.ba/",
+      "sceneIds": [],
+      "swadeshNo": 52,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2352,
+      "msaGloss": "forest, jungle; (fig) haze, fog, confusion",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "عصا",
+      "arabic": "عَصًا",
+      "arabicBare": "عصا",
+      "meaning": "stick",
+      "transliteration": "ʕaṣan",
+      "ipa": "/ʕa.sˤan/",
+      "sceneIds": [],
+      "swadeshNo": 53,
+      "quranFrequency": 10,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 3807,
+      "msaGloss": "stick, baton, rod",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "زرع",
+      "arabic": "زَرْع",
+      "arabicBare": "زرع",
+      "meaning": "seed",
+      "transliteration": "zarʕ",
+      "ipa": "/zarʕ/",
+      "sceneIds": [],
+      "swadeshNo": 55,
+      "quranFrequency": 10,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 3995,
+      "msaGloss": "planting (seed); implanting, transplanting (organ); setting (bomb), laying (mines); growing (plants, crops); cultivating, farming (land)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "ورقة",
+      "arabic": "وَرَقَة",
+      "arabicBare": "ورقة",
+      "meaning": "leaf",
+      "transliteration": "waraqa",
+      "ipa": "/wa.ra.qa/",
+      "sceneIds": [],
+      "swadeshNo": 56,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "جذر",
+      "arabic": "جِذْر",
+      "arabicBare": "جذر",
+      "meaning": "root",
+      "transliteration": "jiḏr",
+      "ipa": "/d͡ʒiðr/",
+      "sceneIds": [],
+      "swadeshNo": 57,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "قلف",
+      "arabic": "قِلْف",
+      "arabicBare": "قلف",
+      "meaning": "bark (of a tree)",
+      "transliteration": "qilf",
+      "ipa": "/qilf/",
+      "sceneIds": [],
+      "swadeshNo": 58,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "زهرة",
+      "arabic": "زَهْرَة",
+      "arabicBare": "زهرة",
+      "meaning": "flower",
+      "transliteration": "zahra",
+      "ipa": "/zah.ra/",
+      "sceneIds": [],
+      "swadeshNo": 59,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 4107,
+      "msaGloss": "flower; (fig) splendor",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "حشيش",
+      "arabic": "حَشِيش",
+      "arabicBare": "حشيش",
+      "meaning": "grass",
+      "transliteration": "ḥašīš",
+      "ipa": "/ħa.ʃiːʃ/",
+      "sceneIds": [],
+      "swadeshNo": 60,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "حبل",
+      "arabic": "حَبْل",
+      "arabicBare": "حبل",
+      "meaning": "rope",
+      "transliteration": "ḥabl",
+      "ipa": "/ħabl/",
+      "sceneIds": [],
+      "swadeshNo": 61,
+      "quranFrequency": 7,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 3308,
+      "msaGloss": "rope, cord, cable",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "جلد",
+      "arabic": "جِلْد",
+      "arabicBare": "جلد",
+      "meaning": "skin",
+      "transliteration": "jild",
+      "ipa": "/d͡ʒild/",
+      "sceneIds": [],
+      "swadeshNo": 62,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2385,
+      "msaGloss": "skin; leather",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "لحم",
+      "arabic": "لَحْم",
+      "arabicBare": "لحم",
+      "meaning": "meat",
+      "transliteration": "laḥm",
+      "ipa": "/laħm/",
+      "sceneIds": [],
+      "swadeshNo": 63,
+      "quranFrequency": 12,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "دم",
+      "arabic": "دَم",
+      "arabicBare": "دم",
+      "meaning": "blood",
+      "transliteration": "dam",
+      "ipa": "/dam/",
+      "sceneIds": [],
+      "swadeshNo": 64,
+      "quranFrequency": 10,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "عظم",
+      "arabic": "عَظْم",
+      "arabicBare": "عظم",
+      "meaning": "bone",
+      "transliteration": "ʕaẓm",
+      "ipa": "/ʕaðˤm/",
+      "sceneIds": [],
+      "swadeshNo": 65,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "دهن",
+      "arabic": "دُهْن",
+      "arabicBare": "دهن",
+      "meaning": "fat (noun)",
+      "transliteration": "duhn",
+      "ipa": "/duhn/",
+      "sceneIds": [],
+      "swadeshNo": 66,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 3492,
+      "msaGloss": "aloe gel; body, physique",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "بيضة",
+      "arabic": "بَيْضَة",
+      "arabicBare": "بيضة",
+      "meaning": "egg",
+      "transliteration": "bayḍa",
+      "ipa": "/baj.dˤa/",
+      "sceneIds": [],
+      "swadeshNo": 67,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "قرن",
+      "arabic": "قَرْن",
+      "arabicBare": "قرن",
+      "meaning": "horn",
+      "transliteration": "qarn",
+      "ipa": "/qarn/",
+      "sceneIds": [],
+      "swadeshNo": 68,
+      "quranFrequency": 23,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "ذنب",
+      "arabic": "ذَنَب",
+      "arabicBare": "ذنب",
+      "meaning": "tail",
+      "transliteration": "ḏanab",
+      "ipa": "/ða.nab/",
+      "sceneIds": [],
+      "swadeshNo": 69,
+      "quranFrequency": 37,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "ريشة",
+      "arabic": "رِيشَة",
+      "arabicBare": "ريشة",
+      "meaning": "feather",
+      "transliteration": "rīša",
+      "ipa": "/riː.ʃa/",
+      "sceneIds": [],
+      "swadeshNo": 70,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "شعر",
+      "arabic": "شَعْر",
+      "arabicBare": "شعر",
+      "meaning": "hair",
+      "transliteration": "šaʕr",
+      "ipa": "/ʃaʕr/",
+      "sceneIds": [],
+      "swadeshNo": 71,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 699,
+      "msaGloss": "poetry",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "راس",
+      "arabic": "رَأْس",
+      "arabicBare": "راس",
+      "meaning": "head",
+      "transliteration": "raʔs",
+      "ipa": "/raʔs/",
+      "sceneIds": [],
+      "swadeshNo": 72,
+      "quranFrequency": 18,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 294,
+      "msaGloss": "capital; (geo) cape",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "اذن",
+      "arabic": "أُذُن",
+      "arabicBare": "اذن",
+      "meaning": "ear",
+      "transliteration": "ʔuḏun",
+      "ipa": "/ʔu.ðun/",
+      "sceneIds": [],
+      "swadeshNo": 73,
+      "quranFrequency": 39,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 791,
+      "msaGloss": "therefore, consequently",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "عين",
+      "arabic": "عَيْن",
+      "arabicBare": "عين",
+      "meaning": "eye",
+      "transliteration": "ʕayn",
+      "ipa": "/ʕajn/",
+      "sceneIds": [],
+      "swadeshNo": 74,
+      "quranFrequency": 57,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 3153,
+      "msaGloss": "same, exactly the same (person, thing); self (with pronoun) itself, himself, etc",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "انف",
+      "arabic": "أَنْف",
+      "arabicBare": "انف",
+      "meaning": "nose",
+      "transliteration": "ʔanf",
+      "ipa": "/ʔanf/",
+      "sceneIds": [],
+      "swadeshNo": 75,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 3428,
+      "msaGloss": "nose; (figurative) pride",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "فم",
+      "arabic": "فَم",
+      "arabicBare": "فم",
+      "meaning": "mouth",
+      "transliteration": "fam",
+      "ipa": "/fam/",
+      "sceneIds": [],
+      "swadeshNo": 76,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "سن",
+      "arabic": "سِنّ",
+      "arabicBare": "سن",
+      "meaning": "tooth",
+      "transliteration": "sinn",
+      "ipa": "/sinn/",
+      "sceneIds": [],
+      "swadeshNo": 77,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1257,
+      "msaGloss": "age (of a person)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "لسان",
+      "arabic": "لِسَان",
+      "arabicBare": "لسان",
+      "meaning": "tongue (organ)",
+      "transliteration": "lisān",
+      "ipa": "/li.saːn/",
+      "sceneIds": [],
+      "swadeshNo": 78,
+      "quranFrequency": 25,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "ظفر",
+      "arabic": "ظُفْر",
+      "arabicBare": "ظفر",
+      "meaning": "fingernail",
+      "transliteration": "ẓufr",
+      "ipa": "/ðˤufr/",
+      "sceneIds": [],
+      "swadeshNo": 79,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "قدم",
+      "arabic": "قَدَم",
+      "arabicBare": "قدم",
+      "meaning": "foot",
+      "transliteration": "qadam",
+      "ipa": "/qa.dam/",
+      "sceneIds": [],
+      "swadeshNo": 80,
+      "quranFrequency": 8,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 317,
+      "msaGloss": "to offer, present sth; to submit (request, complaint) to apply على for (position)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "رجل",
+      "arabic": "رِجْل",
+      "arabicBare": "رجل",
+      "meaning": "leg",
+      "transliteration": "rijl",
+      "ipa": "/rid͡ʒl/",
+      "sceneIds": [],
+      "swadeshNo": 81,
+      "quranFrequency": 29,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 4694,
+      "msaGloss": "leg",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "ركبة",
+      "arabic": "رُكْبَة",
+      "arabicBare": "ركبة",
+      "meaning": "knee",
+      "transliteration": "rukba",
+      "ipa": "/ruk.ba/",
+      "sceneIds": [],
+      "swadeshNo": 82,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "يد",
+      "arabic": "يَد",
+      "arabicBare": "يد",
+      "meaning": "hand",
+      "transliteration": "yad",
+      "ipa": "/jad/",
+      "sceneIds": [],
+      "swadeshNo": 83,
+      "quranFrequency": 120,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "كنف",
+      "arabic": "كَنَف",
+      "arabicBare": "كنف",
+      "meaning": "wing",
+      "transliteration": "kanaf",
+      "ipa": "/ka.naf/",
+      "sceneIds": [],
+      "swadeshNo": 84,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "بطن",
+      "arabic": "بَطْن",
+      "arabicBare": "بطن",
+      "meaning": "belly",
+      "transliteration": "baṭn",
+      "ipa": "/batˤn/",
+      "sceneIds": [],
+      "swadeshNo": 85,
+      "quranFrequency": 17,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 2282,
+      "msaGloss": "stomach, abdomen; inside, interior; depth, core",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "امعاء",
+      "arabic": "أَمْعَاء",
+      "arabicBare": "امعاء",
+      "meaning": "guts",
+      "transliteration": "ʔamʕāʔ",
+      "ipa": "/ʔam.ʕaːʔ/",
+      "sceneIds": [],
+      "swadeshNo": 86,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "رقبة",
+      "arabic": "رَقَبَة",
+      "arabicBare": "رقبة",
+      "meaning": "neck",
+      "transliteration": "raqaba",
+      "ipa": "/ra.qa.ba/",
+      "sceneIds": [],
+      "swadeshNo": 87,
+      "quranFrequency": 9,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 4177,
+      "msaGloss": "neck",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "ظهر",
+      "arabic": "ظَهْر",
+      "arabicBare": "ظهر",
+      "meaning": "back",
+      "transliteration": "ẓahr",
+      "ipa": "/ðˤahr/",
+      "sceneIds": [],
+      "swadeshNo": 88,
+      "quranFrequency": 15,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1562,
+      "msaGloss": "back; rear; deck (ship)",
+      "phrases": [
+        {
+          "arabic": "بعد ظهر",
+          "transliteration": "ba'ada Zuhur",
+          "meaning": "afternoon",
+          "category": "time"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "ثدي",
+      "arabic": "ثَدْي",
+      "arabicBare": "ثدي",
+      "meaning": "breast",
+      "transliteration": "ṯady",
+      "ipa": "/θadj/",
+      "sceneIds": [],
+      "swadeshNo": 89,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 5017,
+      "msaGloss": "breast; udder",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "لب",
+      "arabic": "لُبّ",
+      "arabicBare": "لب",
+      "meaning": "heart",
+      "transliteration": "lubb",
+      "ipa": "/lubb/",
+      "sceneIds": [],
+      "swadeshNo": 90,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "كبد",
+      "arabic": "كَبِد",
+      "arabicBare": "كبد",
+      "meaning": "liver",
+      "transliteration": "kabid",
+      "ipa": "/ka.bid/",
+      "sceneIds": [],
+      "swadeshNo": 91,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 3351,
+      "msaGloss": "liver (organ); center, middle",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "شرب",
+      "arabic": "شَرِبَ",
+      "arabicBare": "شرب",
+      "meaning": "to drink",
+      "transliteration": "šariba",
+      "ipa": "/ʃa.ri.ba/",
+      "sceneIds": [],
+      "swadeshNo": 92,
+      "quranFrequency": 3,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 2589,
+      "msaGloss": "drinking",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "اكل",
+      "arabic": "أَكَلَ",
+      "arabicBare": "اكل",
+      "meaning": "to eat",
+      "transliteration": "ʔakala",
+      "ipa": "/ʔa.ka.la/",
+      "sceneIds": [],
+      "swadeshNo": 93,
+      "quranFrequency": 7,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1699,
+      "msaGloss": "eating; consuming; food, meal",
+      "phrases": [
+        {
+          "arabic": "أكل طعام",
+          "transliteration": "akl; Ta`aam",
+          "meaning": "food",
+          "category": "things"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "عض",
+      "arabic": "عَضَّ",
+      "arabicBare": "عض",
+      "meaning": "to bite",
+      "transliteration": "ʕaḍḍa",
+      "ipa": "/ʕadˤ.dˤa/",
+      "sceneIds": [],
+      "swadeshNo": 94,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "مص",
+      "arabic": "مَصَّ",
+      "arabicBare": "مص",
+      "meaning": "to suck",
+      "transliteration": "maṣṣa",
+      "ipa": "/masˤ.sˤa/",
+      "sceneIds": [],
+      "swadeshNo": 95,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "بصق",
+      "arabic": "بَصَقَ",
+      "arabicBare": "بصق",
+      "meaning": "to spit",
+      "transliteration": "baṣaqa",
+      "ipa": "/ba.sˤa.qa/",
+      "sceneIds": [],
+      "swadeshNo": 96,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "تقيا",
+      "arabic": "تَقَيَّأَ",
+      "arabicBare": "تقيا",
+      "meaning": "to vomit",
+      "transliteration": "taqayyaʔa",
+      "ipa": "/ta.qaj.ja.ʔa/",
+      "sceneIds": [],
+      "swadeshNo": 97,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "نفخ",
+      "arabic": "نَفَخَ",
+      "arabicBare": "نفخ",
+      "meaning": "to blow",
+      "transliteration": "nafaḵa",
+      "ipa": "/na.fa.xa/",
+      "sceneIds": [],
+      "swadeshNo": 98,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "تنفس",
+      "arabic": "تَنَفَّسَ",
+      "arabicBare": "تنفس",
+      "meaning": "to breathe",
+      "transliteration": "tanaffasa",
+      "ipa": "/ta.naf.fa.sa/",
+      "sceneIds": [],
+      "swadeshNo": 99,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 4063,
+      "msaGloss": "breathing, respiration; breath",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "ضحك",
+      "arabic": "ضَحِكَ",
+      "arabicBare": "ضحك",
+      "meaning": "to laugh",
+      "transliteration": "ḍaḥika",
+      "ipa": "/dˤa.ħi.ka/",
+      "sceneIds": [],
+      "swadeshNo": 100,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2635,
+      "msaGloss": "laughter, laughing",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "راى",
+      "arabic": "رَأَى",
+      "arabicBare": "راى",
+      "meaning": "to see",
+      "transliteration": "raʔā",
+      "ipa": "/ra.ʔaː/",
+      "sceneIds": [],
+      "swadeshNo": 101,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "سمع",
+      "arabic": "سَمِعَ",
+      "arabicBare": "سمع",
+      "meaning": "to hear",
+      "transliteration": "samiʕa",
+      "ipa": "/sa.mi.ʕa/",
+      "sceneIds": [],
+      "swadeshNo": 102,
+      "quranFrequency": 22,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 3479,
+      "msaGloss": "hearing",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "عرف",
+      "arabic": "عَرَفَ",
+      "arabicBare": "عرف",
+      "meaning": "to know",
+      "transliteration": "ʕarafa",
+      "ipa": "/ʕa.ra.fa/",
+      "sceneIds": [],
+      "swadeshNo": 103,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 4854,
+      "msaGloss": "to introduce sb ب to sb else; to let sb know sth",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "فكر",
+      "arabic": "فَكَرَ",
+      "arabicBare": "فكر",
+      "meaning": "to think",
+      "transliteration": "fakara",
+      "ipa": "/fa.ka.ra/",
+      "sceneIds": [],
+      "swadeshNo": 104,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 753,
+      "msaGloss": "to think في/ب about sth/sb; to consider في أنّ doing sth; to think believe أنّ that",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "شم",
+      "arabic": "شَمَّ",
+      "arabicBare": "شم",
+      "meaning": "to smell",
+      "transliteration": "šamma",
+      "ipa": "/ʃam.ma/",
+      "sceneIds": [],
+      "swadeshNo": 105,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 4501,
+      "msaGloss": "Egyptian spring festival",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "خاف",
+      "arabic": "خَافَ",
+      "arabicBare": "خاف",
+      "meaning": "to fear",
+      "transliteration": "ḵāfa",
+      "ipa": "/xaː.fa/",
+      "sceneIds": [],
+      "swadeshNo": 106,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "نام",
+      "arabic": "نَامَ",
+      "arabicBare": "نام",
+      "meaning": "to sleep",
+      "transliteration": "nāma",
+      "ipa": "/naː.ma/",
+      "sceneIds": [],
+      "swadeshNo": 107,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 3874,
+      "msaGloss": "developing (country)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "عاش",
+      "arabic": "عَاشَ",
+      "arabicBare": "عاش",
+      "meaning": "to live",
+      "transliteration": "ʕāša",
+      "ipa": "/ʕaː.ʃa/",
+      "sceneIds": [],
+      "swadeshNo": 108,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "مات",
+      "arabic": "مَاتَ",
+      "arabicBare": "مات",
+      "meaning": "to die",
+      "transliteration": "māta",
+      "ipa": "/maː.ta/",
+      "sceneIds": [],
+      "swadeshNo": 109,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "قتل",
+      "arabic": "قَتَلَ",
+      "arabicBare": "قتل",
+      "meaning": "to kill",
+      "transliteration": "qatala",
+      "ipa": "/qa.ta.la/",
+      "sceneIds": [],
+      "swadeshNo": 110,
+      "quranFrequency": 10,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 985,
+      "msaGloss": "murder, killing",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "قاتل",
+      "arabic": "قَاتَلَ",
+      "arabicBare": "قاتل",
+      "meaning": "to fight",
+      "transliteration": "qātala",
+      "ipa": "/qaː.ta.la/",
+      "sceneIds": [],
+      "swadeshNo": 111,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 4356,
+      "msaGloss": "to fight (sb)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "صاد",
+      "arabic": "صَادَ",
+      "arabicBare": "صاد",
+      "meaning": "to hunt",
+      "transliteration": "ṣāda",
+      "ipa": "/sˤaː.da/",
+      "sceneIds": [],
+      "swadeshNo": 112,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "ضرب",
+      "arabic": "ضَرَبَ",
+      "arabicBare": "ضرب",
+      "meaning": "to hit",
+      "transliteration": "ḍaraba",
+      "ipa": "/dˤa.ra.ba/",
+      "sceneIds": [],
+      "swadeshNo": 113,
+      "quranFrequency": 3,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1263,
+      "msaGloss": "to give an example (ل of)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "قطع",
+      "arabic": "قَطَعَ",
+      "arabicBare": "قطع",
+      "meaning": "to cut",
+      "transliteration": "qaṭaʕa",
+      "ipa": "/qa.tˤa.ʕa/",
+      "sceneIds": [],
+      "swadeshNo": 114,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1742,
+      "msaGloss": "breaking off, interruption; traversing (a distance); issuing (a ticket)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "شق",
+      "arabic": "شَقَّ",
+      "arabicBare": "شق",
+      "meaning": "to split",
+      "transliteration": "šaqqa",
+      "ipa": "/ʃaq.qa/",
+      "sceneIds": [],
+      "swadeshNo": 115,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 4047,
+      "msaGloss": "splitting, opening; crack, gap",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "طعن",
+      "arabic": "طَعَنَ",
+      "arabicBare": "طعن",
+      "meaning": "to stab",
+      "transliteration": "ṭaʕana",
+      "ipa": "/tˤa.ʕa.na/",
+      "sceneIds": [],
+      "swadeshNo": 116,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "خدش",
+      "arabic": "خَدَشَ",
+      "arabicBare": "خدش",
+      "meaning": "to scratch",
+      "transliteration": "ḵadaša",
+      "ipa": "/xa.da.ʃa/",
+      "sceneIds": [],
+      "swadeshNo": 117,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "حفر",
+      "arabic": "حَفَرَ",
+      "arabicBare": "حفر",
+      "meaning": "to dig",
+      "transliteration": "ḥafara",
+      "ipa": "/ħa.fa.ra/",
+      "sceneIds": [],
+      "swadeshNo": 118,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 3602,
+      "msaGloss": "digging, drilling; excavation",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "سبح",
+      "arabic": "سَبَحَ",
+      "arabicBare": "سبح",
+      "meaning": "to swim",
+      "transliteration": "sabaḥa",
+      "ipa": "/sa.ba.ħa/",
+      "sceneIds": [],
+      "swadeshNo": 119,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "طار",
+      "arabic": "طَارَ",
+      "arabicBare": "طار",
+      "meaning": "to fly",
+      "transliteration": "ṭāra",
+      "ipa": "/tˤaː.ra/",
+      "sceneIds": [],
+      "swadeshNo": 120,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2618,
+      "msaGloss": "to lose one’s mind",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "مشى",
+      "arabic": "مَشَى",
+      "arabicBare": "مشى",
+      "meaning": "to walk",
+      "transliteration": "mašā",
+      "ipa": "/ma.ʃaː/",
+      "sceneIds": [],
+      "swadeshNo": 121,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "جاء",
+      "arabic": "جَاءَ",
+      "arabicBare": "جاء",
+      "meaning": "to come",
+      "transliteration": "jāʔa",
+      "ipa": "/d͡ʒaː.ʔa/",
+      "sceneIds": [],
+      "swadeshNo": 122,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "رقد",
+      "arabic": "رَقَدَ",
+      "arabicBare": "رقد",
+      "meaning": "to lie (as in a bed)",
+      "transliteration": "raqada",
+      "ipa": "/ra.qa.da/",
+      "sceneIds": [],
+      "swadeshNo": 123,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "جلس",
+      "arabic": "جَلَسَ",
+      "arabicBare": "جلس",
+      "meaning": "to sit",
+      "transliteration": "jalasa",
+      "ipa": "/d͡ʒa.la.sa/",
+      "sceneIds": [],
+      "swadeshNo": 124,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "وقف",
+      "arabic": "وَقَفَ",
+      "arabicBare": "وقف",
+      "meaning": "to stand",
+      "transliteration": "waqafa",
+      "ipa": "/wa.qa.fa/",
+      "sceneIds": [],
+      "swadeshNo": 125,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 605,
+      "msaGloss": "to stand by, support sb",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "دار",
+      "arabic": "دَارَ",
+      "arabicBare": "دار",
+      "meaning": "to turn (intransitive)",
+      "transliteration": "dāra",
+      "ipa": "/daː.ra/",
+      "sceneIds": [],
+      "swadeshNo": 126,
+      "quranFrequency": 48,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "وقع",
+      "arabic": "وَقَعَ",
+      "arabicBare": "وقع",
+      "meaning": "to fall",
+      "transliteration": "waqaʕa",
+      "ipa": "/wa.qa.ʕa/",
+      "sceneIds": [],
+      "swadeshNo": 127,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2681,
+      "msaGloss": "to sign على (treaty); to make sth/sb fall; to inflict, cause (damage)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "اعطى",
+      "arabic": "أَعْطَى",
+      "arabicBare": "اعطى",
+      "meaning": "to give",
+      "transliteration": "ʔaʕṭā",
+      "ipa": "/ʔaʕ.tˤaː/",
+      "sceneIds": [],
+      "swadeshNo": 128,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 436,
+      "msaGloss": "to give, provide sth to sb or ل to sb",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "اخذ",
+      "arabic": "أَخَذَ",
+      "arabicBare": "اخذ",
+      "meaning": "to hold",
+      "transliteration": "ʔaḵaḏa",
+      "ipa": "/ʔa.xa.ða/",
+      "sceneIds": [],
+      "swadeshNo": 129,
+      "quranFrequency": 6,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 2003,
+      "msaGloss": "taking; seizure",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "عصر",
+      "arabic": "عَصَرَ",
+      "arabicBare": "عصر",
+      "meaning": "to squeeze",
+      "transliteration": "ʕaṣara",
+      "ipa": "/ʕa.sˤa.ra/",
+      "sceneIds": [],
+      "swadeshNo": 130,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1048,
+      "msaGloss": "age, period, time, epoch",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "حك",
+      "arabic": "حَكَّ",
+      "arabicBare": "حك",
+      "meaning": "to rub",
+      "transliteration": "ḥakka",
+      "ipa": "/ħak.ka/",
+      "sceneIds": [],
+      "swadeshNo": 131,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "غسل",
+      "arabic": "غَسَلَ",
+      "arabicBare": "غسل",
+      "meaning": "to wash",
+      "transliteration": "ḡasala",
+      "ipa": "/ɣa.sa.la/",
+      "sceneIds": [],
+      "swadeshNo": 132,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "محا",
+      "arabic": "مَحَا",
+      "arabicBare": "محا",
+      "meaning": "to wipe",
+      "transliteration": "maḥā",
+      "ipa": "/ma.ħaː/",
+      "sceneIds": [],
+      "swadeshNo": 133,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "جر",
+      "arabic": "جَرَّ",
+      "arabicBare": "جر",
+      "meaning": "to pull",
+      "transliteration": "jarra",
+      "ipa": "/d͡ʒar.ra/",
+      "sceneIds": [],
+      "swadeshNo": 134,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "دفع",
+      "arabic": "دَفَعَ",
+      "arabicBare": "دفع",
+      "meaning": "to push",
+      "transliteration": "dafaʕa",
+      "ipa": "/da.fa.ʕa/",
+      "sceneIds": [],
+      "swadeshNo": 135,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1357,
+      "msaGloss": "pushing; compelling, moving, driving; pushing back, repelling; payment",
+      "phrases": [
+        {
+          "arabic": "هل يمكنوني دفع غرأمات الأم؟",
+          "transliteration": "hal yumkinuni dafe gharamat alan?",
+          "meaning": "Can I just pay a fine now?",
+          "category": "authority"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "رمى",
+      "arabic": "رَمَى",
+      "arabicBare": "رمى",
+      "meaning": "to throw",
+      "transliteration": "ramā",
+      "ipa": "/ra.maː/",
+      "sceneIds": [],
+      "swadeshNo": 136,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "ربط",
+      "arabic": "رَبَطَ",
+      "arabicBare": "ربط",
+      "meaning": "to tie",
+      "transliteration": "rabaṭa",
+      "ipa": "/ra.ba.tˤa/",
+      "sceneIds": [],
+      "swadeshNo": 137,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2354,
+      "msaGloss": "connecting, linking, coupling; bond, connection",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "خاط",
+      "arabic": "خَاطَ",
+      "arabicBare": "خاط",
+      "meaning": "to sew",
+      "transliteration": "ḵāṭa",
+      "ipa": "/xaː.tˤa/",
+      "sceneIds": [],
+      "swadeshNo": 138,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "عد",
+      "arabic": "عَدَّ",
+      "arabicBare": "عد",
+      "meaning": "to count",
+      "transliteration": "ʕadda",
+      "ipa": "/ʕad.da/",
+      "sceneIds": [],
+      "swadeshNo": 139,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 5293,
+      "msaGloss": "counting, calculating",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "قال",
+      "arabic": "قَالَ",
+      "arabicBare": "قال",
+      "meaning": "to say",
+      "transliteration": "qāla",
+      "ipa": "/qaː.la/",
+      "sceneIds": [],
+      "swadeshNo": 140,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "غنى",
+      "arabic": "غَنَّى",
+      "arabicBare": "غنى",
+      "meaning": "to sing",
+      "transliteration": "ḡannā",
+      "ipa": "/ɣan.naː/",
+      "sceneIds": [],
+      "swadeshNo": 141,
+      "quranFrequency": 20,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 2546,
+      "msaGloss": "to sing (sth)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "لعب",
+      "arabic": "لَعِبَ",
+      "arabicBare": "لعب",
+      "meaning": "to play",
+      "transliteration": "laʕiba",
+      "ipa": "/la.ʕi.ba/",
+      "sceneIds": [],
+      "swadeshNo": 142,
+      "quranFrequency": 8,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "عام",
+      "arabic": "عَامَ",
+      "arabicBare": "عام",
+      "meaning": "to float",
+      "transliteration": "ʕāma",
+      "ipa": "/ʕaː.ma/",
+      "sceneIds": [],
+      "swadeshNo": 143,
+      "quranFrequency": 9,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 154,
+      "msaGloss": "general, common, public",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "تدفق",
+      "arabic": "تَدَفَّقَ",
+      "arabicBare": "تدفق",
+      "meaning": "to flow",
+      "transliteration": "tadaffaqa",
+      "ipa": "/ta.daf.fa.qa/",
+      "sceneIds": [],
+      "swadeshNo": 144,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 3846,
+      "msaGloss": "flow, stream, flood; influx, invasion",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "جمد",
+      "arabic": "جَمَدَ",
+      "arabicBare": "جمد",
+      "meaning": "to freeze",
+      "transliteration": "jamada",
+      "ipa": "/d͡ʒa.ma.da/",
+      "sceneIds": [],
+      "swadeshNo": 145,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "ورم",
+      "arabic": "وَرِمَ",
+      "arabicBare": "ورم",
+      "meaning": "to swell",
+      "transliteration": "warima",
+      "ipa": "/wa.ri.ma/",
+      "sceneIds": [],
+      "swadeshNo": 146,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "نجم",
+      "arabic": "نَجْم",
+      "arabicBare": "نجم",
+      "meaning": "star",
+      "transliteration": "najm",
+      "ipa": "/nad͡ʒm/",
+      "sceneIds": [],
+      "swadeshNo": 149,
+      "quranFrequency": 13,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "مطر",
+      "arabic": "مَطَر",
+      "arabicBare": "مطر",
+      "meaning": "rain",
+      "transliteration": "maṭar",
+      "ipa": "/ma.tˤar/",
+      "sceneIds": [],
+      "swadeshNo": 151,
+      "quranFrequency": 7,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "نهر",
+      "arabic": "نَهْر",
+      "arabicBare": "نهر",
+      "meaning": "river",
+      "transliteration": "nahr",
+      "ipa": "/nahr/",
+      "sceneIds": [],
+      "swadeshNo": 152,
+      "quranFrequency": 54,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "بحيرة",
+      "arabic": "بُحَيْرَة",
+      "arabicBare": "بحيرة",
+      "meaning": "lake",
+      "transliteration": "buḥayra",
+      "ipa": "/bu.ħaj.ra/",
+      "sceneIds": [],
+      "swadeshNo": 153,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 3847,
+      "msaGloss": "lake",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "بحر",
+      "arabic": "بَحْر",
+      "arabicBare": "بحر",
+      "meaning": "sea",
+      "transliteration": "baḥr",
+      "ipa": "/baħr/",
+      "sceneIds": [],
+      "swadeshNo": 154,
+      "quranFrequency": 41,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "ملح",
+      "arabic": "مِلْح",
+      "arabicBare": "ملح",
+      "meaning": "salt",
+      "transliteration": "milḥ",
+      "ipa": "/milħ/",
+      "sceneIds": [],
+      "swadeshNo": 155,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 3047,
+      "msaGloss": "salt",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "حجر",
+      "arabic": "حَجَر",
+      "arabicBare": "حجر",
+      "meaning": "stone",
+      "transliteration": "ḥajar",
+      "ipa": "/ħa.d͡ʒar/",
+      "sceneIds": [],
+      "swadeshNo": 156,
+      "quranFrequency": 4,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "رمل",
+      "arabic": "رَمْل",
+      "arabicBare": "رمل",
+      "meaning": "sand",
+      "transliteration": "raml",
+      "ipa": "/raml/",
+      "sceneIds": [],
+      "swadeshNo": 157,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "غبار",
+      "arabic": "غُبَار",
+      "arabicBare": "غبار",
+      "meaning": "dust",
+      "transliteration": "ḡubār",
+      "ipa": "/ɣu.baːr/",
+      "sceneIds": [],
+      "swadeshNo": 158,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2891,
+      "msaGloss": "dust",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "سحابة",
+      "arabic": "سَحَابَة",
+      "arabicBare": "سحابة",
+      "meaning": "cloud",
+      "transliteration": "saḥāba",
+      "ipa": "/sa.ħaː.ba/",
+      "sceneIds": [],
+      "swadeshNo": 160,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "ضباب",
+      "arabic": "ضَبَاب",
+      "arabicBare": "ضباب",
+      "meaning": "fog",
+      "transliteration": "ḍabāb",
+      "ipa": "/dˤa.baːb/",
+      "sceneIds": [],
+      "swadeshNo": 161,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 4805,
+      "msaGloss": "fog, mist; vapor",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "ريح",
+      "arabic": "رِيح",
+      "arabicBare": "ريح",
+      "meaning": "wind",
+      "transliteration": "rīḥ",
+      "ipa": "/riːħ/",
+      "sceneIds": [],
+      "swadeshNo": 163,
+      "quranFrequency": 29,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "ثلج",
+      "arabic": "ثَلْج",
+      "arabicBare": "ثلج",
+      "meaning": "snow",
+      "transliteration": "ṯalj",
+      "ipa": "/θald͡ʒ/",
+      "sceneIds": [],
+      "swadeshNo": 164,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 3806,
+      "msaGloss": "snow; ice",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "جليد",
+      "arabic": "جَلِيد",
+      "arabicBare": "جليد",
+      "meaning": "ice",
+      "transliteration": "jalīd",
+      "ipa": "/d͡ʒa.liːd/",
+      "sceneIds": [],
+      "swadeshNo": 165,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 5004,
+      "msaGloss": "ice",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "دخان",
+      "arabic": "دُخَان",
+      "arabicBare": "دخان",
+      "meaning": "smoke",
+      "transliteration": "duḵān",
+      "ipa": "/du.xaːn/",
+      "sceneIds": [],
+      "swadeshNo": 166,
+      "quranFrequency": 2,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 2483,
+      "msaGloss": "smoke; smoking",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "نار",
+      "arabic": "نَارَ",
+      "arabicBare": "نار",
+      "meaning": "fire",
+      "transliteration": "nāra",
+      "ipa": "/naː.ra/",
+      "sceneIds": [],
+      "swadeshNo": 167,
+      "quranFrequency": 145,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "رماد",
+      "arabic": "رَمَاد",
+      "arabicBare": "رماد",
+      "meaning": "ash",
+      "transliteration": "ramād",
+      "ipa": "/ra.maːd/",
+      "sceneIds": [],
+      "swadeshNo": 168,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 3775,
+      "msaGloss": "ashes, cinders",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "حرق",
+      "arabic": "حَرَقَ",
+      "arabicBare": "حرق",
+      "meaning": "to burn",
+      "transliteration": "ḥaraqa",
+      "ipa": "/ħa.ra.qa/",
+      "sceneIds": [],
+      "swadeshNo": 169,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 4448,
+      "msaGloss": "burning, incineration; burn (wound)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "طريق",
+      "arabic": "طَرِيق",
+      "arabicBare": "طريق",
+      "meaning": "road",
+      "transliteration": "ṭarīq",
+      "ipa": "/tˤa.riːq/",
+      "sceneIds": [],
+      "swadeshNo": 170,
+      "quranFrequency": 4,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "جبل",
+      "arabic": "جَبَل",
+      "arabicBare": "جبل",
+      "meaning": "mountain",
+      "transliteration": "jabal",
+      "ipa": "/d͡ʒa.bal/",
+      "sceneIds": [],
+      "swadeshNo": 171,
+      "quranFrequency": 39,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "احمر",
+      "arabic": "أَحْمَر",
+      "arabicBare": "احمر",
+      "meaning": "red",
+      "transliteration": "ʔaḥmar",
+      "ipa": "/ʔaħ.mar/",
+      "sceneIds": [],
+      "swadeshNo": 172,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "اخضر",
+      "arabic": "أَخْضَر",
+      "arabicBare": "اخضر",
+      "meaning": "green",
+      "transliteration": "ʔaḵḍar",
+      "ipa": "/ʔax.dˤar/",
+      "sceneIds": [],
+      "swadeshNo": 173,
+      "quranFrequency": 1,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "اصفر",
+      "arabic": "أَصْفَر",
+      "arabicBare": "اصفر",
+      "meaning": "yellow",
+      "transliteration": "ʔaṣfar",
+      "ipa": "/ʔasˤ.far/",
+      "sceneIds": [],
+      "swadeshNo": 174,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "ابيض",
+      "arabic": "أَبْيَض",
+      "arabicBare": "ابيض",
+      "meaning": "white",
+      "transliteration": "ʔabyaḍ",
+      "ipa": "/ʔab.jadˤ/",
+      "sceneIds": [],
+      "swadeshNo": 175,
+      "quranFrequency": 5,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 695,
+      "msaGloss": "white; whites, Caucasians",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "اسود",
+      "arabic": "أَسْوَد",
+      "arabicBare": "اسود",
+      "meaning": "black",
+      "transliteration": "ʔaswad",
+      "ipa": "/ʔas.wad/",
+      "sceneIds": [],
+      "swadeshNo": 176,
+      "quranFrequency": 1,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "فلفل أسود",
+          "transliteration": "filfil aswad",
+          "meaning": "black pepper",
+          "category": "eating"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "ليل",
+      "arabic": "لَيْل",
+      "arabicBare": "ليل",
+      "meaning": "night",
+      "transliteration": "layl",
+      "ipa": "/lajl/",
+      "sceneIds": [],
+      "swadeshNo": 177,
+      "quranFrequency": 82,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 494,
+      "msaGloss": "night, night-time",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "يوم",
+      "arabic": "يَوْم",
+      "arabicBare": "يوم",
+      "meaning": "day",
+      "transliteration": "yawm",
+      "ipa": "/jawm/",
+      "sceneIds": [],
+      "swadeshNo": 178,
+      "quranFrequency": 325,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "يوم أيام",
+          "transliteration": "_____ ( (yom (ayaam",
+          "meaning": "_____ day(s)",
+          "category": "duration"
+        },
+        {
+          "arabic": "يوم الأحد",
+          "transliteration": "yawm) al'aHad",
+          "meaning": "Sunday",
+          "category": "days of the week"
+        },
+        {
+          "arabic": "يوم الاثنين",
+          "transliteration": "yawm) al-ithnayn",
+          "meaning": "Monday",
+          "category": "days of the week"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "سنة",
+      "arabic": "سَنَة",
+      "arabicBare": "سنة",
+      "meaning": "year",
+      "transliteration": "sana",
+      "ipa": "/sa.na/",
+      "sceneIds": [],
+      "swadeshNo": 179,
+      "quranFrequency": 16,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 1939,
+      "msaGloss": "Sunna (orthodox Islam; body of Islamic law; customary procedure)",
+      "phrases": [
+        {
+          "arabic": "سنة سنوات",
+          "transliteration": "_____ ( (sanah (sanooaat",
+          "meaning": "_____ year(s)",
+          "category": "duration"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "دافئ",
+      "arabic": "دَافِئ",
+      "arabicBare": "دافئ",
+      "meaning": "warm",
+      "transliteration": "dāfiʔ",
+      "ipa": "/daː.fiʔ/",
+      "sceneIds": [],
+      "swadeshNo": 180,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 3377,
+      "msaGloss": "warm",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "ممتلئ",
+      "arabic": "مُمْتَلِئ",
+      "arabicBare": "ممتلئ",
+      "meaning": "full",
+      "transliteration": "mumtaliʔ",
+      "ipa": "/mum.ta.liʔ/",
+      "sceneIds": [],
+      "swadeshNo": 182,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "جديد",
+      "arabic": "جَدِيد",
+      "arabicBare": "جديد",
+      "meaning": "new",
+      "transliteration": "jadīd",
+      "ipa": "/d͡ʒa.diːd/",
+      "sceneIds": [],
+      "swadeshNo": 183,
+      "quranFrequency": 8,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "قديم",
+      "arabic": "قَدِيم",
+      "arabicBare": "قديم",
+      "meaning": "old",
+      "transliteration": "qadīm",
+      "ipa": "/qa.diːm/",
+      "sceneIds": [],
+      "swadeshNo": 184,
+      "quranFrequency": 3,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "طيب",
+      "arabic": "طَيِّب",
+      "arabicBare": "طيب",
+      "meaning": "good",
+      "transliteration": "ṭayyib",
+      "ipa": "/tˤaj.jib/",
+      "sceneIds": [],
+      "swadeshNo": 185,
+      "quranFrequency": 8,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": 222,
+      "msaGloss": "good, nice; pleasant; delicious; OK",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "سيئ",
+      "arabic": "سَيِّئ",
+      "arabicBare": "سيئ",
+      "meaning": "bad",
+      "transliteration": "sayyiʔ",
+      "ipa": "/saj.jiʔ/",
+      "sceneIds": [],
+      "swadeshNo": 186,
+      "quranFrequency": 3,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "متعفن",
+      "arabic": "مُتَعَفِّن",
+      "arabicBare": "متعفن",
+      "meaning": "rotten",
+      "transliteration": "mutaʕaffin",
+      "ipa": "/mu.ta.ʕaf.fin/",
+      "sceneIds": [],
+      "swadeshNo": 187,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "قذر",
+      "arabic": "قَذِر",
+      "arabicBare": "قذر",
+      "meaning": "dirty",
+      "transliteration": "qaḏir",
+      "ipa": "/qa.ðir/",
+      "sceneIds": [],
+      "swadeshNo": 188,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "مستقيم",
+      "arabic": "مُسْتَقِيم",
+      "arabicBare": "مستقيم",
+      "meaning": "straight",
+      "transliteration": "mustaqīm",
+      "ipa": "/mus.ta.qiːm/",
+      "sceneIds": [],
+      "swadeshNo": 189,
+      "quranFrequency": 23,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 5267,
+      "msaGloss": "straight, correct; righteous",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "مستدير",
+      "arabic": "مُسْتَدِير",
+      "arabicBare": "مستدير",
+      "meaning": "round",
+      "transliteration": "mustadīr",
+      "ipa": "/mus.ta.diːr/",
+      "sceneIds": [],
+      "swadeshNo": 190,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "حاد",
+      "arabic": "حَادّ",
+      "arabicBare": "حاد",
+      "meaning": "sharp (as a knife)",
+      "transliteration": "ḥādd",
+      "ipa": "/ħaːdd/",
+      "sceneIds": [],
+      "swadeshNo": 191,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 1855,
+      "msaGloss": "sharp, intense",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "ثلم",
+      "arabic": "ثَلِم",
+      "arabicBare": "ثلم",
+      "meaning": "dull (as a knife)",
+      "transliteration": "ṯalim",
+      "ipa": "/θa.lim/",
+      "sceneIds": [],
+      "swadeshNo": 192,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh"
+      ]
+    },
+    {
+      "id": "ناعم",
+      "arabic": "نَاعِم",
+      "arabicBare": "ناعم",
+      "meaning": "smooth",
+      "transliteration": "nāʕim",
+      "ipa": "/naː.ʕim/",
+      "sceneIds": [],
+      "swadeshNo": 193,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2779,
+      "msaGloss": "smooth, soft; dainty",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "رطب",
+      "arabic": "رَطْب",
+      "arabicBare": "رطب",
+      "meaning": "wet",
+      "transliteration": "raṭb",
+      "ipa": "/ratˤb/",
+      "sceneIds": [],
+      "swadeshNo": 194,
+      "quranFrequency": 1,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "جاف",
+      "arabic": "جَافّ",
+      "arabicBare": "جاف",
+      "meaning": "dry",
+      "transliteration": "jāff",
+      "ipa": "/d͡ʒaːff/",
+      "sceneIds": [],
+      "swadeshNo": 195,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 3896,
+      "msaGloss": "dry",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "صحيح",
+      "arabic": "صَحِيح",
+      "arabicBare": "صحيح",
+      "meaning": "correct",
+      "transliteration": "ṣaḥīḥ",
+      "ipa": "/sˤa.ħiːħ/",
+      "sceneIds": [],
+      "swadeshNo": 196,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 463,
+      "msaGloss": "true, correct; sound, healthy; authentic (Hadith); yes, right",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "قريب",
+      "arabic": "قَرِيب",
+      "arabicBare": "قريب",
+      "meaning": "near",
+      "transliteration": "qarīb",
+      "ipa": "/qa.riːb/",
+      "sceneIds": [],
+      "swadeshNo": 197,
+      "quranFrequency": 15,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": 587,
+      "msaGloss": "near, close; related",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "بعيد",
+      "arabic": "بَعِيد",
+      "arabicBare": "بعيد",
+      "meaning": "far",
+      "transliteration": "baʕīd",
+      "ipa": "/ba.ʕiːd/",
+      "sceneIds": [],
+      "swadeshNo": 198,
+      "quranFrequency": 20,
+      "quranPos": "adjective",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    },
+    {
+      "id": "يمين",
+      "arabic": "يَمِين",
+      "arabicBare": "يمين",
+      "meaning": "right",
+      "transliteration": "yamīn",
+      "ipa": "/ja.miːn/",
+      "sceneIds": [],
+      "swadeshNo": 199,
+      "quranFrequency": 65,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [
+        {
+          "arabic": "لف يمين",
+          "transliteration": "lif yameen",
+          "meaning": "Turn right",
+          "category": "directions"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "شمال",
+      "arabic": "شِمَال",
+      "arabicBare": "شمال",
+      "meaning": "left",
+      "transliteration": "šimāl",
+      "ipa": "/ʃi.maːl/",
+      "sceneIds": [],
+      "swadeshNo": 200,
+      "quranFrequency": 8,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": 755,
+      "msaGloss": "north; northern",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "عند",
+      "arabic": "عِنْدَ",
+      "arabicBare": "عند",
+      "meaning": "at",
+      "transliteration": "ʕinda",
+      "ipa": "/ʕin.da/",
+      "sceneIds": [],
+      "swadeshNo": 201,
+      "quranFrequency": 160,
+      "quranPos": "location adverb",
+      "quranLemma": null,
+      "msaRank": 62,
+      "msaGloss": "with, next to; at (time, location); (to have)",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "في",
+      "arabic": "فِي",
+      "arabicBare": "في",
+      "meaning": "in",
+      "transliteration": "fī",
+      "ipa": "/fiː/",
+      "sceneIds": [],
+      "swadeshNo": 202,
+      "quranFrequency": 1701,
+      "quranPos": "preposition",
+      "quranLemma": null,
+      "msaRank": 3,
+      "msaGloss": "in, inside; on (a date); at (a time); about (a topic); among (with pl pronoun) فيكم among you all; could (in requests) هل فينا أنْ could we…?",
+      "phrases": [
+        {
+          "arabic": "أنا اشتغل في أعمل في",
+          "transliteration": "Ana ashtaghel fi _____ / a'mal fi _____ _____",
+          "meaning": "I work at the _____.",
+          "category": "useful \"i\"s"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "مع",
+      "arabic": "مَعَ",
+      "arabicBare": "مع",
+      "meaning": "with",
+      "transliteration": "maʕa",
+      "ipa": "/ma.ʕa/",
+      "sceneIds": [],
+      "swadeshNo": 203,
+      "quranFrequency": 159,
+      "quranPos": "location adverb",
+      "quranLemma": null,
+      "msaRank": 24,
+      "msaGloss": "with",
+      "phrases": [
+        {
+          "arabic": "مع السلامة",
+          "transliteration": "ma`a as-salaamah",
+          "meaning": "Goodbye",
+          "category": "basics"
+        },
+        {
+          "arabic": "اُوريد أن أتكام مع السفار قنصلية الأمريكية أسترالية بريطانية الكندية",
+          "transliteration": "/ / / / (arid an atakalam ma al safara/qunsiluya al amirkiyah/australiyah/britanniyah/kanadiyah",
+          "meaning": "I want to talk to the American/Australian/British/Canadian embassy/consulate.",
+          "category": "authority"
+        },
+        {
+          "arabic": "أريد التحدوث مع محامي",
+          "transliteration": "arid altahaduth ma muhami",
+          "meaning": "I want to talk to a lawyer.",
+          "category": "authority"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "و",
+      "arabic": "وَ",
+      "arabicBare": "و",
+      "meaning": "and",
+      "transliteration": "wa",
+      "ipa": "/wa/",
+      "sceneIds": [],
+      "swadeshNo": 204,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 2,
+      "msaGloss": "and; with",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "لو",
+      "arabic": "لَوْ",
+      "arabicBare": "لو",
+      "meaning": "if",
+      "transliteration": "law",
+      "ipa": "/law/",
+      "sceneIds": [],
+      "swadeshNo": 205,
+      "quranFrequency": 184,
+      "quranPos": "conditional particle",
+      "quranLemma": null,
+      "msaRank": 151,
+      "msaGloss": "if",
+      "phrases": [
+        {
+          "arabic": "لَوْ سَمَحْتَ لَوْ سَمَحْتِ",
+          "transliteration": "law samaḥta (to male): law samaḥti (to female",
+          "meaning": "Excuse me. (getting attention)",
+          "category": "basics"
+        }
+      ],
+      "sources": [
+        "swadesh",
+        "quran-lemmas",
+        "msa-glosses",
+        "wikivoyage-msa"
+      ]
+    },
+    {
+      "id": "لان",
+      "arabic": "لِأَنَّ",
+      "arabicBare": "لان",
+      "meaning": "because",
+      "transliteration": "liʔanna",
+      "ipa": "/li.ʔan.na/",
+      "sceneIds": [],
+      "swadeshNo": 206,
+      "quranFrequency": null,
+      "quranPos": null,
+      "quranLemma": null,
+      "msaRank": 18,
+      "msaGloss": "in order to",
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "msa-glosses"
+      ]
+    },
+    {
+      "id": "اسم",
+      "arabic": "اِسْم",
+      "arabicBare": "اسم",
+      "meaning": "name",
+      "transliteration": "ism",
+      "ipa": "/ism/",
+      "sceneIds": [],
+      "swadeshNo": 207,
+      "quranFrequency": 39,
+      "quranPos": "noun",
+      "quranLemma": null,
+      "msaRank": null,
+      "msaGloss": null,
+      "phrases": [],
+      "sources": [
+        "swadesh",
+        "quran-lemmas"
+      ]
+    }
+  ]
+}

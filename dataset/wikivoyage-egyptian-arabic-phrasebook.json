@@ -1,0 +1,1667 @@
+{
+  "id": "wikivoyage-egyptian-arabic-phrasebook",
+  "title": "Wikivoyage Egyptian Arabic phrasebook",
+  "description": "Cairene Egyptian Arabic travel phrases with gender variants, numbers, time, colors, and directions. The most widely understood spoken variety in the Arab world.",
+  "source": {
+    "retrievedAt": "2026-08-16",
+    "name": "Wikivoyage",
+    "url": "https://en.wikivoyage.org/wiki/Egyptian_Arabic_phrasebook",
+    "license": "CC BY-SA 4.0"
+  },
+  "context": {
+    "variety": "Egyptian Arabic (Cairo)",
+    "kind": "phrasebook",
+    "notes": "Pronunciation follows metropolitan Cairo. Many lines include masculine, feminine, and plural forms. qāf is usually a glottal stop. Useful as a spoken counterpart to the MSA phrasebook."
+  },
+  "wordCount": 206,
+  "entries": [
+    {
+      "rank": 1,
+      "category": "basics",
+      "meaning": "Hello (peace be upon you)",
+      "arabic": "السلام عليكو",
+      "transliteration": "es-salāmu ` alēku",
+      "kind": "phrase"
+    },
+    {
+      "rank": 2,
+      "category": "basics",
+      "meaning": "| Hello (informal)",
+      "arabic": "أهلاً",
+      "transliteration": "ahlan",
+      "kind": "word"
+    },
+    {
+      "rank": 3,
+      "category": "basics",
+      "meaning": "| Good morning",
+      "arabic": "صباح الخير",
+      "transliteration": "SàbâH el khēr",
+      "kind": "phrase"
+    },
+    {
+      "rank": 4,
+      "category": "basics",
+      "meaning": "| Good evening",
+      "arabic": "مساء الخير",
+      "transliteration": "masā ’ el khēr",
+      "kind": "phrase"
+    },
+    {
+      "rank": 5,
+      "category": "basics",
+      "meaning": "Good night (to sleep)",
+      "arabic": "تصبح على خير تصبحى على خير تصبحو على خير",
+      "transliteration": "teSbàH ` ala khēr (to a male) | teSbàHi ` ala khēr (to a female) | teSbàHu ` ala khēr (to a group)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 6,
+      "category": "basics",
+      "meaning": "How are you?",
+      "arabic": "إزيك إزيك إزيكو إزى حدرتك",
+      "transliteration": "ezzayyak? (to a male) | ezzayyek? (to a female) | ezzayyoku? (to a group) | ezzayye Hàdretàk? (to an elder; Hàdretek: female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 7,
+      "category": "basics",
+      "meaning": "Fine, thank you.",
+      "arabic": "كويس شكرا كويسة شكرا كويسين شكراً الحمد لله",
+      "transliteration": "kowayyes shokràn (male) | kowayyesa shokràn (female) | kowayyesīn shokràn (group) | A far more common response to the question \"how are you\" is simply to thank God - el Hamde&nbsp; lellā",
+      "kind": "phrase"
+    },
+    {
+      "rank": 8,
+      "category": "basics",
+      "meaning": "What is your name?",
+      "arabic": "إسمك ايه؟ إسمك ايه؟",
+      "transliteration": "esmak ēh? (to a male) | esmek ēh? (to a female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 9,
+      "category": "basics",
+      "meaning": "| My name is ______",
+      "arabic": "إسمى",
+      "transliteration": "esmi ______",
+      "kind": "word"
+    },
+    {
+      "rank": 10,
+      "category": "basics",
+      "meaning": "Please.",
+      "arabic": "من فضلك من فضلك من فضلكو",
+      "transliteration": "men fàDlàk (to a male) | men fàDlek (to a female) | men fàDloku (to a group)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 11,
+      "category": "basics",
+      "meaning": "| Thank you",
+      "arabic": "شكراً",
+      "transliteration": "shokràn",
+      "kind": "word"
+    },
+    {
+      "rank": 12,
+      "category": "basics",
+      "meaning": "| You're welcome",
+      "arabic": "العفو",
+      "transliteration": "el ` afw",
+      "kind": "word"
+    },
+    {
+      "rank": 13,
+      "category": "basics",
+      "meaning": "| Yes",
+      "arabic": "أيوا",
+      "transliteration": "aywa",
+      "kind": "word"
+    },
+    {
+      "rank": 14,
+      "category": "basics",
+      "meaning": "| No",
+      "arabic": "لا",
+      "transliteration": "la&nbsp;",
+      "kind": "word"
+    },
+    {
+      "rank": 15,
+      "category": "basics",
+      "meaning": "Excuse me. (getting attention)",
+      "arabic": "من فضلك من فضلك من فضلكو",
+      "transliteration": "men fàdlàk (to a male) | men fàdlek (to a female) | men fàdloku (to a group)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 16,
+      "category": "basics",
+      "meaning": "Excuse me. (avoiding offence)",
+      "arabic": "بعد إذنك بعد إذنك بعد إذنكو",
+      "transliteration": "ba ` de &nbsp;eznak (to a male) | ba ` de &nbsp;eznek (to a female) | ba ` de &nbsp;eznoku (to a group)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 17,
+      "category": "basics",
+      "meaning": "| Excuse me. (begging pardon)",
+      "arabic": "لا مؤاخذة",
+      "transliteration": "la mo ’ akhza",
+      "kind": "phrase"
+    },
+    {
+      "rank": 18,
+      "category": "basics",
+      "meaning": "I'm sorry",
+      "arabic": "أنا آسف أنا أسفة",
+      "transliteration": "ana āsef (male) | ana asfa (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 19,
+      "category": "basics",
+      "meaning": "| Goodbye",
+      "arabic": "مع السلامة",
+      "transliteration": "ma ` as-salāma",
+      "kind": "phrase"
+    },
+    {
+      "rank": 20,
+      "category": "basics",
+      "meaning": "| Goodbye (informal)",
+      "arabic": "سلام",
+      "transliteration": "salām",
+      "kind": "word"
+    },
+    {
+      "rank": 21,
+      "category": "basics",
+      "meaning": "| I can't speak Arabic well",
+      "arabic": "مش بتكلم عربى كويس",
+      "transliteration": "mesh batkallem ` arabi kwayyes",
+      "kind": "phrase"
+    },
+    {
+      "rank": 22,
+      "category": "basics",
+      "meaning": "Do you speak English?",
+      "arabic": "بتتكلم إنجليزى؟ بتتكلمى إنجليزى؟",
+      "transliteration": "betetkallem engelīzi? (male) | betetkallemi engelīzi? (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 23,
+      "category": "basics",
+      "meaning": "| Is there someone here who speaks English?",
+      "arabic": "فيه حد هنا بيتكلم إنجليزى؟",
+      "transliteration": "fī Hadde&nbsp; hena beyetkallem engelīzi?",
+      "kind": "phrase"
+    },
+    {
+      "rank": 24,
+      "category": "basics",
+      "meaning": "| Help!",
+      "arabic": "إلحقونى",
+      "transliteration": "elHa ’ ūni!",
+      "kind": "word"
+    },
+    {
+      "rank": 25,
+      "category": "basics",
+      "meaning": "Look out!",
+      "arabic": "حاسب حاسبى حاسبو",
+      "transliteration": "Hāseb (to a male) | Hasbi (to a female) | Hasbu (to a group)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 26,
+      "category": "basics",
+      "meaning": "I don't understand.",
+      "arabic": "أنا مش فاهم أنا مش فاهمة",
+      "transliteration": "ana mesh fāhem (male) | ana mesh fahma (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 27,
+      "category": "basics",
+      "meaning": "Where is the toilet?",
+      "arabic": "فين الحمام؟",
+      "transliteration": "fēn el Hammām?",
+      "kind": "phrase"
+    },
+    {
+      "rank": 28,
+      "category": "problems",
+      "meaning": "Leave me alone.",
+      "arabic": "سيبنى سيبينى سيبونى",
+      "transliteration": "sebni! (to a male), | sibīni! ( to a female) | sibūni! (to a group)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 29,
+      "category": "problems",
+      "meaning": "Go away!",
+      "arabic": "إمشى إمشو",
+      "transliteration": "emshi! (to a male or a female) | emshu! (to a group)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 30,
+      "category": "problems",
+      "meaning": "Don't touch me!",
+      "arabic": "ما تلمسنيش ما تلمسينيش",
+      "transliteration": "matelmesnīsh! (to a male) | matelmesenīsh! (to a female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 31,
+      "category": "problems",
+      "meaning": "| I'll call the police",
+      "arabic": "أنا هكلم البوليس",
+      "transliteration": "ana hakallem el bulīs",
+      "kind": "phrase"
+    },
+    {
+      "rank": 32,
+      "category": "problems",
+      "meaning": "| Police!",
+      "arabic": "بوليس",
+      "transliteration": "bulīs!",
+      "kind": "word"
+    },
+    {
+      "rank": 33,
+      "category": "problems",
+      "meaning": "| Thief!",
+      "arabic": "حرامى",
+      "transliteration": "Hàrâmi!",
+      "kind": "word"
+    },
+    {
+      "rank": 34,
+      "category": "problems",
+      "meaning": "I need help.",
+      "arabic": "أنا محتاج مساعدة أنا محتاجة مساعدة",
+      "transliteration": "ana meHtāg mosa ` da (male speaking) | ana meHtāga mosa ` da (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 35,
+      "category": "problems",
+      "meaning": "| It's an emergency",
+      "arabic": "حالة طارئة",
+      "transliteration": "Hāla Tàr ’ à",
+      "kind": "phrase"
+    },
+    {
+      "rank": 36,
+      "category": "problems",
+      "meaning": "I'm lost.",
+      "arabic": "أنا تايه أنا تايهة",
+      "transliteration": "ana tāyeh (male speaking) | ana tayha (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 37,
+      "category": "problems",
+      "meaning": "| My purse/handbag was lost",
+      "arabic": "شنطيتى ضاعت",
+      "transliteration": "shànTeti Dâ ` et",
+      "kind": "phrase"
+    },
+    {
+      "rank": 38,
+      "category": "problems",
+      "meaning": "| My wallet was lost",
+      "arabic": "محفظتى ضاعت",
+      "transliteration": "màHfàZti Dâ ` et",
+      "kind": "phrase"
+    },
+    {
+      "rank": 39,
+      "category": "problems",
+      "meaning": "I'm sick.",
+      "arabic": "أنا مريض أنا مريضة",
+      "transliteration": "ana màrīD (male speaking) | ana màrīDà (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 40,
+      "category": "problems",
+      "meaning": "I'm injured.",
+      "arabic": "أنا مجروح أنا مجروحة",
+      "transliteration": "ana magrūH (male speaking) | ana magrūHa (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 41,
+      "category": "problems",
+      "meaning": "I need a doctor.",
+      "arabic": "أنا محتاج دكتور أنا محتاجة دكتور",
+      "transliteration": "ana meHtāg doktōr (male speaking) | ana meHtāga doktōr (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 42,
+      "category": "problems",
+      "meaning": "Can I use your phone?",
+      "arabic": "ممكن أتكلم من تيلفونك؟ ممكن أتكلم من تيلفونك؟ ممكن أتكلم من تيلفونكو؟",
+      "transliteration": "momken atkallem men telefōnak? (to a male) | momken atkallem men telefōnek? (to a female) | mumken atkallem men telefonku? (to a group)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 43,
+      "category": "problems",
+      "meaning": "May I use your cell phone?",
+      "arabic": "ممكن أتكلم من موبايلك؟ ممكن أتكلم من موبايلك؟ ممكن أتكلم من موبايلكو؟",
+      "transliteration": "momken atkallem men mobàylàk? (to a male) | momken atkallem men mobàylek? (to a female) | momken atkallem men mobàyloku? (to a group)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 44,
+      "category": "numbers",
+      "meaning": "{| class=\"wikitable\" style=\"text-align",
+      "arabic": null,
+      "transliteration": "center;\"",
+      "kind": "word"
+    },
+    {
+      "rank": 45,
+      "category": "numbers",
+      "meaning": "|- style=\"font-size",
+      "arabic": null,
+      "transliteration": "115%\"",
+      "kind": "word"
+    },
+    {
+      "rank": 46,
+      "category": "numbers",
+      "meaning": "! style=\"font-size",
+      "arabic": null,
+      "transliteration": "87%\"| Arabic Numerals",
+      "kind": "word"
+    },
+    {
+      "rank": 47,
+      "category": "numbers",
+      "meaning": "|- style=\"font-size",
+      "arabic": null,
+      "transliteration": "350%; font-family:'Times New Roman', 'Arabic Transparent', Arial, 'Simplified Arabic', Scheherazade, Lateef, 'Arabic Typesetting', serif; line-height:normal\"",
+      "kind": "word"
+    },
+    {
+      "rank": 48,
+      "category": "numbers",
+      "meaning": "! style=\"font-size",
+      "arabic": null,
+      "transliteration": "28.5%; font-family:sans-serif\" | Eastern Arabic numerals",
+      "kind": "word"
+    },
+    {
+      "rank": 49,
+      "category": "numbers",
+      "meaning": "0 ( ٠ )",
+      "arabic": "صفر زيرو",
+      "transliteration": "Sefr &nbsp; / &nbsp; zīru",
+      "kind": "phrase"
+    },
+    {
+      "rank": 50,
+      "category": "numbers",
+      "meaning": "| 1 ( ١ )",
+      "arabic": "واحد أول الأولى",
+      "transliteration": "wāHed &nbsp; — &nbsp; first: awwel &nbsp; — &nbsp; the first (definitive f.): el ūla",
+      "kind": "phrase"
+    },
+    {
+      "rank": 51,
+      "category": "numbers",
+      "meaning": "| 2 ( ٢ )",
+      "arabic": "إتنين تانى التانية",
+      "transliteration": "etnēn &nbsp; — &nbsp; second: tāni &nbsp; — &nbsp; second (definitive f.): et-tanya",
+      "kind": "phrase"
+    },
+    {
+      "rank": 52,
+      "category": "numbers",
+      "meaning": "| 3 ( ٣ )",
+      "arabic": "تلاتة تالت التالتة",
+      "transliteration": "talāta &nbsp; — &nbsp; third: tālet &nbsp; — &nbsp; third (definitive f.): et-talta",
+      "kind": "phrase"
+    },
+    {
+      "rank": 53,
+      "category": "numbers",
+      "meaning": "| 4 ( ٤ )",
+      "arabic": "أربعة رابع الرابعة",
+      "transliteration": "àrbà ` à &nbsp; — &nbsp; fourth: râbe ` &nbsp; &nbsp; — &nbsp; fourth (definitive f.): er-ràb ` à",
+      "kind": "phrase"
+    },
+    {
+      "rank": 54,
+      "category": "numbers",
+      "meaning": "| 5 ( ٥ )",
+      "arabic": "خمسة خامس الخامسة",
+      "transliteration": "khamsa &nbsp; — &nbsp; fifth: khāmes &nbsp; — &nbsp; fifth (definitive f.): el khamsa",
+      "kind": "phrase"
+    },
+    {
+      "rank": 55,
+      "category": "numbers",
+      "meaning": "| 6 ( ٦ )",
+      "arabic": "ستة سادس السادسة",
+      "transliteration": "setta &nbsp; — &nbsp; sixth: sādes &nbsp; — &nbsp; sixth (definitive f.): es-sadsa",
+      "kind": "phrase"
+    },
+    {
+      "rank": 56,
+      "category": "numbers",
+      "meaning": "| 7 ( ٧ )",
+      "arabic": "سبعة سابع السابعة",
+      "transliteration": "sab ` a &nbsp; — &nbsp; seventh: sābe ` &nbsp; &nbsp; — &nbsp; seventh (definitive f.): es-sab ` a",
+      "kind": "phrase"
+    },
+    {
+      "rank": 57,
+      "category": "numbers",
+      "meaning": "| 8 ( ٨ )",
+      "arabic": "تمانية تامن التامنة",
+      "transliteration": "tamanya &nbsp; — &nbsp; eighth: tāmen &nbsp; — &nbsp; eighth (definitive f.): et-tamna",
+      "kind": "phrase"
+    },
+    {
+      "rank": 58,
+      "category": "numbers",
+      "meaning": "| 9 ( ٩ )",
+      "arabic": "تسعة تاسع التاسعة",
+      "transliteration": "tes ` a &nbsp; — &nbsp; ninth: tāse ` &nbsp; &nbsp; — &nbsp; ninth (definitive f.): et-tas ` a",
+      "kind": "phrase"
+    },
+    {
+      "rank": 59,
+      "category": "numbers",
+      "meaning": "| 10 ( ١٠ )",
+      "arabic": "عشرة عاشر العاشرة",
+      "transliteration": "&nbsp; ` àshrà &nbsp; — &nbsp; tenth: &nbsp; ` āsher &nbsp; — &nbsp; tenth (definitive f.): el&nbsp; ` ashra",
+      "kind": "phrase"
+    },
+    {
+      "rank": 60,
+      "category": "numbers",
+      "meaning": "| 11 ( ١١ )",
+      "arabic": "حداشر",
+      "transliteration": "Hedâshàr",
+      "kind": "word"
+    },
+    {
+      "rank": 61,
+      "category": "numbers",
+      "meaning": "| 12 ( ١٢ )",
+      "arabic": "إتناشر",
+      "transliteration": "etnâshàr",
+      "kind": "word"
+    },
+    {
+      "rank": 62,
+      "category": "numbers",
+      "meaning": "| 13 ( ١٣ )",
+      "arabic": "تلاتاشر",
+      "transliteration": "tàlàttâshàr",
+      "kind": "word"
+    },
+    {
+      "rank": 63,
+      "category": "numbers",
+      "meaning": "| 14 ( ١٤ )",
+      "arabic": "أربعتاشر",
+      "transliteration": "àrbà ` tâshàr",
+      "kind": "word"
+    },
+    {
+      "rank": 64,
+      "category": "numbers",
+      "meaning": "| 15 ( ١٥ )",
+      "arabic": "خمستاشر",
+      "transliteration": "khàmàstâshàr",
+      "kind": "word"
+    },
+    {
+      "rank": 65,
+      "category": "numbers",
+      "meaning": "| 16 ( ١٦ )",
+      "arabic": "ستاشر",
+      "transliteration": "settâshàr",
+      "kind": "word"
+    },
+    {
+      "rank": 66,
+      "category": "numbers",
+      "meaning": "| 17 ( ١٧ )",
+      "arabic": "سبعتاشر",
+      "transliteration": "sàbà ` tâshàr",
+      "kind": "word"
+    },
+    {
+      "rank": 67,
+      "category": "numbers",
+      "meaning": "| 18 ( ١٨ )",
+      "arabic": "تمنتاشر",
+      "transliteration": "tàmàntâshàr",
+      "kind": "word"
+    },
+    {
+      "rank": 68,
+      "category": "numbers",
+      "meaning": "| 19 ( ١٩ )",
+      "arabic": "تسعتاشر",
+      "transliteration": "tesà ` tâshàr",
+      "kind": "word"
+    },
+    {
+      "rank": 69,
+      "category": "numbers",
+      "meaning": "| 20 ( ٢٠ )",
+      "arabic": "عشرين",
+      "transliteration": "&nbsp; ` eshrīn",
+      "kind": "word"
+    },
+    {
+      "rank": 70,
+      "category": "numbers",
+      "meaning": "| 21 ( ٢١ )",
+      "arabic": "واحد و عشرين",
+      "transliteration": "wāHed we- ` eshrīn",
+      "kind": "phrase"
+    },
+    {
+      "rank": 71,
+      "category": "numbers",
+      "meaning": "| 22 ( ٢٢ )",
+      "arabic": "إتنين و عشرين",
+      "transliteration": "etnēn we- ` eshrīn",
+      "kind": "phrase"
+    },
+    {
+      "rank": 72,
+      "category": "numbers",
+      "meaning": "| 23 ( ٢٣ )",
+      "arabic": "تلاتة و عشرين",
+      "transliteration": "talāta we- ` eshrīn",
+      "kind": "phrase"
+    },
+    {
+      "rank": 73,
+      "category": "numbers",
+      "meaning": "| 30 ( ٣٠ )",
+      "arabic": "تلاتين",
+      "transliteration": "talatīn",
+      "kind": "word"
+    },
+    {
+      "rank": 74,
+      "category": "numbers",
+      "meaning": "| 40 ( ٤٠ )",
+      "arabic": "أربعين",
+      "transliteration": "arbe ` īn",
+      "kind": "word"
+    },
+    {
+      "rank": 75,
+      "category": "numbers",
+      "meaning": "| 50 ( ٥٠ )",
+      "arabic": "خمسين",
+      "transliteration": "khamsīn",
+      "kind": "word"
+    },
+    {
+      "rank": 76,
+      "category": "numbers",
+      "meaning": "| 60 ( ٦٠ )",
+      "arabic": "ستين",
+      "transliteration": "settīn",
+      "kind": "word"
+    },
+    {
+      "rank": 77,
+      "category": "numbers",
+      "meaning": "| 70 ( ٧٠ )",
+      "arabic": "سبعين",
+      "transliteration": "sab ` īn",
+      "kind": "word"
+    },
+    {
+      "rank": 78,
+      "category": "numbers",
+      "meaning": "| 80 ( ٨٠ )",
+      "arabic": "تمانين",
+      "transliteration": "tamanīn",
+      "kind": "word"
+    },
+    {
+      "rank": 79,
+      "category": "numbers",
+      "meaning": "| 90 ( ٩٠ )",
+      "arabic": "تسعين",
+      "transliteration": "tes ` īn",
+      "kind": "word"
+    },
+    {
+      "rank": 80,
+      "category": "numbers",
+      "meaning": "| 100 ( ١٠٠ )",
+      "arabic": "مية",
+      "transliteration": "meyya",
+      "kind": "word"
+    },
+    {
+      "rank": 81,
+      "category": "numbers",
+      "meaning": "| 200 ( ٢٠٠ )",
+      "arabic": "متين",
+      "transliteration": "metēn",
+      "kind": "word"
+    },
+    {
+      "rank": 82,
+      "category": "numbers",
+      "meaning": "| 300 ( ٣٠٠ )",
+      "arabic": "تلتمية",
+      "transliteration": "toltomeyya",
+      "kind": "word"
+    },
+    {
+      "rank": 83,
+      "category": "numbers",
+      "meaning": "| 400 ( ٤٠٠ )",
+      "arabic": "ربعميه",
+      "transliteration": "rob ` omeyya",
+      "kind": "word"
+    },
+    {
+      "rank": 84,
+      "category": "numbers",
+      "meaning": "| 500 ( ٥٠٠ )",
+      "arabic": "خمسميه",
+      "transliteration": "khomsomeyya",
+      "kind": "word"
+    },
+    {
+      "rank": 85,
+      "category": "numbers",
+      "meaning": "| 600 ( ٦٠٠ )",
+      "arabic": "ستميه",
+      "transliteration": "sottomeyya",
+      "kind": "word"
+    },
+    {
+      "rank": 86,
+      "category": "numbers",
+      "meaning": "| 700 ( ٧٠٠ )",
+      "arabic": "سبعميه",
+      "transliteration": "sob ` omeyya",
+      "kind": "word"
+    },
+    {
+      "rank": 87,
+      "category": "numbers",
+      "meaning": "| 800 ( ٨٠٠ )",
+      "arabic": "تمنميه",
+      "transliteration": "tomnomeyya",
+      "kind": "word"
+    },
+    {
+      "rank": 88,
+      "category": "numbers",
+      "meaning": "| 900 ( ٩٠٠ )",
+      "arabic": "تسعميه",
+      "transliteration": "tos ` omeyya",
+      "kind": "word"
+    },
+    {
+      "rank": 89,
+      "category": "numbers",
+      "meaning": "| 1,000 ( ١،٠٠٠ )",
+      "arabic": "ألف",
+      "transliteration": "alf",
+      "kind": "word"
+    },
+    {
+      "rank": 90,
+      "category": "numbers",
+      "meaning": "| 2,000 ( ٢،٠٠٠ )",
+      "arabic": "ألفين",
+      "transliteration": "alfēn",
+      "kind": "word"
+    },
+    {
+      "rank": 91,
+      "category": "numbers",
+      "meaning": "| 3,000 ( ٣،٠٠٠ )",
+      "arabic": "تلاتلاف",
+      "transliteration": "talattalāf",
+      "kind": "word"
+    },
+    {
+      "rank": 92,
+      "category": "numbers",
+      "meaning": "| 4,000 ( ٤،٠٠٠ )",
+      "arabic": "أربعتلاف",
+      "transliteration": "àrbà ` talāf",
+      "kind": "word"
+    },
+    {
+      "rank": 93,
+      "category": "numbers",
+      "meaning": "| 5,000 ( ٥،٠٠٠ )",
+      "arabic": "خمستلاف",
+      "transliteration": "khamastalāf",
+      "kind": "word"
+    },
+    {
+      "rank": 94,
+      "category": "numbers",
+      "meaning": "| 6,000 ( ٦،٠٠٠ )",
+      "arabic": "ستلاف",
+      "transliteration": "settalāf",
+      "kind": "word"
+    },
+    {
+      "rank": 95,
+      "category": "numbers",
+      "meaning": "| 7,000 ( ٧،٠٠٠ )",
+      "arabic": "سبعتلاف",
+      "transliteration": "saba ` talāf",
+      "kind": "word"
+    },
+    {
+      "rank": 96,
+      "category": "numbers",
+      "meaning": "| 8,000 ( ٨،٠٠٠ )",
+      "arabic": "تمنتلاف",
+      "transliteration": "tamantalāf",
+      "kind": "word"
+    },
+    {
+      "rank": 97,
+      "category": "numbers",
+      "meaning": "| 9,000 ( ٩،٠٠٠ )",
+      "arabic": "تسعتلاف",
+      "transliteration": "tesa ` talāf",
+      "kind": "word"
+    },
+    {
+      "rank": 98,
+      "category": "numbers",
+      "meaning": "| 10,000 ( ١٠،٠٠٠ )",
+      "arabic": "عشرتلاف",
+      "transliteration": "&nbsp; ` àshàrtalāf",
+      "kind": "word"
+    },
+    {
+      "rank": 99,
+      "category": "numbers",
+      "meaning": "| 11,000 ( ١١،٠٠٠ )",
+      "arabic": "حداشر ألف",
+      "transliteration": "Hedâshàr alf",
+      "kind": "phrase"
+    },
+    {
+      "rank": 100,
+      "category": "numbers",
+      "meaning": "| 100,000 ( ١٠٠،٠٠٠ )",
+      "arabic": "ميت ألف",
+      "transliteration": "mīt alf",
+      "kind": "phrase"
+    },
+    {
+      "rank": 101,
+      "category": "numbers",
+      "meaning": "| 200,000 ( ٢٠٠،٠٠٠ )",
+      "arabic": "ميتين ألف",
+      "transliteration": "metēn alf",
+      "kind": "phrase"
+    },
+    {
+      "rank": 102,
+      "category": "numbers",
+      "meaning": "| 300,000 ( ٣٠٠،٠٠٠ )",
+      "arabic": "تلتميت ألف",
+      "transliteration": "toltomīt alf",
+      "kind": "phrase"
+    },
+    {
+      "rank": 103,
+      "category": "numbers",
+      "meaning": "| 400,000 ( ٤٠٠،٠٠٠ )",
+      "arabic": "ربعميت ألف",
+      "transliteration": "rob`omīt alf",
+      "kind": "phrase"
+    },
+    {
+      "rank": 104,
+      "category": "numbers",
+      "meaning": "| 1,000,000 ( ١،٠٠٠،٠٠٠ )",
+      "arabic": "مليون",
+      "transliteration": "melyōn",
+      "kind": "word"
+    },
+    {
+      "rank": 105,
+      "category": "numbers",
+      "meaning": "| 2,000,000 ( ٢،٠٠٠،٠٠٠ )",
+      "arabic": "إتنين مليون",
+      "transliteration": "etnēn melyōn",
+      "kind": "phrase"
+    },
+    {
+      "rank": 106,
+      "category": "numbers",
+      "meaning": "| 1,000,000,000 ( ١،٠٠٠،٠٠٠،٠٠٠ )",
+      "arabic": "مليار بليون",
+      "transliteration": "melyâr &nbsp; / &nbsp; belyōn",
+      "kind": "phrase"
+    },
+    {
+      "rank": 107,
+      "category": "numbers",
+      "meaning": "| 2,000,000,000 ( ٢،٠٠٠،٠٠٠،٠٠٠ )",
+      "arabic": "إتنين مليار إتنين بليون",
+      "transliteration": "etnēn melyâr &nbsp; / &nbsp; etnēn belyōn",
+      "kind": "phrase"
+    },
+    {
+      "rank": 108,
+      "category": "numbers",
+      "meaning": "| 100.6 ( ١٠٠,٦ )",
+      "arabic": "مية فصلة ستة",
+      "transliteration": "meyya fàSlà setta",
+      "kind": "phrase"
+    },
+    {
+      "rank": 109,
+      "category": "numbers",
+      "meaning": "| 1,000.63 ( ١،٠٠٠,٦٣ )",
+      "arabic": "ألف فاصل ستة تلاتة",
+      "transliteration": "alfe fâSel setta talāta",
+      "kind": "phrase"
+    },
+    {
+      "rank": 110,
+      "category": "numbers",
+      "meaning": "| number",
+      "arabic": "نمرة رقم",
+      "transliteration": "nemra &nbsp; / &nbsp; ràqàm",
+      "kind": "phrase"
+    },
+    {
+      "rank": 111,
+      "category": "numbers",
+      "meaning": "| half",
+      "arabic": "نص",
+      "transliteration": "noSS",
+      "kind": "word"
+    },
+    {
+      "rank": 112,
+      "category": "numbers",
+      "meaning": "| less",
+      "arabic": "أقل",
+      "transliteration": "a ’ all",
+      "kind": "word"
+    },
+    {
+      "rank": 113,
+      "category": "numbers",
+      "meaning": "| more",
+      "arabic": "أكتر",
+      "transliteration": "àktàr",
+      "kind": "word"
+    },
+    {
+      "rank": 114,
+      "category": "time",
+      "meaning": "| now",
+      "arabic": "دلوقتى",
+      "transliteration": "delwa ’ ti",
+      "kind": "word"
+    },
+    {
+      "rank": 115,
+      "category": "time",
+      "meaning": "| later",
+      "arabic": "بعدين",
+      "transliteration": "ba ` dēn",
+      "kind": "word"
+    },
+    {
+      "rank": 116,
+      "category": "time",
+      "meaning": "| before",
+      "arabic": "قبل",
+      "transliteration": "abl",
+      "kind": "word"
+    },
+    {
+      "rank": 117,
+      "category": "time",
+      "meaning": "| after",
+      "arabic": "بعد",
+      "transliteration": "ba ` d",
+      "kind": "word"
+    },
+    {
+      "rank": 118,
+      "category": "time",
+      "meaning": "| sunrise",
+      "arabic": "الشروق",
+      "transliteration": "esh-shorū ’ &nbsp;",
+      "kind": "word"
+    },
+    {
+      "rank": 119,
+      "category": "time",
+      "meaning": "| morning",
+      "arabic": "صبح",
+      "transliteration": "SobH",
+      "kind": "word"
+    },
+    {
+      "rank": 120,
+      "category": "time",
+      "meaning": "| in the morning",
+      "arabic": "الصبح",
+      "transliteration": "es-SobH",
+      "kind": "word"
+    },
+    {
+      "rank": 121,
+      "category": "time",
+      "meaning": "| noon",
+      "arabic": "الضهر",
+      "transliteration": "ed-dohr",
+      "kind": "word"
+    },
+    {
+      "rank": 122,
+      "category": "time",
+      "meaning": "| in the noon",
+      "arabic": "فى الضهر",
+      "transliteration": "fed-dohr",
+      "kind": "phrase"
+    },
+    {
+      "rank": 123,
+      "category": "time",
+      "meaning": "| afternoon",
+      "arabic": "العصر",
+      "transliteration": "el ` àSr",
+      "kind": "word"
+    },
+    {
+      "rank": 124,
+      "category": "time",
+      "meaning": "| in the afternoon",
+      "arabic": "فى العصر",
+      "transliteration": "fel ` àSr",
+      "kind": "phrase"
+    },
+    {
+      "rank": 125,
+      "category": "time",
+      "meaning": "| sunset",
+      "arabic": "الغروب",
+      "transliteration": "el ghorūb",
+      "kind": "word"
+    },
+    {
+      "rank": 126,
+      "category": "time",
+      "meaning": "| evening",
+      "arabic": "مسا مساء",
+      "transliteration": "mesa &nbsp;or&nbsp; masā ’ &nbsp;",
+      "kind": "phrase"
+    },
+    {
+      "rank": 127,
+      "category": "time",
+      "meaning": "| in the evening",
+      "arabic": "ع المسا",
+      "transliteration": "&nbsp; ` al mesa",
+      "kind": "phrase"
+    },
+    {
+      "rank": 128,
+      "category": "time",
+      "meaning": "| night",
+      "arabic": "ليلة",
+      "transliteration": "lēla",
+      "kind": "word"
+    },
+    {
+      "rank": 129,
+      "category": "time",
+      "meaning": "| in the night",
+      "arabic": "بلليل",
+      "transliteration": "bel-lēl",
+      "kind": "word"
+    },
+    {
+      "rank": 130,
+      "category": "time",
+      "meaning": "| dawn",
+      "arabic": "فجر",
+      "transliteration": "fagr",
+      "kind": "word"
+    },
+    {
+      "rank": 131,
+      "category": "time",
+      "meaning": "| in the dawn",
+      "arabic": "فى الفجر",
+      "transliteration": "fel fagr",
+      "kind": "phrase"
+    },
+    {
+      "rank": 132,
+      "category": "clock time",
+      "meaning": "| what time is it?",
+      "arabic": "الساعة كام؟",
+      "transliteration": "es-sā ` a kām?",
+      "kind": "phrase"
+    },
+    {
+      "rank": 133,
+      "category": "clock time",
+      "meaning": "| it is ___",
+      "arabic": "الساعة",
+      "transliteration": "es-sā ` a ___ ...‏",
+      "kind": "word"
+    },
+    {
+      "rank": 134,
+      "category": "clock time",
+      "meaning": "| it is 3 o'clock",
+      "arabic": "الساعة تلاتة بالظبط",
+      "transliteration": "es-sā ` a talāta (bezZàbt) ( )‏",
+      "kind": "phrase"
+    },
+    {
+      "rank": 135,
+      "category": "clock time",
+      "meaning": "| quarter past",
+      "arabic": "و ربع",
+      "transliteration": "we rob ` &nbsp;",
+      "kind": "phrase"
+    },
+    {
+      "rank": 136,
+      "category": "clock time",
+      "meaning": "| quarter to",
+      "arabic": "إلا ربع",
+      "transliteration": "ella rob ` &nbsp;",
+      "kind": "phrase"
+    },
+    {
+      "rank": 137,
+      "category": "clock time",
+      "meaning": "| half past",
+      "arabic": "و نص",
+      "transliteration": "we noSS",
+      "kind": "phrase"
+    },
+    {
+      "rank": 138,
+      "category": "clock time",
+      "meaning": "| it is half past 3",
+      "arabic": "الساعة تلاتة و نص",
+      "transliteration": "es-sā ` a talāta w-noSS",
+      "kind": "phrase"
+    },
+    {
+      "rank": 139,
+      "category": "days",
+      "meaning": "| Monday",
+      "arabic": "يوم الإتنين",
+      "transliteration": "yōm letnēn",
+      "kind": "phrase"
+    },
+    {
+      "rank": 140,
+      "category": "days",
+      "meaning": "| Tuesday",
+      "arabic": "يوم التلات",
+      "transliteration": "yōm et-talāt",
+      "kind": "phrase"
+    },
+    {
+      "rank": 141,
+      "category": "days",
+      "meaning": "| Wednesday",
+      "arabic": "يوم الأربع",
+      "transliteration": "yōm làrbà ` &nbsp;",
+      "kind": "phrase"
+    },
+    {
+      "rank": 142,
+      "category": "days",
+      "meaning": "| Thursday",
+      "arabic": "يوم الخميس",
+      "transliteration": "yōm el khamīs",
+      "kind": "phrase"
+    },
+    {
+      "rank": 143,
+      "category": "days",
+      "meaning": "| Friday",
+      "arabic": "يوم الجمعة",
+      "transliteration": "yōm el gom ` a",
+      "kind": "phrase"
+    },
+    {
+      "rank": 144,
+      "category": "days",
+      "meaning": "| Saturday",
+      "arabic": "يوم السبت",
+      "transliteration": "yōm es-sabt",
+      "kind": "phrase"
+    },
+    {
+      "rank": 145,
+      "category": "days",
+      "meaning": "| Sunday",
+      "arabic": "يوم الحد",
+      "transliteration": "yōm el Hadd",
+      "kind": "phrase"
+    },
+    {
+      "rank": 146,
+      "category": "months",
+      "meaning": "| January",
+      "arabic": "يناير",
+      "transliteration": "yanāyer",
+      "kind": "word"
+    },
+    {
+      "rank": 147,
+      "category": "months",
+      "meaning": "| February",
+      "arabic": "فبراير",
+      "transliteration": "febrâyer",
+      "kind": "word"
+    },
+    {
+      "rank": 148,
+      "category": "months",
+      "meaning": "| March",
+      "arabic": "مارس",
+      "transliteration": "māres",
+      "kind": "word"
+    },
+    {
+      "rank": 149,
+      "category": "months",
+      "meaning": "| April",
+      "arabic": "ابريل",
+      "transliteration": "ebrīl",
+      "kind": "word"
+    },
+    {
+      "rank": 150,
+      "category": "months",
+      "meaning": "| May",
+      "arabic": "مايو",
+      "transliteration": "māyu",
+      "kind": "word"
+    },
+    {
+      "rank": 151,
+      "category": "months",
+      "meaning": "| June",
+      "arabic": "يونيه",
+      "transliteration": "yonya",
+      "kind": "word"
+    },
+    {
+      "rank": 152,
+      "category": "months",
+      "meaning": "| July",
+      "arabic": "يوليه",
+      "transliteration": "yolya",
+      "kind": "word"
+    },
+    {
+      "rank": 153,
+      "category": "months",
+      "meaning": "| August",
+      "arabic": "اغسطس",
+      "transliteration": "aghosTos",
+      "kind": "word"
+    },
+    {
+      "rank": 154,
+      "category": "months",
+      "meaning": "| September",
+      "arabic": "سبتمبر",
+      "transliteration": "sebtamber",
+      "kind": "word"
+    },
+    {
+      "rank": 155,
+      "category": "months",
+      "meaning": "| October",
+      "arabic": "اُكتوبر",
+      "transliteration": "oktōbàr",
+      "kind": "word"
+    },
+    {
+      "rank": 156,
+      "category": "months",
+      "meaning": "| November",
+      "arabic": "نوفمبر",
+      "transliteration": "novamber",
+      "kind": "word"
+    },
+    {
+      "rank": 157,
+      "category": "months",
+      "meaning": "| December",
+      "arabic": "ديسمبر",
+      "transliteration": "desamber",
+      "kind": "word"
+    },
+    {
+      "rank": 158,
+      "category": "colors",
+      "meaning": "white",
+      "arabic": "أبيض",
+      "transliteration": "àbyàD",
+      "kind": "word"
+    },
+    {
+      "rank": 159,
+      "category": "colors",
+      "meaning": "| black",
+      "arabic": "إسود",
+      "transliteration": "eswed",
+      "kind": "word"
+    },
+    {
+      "rank": 160,
+      "category": "colors",
+      "meaning": "| gray",
+      "arabic": "رمادى",
+      "transliteration": "ràmâdi",
+      "kind": "word"
+    },
+    {
+      "rank": 161,
+      "category": "colors",
+      "meaning": "| silver",
+      "arabic": "فضى",
+      "transliteration": "faDDi",
+      "kind": "word"
+    },
+    {
+      "rank": 162,
+      "category": "colors",
+      "meaning": "| golden",
+      "arabic": "دهبى",
+      "transliteration": "dahabi",
+      "kind": "word"
+    },
+    {
+      "rank": 163,
+      "category": "colors",
+      "meaning": "| red",
+      "arabic": "أحمر",
+      "transliteration": "àHmàr",
+      "kind": "word"
+    },
+    {
+      "rank": 164,
+      "category": "colors",
+      "meaning": "| green",
+      "arabic": "أخضر",
+      "transliteration": "àkhDàr",
+      "kind": "word"
+    },
+    {
+      "rank": 165,
+      "category": "colors",
+      "meaning": "| blue",
+      "arabic": "أزرق",
+      "transliteration": "azra ’ &nbsp;",
+      "kind": "word"
+    },
+    {
+      "rank": 166,
+      "category": "colors",
+      "meaning": "| yellow",
+      "arabic": "أصفر",
+      "transliteration": "àSfàr",
+      "kind": "word"
+    },
+    {
+      "rank": 167,
+      "category": "colors",
+      "meaning": "| orange",
+      "arabic": "برتقانى",
+      "transliteration": "borto ’ âni",
+      "kind": "word"
+    },
+    {
+      "rank": 168,
+      "category": "colors",
+      "meaning": "| pink",
+      "arabic": "بمبى",
+      "transliteration": "bambi",
+      "kind": "word"
+    },
+    {
+      "rank": 169,
+      "category": "colors",
+      "meaning": "| brown",
+      "arabic": "بنى",
+      "transliteration": "bonni",
+      "kind": "word"
+    },
+    {
+      "rank": 170,
+      "category": "colors",
+      "meaning": "| violet",
+      "arabic": "بنفسجى",
+      "transliteration": "banafsegi",
+      "kind": "word"
+    },
+    {
+      "rank": 171,
+      "category": "colors",
+      "meaning": "| turquoise",
+      "arabic": "تركواز",
+      "transliteration": "terkewāz",
+      "kind": "word"
+    },
+    {
+      "rank": 172,
+      "category": "colors",
+      "meaning": "| honey",
+      "arabic": "عسلى",
+      "transliteration": "&nbsp; ` asali",
+      "kind": "word"
+    },
+    {
+      "rank": 173,
+      "category": "colors",
+      "meaning": "| Bluish green is turquoise",
+      "arabic": "أخضر مزرق يبقى تركواز",
+      "transliteration": "akhDar mezre ’ &nbsp; yeb ’ a terkewāz",
+      "kind": "phrase"
+    },
+    {
+      "rank": 174,
+      "category": "colors",
+      "meaning": "| A turquoise dress",
+      "arabic": "فستان تركواز",
+      "transliteration": "fostān terkewāz",
+      "kind": "phrase"
+    },
+    {
+      "rank": 175,
+      "category": "colors",
+      "meaning": "| A brown bag",
+      "arabic": "شنطة بنى",
+      "transliteration": "shànTà bonni",
+      "kind": "phrase"
+    },
+    {
+      "rank": 176,
+      "category": "colors",
+      "meaning": "| A silver watch",
+      "arabic": "ساعة فضى",
+      "transliteration": "sā ` a faDDi",
+      "kind": "phrase"
+    },
+    {
+      "rank": 177,
+      "category": "colors",
+      "meaning": "| A golden ring",
+      "arabic": "خاتم دهبى",
+      "transliteration": "khātem dahabi",
+      "kind": "phrase"
+    },
+    {
+      "rank": 178,
+      "category": "colors",
+      "meaning": "| Black hair",
+      "arabic": "شعر إسود",
+      "transliteration": "shà ` r eswed",
+      "kind": "phrase"
+    },
+    {
+      "rank": 179,
+      "category": "colors",
+      "meaning": "| Brown hair",
+      "arabic": "شعر بنى",
+      "transliteration": "shà ` re bonni",
+      "kind": "phrase"
+    },
+    {
+      "rank": 180,
+      "category": "colors",
+      "meaning": "| Brown eyes",
+      "arabic": "عيون بنى",
+      "transliteration": "&nbsp; ` eyūn bonni",
+      "kind": "phrase"
+    },
+    {
+      "rank": 181,
+      "category": "colors",
+      "meaning": "| Honey eyes",
+      "arabic": "عيون عسلى",
+      "transliteration": "&nbsp; ` eyūn &nbsp; ` asali",
+      "kind": "phrase"
+    },
+    {
+      "rank": 182,
+      "category": "colors",
+      "meaning": "| Yellow hair",
+      "arabic": "شعر أصفر",
+      "transliteration": "shà ` r àSfàr",
+      "kind": "phrase"
+    },
+    {
+      "rank": 183,
+      "category": "colors",
+      "meaning": "| White hair",
+      "arabic": "شعر أبيض",
+      "transliteration": "shà ` r àbyaD",
+      "kind": "phrase"
+    },
+    {
+      "rank": 184,
+      "category": "colors",
+      "meaning": "| Orange hair",
+      "arabic": "شعر برتقانى",
+      "transliteration": "shà ` re borto ’ âni",
+      "kind": "phrase"
+    },
+    {
+      "rank": 185,
+      "category": "colors",
+      "meaning": "| Green eyes",
+      "arabic": "عيون خضرة عيون خضر",
+      "transliteration": "&nbsp; ` eyūn khàDrà &nbsp; / &nbsp; &nbsp; ` eyūn khoDr",
+      "kind": "phrase"
+    },
+    {
+      "rank": 186,
+      "category": "colors",
+      "meaning": "| Blue eyes",
+      "arabic": "عيون زرقا عيون زرق",
+      "transliteration": "&nbsp; ` eyūn zar ’ a &nbsp; / &nbsp; &nbsp; ` eyūn zor ’ &nbsp;",
+      "kind": "phrase"
+    },
+    {
+      "rank": 187,
+      "category": "places",
+      "meaning": "| Airport",
+      "arabic": "مطار",
+      "transliteration": "màTâr",
+      "kind": "word"
+    },
+    {
+      "rank": 188,
+      "category": "places",
+      "meaning": "| Train station",
+      "arabic": "محطة القطر",
+      "transliteration": "màHàTtet el àTr",
+      "kind": "phrase"
+    },
+    {
+      "rank": 189,
+      "category": "places",
+      "meaning": "| Metro station",
+      "arabic": "محطة المترو",
+      "transliteration": "màHàTtet el metro",
+      "kind": "phrase"
+    },
+    {
+      "rank": 190,
+      "category": "places",
+      "meaning": "| Bus station",
+      "arabic": "محطة الاوتوبيس",
+      "transliteration": "màHàTtet el otobis",
+      "kind": "phrase"
+    },
+    {
+      "rank": 191,
+      "category": "places",
+      "meaning": "| Library",
+      "arabic": "مكتبة",
+      "transliteration": "maktaba",
+      "kind": "word"
+    },
+    {
+      "rank": 192,
+      "category": "places",
+      "meaning": "| School",
+      "arabic": "مدرسة",
+      "transliteration": "madrasa",
+      "kind": "word"
+    },
+    {
+      "rank": 193,
+      "category": "bus and train",
+      "meaning": "| Can I buy a ticket?",
+      "arabic": "ممكن أشترى تذكرة",
+      "transliteration": "momken ashteri tàzkàrà?",
+      "kind": "phrase"
+    },
+    {
+      "rank": 194,
+      "category": "bus and train",
+      "meaning": "I will step down in (Heliopolis)",
+      "arabic": "أنا نازل فى مصر الجديدة أنا نازلة فى مصر الجديدة",
+      "transliteration": "ana nāzel fe (màSr el gedīda) ( )‏ (male speaking) | ana nazla fe (màSr el gedīda) ( )‏ (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 195,
+      "category": "directions",
+      "meaning": "| front",
+      "arabic": "قدام",
+      "transliteration": "oddām",
+      "kind": "word"
+    },
+    {
+      "rank": 196,
+      "category": "directions",
+      "meaning": "| back",
+      "arabic": "ورا",
+      "transliteration": "wàrà",
+      "kind": "word"
+    },
+    {
+      "rank": 197,
+      "category": "directions",
+      "meaning": "| up",
+      "arabic": "فوق",
+      "transliteration": "fō ’ &nbsp;",
+      "kind": "word"
+    },
+    {
+      "rank": 198,
+      "category": "directions",
+      "meaning": "| down",
+      "arabic": "تحت",
+      "transliteration": "taHt",
+      "kind": "word"
+    },
+    {
+      "rank": 199,
+      "category": "directions",
+      "meaning": "| right",
+      "arabic": "يمين",
+      "transliteration": "yemīn",
+      "kind": "word"
+    },
+    {
+      "rank": 200,
+      "category": "directions",
+      "meaning": "| left",
+      "arabic": "شمال",
+      "transliteration": "shemāl",
+      "kind": "word"
+    },
+    {
+      "rank": 201,
+      "category": "directions",
+      "meaning": "north",
+      "arabic": "شمال",
+      "transliteration": "shamāl",
+      "kind": "word"
+    },
+    {
+      "rank": 202,
+      "category": "directions",
+      "meaning": "| south",
+      "arabic": "جنوب",
+      "transliteration": "ganūb",
+      "kind": "word"
+    },
+    {
+      "rank": 203,
+      "category": "directions",
+      "meaning": "| east",
+      "arabic": "شرق",
+      "transliteration": "shar ’ &nbsp;",
+      "kind": "word"
+    },
+    {
+      "rank": 204,
+      "category": "directions",
+      "meaning": "| west",
+      "arabic": "غرب",
+      "transliteration": "ghàrb",
+      "kind": "word"
+    },
+    {
+      "rank": 205,
+      "category": "directions",
+      "meaning": "compass",
+      "arabic": "بوصلة",
+      "transliteration": "boSlà",
+      "kind": "word"
+    },
+    {
+      "rank": 206,
+      "category": "taxi",
+      "meaning": "Can you drive me to (the hospital)?",
+      "arabic": "ممكن توصلنى المستشفى ؟",
+      "transliteration": "momken tewàSSàlni (el mostashfa)? ( )",
+      "kind": "phrase"
+    }
+  ]
+}

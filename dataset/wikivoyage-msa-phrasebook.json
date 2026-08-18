@@ -1,0 +1,3331 @@
+{
+  "id": "wikivoyage-msa-phrasebook",
+  "title": "Wikivoyage Modern Standard Arabic phrasebook",
+  "description": "Travel phrases, numbers, directions, food, lodging, and shopping vocabulary from the English Wikivoyage Arabic phrasebook. Aimed at getting by, not at MSA purity.",
+  "source": {
+    "retrievedAt": "2026-08-16",
+    "name": "Wikivoyage",
+    "url": "https://en.wikivoyage.org/wiki/Arabic_phrasebook",
+    "license": "CC BY-SA 4.0"
+  },
+  "context": {
+    "variety": "Modern Standard Arabic with some dialect notes",
+    "kind": "phrasebook",
+    "notes": "Wikivoyage warns that MSA and dialects are often mutually unintelligible in speech. Some entries mix Levantine or Egyptian forms (شوي شوي, على طول). Categories follow the page sections (basics, numbers, eating, taxi, etc.)."
+  },
+  "wordCount": 414,
+  "entries": [
+    {
+      "rank": 1,
+      "category": "phrase list",
+      "meaning": "CLOSED",
+      "arabic": "مغلق",
+      "transliteration": "(mughlaq)",
+      "kind": "word"
+    },
+    {
+      "rank": 2,
+      "category": "phrase list",
+      "meaning": "ENTRANCE",
+      "arabic": "دخول",
+      "transliteration": "(dukhuul)",
+      "kind": "word"
+    },
+    {
+      "rank": 3,
+      "category": "phrase list",
+      "meaning": "EXIT",
+      "arabic": "خروج",
+      "transliteration": "(khuruuj)",
+      "kind": "word"
+    },
+    {
+      "rank": 4,
+      "category": "phrase list",
+      "meaning": "PUSH",
+      "arabic": "ادفع",
+      "transliteration": "(idfa`)",
+      "kind": "word"
+    },
+    {
+      "rank": 5,
+      "category": "phrase list",
+      "meaning": "PULL",
+      "arabic": "اسحب",
+      "transliteration": "(isHab)",
+      "kind": "word"
+    },
+    {
+      "rank": 6,
+      "category": "phrase list",
+      "meaning": "TOILET",
+      "arabic": "حمام",
+      "transliteration": "(Hammaam)",
+      "kind": "word"
+    },
+    {
+      "rank": 7,
+      "category": "phrase list",
+      "meaning": "MEN",
+      "arabic": "رجال",
+      "transliteration": "(rijaal)",
+      "kind": "word"
+    },
+    {
+      "rank": 8,
+      "category": "phrase list",
+      "meaning": "WOMEN",
+      "arabic": "سيدات",
+      "transliteration": "(sayyidaat)",
+      "kind": "word"
+    },
+    {
+      "rank": 9,
+      "category": "phrase list",
+      "meaning": "FORBIDDEN",
+      "arabic": "ممنوع",
+      "transliteration": "(mamnuu`)}}",
+      "kind": "word"
+    },
+    {
+      "rank": 10,
+      "category": "basics",
+      "meaning": "Hello (informal)",
+      "arabic": "سَلاَم مَرْحَبًا",
+      "transliteration": "(salām), (marḥaban)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 11,
+      "category": "basics",
+      "meaning": "Peace be with you. (formal)",
+      "arabic": "السَّلَامُ عَلَيْكُمْ",
+      "transliteration": "('as-salaamu 'alaikum)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 12,
+      "category": "basics",
+      "meaning": "How are you?",
+      "arabic": "كيف حالك؟",
+      "transliteration": null,
+      "kind": "phrase"
+    },
+    {
+      "rank": 13,
+      "category": "basics",
+      "meaning": "Please.",
+      "arabic": "من فضلك",
+      "transliteration": "(min faDlak) (male)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 14,
+      "category": "basics",
+      "meaning": "Thank you very much!",
+      "arabic": "شُكْرًا جَزِيلًا",
+      "transliteration": "(shukran jazīlan)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 15,
+      "category": "basics",
+      "meaning": "Yes.",
+      "arabic": "نَعَمْ",
+      "transliteration": "na'am",
+      "kind": "word"
+    },
+    {
+      "rank": 16,
+      "category": "basics",
+      "meaning": "No.",
+      "arabic": "لا",
+      "transliteration": "laa",
+      "kind": "word"
+    },
+    {
+      "rank": 17,
+      "category": "basics",
+      "meaning": "Maybe.",
+      "arabic": "رُبَّمَا",
+      "transliteration": "(rubbamaa)",
+      "kind": "word"
+    },
+    {
+      "rank": 18,
+      "category": "basics",
+      "meaning": "Excuse me.",
+      "arabic": "إسمحلي",
+      "transliteration": "ismaHli",
+      "kind": "word"
+    },
+    {
+      "rank": 19,
+      "category": "basics",
+      "meaning": "Good morning.",
+      "arabic": "صباح الخير",
+      "transliteration": "sabaH al-khair",
+      "kind": "phrase"
+    },
+    {
+      "rank": 20,
+      "category": "basics",
+      "meaning": "Good evening.",
+      "arabic": "مساء الخير",
+      "transliteration": "masaa' al-khair",
+      "kind": "phrase"
+    },
+    {
+      "rank": 21,
+      "category": "basics",
+      "meaning": "good",
+      "arabic": "جيد",
+      "transliteration": "jayyid",
+      "kind": "word"
+    },
+    {
+      "rank": 22,
+      "category": "basics",
+      "meaning": "very good",
+      "arabic": "جيد جدا",
+      "transliteration": "jayyid jiddan",
+      "kind": "phrase"
+    },
+    {
+      "rank": 23,
+      "category": "basics",
+      "meaning": "Never mind.",
+      "arabic": "لا يهم",
+      "transliteration": "laa yahummu",
+      "kind": "phrase"
+    },
+    {
+      "rank": 24,
+      "category": "basics",
+      "meaning": "Nothing.",
+      "arabic": "لا شيء",
+      "transliteration": "laa shay",
+      "kind": "phrase"
+    },
+    {
+      "rank": 25,
+      "category": "basics",
+      "meaning": "Fine, thank you.",
+      "arabic": "بخير شكرا",
+      "transliteration": ", bi-khair, shukran",
+      "kind": "phrase"
+    },
+    {
+      "rank": 26,
+      "category": "basics",
+      "meaning": "What is your name?",
+      "arabic": "ما اسمك؟",
+      "transliteration": null,
+      "kind": "phrase"
+    },
+    {
+      "rank": 27,
+      "category": "basics",
+      "meaning": "My name is ______ .",
+      "arabic": "اسمي",
+      "transliteration": "_____ ismi _______",
+      "kind": "word"
+    },
+    {
+      "rank": 28,
+      "category": "basics",
+      "meaning": "Nice to meet you.",
+      "arabic": "تشرفنا",
+      "transliteration": "tasharafna lit. \"You honor us\"",
+      "kind": "word"
+    },
+    {
+      "rank": 29,
+      "category": "basics",
+      "meaning": "You're welcome.",
+      "arabic": "عَفْوًا",
+      "transliteration": "afwaan",
+      "kind": "word"
+    },
+    {
+      "rank": 30,
+      "category": "basics",
+      "meaning": "Excuse me. (getting attention)",
+      "arabic": "لَوْ سَمَحْتَ لَوْ سَمَحْتِ",
+      "transliteration": "law samaḥta (to male): law samaḥti (to female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 31,
+      "category": "basics",
+      "meaning": "Excuse me. (begging pardon)",
+      "arabic": "عذرا",
+      "transliteration": "eudhran",
+      "kind": "word"
+    },
+    {
+      "rank": 32,
+      "category": "basics",
+      "meaning": "I'm sorry.",
+      "arabic": "انا اسفه انا اسف",
+      "transliteration": "/ ana aasif (male) / ana aasifah (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 33,
+      "category": "basics",
+      "meaning": "Goodbye",
+      "arabic": "مع السلامة",
+      "transliteration": "ma`a as-salaamah",
+      "kind": "phrase"
+    },
+    {
+      "rank": 34,
+      "category": "basics",
+      "meaning": "Goodbye (informal)",
+      "arabic": "سلام",
+      "transliteration": "salaam",
+      "kind": "word"
+    },
+    {
+      "rank": 35,
+      "category": "basics",
+      "meaning": "I can't speak Arabic [well].",
+      "arabic": "لا اتكلم العربية جيدا",
+      "transliteration": "[ [ laa atakallam al-`arabiyyah [jayyidan]",
+      "kind": "phrase"
+    },
+    {
+      "rank": 36,
+      "category": "basics",
+      "meaning": "Do you speak English?",
+      "arabic": "هل تتكلم الانجليزية",
+      "transliteration": "hal tatakallam al-ingliziyyah?",
+      "kind": "phrase"
+    },
+    {
+      "rank": 37,
+      "category": "basics",
+      "meaning": "Is there someone here who speaks English?",
+      "arabic": "هل هنا اي شخص يتكلم الانجليزية؟",
+      "transliteration": "hal hunaa ayy shakhS yatakallam al-ingliziyya?",
+      "kind": "phrase"
+    },
+    {
+      "rank": 38,
+      "category": "basics",
+      "meaning": "Help!",
+      "arabic": "مساعدة",
+      "transliteration": "musaa`adah!",
+      "kind": "word"
+    },
+    {
+      "rank": 39,
+      "category": "basics",
+      "meaning": "Look out!",
+      "arabic": "انتبه",
+      "transliteration": "intabih",
+      "kind": "word"
+    },
+    {
+      "rank": 40,
+      "category": "basics",
+      "meaning": "Good night.",
+      "arabic": "تصبح على الخير",
+      "transliteration": "tiSbaH `alal-khair",
+      "kind": "phrase"
+    },
+    {
+      "rank": 41,
+      "category": "basics",
+      "meaning": "Good night (in response)",
+      "arabic": "وانت من اهل الخير",
+      "transliteration": "wa anta min ahl al-khair",
+      "kind": "phrase"
+    },
+    {
+      "rank": 42,
+      "category": "basics",
+      "meaning": "I don't understand.",
+      "arabic": "لا افهم",
+      "transliteration": "laa afham",
+      "kind": "phrase"
+    },
+    {
+      "rank": 43,
+      "category": "basics",
+      "meaning": "Where is the toilet?",
+      "arabic": "اين الحمام؟",
+      "transliteration": "ayn al-Hammaam?",
+      "kind": "phrase"
+    },
+    {
+      "rank": 44,
+      "category": "problems",
+      "meaning": "Leave me alone.",
+      "arabic": "اتركني اتركيني",
+      "transliteration": "/ utrukni (to a male) / utrukiini (to a female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 45,
+      "category": "problems",
+      "meaning": "Don't touch me!",
+      "arabic": "ما تلمسني",
+      "transliteration": "ma tilmisni",
+      "kind": "phrase"
+    },
+    {
+      "rank": 46,
+      "category": "problems",
+      "meaning": "I'll call the police.",
+      "arabic": "سأتصل بالشرطة",
+      "transliteration": "sa'ataSal bashurTah",
+      "kind": "phrase"
+    },
+    {
+      "rank": 47,
+      "category": "problems",
+      "meaning": "Police!",
+      "arabic": "شرطة",
+      "transliteration": "shurtah!",
+      "kind": "word"
+    },
+    {
+      "rank": 48,
+      "category": "problems",
+      "meaning": "Stop! Thief!",
+      "arabic": "توقف السارق",
+      "transliteration": "! ! tawqaf! assaariq!",
+      "kind": "phrase"
+    },
+    {
+      "rank": 49,
+      "category": "problems",
+      "meaning": "I need your help.",
+      "arabic": "أحتاج مساع",
+      "transliteration": null,
+      "kind": "phrase"
+    },
+    {
+      "rank": 50,
+      "category": "problems",
+      "meaning": "It's an emergency.",
+      "arabic": "طوارئ",
+      "transliteration": "Taware",
+      "kind": "word"
+    },
+    {
+      "rank": 51,
+      "category": "problems",
+      "meaning": "I'm lost.",
+      "arabic": "أضعت طريقي",
+      "transliteration": "ada'tu tareeqi",
+      "kind": "phrase"
+    },
+    {
+      "rank": 52,
+      "category": "problems",
+      "meaning": "I lost my bag.",
+      "arabic": "حقيبتي ضاعت",
+      "transliteration": "Haqiibati Daa`at",
+      "kind": "phrase"
+    },
+    {
+      "rank": 53,
+      "category": "problems",
+      "meaning": "I lost my wallet.",
+      "arabic": "محفظتي ضاعت",
+      "transliteration": "maHafaZati Daa`at",
+      "kind": "phrase"
+    },
+    {
+      "rank": 54,
+      "category": "problems",
+      "meaning": "I'm sick.",
+      "arabic": "انا مريض انا مريضة",
+      "transliteration": "/ ana mariiD (male) / ana mariiDah (female)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 55,
+      "category": "problems",
+      "meaning": "I've been injured.",
+      "arabic": "إنني مصاب",
+      "transliteration": "innani muSabun",
+      "kind": "phrase"
+    },
+    {
+      "rank": 56,
+      "category": "problems",
+      "meaning": "I need a doctor.",
+      "arabic": "احتاج دكتر",
+      "transliteration": "aHtaaj duktur",
+      "kind": "phrase"
+    },
+    {
+      "rank": 57,
+      "category": "problems",
+      "meaning": "Can I use your phone?",
+      "arabic": "هل ممكن استخدم التلفون؟",
+      "transliteration": "Hal mumkin astakhdim at-tilifun?",
+      "kind": "phrase"
+    },
+    {
+      "rank": 58,
+      "category": "numbers",
+      "meaning": "0",
+      "arabic": "صفر",
+      "transliteration": "Sifr",
+      "kind": "word"
+    },
+    {
+      "rank": 59,
+      "category": "numbers",
+      "meaning": "1",
+      "arabic": "واحد",
+      "transliteration": "waaHid",
+      "kind": "word"
+    },
+    {
+      "rank": 60,
+      "category": "numbers",
+      "meaning": "2",
+      "arabic": "إثنان",
+      "transliteration": "ithnaan",
+      "kind": "word"
+    },
+    {
+      "rank": 61,
+      "category": "numbers",
+      "meaning": "3",
+      "arabic": "ثلاثة",
+      "transliteration": "thalaatha",
+      "kind": "word"
+    },
+    {
+      "rank": 62,
+      "category": "numbers",
+      "meaning": "4",
+      "arabic": "اربعة",
+      "transliteration": "arba`a",
+      "kind": "word"
+    },
+    {
+      "rank": 63,
+      "category": "numbers",
+      "meaning": "5",
+      "arabic": "خمسة",
+      "transliteration": "khamsa",
+      "kind": "word"
+    },
+    {
+      "rank": 64,
+      "category": "numbers",
+      "meaning": "6",
+      "arabic": "ستة",
+      "transliteration": "sitta",
+      "kind": "word"
+    },
+    {
+      "rank": 65,
+      "category": "numbers",
+      "meaning": "7",
+      "arabic": "سبعة",
+      "transliteration": "sab`a",
+      "kind": "word"
+    },
+    {
+      "rank": 66,
+      "category": "numbers",
+      "meaning": "8",
+      "arabic": "ثمانية",
+      "transliteration": "thamaaniya",
+      "kind": "word"
+    },
+    {
+      "rank": 67,
+      "category": "numbers",
+      "meaning": "9",
+      "arabic": "تسعة",
+      "transliteration": "tis`a",
+      "kind": "word"
+    },
+    {
+      "rank": 68,
+      "category": "numbers",
+      "meaning": "10",
+      "arabic": "عشرة",
+      "transliteration": "`ashara",
+      "kind": "word"
+    },
+    {
+      "rank": 69,
+      "category": "numbers",
+      "meaning": "11",
+      "arabic": "احد عشر",
+      "transliteration": "aHad `ashar",
+      "kind": "phrase"
+    },
+    {
+      "rank": 70,
+      "category": "numbers",
+      "meaning": "12",
+      "arabic": "اثنا عشر",
+      "transliteration": "ithnaa `ashar",
+      "kind": "phrase"
+    },
+    {
+      "rank": 71,
+      "category": "numbers",
+      "meaning": "13",
+      "arabic": "ثلاثة عشر",
+      "transliteration": "thalaathata `ashar",
+      "kind": "phrase"
+    },
+    {
+      "rank": 72,
+      "category": "numbers",
+      "meaning": "14",
+      "arabic": "اربعة عشر",
+      "transliteration": "arba`ata `ashar",
+      "kind": "phrase"
+    },
+    {
+      "rank": 73,
+      "category": "numbers",
+      "meaning": "15",
+      "arabic": "خمسة عشر",
+      "transliteration": "khamsata `ashar",
+      "kind": "phrase"
+    },
+    {
+      "rank": 74,
+      "category": "numbers",
+      "meaning": "16",
+      "arabic": "ستة عشر",
+      "transliteration": "sittata `ashar",
+      "kind": "phrase"
+    },
+    {
+      "rank": 75,
+      "category": "numbers",
+      "meaning": "17",
+      "arabic": "سبعة عشر",
+      "transliteration": "sab`ata `ashar",
+      "kind": "phrase"
+    },
+    {
+      "rank": 76,
+      "category": "numbers",
+      "meaning": "18",
+      "arabic": "ثمانية عشر",
+      "transliteration": "thamaaniyata `ashar",
+      "kind": "phrase"
+    },
+    {
+      "rank": 77,
+      "category": "numbers",
+      "meaning": "19",
+      "arabic": "تسعة عشر",
+      "transliteration": "tis'ata `ashar",
+      "kind": "phrase"
+    },
+    {
+      "rank": 78,
+      "category": "numbers",
+      "meaning": "20",
+      "arabic": "عشرون",
+      "transliteration": "ishruun",
+      "kind": "word"
+    },
+    {
+      "rank": 79,
+      "category": "numbers",
+      "meaning": "21",
+      "arabic": "واحد وعشرون",
+      "transliteration": "waaHid wa-`ashruun",
+      "kind": "phrase"
+    },
+    {
+      "rank": 80,
+      "category": "numbers",
+      "meaning": "22",
+      "arabic": "اثنان وعشرون",
+      "transliteration": "ithnaan wa-`ashruun",
+      "kind": "phrase"
+    },
+    {
+      "rank": 81,
+      "category": "numbers",
+      "meaning": "23",
+      "arabic": "ثلاثة وعشرون",
+      "transliteration": "thalaatha wa-`ashruun",
+      "kind": "phrase"
+    },
+    {
+      "rank": 82,
+      "category": "numbers",
+      "meaning": "30",
+      "arabic": "ثلاثون",
+      "transliteration": "thalathuun",
+      "kind": "word"
+    },
+    {
+      "rank": 83,
+      "category": "numbers",
+      "meaning": "40",
+      "arabic": "اربعون",
+      "transliteration": "arba`uun",
+      "kind": "word"
+    },
+    {
+      "rank": 84,
+      "category": "numbers",
+      "meaning": "50",
+      "arabic": "خمسون",
+      "transliteration": "khamsuun",
+      "kind": "word"
+    },
+    {
+      "rank": 85,
+      "category": "numbers",
+      "meaning": "60",
+      "arabic": "ستون",
+      "transliteration": "sittuun",
+      "kind": "word"
+    },
+    {
+      "rank": 86,
+      "category": "numbers",
+      "meaning": "70",
+      "arabic": "سبعون",
+      "transliteration": "sab`uun",
+      "kind": "word"
+    },
+    {
+      "rank": 87,
+      "category": "numbers",
+      "meaning": "80",
+      "arabic": "ثمانون",
+      "transliteration": "thamanuun",
+      "kind": "word"
+    },
+    {
+      "rank": 88,
+      "category": "numbers",
+      "meaning": "90",
+      "arabic": "تسعون",
+      "transliteration": "tis`uun",
+      "kind": "word"
+    },
+    {
+      "rank": 89,
+      "category": "numbers",
+      "meaning": "100",
+      "arabic": "مئة",
+      "transliteration": "mi'a",
+      "kind": "word"
+    },
+    {
+      "rank": 90,
+      "category": "numbers",
+      "meaning": "200",
+      "arabic": "مئتين",
+      "transliteration": "mitayn",
+      "kind": "word"
+    },
+    {
+      "rank": 91,
+      "category": "numbers",
+      "meaning": "300",
+      "arabic": "ثلاث مئة",
+      "transliteration": "thalaath mi'a",
+      "kind": "phrase"
+    },
+    {
+      "rank": 92,
+      "category": "numbers",
+      "meaning": "1,000",
+      "arabic": "الف الف ليلة وليلة",
+      "transliteration": "alf (as in The Thousand and One Nights - Alf Layla wa Layla)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 93,
+      "category": "numbers",
+      "meaning": "2,000",
+      "arabic": "الفين",
+      "transliteration": "alfayn",
+      "kind": "word"
+    },
+    {
+      "rank": 94,
+      "category": "numbers",
+      "meaning": "1,000,000",
+      "arabic": "مليون",
+      "transliteration": "milyon",
+      "kind": "word"
+    },
+    {
+      "rank": 95,
+      "category": "numbers",
+      "meaning": "1,000,000,000",
+      "arabic": "مليار بليون",
+      "transliteration": "milyaar / bilyon",
+      "kind": "phrase"
+    },
+    {
+      "rank": 96,
+      "category": "numbers",
+      "meaning": "1,000,000,000,000",
+      "arabic": "تريليون",
+      "transliteration": "triilyon",
+      "kind": "word"
+    },
+    {
+      "rank": 97,
+      "category": "numbers",
+      "meaning": "number _____ (train, bus, etc.)",
+      "arabic": "رقم",
+      "transliteration": "/ Raqm (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 98,
+      "category": "numbers",
+      "meaning": "half",
+      "arabic": "نصف",
+      "transliteration": "niSf",
+      "kind": "word"
+    },
+    {
+      "rank": 99,
+      "category": "numbers",
+      "meaning": "less",
+      "arabic": "اقل",
+      "transliteration": "aqal",
+      "kind": "word"
+    },
+    {
+      "rank": 100,
+      "category": "numbers",
+      "meaning": "more",
+      "arabic": "اكثر",
+      "transliteration": "akthar",
+      "kind": "word"
+    },
+    {
+      "rank": 101,
+      "category": "directions",
+      "meaning": "Go",
+      "arabic": "اذهب",
+      "transliteration": "idh-hab",
+      "kind": "word"
+    },
+    {
+      "rank": 102,
+      "category": "directions",
+      "meaning": "Stop",
+      "arabic": "قف",
+      "transliteration": "qif",
+      "kind": "word"
+    },
+    {
+      "rank": 103,
+      "category": "directions",
+      "meaning": "Turn left",
+      "arabic": "لف يسار",
+      "transliteration": "lif yassar",
+      "kind": "phrase"
+    },
+    {
+      "rank": 104,
+      "category": "directions",
+      "meaning": "Turn right",
+      "arabic": "لف يمين",
+      "transliteration": "lif yameen",
+      "kind": "phrase"
+    },
+    {
+      "rank": 105,
+      "category": "directions",
+      "meaning": "straight ahead",
+      "arabic": "على طول الى الامام",
+      "transliteration": "Ala Tool (Egyptian) or illal amaama ; dughri (Jordan); quduman (general)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 106,
+      "category": "directions",
+      "meaning": "slowly",
+      "arabic": null,
+      "transliteration": "Shway Shway",
+      "kind": "word"
+    },
+    {
+      "rank": 107,
+      "category": "directions",
+      "meaning": "Wait or Stay",
+      "arabic": "انتظر",
+      "transliteration": "(intadhir)",
+      "kind": "word"
+    },
+    {
+      "rank": 108,
+      "category": "directions",
+      "meaning": "Show me.",
+      "arabic": "ارني",
+      "transliteration": "(areni)",
+      "kind": "word"
+    },
+    {
+      "rank": 109,
+      "category": "directions",
+      "meaning": "here",
+      "arabic": "هنا",
+      "transliteration": "huna",
+      "kind": "word"
+    },
+    {
+      "rank": 110,
+      "category": "directions",
+      "meaning": "there",
+      "arabic": "هناك",
+      "transliteration": "hunak",
+      "kind": "word"
+    },
+    {
+      "rank": 111,
+      "category": "directions",
+      "meaning": "before",
+      "arabic": "قبل",
+      "transliteration": "qabla",
+      "kind": "word"
+    },
+    {
+      "rank": 112,
+      "category": "directions",
+      "meaning": "after",
+      "arabic": "بعد",
+      "transliteration": "ba'da",
+      "kind": "word"
+    },
+    {
+      "rank": 113,
+      "category": "directions",
+      "meaning": "now",
+      "arabic": "الأن",
+      "transliteration": "al-aan",
+      "kind": "word"
+    },
+    {
+      "rank": 114,
+      "category": "directions",
+      "meaning": "from",
+      "arabic": "من",
+      "transliteration": "min",
+      "kind": "word"
+    },
+    {
+      "rank": 115,
+      "category": "directions",
+      "meaning": "to or at (a place)",
+      "arabic": "الى",
+      "transliteration": "ilah",
+      "kind": "word"
+    },
+    {
+      "rank": 116,
+      "category": "directions",
+      "meaning": "Wait one minute.",
+      "arabic": "إنتظر دقيقه واحده",
+      "transliteration": "intadhir daqeeqa waaheda",
+      "kind": "phrase"
+    },
+    {
+      "rank": 117,
+      "category": "directions",
+      "meaning": "Just a moment.",
+      "arabic": "لحظة",
+      "transliteration": "/laH-dha",
+      "kind": "word"
+    },
+    {
+      "rank": 118,
+      "category": "pronouns",
+      "meaning": "I",
+      "arabic": "انا",
+      "transliteration": "ana",
+      "kind": "word"
+    },
+    {
+      "rank": 119,
+      "category": "pronouns",
+      "meaning": "you (m)",
+      "arabic": "انتَ",
+      "transliteration": "anta",
+      "kind": "word"
+    },
+    {
+      "rank": 120,
+      "category": "pronouns",
+      "meaning": "you (f)",
+      "arabic": "انتِ",
+      "transliteration": "anti",
+      "kind": "word"
+    },
+    {
+      "rank": 121,
+      "category": "pronouns",
+      "meaning": "he",
+      "arabic": "هو",
+      "transliteration": "huwa",
+      "kind": "word"
+    },
+    {
+      "rank": 122,
+      "category": "pronouns",
+      "meaning": "she",
+      "arabic": "هي",
+      "transliteration": "hiya",
+      "kind": "word"
+    },
+    {
+      "rank": 123,
+      "category": "pronouns",
+      "meaning": "we",
+      "arabic": "نحن",
+      "transliteration": "naHnu",
+      "kind": "word"
+    },
+    {
+      "rank": 124,
+      "category": "pronouns",
+      "meaning": "you (two people)",
+      "arabic": "انتما",
+      "transliteration": "antuma",
+      "kind": "word"
+    },
+    {
+      "rank": 125,
+      "category": "pronouns",
+      "meaning": "you (m/mixed)",
+      "arabic": "انتم",
+      "transliteration": "antum",
+      "kind": "word"
+    },
+    {
+      "rank": 126,
+      "category": "pronouns",
+      "meaning": "you (f)",
+      "arabic": "انتن",
+      "transliteration": "antunna",
+      "kind": "word"
+    },
+    {
+      "rank": 127,
+      "category": "pronouns",
+      "meaning": "they (two people)",
+      "arabic": "هما",
+      "transliteration": "huma",
+      "kind": "word"
+    },
+    {
+      "rank": 128,
+      "category": "pronouns",
+      "meaning": "they (m/mixed)",
+      "arabic": "هم",
+      "transliteration": "hum",
+      "kind": "word"
+    },
+    {
+      "rank": 129,
+      "category": "pronouns",
+      "meaning": "they (f)",
+      "arabic": "هن",
+      "transliteration": "hunna",
+      "kind": "word"
+    },
+    {
+      "rank": 130,
+      "category": "asking questions",
+      "meaning": "Who?",
+      "arabic": "من",
+      "transliteration": "man",
+      "kind": "word"
+    },
+    {
+      "rank": 131,
+      "category": "asking questions",
+      "meaning": "What?",
+      "arabic": "ما ماذا",
+      "transliteration": "/ ma/madha",
+      "kind": "phrase"
+    },
+    {
+      "rank": 132,
+      "category": "asking questions",
+      "meaning": "When?",
+      "arabic": "متى",
+      "transliteration": "mata",
+      "kind": "word"
+    },
+    {
+      "rank": 133,
+      "category": "asking questions",
+      "meaning": "Where?",
+      "arabic": "اين",
+      "transliteration": "ayn",
+      "kind": "word"
+    },
+    {
+      "rank": 134,
+      "category": "asking questions",
+      "meaning": "Why?",
+      "arabic": "لماذا",
+      "transliteration": "li-madha",
+      "kind": "word"
+    },
+    {
+      "rank": 135,
+      "category": "asking questions",
+      "meaning": "How much?",
+      "arabic": "بكم",
+      "transliteration": "biKam",
+      "kind": "word"
+    },
+    {
+      "rank": 136,
+      "category": "asking questions",
+      "meaning": "How much is this?",
+      "arabic": "بكم هذا",
+      "transliteration": "biKam Hadha",
+      "kind": "phrase"
+    },
+    {
+      "rank": 137,
+      "category": "asking questions",
+      "meaning": "Where are you from?",
+      "arabic": "من اين انت",
+      "transliteration": "min ayn anta",
+      "kind": "phrase"
+    },
+    {
+      "rank": 138,
+      "category": "asking questions",
+      "meaning": "Understand?",
+      "arabic": null,
+      "transliteration": "Maf Hoom",
+      "kind": "word"
+    },
+    {
+      "rank": 139,
+      "category": "asking questions",
+      "meaning": "Do you speak English?",
+      "arabic": "هل تتكلم الإنجليزية؟",
+      "transliteration": "hal tatakallam al-ingliziya?",
+      "kind": "phrase"
+    },
+    {
+      "rank": 140,
+      "category": "asking questions",
+      "meaning": "What is this?",
+      "arabic": null,
+      "transliteration": "ma haadha?",
+      "kind": "word"
+    },
+    {
+      "rank": 141,
+      "category": "useful \"i\"s",
+      "meaning": "I want",
+      "arabic": "أريد",
+      "transliteration": "(Uriid)",
+      "kind": "word"
+    },
+    {
+      "rank": 142,
+      "category": "useful \"i\"s",
+      "meaning": "I don't want",
+      "arabic": "لا أريد",
+      "transliteration": "(La Uriid)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 143,
+      "category": "useful \"i\"s",
+      "meaning": "I have",
+      "arabic": "لي لدي عندي",
+      "transliteration": "lii / ladayya / `indi",
+      "kind": "phrase"
+    },
+    {
+      "rank": 144,
+      "category": "useful \"i\"s",
+      "meaning": "I don't have",
+      "arabic": "ليس عندي",
+      "transliteration": "(laysa `indi)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 145,
+      "category": "useful \"i\"s",
+      "meaning": "I don't understand",
+      "arabic": "أنا ما فاهم أنا لا أفهم أنا مش فاهم",
+      "transliteration": "Ana ma fehim / ana laa afham / Ana mesh fahem",
+      "kind": "phrase"
+    },
+    {
+      "rank": 146,
+      "category": "useful \"i\"s",
+      "meaning": "I work at the _____.",
+      "arabic": "أنا اشتغل في أعمل في",
+      "transliteration": "Ana ashtaghel fi _____ / a'mal fi _____ _____",
+      "kind": "phrase"
+    },
+    {
+      "rank": 147,
+      "category": "useful \"i\"s",
+      "meaning": "I don't speak Arabic",
+      "arabic": "لا اتكلم العربية ما باحكي عربي ماباتكلمش عربي",
+      "transliteration": "laa atkallam al-arabiya / Ma bihki arabi / Ma batkalemsh arabi",
+      "kind": "phrase"
+    },
+    {
+      "rank": 148,
+      "category": "things",
+      "meaning": "money",
+      "arabic": "فلوس",
+      "transliteration": "fuluus",
+      "kind": "word"
+    },
+    {
+      "rank": 149,
+      "category": "things",
+      "meaning": "food",
+      "arabic": "أكل طعام",
+      "transliteration": "akl; Ta`aam",
+      "kind": "phrase"
+    },
+    {
+      "rank": 150,
+      "category": "things",
+      "meaning": "coffee",
+      "arabic": "قهوة",
+      "transliteration": "qahwa (pronounced ah-way in Syrian Arabic)",
+      "kind": "word"
+    },
+    {
+      "rank": 151,
+      "category": "things",
+      "meaning": "sugar",
+      "arabic": "سكر",
+      "transliteration": "sukkar",
+      "kind": "word"
+    },
+    {
+      "rank": 152,
+      "category": "things",
+      "meaning": "salt",
+      "arabic": "ملح",
+      "transliteration": "milH",
+      "kind": "word"
+    },
+    {
+      "rank": 153,
+      "category": "things",
+      "meaning": "car",
+      "arabic": "سيارة",
+      "transliteration": "sayyaara",
+      "kind": "word"
+    },
+    {
+      "rank": 154,
+      "category": "things",
+      "meaning": "hotel",
+      "arabic": "فندق اوتيل",
+      "transliteration": "funduq / ooteel",
+      "kind": "phrase"
+    },
+    {
+      "rank": 155,
+      "category": "things",
+      "meaning": "museum",
+      "arabic": "متحف",
+      "transliteration": "matHaf",
+      "kind": "word"
+    },
+    {
+      "rank": 156,
+      "category": "things",
+      "meaning": "hospital",
+      "arabic": "مستشفى",
+      "transliteration": "mustashfa",
+      "kind": "word"
+    },
+    {
+      "rank": 157,
+      "category": "things",
+      "meaning": "water",
+      "arabic": "ماء",
+      "transliteration": "maa'",
+      "kind": "word"
+    },
+    {
+      "rank": 158,
+      "category": "things",
+      "meaning": "tea",
+      "arabic": "شاي",
+      "transliteration": "shaay",
+      "kind": "word"
+    },
+    {
+      "rank": 159,
+      "category": "things",
+      "meaning": "milk",
+      "arabic": "حليب",
+      "transliteration": "Haliib",
+      "kind": "word"
+    },
+    {
+      "rank": 160,
+      "category": "things",
+      "meaning": "work",
+      "arabic": "شغل",
+      "transliteration": "shughl",
+      "kind": "word"
+    },
+    {
+      "rank": 161,
+      "category": "things",
+      "meaning": "airplane",
+      "arabic": "طائرة",
+      "transliteration": "Taa'irah (pronounced \"Tayyaara\" in most dialects)",
+      "kind": "word"
+    },
+    {
+      "rank": 162,
+      "category": "things",
+      "meaning": "train",
+      "arabic": "قطار",
+      "transliteration": "qiTaar",
+      "kind": "word"
+    },
+    {
+      "rank": 163,
+      "category": "things",
+      "meaning": "bicycle",
+      "arabic": "دراجة",
+      "transliteration": "darraaja",
+      "kind": "word"
+    },
+    {
+      "rank": 164,
+      "category": "things",
+      "meaning": "street",
+      "arabic": "شارع",
+      "transliteration": "shaari`",
+      "kind": "word"
+    },
+    {
+      "rank": 165,
+      "category": "things",
+      "meaning": "building",
+      "arabic": "مبنى",
+      "transliteration": "mabna",
+      "kind": "word"
+    },
+    {
+      "rank": 166,
+      "category": "time",
+      "meaning": "now",
+      "arabic": "الآن",
+      "transliteration": "(al-'aana)",
+      "kind": "word"
+    },
+    {
+      "rank": 167,
+      "category": "time",
+      "meaning": "later",
+      "arabic": "بعدين",
+      "transliteration": "(ba`adayn)",
+      "kind": "word"
+    },
+    {
+      "rank": 168,
+      "category": "time",
+      "meaning": "before",
+      "arabic": "قبل",
+      "transliteration": "(qabla)",
+      "kind": "word"
+    },
+    {
+      "rank": 169,
+      "category": "time",
+      "meaning": "morning",
+      "arabic": "صباح",
+      "transliteration": "(SabaaH)",
+      "kind": "word"
+    },
+    {
+      "rank": 170,
+      "category": "time",
+      "meaning": "afternoon",
+      "arabic": "بعد ظهر",
+      "transliteration": "(ba'ada Zuhur)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 171,
+      "category": "time",
+      "meaning": "evening",
+      "arabic": "مساء",
+      "transliteration": "(masaa)",
+      "kind": "word"
+    },
+    {
+      "rank": 172,
+      "category": "time",
+      "meaning": "night",
+      "arabic": "ليلة",
+      "transliteration": "(laylah)",
+      "kind": "word"
+    },
+    {
+      "rank": 173,
+      "category": "clock time",
+      "meaning": "one o'clock AM",
+      "arabic": null,
+      "transliteration": "one o'clock AM (sa'ati waHad)",
+      "kind": "word"
+    },
+    {
+      "rank": 174,
+      "category": "clock time",
+      "meaning": "two o'clock AM",
+      "arabic": null,
+      "transliteration": "two o'clock AM (sa'ati ithnayn)",
+      "kind": "word"
+    },
+    {
+      "rank": 175,
+      "category": "clock time",
+      "meaning": "noon",
+      "arabic": null,
+      "transliteration": "noon (ZuHur)",
+      "kind": "word"
+    },
+    {
+      "rank": 176,
+      "category": "clock time",
+      "meaning": "one o'clock PM",
+      "arabic": null,
+      "transliteration": "one o'clock PM (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 177,
+      "category": "clock time",
+      "meaning": "two o'clock PM",
+      "arabic": null,
+      "transliteration": "two o'clock PM (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 178,
+      "category": "clock time",
+      "meaning": "midnight",
+      "arabic": null,
+      "transliteration": "midnight (muntasf al-laylah)",
+      "kind": "word"
+    },
+    {
+      "rank": 179,
+      "category": "duration",
+      "meaning": "_____ minute(s)",
+      "arabic": "دقيقة دقائق",
+      "transliteration": "_____ ( ( (daqiiqah (daqaa'iq) )",
+      "kind": "phrase"
+    },
+    {
+      "rank": 180,
+      "category": "duration",
+      "meaning": "_____ hour(s)",
+      "arabic": null,
+      "transliteration": "_____ hour(s)(saa)",
+      "kind": "word"
+    },
+    {
+      "rank": 181,
+      "category": "duration",
+      "meaning": "_____ day(s)",
+      "arabic": "يوم أيام",
+      "transliteration": "_____ ( (yom (ayaam))",
+      "kind": "phrase"
+    },
+    {
+      "rank": 182,
+      "category": "duration",
+      "meaning": "_____ week(s)",
+      "arabic": null,
+      "transliteration": "_____ week(s) (usbuu`)",
+      "kind": "word"
+    },
+    {
+      "rank": 183,
+      "category": "duration",
+      "meaning": "_____ month(s)",
+      "arabic": null,
+      "transliteration": "_____ month(s) (shahr)",
+      "kind": "word"
+    },
+    {
+      "rank": 184,
+      "category": "duration",
+      "meaning": "_____ year(s)",
+      "arabic": "سنة سنوات",
+      "transliteration": "_____ ( (sanah (sanooaat))",
+      "kind": "phrase"
+    },
+    {
+      "rank": 185,
+      "category": "days",
+      "meaning": "today",
+      "arabic": "البوم",
+      "transliteration": "(al-yawm(a))",
+      "kind": "word"
+    },
+    {
+      "rank": 186,
+      "category": "days",
+      "meaning": "yesterday",
+      "arabic": "امس",
+      "transliteration": "(ams(i))",
+      "kind": "word"
+    },
+    {
+      "rank": 187,
+      "category": "days",
+      "meaning": "tomorrow",
+      "arabic": "غداً",
+      "transliteration": "(ghadan)",
+      "kind": "word"
+    },
+    {
+      "rank": 188,
+      "category": "days",
+      "meaning": "this week",
+      "arabic": "الاسبوع",
+      "transliteration": "(al-'usbu`)",
+      "kind": "word"
+    },
+    {
+      "rank": 189,
+      "category": "days",
+      "meaning": "last week",
+      "arabic": "اسبوع الماضي",
+      "transliteration": "(usbu`(u) 'l-maaDi)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 190,
+      "category": "days",
+      "meaning": "next week",
+      "arabic": "اسبوع القادم",
+      "transliteration": "(usbu`(u) 'l-qaadim)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 191,
+      "category": "days of the week",
+      "meaning": "Sunday",
+      "arabic": "يوم الأحد",
+      "transliteration": "((yawm) al'aHad)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 192,
+      "category": "days of the week",
+      "meaning": "Monday",
+      "arabic": "يوم الاثنين",
+      "transliteration": "((yawm) al-ithnayn)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 193,
+      "category": "days of the week",
+      "meaning": "Tuesday",
+      "arabic": "يوم الثلاثاء",
+      "transliteration": "((yawm) ath-thulaatha)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 194,
+      "category": "days of the week",
+      "meaning": "Wednesday",
+      "arabic": "يوم الأربعاء",
+      "transliteration": "((yawm) al'arbi`a)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 195,
+      "category": "days of the week",
+      "meaning": "Thursday",
+      "arabic": "يوم الخميس",
+      "transliteration": "((yawm) al-khamiis)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 196,
+      "category": "days of the week",
+      "meaning": "Friday",
+      "arabic": "يوم الجمعة",
+      "transliteration": "((yawm) al-jum`a...)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 197,
+      "category": "days of the week",
+      "meaning": "Saturday",
+      "arabic": "يوم السبت",
+      "transliteration": "((yawm) as-sabt)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 198,
+      "category": "months",
+      "meaning": "January",
+      "arabic": "كانون الثاني",
+      "transliteration": "(Kanoon al thani)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 199,
+      "category": "months",
+      "meaning": "February",
+      "arabic": "شباط",
+      "transliteration": "February (.shubat ..)",
+      "kind": "word"
+    },
+    {
+      "rank": 200,
+      "category": "months",
+      "meaning": "March",
+      "arabic": "آذار",
+      "transliteration": "March (... Aathar);",
+      "kind": "word"
+    },
+    {
+      "rank": 201,
+      "category": "months",
+      "meaning": "April",
+      "arabic": "نيسان",
+      "transliteration": "April (..Nissan .)",
+      "kind": "word"
+    },
+    {
+      "rank": 202,
+      "category": "months",
+      "meaning": "May",
+      "arabic": "أيار",
+      "transliteration": "May (... Ayyar)",
+      "kind": "word"
+    },
+    {
+      "rank": 203,
+      "category": "months",
+      "meaning": "June",
+      "arabic": "حزيران",
+      "transliteration": "(Hzayraan)",
+      "kind": "word"
+    },
+    {
+      "rank": 204,
+      "category": "months",
+      "meaning": "July",
+      "arabic": "تموز",
+      "transliteration": "(Tammouz)",
+      "kind": "word"
+    },
+    {
+      "rank": 205,
+      "category": "months",
+      "meaning": "August",
+      "arabic": "اّب",
+      "transliteration": "(Ab)",
+      "kind": "word"
+    },
+    {
+      "rank": 206,
+      "category": "months",
+      "meaning": "September",
+      "arabic": "ايلول",
+      "transliteration": "(Ayloul)",
+      "kind": "word"
+    },
+    {
+      "rank": 207,
+      "category": "months",
+      "meaning": "October",
+      "arabic": "تشرن الأول",
+      "transliteration": "(Tishreen al awwal)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 208,
+      "category": "months",
+      "meaning": "November",
+      "arabic": "تشرن الثاني",
+      "transliteration": "(Tishreen al thani)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 209,
+      "category": "months",
+      "meaning": "December",
+      "arabic": "كانون الأول",
+      "transliteration": "(Kanoon al awwal)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 210,
+      "category": "colors",
+      "meaning": "black",
+      "arabic": "أسود",
+      "transliteration": "(Aswad)",
+      "kind": "word"
+    },
+    {
+      "rank": 211,
+      "category": "colors",
+      "meaning": "white",
+      "arabic": "أبيض",
+      "transliteration": "(Abyadh)",
+      "kind": "word"
+    },
+    {
+      "rank": 212,
+      "category": "colors",
+      "meaning": "gray",
+      "arabic": "رمادي",
+      "transliteration": "(Ramaadii)",
+      "kind": "word"
+    },
+    {
+      "rank": 213,
+      "category": "colors",
+      "meaning": "red",
+      "arabic": "أحمر",
+      "transliteration": "(AHmar)",
+      "kind": "word"
+    },
+    {
+      "rank": 214,
+      "category": "colors",
+      "meaning": "blue",
+      "arabic": "أزرق",
+      "transliteration": "(Azraq)",
+      "kind": "word"
+    },
+    {
+      "rank": 215,
+      "category": "colors",
+      "meaning": "yellow",
+      "arabic": "أصفر",
+      "transliteration": "(Asfar)",
+      "kind": "word"
+    },
+    {
+      "rank": 216,
+      "category": "colors",
+      "meaning": "green",
+      "arabic": "أخضر",
+      "transliteration": "(Akhdhar)",
+      "kind": "word"
+    },
+    {
+      "rank": 217,
+      "category": "colors",
+      "meaning": "orange",
+      "arabic": "برتقالي",
+      "transliteration": "(Burtuqaali)",
+      "kind": "word"
+    },
+    {
+      "rank": 218,
+      "category": "colors",
+      "meaning": "purple",
+      "arabic": "أرجواني",
+      "transliteration": "(Urjuwaan)",
+      "kind": "word"
+    },
+    {
+      "rank": 219,
+      "category": "colors",
+      "meaning": "brown",
+      "arabic": "بني",
+      "transliteration": "(Bunny)",
+      "kind": "word"
+    },
+    {
+      "rank": 220,
+      "category": "bus and train",
+      "meaning": "How much is a ticket to _____?",
+      "arabic": null,
+      "transliteration": "adash tazkara ila ____? Bekam Tazkara ila......?",
+      "kind": "word"
+    },
+    {
+      "rank": 221,
+      "category": "bus and train",
+      "meaning": "One ticket to _____, please.",
+      "arabic": null,
+      "transliteration": "Tazkara wahida ila ___ law samaht",
+      "kind": "word"
+    },
+    {
+      "rank": 222,
+      "category": "bus and train",
+      "meaning": "Where does this train/bus go?",
+      "arabic": null,
+      "transliteration": "Hazal qitar/bus biyruh ila wayn? Ila Ayn Yazhab haza Alkitar/autobis?",
+      "kind": "word"
+    },
+    {
+      "rank": 223,
+      "category": "bus and train",
+      "meaning": "Where is the train/bus to _____?",
+      "arabic": null,
+      "transliteration": "Wein el-qitar/el-bus ila ___?",
+      "kind": "word"
+    },
+    {
+      "rank": 224,
+      "category": "bus and train",
+      "meaning": "Does this train/bus stop in _____?",
+      "arabic": null,
+      "transliteration": "hal biwa'ef hazal qitar/bus fi__ ?",
+      "kind": "word"
+    },
+    {
+      "rank": 225,
+      "category": "bus and train",
+      "meaning": "When does the train/bus for _____ leave?",
+      "arabic": null,
+      "transliteration": "emta btatla el-qitar/el-bus ila ___?",
+      "kind": "word"
+    },
+    {
+      "rank": 226,
+      "category": "bus and train",
+      "meaning": "When will this train/bus arrive in _____?",
+      "arabic": null,
+      "transliteration": "emta byusil hazal qitar/bus fi___?",
+      "kind": "word"
+    },
+    {
+      "rank": 227,
+      "category": "directions",
+      "meaning": "How do I get to _____ ?",
+      "arabic": null,
+      "transliteration": "How do I get to _____ ? (Kayf bawsal la __)",
+      "kind": "word"
+    },
+    {
+      "rank": 228,
+      "category": "directions",
+      "meaning": "...the train station?",
+      "arabic": null,
+      "transliteration": "the train station? (mahatet il qitar?)",
+      "kind": "word"
+    },
+    {
+      "rank": 229,
+      "category": "directions",
+      "meaning": "...the bus station?",
+      "arabic": null,
+      "transliteration": "the bus station? (mawqif il bassat?)",
+      "kind": "word"
+    },
+    {
+      "rank": 230,
+      "category": "directions",
+      "meaning": "...the airport?",
+      "arabic": "المطار",
+      "transliteration": "(al-matar?)",
+      "kind": "word"
+    },
+    {
+      "rank": 231,
+      "category": "directions",
+      "meaning": "...downtown?",
+      "arabic": null,
+      "transliteration": "downtown? (West il balad?)",
+      "kind": "word"
+    },
+    {
+      "rank": 232,
+      "category": "directions",
+      "meaning": "...the youth hostel?",
+      "arabic": null,
+      "transliteration": "the youth hostel? (Bayt El Shabab)",
+      "kind": "word"
+    },
+    {
+      "rank": 233,
+      "category": "directions",
+      "meaning": "...the _____ hotel?",
+      "arabic": null,
+      "transliteration": "the _____ hotel? (otel?/ Al Fonduk)",
+      "kind": "word"
+    },
+    {
+      "rank": 234,
+      "category": "directions",
+      "meaning": "...the American/Canadian/Australian/British consulate?",
+      "arabic": null,
+      "transliteration": "the American/Canadian/Australian/British consulate? (sefara Al Amrikia, Canadeia, ostralia, beritania)",
+      "kind": "word"
+    },
+    {
+      "rank": 235,
+      "category": "directions",
+      "meaning": "Where are there a lot of...",
+      "arabic": null,
+      "transliteration": "Where are there a lot of... (Wein fi kteer...)",
+      "kind": "word"
+    },
+    {
+      "rank": 236,
+      "category": "directions",
+      "meaning": "...hotels?",
+      "arabic": null,
+      "transliteration": "hotels? (otelat/ Fanadek)",
+      "kind": "word"
+    },
+    {
+      "rank": 237,
+      "category": "directions",
+      "meaning": "...restaurants?",
+      "arabic": null,
+      "transliteration": "restaurants? (mata'em)",
+      "kind": "word"
+    },
+    {
+      "rank": 238,
+      "category": "directions",
+      "meaning": "...bars?",
+      "arabic": null,
+      "transliteration": "bars? (bars)",
+      "kind": "word"
+    },
+    {
+      "rank": 239,
+      "category": "directions",
+      "meaning": "...sites to see?",
+      "arabic": null,
+      "transliteration": "sites to see? (amaken seyaheyeh?)",
+      "kind": "word"
+    },
+    {
+      "rank": 240,
+      "category": "directions",
+      "meaning": "Can you show me on the map?",
+      "arabic": null,
+      "transliteration": "Can you show me on the map? (momken tfarjeeni ala al khareeta?)",
+      "kind": "word"
+    },
+    {
+      "rank": 241,
+      "category": "directions",
+      "meaning": "street",
+      "arabic": "شارع",
+      "transliteration": "(shar'iah)",
+      "kind": "word"
+    },
+    {
+      "rank": 242,
+      "category": "directions",
+      "meaning": "Turn left.",
+      "arabic": "لف يسار",
+      "transliteration": "(lif yasaar)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 243,
+      "category": "directions",
+      "meaning": "Turn right.",
+      "arabic": "لف يمين",
+      "transliteration": "(lif yameen)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 244,
+      "category": "directions",
+      "meaning": "left",
+      "arabic": "يسار",
+      "transliteration": "(yasaar)",
+      "kind": "word"
+    },
+    {
+      "rank": 245,
+      "category": "directions",
+      "meaning": "right",
+      "arabic": "يمين",
+      "transliteration": "(yameen)",
+      "kind": "word"
+    },
+    {
+      "rank": 246,
+      "category": "directions",
+      "meaning": "straight ahead",
+      "arabic": "على طول",
+      "transliteration": "(ala tul)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 247,
+      "category": "directions",
+      "meaning": "towards the _____",
+      "arabic": null,
+      "transliteration": "towards the _____ (bijehet il)",
+      "kind": "word"
+    },
+    {
+      "rank": 248,
+      "category": "directions",
+      "meaning": "past the _____",
+      "arabic": null,
+      "transliteration": "past the _____ (baed il)",
+      "kind": "word"
+    },
+    {
+      "rank": 249,
+      "category": "directions",
+      "meaning": "before the _____",
+      "arabic": null,
+      "transliteration": "before the _____ (abel il)",
+      "kind": "word"
+    },
+    {
+      "rank": 250,
+      "category": "directions",
+      "meaning": "Watch for the _____.",
+      "arabic": null,
+      "transliteration": "Watch for the _____. (intibeh la)",
+      "kind": "word"
+    },
+    {
+      "rank": 251,
+      "category": "directions",
+      "meaning": "intersection",
+      "arabic": null,
+      "transliteration": "intersection (taqato)",
+      "kind": "word"
+    },
+    {
+      "rank": 252,
+      "category": "directions",
+      "meaning": "north",
+      "arabic": "شمال",
+      "transliteration": "(shamaal)",
+      "kind": "word"
+    },
+    {
+      "rank": 253,
+      "category": "directions",
+      "meaning": "south",
+      "arabic": "جنوب",
+      "transliteration": "(janoob)",
+      "kind": "word"
+    },
+    {
+      "rank": 254,
+      "category": "directions",
+      "meaning": "east",
+      "arabic": "شرق",
+      "transliteration": "(sharq)",
+      "kind": "word"
+    },
+    {
+      "rank": 255,
+      "category": "directions",
+      "meaning": "west",
+      "arabic": "غرب",
+      "transliteration": "(gharb)",
+      "kind": "word"
+    },
+    {
+      "rank": 256,
+      "category": "directions",
+      "meaning": "uphill",
+      "arabic": null,
+      "transliteration": "uphill (talaa)",
+      "kind": "word"
+    },
+    {
+      "rank": 257,
+      "category": "directions",
+      "meaning": "downhill",
+      "arabic": null,
+      "transliteration": "downhill (nazleh)",
+      "kind": "word"
+    },
+    {
+      "rank": 258,
+      "category": "taxi",
+      "meaning": "Taxi!",
+      "arabic": null,
+      "transliteration": "Taxi! (taxi!) Sayyara",
+      "kind": "word"
+    },
+    {
+      "rank": 259,
+      "category": "taxi",
+      "meaning": "Take me to _____, please.",
+      "arabic": null,
+      "transliteration": "Take me to _____, please. (khodni il....., law Samaht)",
+      "kind": "word"
+    },
+    {
+      "rank": 260,
+      "category": "taxi",
+      "meaning": "How much does it cost to get to _____?",
+      "arabic": null,
+      "transliteration": "How much does it cost to",
+      "kind": "word"
+    },
+    {
+      "rank": 261,
+      "category": "taxi",
+      "meaning": "Take me there, please.",
+      "arabic": null,
+      "transliteration": "Take me there, please. (khodni ala __, law samaht)",
+      "kind": "word"
+    },
+    {
+      "rank": 262,
+      "category": "lodging",
+      "meaning": "Do you have any rooms available?",
+      "arabic": null,
+      "transliteration": "Do you have any rooms available? (Endkom ghoraf(alternatively- owad) edafeyeh?)",
+      "kind": "word"
+    },
+    {
+      "rank": 263,
+      "category": "lodging",
+      "meaning": "How much is a room for one person/two people?",
+      "arabic": null,
+      "transliteration": "How much is a room for one person/two people? (Adeish il ghorfeh li shakhs/shakhsein?)",
+      "kind": "word"
+    },
+    {
+      "rank": 264,
+      "category": "lodging",
+      "meaning": "Does the room come with...",
+      "arabic": null,
+      "transliteration": "Does the room come with... (Il ghorfeh bteeji ma...)",
+      "kind": "word"
+    },
+    {
+      "rank": 265,
+      "category": "lodging",
+      "meaning": "...bedsheets?",
+      "arabic": null,
+      "transliteration": "bedsheets? (sharashef?)",
+      "kind": "word"
+    },
+    {
+      "rank": 266,
+      "category": "lodging",
+      "meaning": "...a bathroom?",
+      "arabic": null,
+      "transliteration": "a bathroom? (hammam?)",
+      "kind": "word"
+    },
+    {
+      "rank": 267,
+      "category": "lodging",
+      "meaning": "...a telephone?",
+      "arabic": null,
+      "transliteration": "a telephone? (tele-phown?)",
+      "kind": "word"
+    },
+    {
+      "rank": 268,
+      "category": "lodging",
+      "meaning": "...a TV?",
+      "arabic": null,
+      "transliteration": "a TV? (televis-yon?)",
+      "kind": "word"
+    },
+    {
+      "rank": 269,
+      "category": "lodging",
+      "meaning": "May I see the room first?",
+      "arabic": null,
+      "transliteration": "May I see the room first? (Baqdar ashoof il ghorfeh abel?)",
+      "kind": "word"
+    },
+    {
+      "rank": 270,
+      "category": "lodging",
+      "meaning": "Do you have anything quieter?",
+      "arabic": null,
+      "transliteration": "Do you have anything quieter? (Fi eshi ah-da?.)",
+      "kind": "word"
+    },
+    {
+      "rank": 271,
+      "category": "lodging",
+      "meaning": "...bigger?",
+      "arabic": null,
+      "transliteration": "bigger? (akbar?)",
+      "kind": "word"
+    },
+    {
+      "rank": 272,
+      "category": "lodging",
+      "meaning": "...cleaner?",
+      "arabic": null,
+      "transliteration": "cleaner? (andaf?)",
+      "kind": "word"
+    },
+    {
+      "rank": 273,
+      "category": "lodging",
+      "meaning": "...cheaper?",
+      "arabic": null,
+      "transliteration": "cheaper? (arkhas?)",
+      "kind": "word"
+    },
+    {
+      "rank": 274,
+      "category": "lodging",
+      "meaning": "OK, I'll take it.",
+      "arabic": null,
+      "transliteration": "OK, I'll take it. (OK, bakhodha)",
+      "kind": "word"
+    },
+    {
+      "rank": 275,
+      "category": "lodging",
+      "meaning": "I will stay for _____ night(s).",
+      "arabic": null,
+      "transliteration": "I will stay for _____ night(s). (Rah aba'a kaman ___ yom)",
+      "kind": "word"
+    },
+    {
+      "rank": 276,
+      "category": "lodging",
+      "meaning": "Can you suggest another hotel?",
+      "arabic": null,
+      "transliteration": "Can you suggest another hotel? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 277,
+      "category": "lodging",
+      "meaning": "Do you have a safe?",
+      "arabic": null,
+      "transliteration": "Do you have a safe? (fi khazneh?)",
+      "kind": "word"
+    },
+    {
+      "rank": 278,
+      "category": "lodging",
+      "meaning": "...lockers?",
+      "arabic": null,
+      "transliteration": "lockers? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 279,
+      "category": "lodging",
+      "meaning": "Is breakfast/supper included?",
+      "arabic": null,
+      "transliteration": "Is breakfast/supper included? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 280,
+      "category": "lodging",
+      "meaning": "What time is breakfast/supper?",
+      "arabic": null,
+      "transliteration": "What time is breakfast/supper? (ay sei-a il ftoor/asha?)",
+      "kind": "word"
+    },
+    {
+      "rank": 281,
+      "category": "lodging",
+      "meaning": "Please clean my room.",
+      "arabic": null,
+      "transliteration": "Please clean my room. (momken tanadef il ghorfeh)",
+      "kind": "word"
+    },
+    {
+      "rank": 282,
+      "category": "lodging",
+      "meaning": "I want to check out.",
+      "arabic": null,
+      "transliteration": "I want to check out. (beddi ashoofha)",
+      "kind": "word"
+    },
+    {
+      "rank": 283,
+      "category": "money",
+      "meaning": "Do you accept American/Australian/Canadian dollars?",
+      "arabic": null,
+      "transliteration": "Do you accept American/Australian/Canadian dollars? (Hal taqbal bi noqood Amreekeyah/Ostoraleyah/Canadeyah?)",
+      "kind": "word"
+    },
+    {
+      "rank": 284,
+      "category": "money",
+      "meaning": "Do you accept British pounds?",
+      "arabic": null,
+      "transliteration": "Do you accept British pounds? (Hal Taqbal bi Jenehat Biritaneyeh?)",
+      "kind": "word"
+    },
+    {
+      "rank": 285,
+      "category": "money",
+      "meaning": "Do you accept credit cards?",
+      "arabic": null,
+      "transliteration": "Do you accept credit cards? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 286,
+      "category": "money",
+      "meaning": "Can you change money for me?",
+      "arabic": null,
+      "transliteration": "Can you change money for me? (Momken tsarefli masari?)",
+      "kind": "word"
+    },
+    {
+      "rank": 287,
+      "category": "money",
+      "meaning": "Where can I get money changed?",
+      "arabic": null,
+      "transliteration": "Where can I get money changed? (Wein badar asaref masari?)",
+      "kind": "word"
+    },
+    {
+      "rank": 288,
+      "category": "money",
+      "meaning": "Can you change a traveler's check for me?",
+      "arabic": null,
+      "transliteration": "Can you change a traveler's check for me? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 289,
+      "category": "money",
+      "meaning": "Where can I get a traveler's check changed?",
+      "arabic": null,
+      "transliteration": "Where can I get a traveler's check changed? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 290,
+      "category": "money",
+      "meaning": "What is the exchange rate?",
+      "arabic": null,
+      "transliteration": "What is the exchange rate? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 291,
+      "category": "money",
+      "meaning": "Where is an automatic teller machine (ATM)?",
+      "arabic": null,
+      "transliteration": "Where is an automatic teller machine (ATM)? (Wein fi ATM?)",
+      "kind": "word"
+    },
+    {
+      "rank": 292,
+      "category": "eating",
+      "meaning": "A table for one person/two people, please.",
+      "arabic": null,
+      "transliteration": "A table for one person/two people, please. (Tawlah la wahed/tenein)",
+      "kind": "word"
+    },
+    {
+      "rank": 293,
+      "category": "eating",
+      "meaning": "Can I look at the menu, please?",
+      "arabic": null,
+      "transliteration": "Can I look at the menu, please? (Momken ashoof il menu?)",
+      "kind": "word"
+    },
+    {
+      "rank": 294,
+      "category": "eating",
+      "meaning": "Can I look in the kitchen?",
+      "arabic": null,
+      "transliteration": "Can I look in the kitchen? (Mumken ashuf il matbakh?)",
+      "kind": "word"
+    },
+    {
+      "rank": 295,
+      "category": "eating",
+      "meaning": "Is there a house specialty?",
+      "arabic": null,
+      "transliteration": "Is there a house specialty? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 296,
+      "category": "eating",
+      "meaning": "Is there a local specialty?",
+      "arabic": null,
+      "transliteration": "Is there a local specialty? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 297,
+      "category": "eating",
+      "meaning": "I'm a vegetarian.",
+      "arabic": null,
+      "transliteration": "I'm a vegetarian. (Ana nabati)",
+      "kind": "word"
+    },
+    {
+      "rank": 298,
+      "category": "eating",
+      "meaning": "I don't eat pork.",
+      "arabic": null,
+      "transliteration": "I don't eat pork. (Ma bakol lahem khanzeer)",
+      "kind": "word"
+    },
+    {
+      "rank": 299,
+      "category": "eating",
+      "meaning": "I don't eat beef.",
+      "arabic": null,
+      "transliteration": "I don't eat beef. (Ma bakol lahmeh)",
+      "kind": "word"
+    },
+    {
+      "rank": 300,
+      "category": "eating",
+      "meaning": "I only eat Halal food.",
+      "arabic": null,
+      "transliteration": "I only eat Halal food. (Bas bakol akel hallal)",
+      "kind": "word"
+    },
+    {
+      "rank": 301,
+      "category": "eating",
+      "meaning": "Can you make it \"lite\", please? (less oil/butter/lard)",
+      "arabic": null,
+      "transliteration": "Can you make it \"lite\", please? (khaleeha khafeefeh)",
+      "kind": "word"
+    },
+    {
+      "rank": 302,
+      "category": "eating",
+      "meaning": "fixed-price meal",
+      "arabic": null,
+      "transliteration": "fixed-price meal (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 303,
+      "category": "eating",
+      "meaning": "à la carte",
+      "arabic": null,
+      "transliteration": "à la carte (à la carte)",
+      "kind": "word"
+    },
+    {
+      "rank": 304,
+      "category": "eating",
+      "meaning": "breakfast",
+      "arabic": null,
+      "transliteration": "breakfast (ftoor) al iftar",
+      "kind": "word"
+    },
+    {
+      "rank": 305,
+      "category": "eating",
+      "meaning": "lunch",
+      "arabic": null,
+      "transliteration": "lunch (...) al ghada",
+      "kind": "word"
+    },
+    {
+      "rank": 306,
+      "category": "eating",
+      "meaning": "tea (meal)",
+      "arabic": null,
+      "transliteration": "tea (...) shay'",
+      "kind": "word"
+    },
+    {
+      "rank": 307,
+      "category": "eating",
+      "meaning": "supper",
+      "arabic": null,
+      "transliteration": "supper (...) al isha'",
+      "kind": "word"
+    },
+    {
+      "rank": 308,
+      "category": "eating",
+      "meaning": "I want _____.",
+      "arabic": "أريد",
+      "transliteration": "_____ (ooreed)",
+      "kind": "word"
+    },
+    {
+      "rank": 309,
+      "category": "eating",
+      "meaning": "I want a dish containing _____.",
+      "arabic": null,
+      "transliteration": "I want a dish containing _____. (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 310,
+      "category": "eating",
+      "meaning": "chicken",
+      "arabic": "دجاج",
+      "transliteration": "(dajaj)",
+      "kind": "word"
+    },
+    {
+      "rank": 311,
+      "category": "eating",
+      "meaning": "beef",
+      "arabic": "بقر",
+      "transliteration": "(baqar)",
+      "kind": "word"
+    },
+    {
+      "rank": 312,
+      "category": "eating",
+      "meaning": "fish",
+      "arabic": "سمك",
+      "transliteration": "(samak)",
+      "kind": "word"
+    },
+    {
+      "rank": 313,
+      "category": "eating",
+      "meaning": "ham",
+      "arabic": null,
+      "transliteration": "ham (khanzeer)",
+      "kind": "word"
+    },
+    {
+      "rank": 314,
+      "category": "eating",
+      "meaning": "sausage",
+      "arabic": null,
+      "transliteration": "sausage (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 315,
+      "category": "eating",
+      "meaning": "cheese",
+      "arabic": "جبنة",
+      "transliteration": "(jubneh)",
+      "kind": "word"
+    },
+    {
+      "rank": 316,
+      "category": "eating",
+      "meaning": "eggs",
+      "arabic": "بيض",
+      "transliteration": "(baid)",
+      "kind": "word"
+    },
+    {
+      "rank": 317,
+      "category": "eating",
+      "meaning": "salad",
+      "arabic": "سَلَطَة",
+      "transliteration": "(salata)",
+      "kind": "word"
+    },
+    {
+      "rank": 318,
+      "category": "eating",
+      "meaning": "(fresh) vegetables",
+      "arabic": null,
+      "transliteration": "(fresh) vegetables (...) (fresh) khudrawat",
+      "kind": "word"
+    },
+    {
+      "rank": 319,
+      "category": "eating",
+      "meaning": "(fresh) fruit",
+      "arabic": null,
+      "transliteration": "(fresh) fruit (fawakeh) (fresh) fawakat",
+      "kind": "word"
+    },
+    {
+      "rank": 320,
+      "category": "eating",
+      "meaning": "bread",
+      "arabic": null,
+      "transliteration": "bread (...) ayish OR khubz",
+      "kind": "word"
+    },
+    {
+      "rank": 321,
+      "category": "eating",
+      "meaning": "toast",
+      "arabic": null,
+      "transliteration": "toast (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 322,
+      "category": "eating",
+      "meaning": "noodles",
+      "arabic": null,
+      "transliteration": "noodles (makarona)",
+      "kind": "word"
+    },
+    {
+      "rank": 323,
+      "category": "eating",
+      "meaning": "rice",
+      "arabic": "أرز",
+      "transliteration": "( 'roz)",
+      "kind": "word"
+    },
+    {
+      "rank": 324,
+      "category": "eating",
+      "meaning": "beans",
+      "arabic": null,
+      "transliteration": "beans (fool) fasoliyya",
+      "kind": "word"
+    },
+    {
+      "rank": 325,
+      "category": "eating",
+      "meaning": "May I have a glass of _____?",
+      "arabic": null,
+      "transliteration": "May I have a glass of _____? (Momken Kaset___)",
+      "kind": "word"
+    },
+    {
+      "rank": 326,
+      "category": "eating",
+      "meaning": "May I have a cup of _____?",
+      "arabic": null,
+      "transliteration": "May I have a cup of _____? (Momken finjan ___)",
+      "kind": "word"
+    },
+    {
+      "rank": 327,
+      "category": "eating",
+      "meaning": "May I have a bottle of _____?",
+      "arabic": null,
+      "transliteration": "May I have a bottle of _____? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 328,
+      "category": "eating",
+      "meaning": "coffee",
+      "arabic": null,
+      "transliteration": "coffee (qahweh) kah'wa",
+      "kind": "word"
+    },
+    {
+      "rank": 329,
+      "category": "eating",
+      "meaning": "tea (drink)",
+      "arabic": "شاي",
+      "transliteration": "( shay' )",
+      "kind": "word"
+    },
+    {
+      "rank": 330,
+      "category": "eating",
+      "meaning": "juice",
+      "arabic": "عصير",
+      "transliteration": "(Aseer)",
+      "kind": "word"
+    },
+    {
+      "rank": 331,
+      "category": "eating",
+      "meaning": "(bubbly) water",
+      "arabic": null,
+      "transliteration": "water (may)",
+      "kind": "word"
+    },
+    {
+      "rank": 332,
+      "category": "eating",
+      "meaning": "water",
+      "arabic": "ماء",
+      "transliteration": "( maa' )",
+      "kind": "word"
+    },
+    {
+      "rank": 333,
+      "category": "eating",
+      "meaning": "beer",
+      "arabic": "بيرة",
+      "transliteration": "(beerah)",
+      "kind": "word"
+    },
+    {
+      "rank": 334,
+      "category": "eating",
+      "meaning": "red/white wine",
+      "arabic": null,
+      "transliteration": "red/white wine (nabeed ahmar/abyad)",
+      "kind": "word"
+    },
+    {
+      "rank": 335,
+      "category": "eating",
+      "meaning": "May I have some _____?",
+      "arabic": null,
+      "transliteration": "May I have some _____? (momken ___?)",
+      "kind": "word"
+    },
+    {
+      "rank": 336,
+      "category": "eating",
+      "meaning": "salt",
+      "arabic": "ملح",
+      "transliteration": "(malh)",
+      "kind": "word"
+    },
+    {
+      "rank": 337,
+      "category": "eating",
+      "meaning": "black pepper",
+      "arabic": "فلفل أسود",
+      "transliteration": "(filfil aswad)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 338,
+      "category": "eating",
+      "meaning": "butter",
+      "arabic": "زبدة",
+      "transliteration": "(zibdeh)",
+      "kind": "word"
+    },
+    {
+      "rank": 339,
+      "category": "eating",
+      "meaning": "Excuse me, waiter? (getting attention of server)",
+      "arabic": null,
+      "transliteration": "Excuse me, waiter? (...)garcoon",
+      "kind": "word"
+    },
+    {
+      "rank": 340,
+      "category": "eating",
+      "meaning": "I'm finished.",
+      "arabic": null,
+      "transliteration": "I'm finished. (khalast ) galaste",
+      "kind": "word"
+    },
+    {
+      "rank": 341,
+      "category": "eating",
+      "meaning": "It was delicious.",
+      "arabic": null,
+      "transliteration": "It was delicious. (Zaki) Al-akl mazboot!",
+      "kind": "word"
+    },
+    {
+      "rank": 342,
+      "category": "eating",
+      "meaning": "Please clear the plates.",
+      "arabic": null,
+      "transliteration": "Please clear the plates. (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 343,
+      "category": "eating",
+      "meaning": "The check, please.",
+      "arabic": null,
+      "transliteration": "The check, please. (...)Leh'seb min fadlak",
+      "kind": "word"
+    },
+    {
+      "rank": 344,
+      "category": "bars",
+      "meaning": "Do you serve alcohol?",
+      "arabic": null,
+      "transliteration": "Do you serve alcohol? (fi kohool?)",
+      "kind": "word"
+    },
+    {
+      "rank": 345,
+      "category": "bars",
+      "meaning": "Is there table service?",
+      "arabic": null,
+      "transliteration": "Is there table service? (hal hnak khidmat tawlah)",
+      "kind": "word"
+    },
+    {
+      "rank": 346,
+      "category": "bars",
+      "meaning": "A beer/two beers, please.",
+      "arabic": null,
+      "transliteration": "A beer/two beers, please. (beerah, min fadlik)",
+      "kind": "word"
+    },
+    {
+      "rank": 347,
+      "category": "bars",
+      "meaning": "A glass of red/white wine, please.",
+      "arabic": null,
+      "transliteration": "A glass of red/white wine, please. (kaset nbeed)",
+      "kind": "word"
+    },
+    {
+      "rank": 348,
+      "category": "bars",
+      "meaning": "A pint, please.",
+      "arabic": null,
+      "transliteration": "A pint, please. (nsf ltr, min fadlik)",
+      "kind": "word"
+    },
+    {
+      "rank": 349,
+      "category": "bars",
+      "meaning": "A bottle, please.",
+      "arabic": null,
+      "transliteration": "A bottle, please. (zujaja, min fadlik)",
+      "kind": "word"
+    },
+    {
+      "rank": 350,
+      "category": "bars",
+      "meaning": "_____ (hard liquor) and _____ (mixer), please.",
+      "arabic": null,
+      "transliteration": "_____ and _____, please. (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 351,
+      "category": "bars",
+      "meaning": "whiskey",
+      "arabic": null,
+      "transliteration": "whiskey (whesky)",
+      "kind": "word"
+    },
+    {
+      "rank": 352,
+      "category": "bars",
+      "meaning": "vodka",
+      "arabic": null,
+      "transliteration": "vodka (fodka)",
+      "kind": "word"
+    },
+    {
+      "rank": 353,
+      "category": "bars",
+      "meaning": "rum",
+      "arabic": null,
+      "transliteration": "rum (rm)",
+      "kind": "word"
+    },
+    {
+      "rank": 354,
+      "category": "bars",
+      "meaning": "water",
+      "arabic": "ماء",
+      "transliteration": "( maa' )",
+      "kind": "word"
+    },
+    {
+      "rank": 355,
+      "category": "bars",
+      "meaning": "club soda",
+      "arabic": null,
+      "transliteration": "club soda (soda)",
+      "kind": "word"
+    },
+    {
+      "rank": 356,
+      "category": "bars",
+      "meaning": "tonic water",
+      "arabic": null,
+      "transliteration": "tonic water (miah muqwia)",
+      "kind": "word"
+    },
+    {
+      "rank": 357,
+      "category": "bars",
+      "meaning": "orange juice",
+      "arabic": null,
+      "transliteration": "orange juice (aseer bortoqal)",
+      "kind": "word"
+    },
+    {
+      "rank": 358,
+      "category": "bars",
+      "meaning": "Coke (soda)",
+      "arabic": null,
+      "transliteration": "Coke (cola)",
+      "kind": "word"
+    },
+    {
+      "rank": 359,
+      "category": "bars",
+      "meaning": "Do you have any bar snacks?",
+      "arabic": null,
+      "transliteration": "Do you have any bar snacks? (hal ladayk 'ayu wajabbat khafifat bel bar)",
+      "kind": "word"
+    },
+    {
+      "rank": 360,
+      "category": "bars",
+      "meaning": "One more, please.",
+      "arabic": null,
+      "transliteration": "One more, please. (kaman wahed)",
+      "kind": "word"
+    },
+    {
+      "rank": 361,
+      "category": "bars",
+      "meaning": "Another round, please.",
+      "arabic": null,
+      "transliteration": "Another round, please. (kaman wahed)",
+      "kind": "word"
+    },
+    {
+      "rank": 362,
+      "category": "bars",
+      "meaning": "When is closing time?",
+      "arabic": null,
+      "transliteration": "When is closing time? (emta bitsakro?)",
+      "kind": "word"
+    },
+    {
+      "rank": 363,
+      "category": "shopping",
+      "meaning": "Do you have this in my size?",
+      "arabic": null,
+      "transliteration": "Do you have this in my size? (Fi maqas?)",
+      "kind": "word"
+    },
+    {
+      "rank": 364,
+      "category": "shopping",
+      "meaning": "How much is this?",
+      "arabic": "بكم هذا؟",
+      "transliteration": "(bikam hatha)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 365,
+      "category": "shopping",
+      "meaning": "That's too expensive.",
+      "arabic": null,
+      "transliteration": "That's too expensive. (...) \"ghali katheer!\"",
+      "kind": "word"
+    },
+    {
+      "rank": 366,
+      "category": "shopping",
+      "meaning": "Would you take _____?",
+      "arabic": null,
+      "transliteration": "Would you take _____? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 367,
+      "category": "shopping",
+      "meaning": "expensive",
+      "arabic": "غالي",
+      "transliteration": "(ghali)",
+      "kind": "word"
+    },
+    {
+      "rank": 368,
+      "category": "shopping",
+      "meaning": "cheap",
+      "arabic": "رخيص",
+      "transliteration": "(rakhees)",
+      "kind": "word"
+    },
+    {
+      "rank": 369,
+      "category": "shopping",
+      "meaning": "I can't afford it.",
+      "arabic": null,
+      "transliteration": "I can't afford it. (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 370,
+      "category": "shopping",
+      "meaning": "I don't want it.",
+      "arabic": null,
+      "transliteration": "I don't want it. (ma beddi)",
+      "kind": "word"
+    },
+    {
+      "rank": 371,
+      "category": "shopping",
+      "meaning": "You're cheating me.",
+      "arabic": null,
+      "transliteration": "You're cheating me. (harami)",
+      "kind": "word"
+    },
+    {
+      "rank": 372,
+      "category": "shopping",
+      "meaning": "I'm not interested.",
+      "arabic": null,
+      "transliteration": "I'm not interested. (lust muhtam)",
+      "kind": "word"
+    },
+    {
+      "rank": 373,
+      "category": "shopping",
+      "meaning": "OK, I'll take it.",
+      "arabic": null,
+      "transliteration": "OK, I'll take it. (ok)",
+      "kind": "word"
+    },
+    {
+      "rank": 374,
+      "category": "shopping",
+      "meaning": "Can I have a bag?",
+      "arabic": null,
+      "transliteration": "Can I have a bag? (oreedo kees)",
+      "kind": "word"
+    },
+    {
+      "rank": 375,
+      "category": "shopping",
+      "meaning": "Do you ship (overseas)?",
+      "arabic": null,
+      "transliteration": "Do you ship (overseas)? (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 376,
+      "category": "shopping",
+      "meaning": "I need...",
+      "arabic": null,
+      "transliteration": "I need... (...) Ahtaj",
+      "kind": "word"
+    },
+    {
+      "rank": 377,
+      "category": "shopping",
+      "meaning": "...toothpaste.",
+      "arabic": null,
+      "transliteration": "toothpaste. (ma'ajoon asnan)",
+      "kind": "word"
+    },
+    {
+      "rank": 378,
+      "category": "shopping",
+      "meaning": "...a toothbrush.",
+      "arabic": null,
+      "transliteration": "a toothbrush. (forshaat asnan)",
+      "kind": "word"
+    },
+    {
+      "rank": 379,
+      "category": "shopping",
+      "meaning": "...tampons.",
+      "arabic": null,
+      "transliteration": "tampons. (always)",
+      "kind": "word"
+    },
+    {
+      "rank": 380,
+      "category": "shopping",
+      "meaning": "...soap.",
+      "arabic": null,
+      "transliteration": "soap. (saboon)",
+      "kind": "word"
+    },
+    {
+      "rank": 381,
+      "category": "shopping",
+      "meaning": "...shampoo.",
+      "arabic": null,
+      "transliteration": "shampoo. (shamboo)",
+      "kind": "word"
+    },
+    {
+      "rank": 382,
+      "category": "shopping",
+      "meaning": "...pain reliever. (e.g., aspirin or ibuprofen)",
+      "arabic": null,
+      "transliteration": "pain reliever. (mussakin)",
+      "kind": "word"
+    },
+    {
+      "rank": 383,
+      "category": "shopping",
+      "meaning": "...cold medicine.",
+      "arabic": null,
+      "transliteration": "cold medicine. (dawa rash-h)",
+      "kind": "word"
+    },
+    {
+      "rank": 384,
+      "category": "shopping",
+      "meaning": "...stomach medicine.",
+      "arabic": null,
+      "transliteration": "stomach medicine. (dawa baten)",
+      "kind": "word"
+    },
+    {
+      "rank": 385,
+      "category": "shopping",
+      "meaning": "...a razor.",
+      "arabic": null,
+      "transliteration": "a razor. (shafra)",
+      "kind": "word"
+    },
+    {
+      "rank": 386,
+      "category": "shopping",
+      "meaning": "...an umbrella.",
+      "arabic": null,
+      "transliteration": "an umbrella. (shamseyeh)",
+      "kind": "word"
+    },
+    {
+      "rank": 387,
+      "category": "shopping",
+      "meaning": "...sunblock lotion.",
+      "arabic": null,
+      "transliteration": "sunblock lotion. (...)",
+      "kind": "word"
+    },
+    {
+      "rank": 388,
+      "category": "shopping",
+      "meaning": "...a postcard.",
+      "arabic": "بطاقة بريدية",
+      "transliteration": "(bitaqa bareedia)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 389,
+      "category": "shopping",
+      "meaning": "...postage stamps.",
+      "arabic": null,
+      "transliteration": "postage stamps. (tawabe' bareed)",
+      "kind": "word"
+    },
+    {
+      "rank": 390,
+      "category": "shopping",
+      "meaning": "...batteries.",
+      "arabic": null,
+      "transliteration": "batteries. (batareyat)",
+      "kind": "word"
+    },
+    {
+      "rank": 391,
+      "category": "shopping",
+      "meaning": "...writing paper.",
+      "arabic": "ورق للكتبة",
+      "transliteration": "(waraq lil-kitaba)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 392,
+      "category": "shopping",
+      "meaning": "...a pen.",
+      "arabic": "قلم",
+      "transliteration": "(qalam)",
+      "kind": "word"
+    },
+    {
+      "rank": 393,
+      "category": "shopping",
+      "meaning": "...English-language books.",
+      "arabic": "كتب إنجليزية",
+      "transliteration": "(kutub ingliziya)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 394,
+      "category": "shopping",
+      "meaning": "...English-language magazines.",
+      "arabic": "مجلات انكليزية",
+      "transliteration": "(majalat engiliziya)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 395,
+      "category": "shopping",
+      "meaning": "...an English-language newspaper.",
+      "arabic": "جرائد إنجليزية",
+      "transliteration": "(jara'id ingliziya)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 396,
+      "category": "shopping",
+      "meaning": "...an English-English dictionary.",
+      "arabic": null,
+      "transliteration": "an English-English dictionary. (qamoos ingilizi-ingilizi)",
+      "kind": "word"
+    },
+    {
+      "rank": 397,
+      "category": "driving",
+      "meaning": "I want to rent a car.",
+      "arabic": null,
+      "transliteration": "I want to rent a car. (beddi astajer sayarah)",
+      "kind": "word"
+    },
+    {
+      "rank": 398,
+      "category": "driving",
+      "meaning": "Can I get insurance?",
+      "arabic": null,
+      "transliteration": "Can I get insurance? (fi tameen?)",
+      "kind": "word"
+    },
+    {
+      "rank": 399,
+      "category": "driving",
+      "meaning": "stop (on a street sign)",
+      "arabic": null,
+      "transliteration": "stop (qif)",
+      "kind": "word"
+    },
+    {
+      "rank": 400,
+      "category": "driving",
+      "meaning": "one way",
+      "arabic": null,
+      "transliteration": "one way (tho itjah wahed)",
+      "kind": "word"
+    },
+    {
+      "rank": 401,
+      "category": "driving",
+      "meaning": "yield",
+      "arabic": null,
+      "transliteration": "yield (atti alaolwyeh)",
+      "kind": "word"
+    },
+    {
+      "rank": 402,
+      "category": "driving",
+      "meaning": "no parking",
+      "arabic": null,
+      "transliteration": "no parking (mamnoo alistifaf)",
+      "kind": "word"
+    },
+    {
+      "rank": 403,
+      "category": "driving",
+      "meaning": "speed limit",
+      "arabic": null,
+      "transliteration": "speed limit (alsuraa alkanooniya)",
+      "kind": "word"
+    },
+    {
+      "rank": 404,
+      "category": "driving",
+      "meaning": "gas (petrol) station",
+      "arabic": null,
+      "transliteration": "gas station (mahatet banzeen)",
+      "kind": "word"
+    },
+    {
+      "rank": 405,
+      "category": "driving",
+      "meaning": "petrol",
+      "arabic": null,
+      "transliteration": "petrol (betrol)",
+      "kind": "word"
+    },
+    {
+      "rank": 406,
+      "category": "driving",
+      "meaning": "diesel",
+      "arabic": null,
+      "transliteration": "diesel (diesel)",
+      "kind": "word"
+    },
+    {
+      "rank": 407,
+      "category": "authority",
+      "meaning": "I haven't done anything wrong.",
+      "arabic": "ما إمليت اياش غلط",
+      "transliteration": "(Ma emelet eshi ghalat)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 408,
+      "category": "authority",
+      "meaning": "It was a misunderstanding.",
+      "arabic": "كان سوء فهم",
+      "transliteration": "(kan su' fahum)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 409,
+      "category": "authority",
+      "meaning": "Where are you taking me?",
+      "arabic": "وين توديني؟",
+      "transliteration": "(wein twadini?)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 410,
+      "category": "authority",
+      "meaning": "Am I under arrest?",
+      "arabic": "أنا معتقل؟",
+      "transliteration": "(ana motaqal?)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 411,
+      "category": "authority",
+      "meaning": "I am an American/Australian/British/Canadian citizen.",
+      "arabic": "أنا موطن أمريكي أوسترالي بريطاني كنادي",
+      "transliteration": "/ / / (Ana mowaten amiriki/australi/britani/kanadi)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 412,
+      "category": "authority",
+      "meaning": "I want to talk to the American/Australian/British/Canadian embassy/consulate.",
+      "arabic": "اُوريد أن أتكام مع السفار قنصلية الأمريكية أسترالية بريطانية الكندية",
+      "transliteration": "/ / / / (arid an atakalam ma al safara/qunsiluya al amirkiyah/australiyah/britanniyah/kanadiyah)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 413,
+      "category": "authority",
+      "meaning": "I want to talk to a lawyer.",
+      "arabic": "أريد التحدوث مع محامي",
+      "transliteration": "(arid altahaduth ma muhami)",
+      "kind": "phrase"
+    },
+    {
+      "rank": 414,
+      "category": "authority",
+      "meaning": "Can I just pay a fine now?",
+      "arabic": "هل يمكنوني دفع غرأمات الأم؟",
+      "transliteration": "(hal yumkinuni dafe gharamat alan?)",
+      "kind": "phrase"
+    }
+  ]
+}

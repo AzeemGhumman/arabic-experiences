@@ -1,0 +1,2835 @@
+{
+  "id": "wiktionary-arabic-swadesh",
+  "title": "Arabic Swadesh list",
+  "description": "Morris Swadesh's 207-item basic vocabulary list for Classical Arabic, with MSA pronunciations, transliteration, and IPA.",
+  "source": {
+    "retrievedAt": "2026-08-16",
+    "name": "Wiktionary",
+    "url": "https://en.wiktionary.org/wiki/Appendix:Arabic_Swadesh_list",
+    "license": "CC BY-SA 4.0"
+  },
+  "context": {
+    "variety": "Classical Arabic with MSA pronunciation",
+    "kind": "core-vocabulary",
+    "notes": "Wiktionary notes that the list is Classical Arabic exclusively, while pronunciations are MSA equivalents. Multiple forms in one cell are gender, number, or near-synonym variants. This is a comparative-linguistics list, not a travel phrasebook."
+  },
+  "wordCount": 207,
+  "entries": [
+    {
+      "rank": 1,
+      "swadeshNo": 1,
+      "meaning": "I ( 1sg)",
+      "arabic": "أَنَا",
+      "transliteration": "ʔanā",
+      "ipa": "/ʔa.naː/",
+      "variants": null,
+      "allIpa": [
+        "/ʔa.naː/"
+      ]
+    },
+    {
+      "rank": 2,
+      "swadeshNo": 2,
+      "meaning": "you ( 2sg)",
+      "arabic": "أَنْتَ",
+      "transliteration": "ʔanta",
+      "ipa": "/ʔan.ta/",
+      "variants": [
+        {
+          "arabic": "أَنْتِ",
+          "transliteration": "ʔanti"
+        }
+      ],
+      "allIpa": [
+        "/ʔan.ta/",
+        "/ʔan.ti/"
+      ]
+    },
+    {
+      "rank": 3,
+      "swadeshNo": 3,
+      "meaning": "he, she, it ( 3sg)",
+      "arabic": "هُوَ",
+      "transliteration": "huwa",
+      "ipa": "/hu.wa/",
+      "variants": [
+        {
+          "arabic": "هِيَ",
+          "transliteration": "hiya"
+        }
+      ],
+      "allIpa": [
+        "/hu.wa/",
+        "/hi.ja/"
+      ]
+    },
+    {
+      "rank": 4,
+      "swadeshNo": 4,
+      "meaning": "we ( 1pl)",
+      "arabic": "نَحْنُ",
+      "transliteration": "naḥnu",
+      "ipa": "/naħ.nu/",
+      "variants": null,
+      "allIpa": [
+        "/naħ.nu/"
+      ]
+    },
+    {
+      "rank": 5,
+      "swadeshNo": 5,
+      "meaning": "you ( 2pl)",
+      "arabic": "أَنْتُمْ",
+      "transliteration": "ʔantum",
+      "ipa": "/ʔan.tum/",
+      "variants": [
+        {
+          "arabic": "أَنْتُنَّ",
+          "transliteration": "ʔantunna"
+        },
+        {
+          "arabic": "أَنْتُمَا",
+          "transliteration": "ʔantumā"
+        }
+      ],
+      "allIpa": [
+        "/ʔan.tum/",
+        "/ʔan.tun.na/",
+        "/ʔan.tu.maː/"
+      ]
+    },
+    {
+      "rank": 6,
+      "swadeshNo": 6,
+      "meaning": "they ( 3pl)",
+      "arabic": "هُمْ",
+      "transliteration": "hum",
+      "ipa": "/hum/",
+      "variants": [
+        {
+          "arabic": "هُنَّ",
+          "transliteration": "hunna"
+        },
+        {
+          "arabic": "هُمَا",
+          "transliteration": "humā"
+        }
+      ],
+      "allIpa": [
+        "/hum/",
+        "/hun.na/",
+        "/hu.maː/"
+      ]
+    },
+    {
+      "rank": 7,
+      "swadeshNo": 7,
+      "meaning": "this",
+      "arabic": "هٰذَا",
+      "transliteration": "hāḏā",
+      "ipa": "/haː.ðaː/",
+      "variants": [
+        {
+          "arabic": "هٰذِهِ",
+          "transliteration": "hāḏihi"
+        },
+        {
+          "arabic": "هٰذِي",
+          "transliteration": "hāḏī"
+        }
+      ],
+      "allIpa": [
+        "/haː.ðaː/",
+        "/haː.ði.hi/",
+        "/haː.ðiː/"
+      ]
+    },
+    {
+      "rank": 8,
+      "swadeshNo": 8,
+      "meaning": "that",
+      "arabic": "ذٰلِكَ",
+      "transliteration": "ḏālika",
+      "ipa": "/ðaː.li.ka/",
+      "variants": [
+        {
+          "arabic": "ذَاكَ",
+          "transliteration": "ḏāka"
+        },
+        {
+          "arabic": "تِلْكَ",
+          "transliteration": "tilka"
+        },
+        {
+          "arabic": "تِيكَ",
+          "transliteration": "tīka"
+        }
+      ],
+      "allIpa": [
+        "/ðaː.li.ka/",
+        "/ðaː.ka/",
+        "/til.ka/",
+        "/tiː.ka/"
+      ]
+    },
+    {
+      "rank": 9,
+      "swadeshNo": 9,
+      "meaning": "here",
+      "arabic": "هُنَا",
+      "transliteration": "hunā",
+      "ipa": "/hu.naː/",
+      "variants": null,
+      "allIpa": [
+        "/hu.naː/"
+      ]
+    },
+    {
+      "rank": 10,
+      "swadeshNo": 10,
+      "meaning": "there",
+      "arabic": "هُنَاكَ",
+      "transliteration": "hunāka",
+      "ipa": "/hu.naː.ka/",
+      "variants": [
+        {
+          "arabic": "هُنَالِكَ",
+          "transliteration": "hunālika"
+        },
+        {
+          "arabic": "ثَمَّ",
+          "transliteration": "ṯamma"
+        }
+      ],
+      "allIpa": [
+        "/hu.naː.ka/",
+        "/hu.naː.li.ka/",
+        "/θam.ma/"
+      ]
+    },
+    {
+      "rank": 11,
+      "swadeshNo": 11,
+      "meaning": "who",
+      "arabic": "مَنْ",
+      "transliteration": "man",
+      "ipa": "/man/",
+      "variants": null,
+      "allIpa": [
+        "/man/"
+      ]
+    },
+    {
+      "rank": 12,
+      "swadeshNo": 12,
+      "meaning": "what",
+      "arabic": "مَا",
+      "transliteration": "mā",
+      "ipa": "/maː/",
+      "variants": [
+        {
+          "arabic": "مَاذَا",
+          "transliteration": "māḏā"
+        }
+      ],
+      "allIpa": [
+        "/maː/",
+        "/maː.ðaː/"
+      ]
+    },
+    {
+      "rank": 13,
+      "swadeshNo": 13,
+      "meaning": "where",
+      "arabic": "أَيْن",
+      "transliteration": "ʔayn",
+      "ipa": "/ʔajn/",
+      "variants": null,
+      "allIpa": [
+        "/ʔajn/"
+      ]
+    },
+    {
+      "rank": 14,
+      "swadeshNo": 14,
+      "meaning": "when",
+      "arabic": "مَتَى",
+      "transliteration": "matā",
+      "ipa": "/ma.taː/",
+      "variants": null,
+      "allIpa": [
+        "/ma.taː/"
+      ]
+    },
+    {
+      "rank": 15,
+      "swadeshNo": 15,
+      "meaning": "how",
+      "arabic": "كَيْف",
+      "transliteration": "kayf",
+      "ipa": "/kajf/",
+      "variants": null,
+      "allIpa": [
+        "/kajf/"
+      ]
+    },
+    {
+      "rank": 16,
+      "swadeshNo": 16,
+      "meaning": "not",
+      "arabic": "لَا",
+      "transliteration": "lā",
+      "ipa": "/laː/",
+      "variants": [
+        {
+          "arabic": "مَا",
+          "transliteration": "mā"
+        },
+        {
+          "arabic": "لَنْ",
+          "transliteration": "lan"
+        },
+        {
+          "arabic": "لَمْ",
+          "transliteration": "lam"
+        }
+      ],
+      "allIpa": [
+        "/laː/",
+        "/maː/",
+        "/lan/",
+        "/lam/"
+      ]
+    },
+    {
+      "rank": 17,
+      "swadeshNo": 17,
+      "meaning": "all",
+      "arabic": "كُلّ",
+      "transliteration": "kull",
+      "ipa": "/kull/",
+      "variants": null,
+      "allIpa": [
+        "/kull/"
+      ]
+    },
+    {
+      "rank": 18,
+      "swadeshNo": 18,
+      "meaning": "many",
+      "arabic": "كَثِير",
+      "transliteration": "kaṯīr",
+      "ipa": "/ka.θiːr/",
+      "variants": null,
+      "allIpa": [
+        "/ka.θiːr/"
+      ]
+    },
+    {
+      "rank": 19,
+      "swadeshNo": 19,
+      "meaning": "some",
+      "arabic": "بَعْض",
+      "transliteration": "baʕḍ",
+      "ipa": "/baʕdˤ/",
+      "variants": null,
+      "allIpa": [
+        "/baʕdˤ/"
+      ]
+    },
+    {
+      "rank": 20,
+      "swadeshNo": 20,
+      "meaning": "few",
+      "arabic": "قَلِيل",
+      "transliteration": "qalīl",
+      "ipa": "/qa.liːl/",
+      "variants": null,
+      "allIpa": [
+        "/qa.liːl/"
+      ]
+    },
+    {
+      "rank": 21,
+      "swadeshNo": 21,
+      "meaning": "other",
+      "arabic": "آخَر",
+      "transliteration": "ʔāḵar",
+      "ipa": "/ʔaː.xar/",
+      "variants": null,
+      "allIpa": [
+        "/ʔaː.xar/"
+      ]
+    },
+    {
+      "rank": 22,
+      "swadeshNo": 22,
+      "meaning": "one",
+      "arabic": "وَاحِد",
+      "transliteration": "wāḥid",
+      "ipa": "/waː.ħid/",
+      "variants": null,
+      "allIpa": [
+        "/waː.ħid/"
+      ]
+    },
+    {
+      "rank": 23,
+      "swadeshNo": 23,
+      "meaning": "two",
+      "arabic": "اِثْنَان",
+      "transliteration": "iṯnān",
+      "ipa": "/iθ.naːn/",
+      "variants": null,
+      "allIpa": [
+        "/iθ.naːn/"
+      ]
+    },
+    {
+      "rank": 24,
+      "swadeshNo": 24,
+      "meaning": "three",
+      "arabic": "ثَلَاثَة",
+      "transliteration": "ṯalāṯa",
+      "ipa": "/θa.laː.θa/",
+      "variants": null,
+      "allIpa": [
+        "/θa.laː.θa/"
+      ]
+    },
+    {
+      "rank": 25,
+      "swadeshNo": 25,
+      "meaning": "four",
+      "arabic": "أَرْبَعَة",
+      "transliteration": "ʔarbaʕa",
+      "ipa": "/ʔar.ba.ʕa/",
+      "variants": null,
+      "allIpa": [
+        "/ʔar.ba.ʕa/"
+      ]
+    },
+    {
+      "rank": 26,
+      "swadeshNo": 26,
+      "meaning": "five",
+      "arabic": "خَمْسَة",
+      "transliteration": "ḵamsa",
+      "ipa": "/xam.sa/",
+      "variants": null,
+      "allIpa": [
+        "/xam.sa/"
+      ]
+    },
+    {
+      "rank": 27,
+      "swadeshNo": 27,
+      "meaning": "big",
+      "arabic": "كَبِير",
+      "transliteration": "kabīr",
+      "ipa": "/ka.biːr/",
+      "variants": null,
+      "allIpa": [
+        "/ka.biːr/"
+      ]
+    },
+    {
+      "rank": 28,
+      "swadeshNo": 28,
+      "meaning": "long",
+      "arabic": "طَوِيل",
+      "transliteration": "ṭawīl",
+      "ipa": "/tˤa.wiːl/",
+      "variants": null,
+      "allIpa": [
+        "/tˤa.wiːl/"
+      ]
+    },
+    {
+      "rank": 29,
+      "swadeshNo": 29,
+      "meaning": "wide",
+      "arabic": "رَحْب",
+      "transliteration": "raḥb",
+      "ipa": "/raħb/",
+      "variants": [
+        {
+          "arabic": "وَاسِع",
+          "transliteration": "wāsiʕ"
+        }
+      ],
+      "allIpa": [
+        "/raħb/",
+        "/waː.siʕ/"
+      ]
+    },
+    {
+      "rank": 30,
+      "swadeshNo": 30,
+      "meaning": "thick",
+      "arabic": "سَمِيك",
+      "transliteration": "samīk",
+      "ipa": "/sa.miːk/",
+      "variants": null,
+      "allIpa": [
+        "/sa.miːk/"
+      ]
+    },
+    {
+      "rank": 31,
+      "swadeshNo": 31,
+      "meaning": "heavy",
+      "arabic": "ثَقِيل",
+      "transliteration": "ṯaqīl",
+      "ipa": "/θa.qiːl/",
+      "variants": null,
+      "allIpa": [
+        "/θa.qiːl/"
+      ]
+    },
+    {
+      "rank": 32,
+      "swadeshNo": 32,
+      "meaning": "small",
+      "arabic": "صَغِير",
+      "transliteration": "ṣaḡīr",
+      "ipa": "/sˤa.ɣiːr/",
+      "variants": null,
+      "allIpa": [
+        "/sˤa.ɣiːr/"
+      ]
+    },
+    {
+      "rank": 33,
+      "swadeshNo": 33,
+      "meaning": "short",
+      "arabic": "قَصِير",
+      "transliteration": "qaṣīr",
+      "ipa": "/qa.sˤiːr/",
+      "variants": null,
+      "allIpa": [
+        "/qa.sˤiːr/"
+      ]
+    },
+    {
+      "rank": 34,
+      "swadeshNo": 34,
+      "meaning": "narrow",
+      "arabic": "ضَيِّق",
+      "transliteration": "ḍayyiq",
+      "ipa": "/dˤaj.jiq/",
+      "variants": null,
+      "allIpa": [
+        "/dˤaj.jiq/"
+      ]
+    },
+    {
+      "rank": 35,
+      "swadeshNo": 35,
+      "meaning": "thin",
+      "arabic": "رَقِيق",
+      "transliteration": "raqīq",
+      "ipa": "/ra.qiːq/",
+      "variants": null,
+      "allIpa": [
+        "/ra.qiːq/"
+      ]
+    },
+    {
+      "rank": 36,
+      "swadeshNo": 36,
+      "meaning": "woman",
+      "arabic": "اِمْرَأَة",
+      "transliteration": "imraʔa",
+      "ipa": "/im.ra.ʔa/",
+      "variants": null,
+      "allIpa": [
+        "/im.ra.ʔa/"
+      ]
+    },
+    {
+      "rank": 37,
+      "swadeshNo": 37,
+      "meaning": "man (adult male)",
+      "arabic": "رَجُل",
+      "transliteration": "rajul",
+      "ipa": "/ra.d͡ʒul/",
+      "variants": null,
+      "allIpa": [
+        "/ra.d͡ʒul/"
+      ]
+    },
+    {
+      "rank": 38,
+      "swadeshNo": 38,
+      "meaning": "man (human being)",
+      "arabic": "إِنْسَان",
+      "transliteration": "ʔinsān",
+      "ipa": "/ʔin.saːn/",
+      "variants": null,
+      "allIpa": [
+        "/ʔin.saːn/"
+      ]
+    },
+    {
+      "rank": 39,
+      "swadeshNo": 39,
+      "meaning": "child",
+      "arabic": "طِفْل",
+      "transliteration": "ṭifl",
+      "ipa": "/tˤifl/",
+      "variants": null,
+      "allIpa": [
+        "/tˤifl/"
+      ]
+    },
+    {
+      "rank": 40,
+      "swadeshNo": 40,
+      "meaning": "wife",
+      "arabic": "زَوْجَة",
+      "transliteration": "zawja",
+      "ipa": "/zaw.d͡ʒa/",
+      "variants": null,
+      "allIpa": [
+        "/zaw.d͡ʒa/"
+      ]
+    },
+    {
+      "rank": 41,
+      "swadeshNo": 41,
+      "meaning": "husband",
+      "arabic": "زَوْج",
+      "transliteration": "zawj",
+      "ipa": "/zawd͡ʒ/",
+      "variants": [
+        {
+          "arabic": "بَعْل",
+          "transliteration": "baʕl"
+        }
+      ],
+      "allIpa": [
+        "/zawd͡ʒ/",
+        "/baʕl/"
+      ]
+    },
+    {
+      "rank": 42,
+      "swadeshNo": 42,
+      "meaning": "mother",
+      "arabic": "أُمّ",
+      "transliteration": "ʔumm",
+      "ipa": "/ʔumm/",
+      "variants": null,
+      "allIpa": [
+        "/ʔumm/"
+      ]
+    },
+    {
+      "rank": 43,
+      "swadeshNo": 43,
+      "meaning": "father",
+      "arabic": "أَب",
+      "transliteration": "ʔab",
+      "ipa": "/ʔab/",
+      "variants": null,
+      "allIpa": [
+        "/ʔab/"
+      ]
+    },
+    {
+      "rank": 44,
+      "swadeshNo": 44,
+      "meaning": "animal",
+      "arabic": "حَيَوَان",
+      "transliteration": "ḥayawān",
+      "ipa": "/ħa.ja.waːn/",
+      "variants": null,
+      "allIpa": [
+        "/ħa.ja.waːn/"
+      ]
+    },
+    {
+      "rank": 45,
+      "swadeshNo": 45,
+      "meaning": "fish",
+      "arabic": "سَمَك",
+      "transliteration": "samak",
+      "ipa": "/sa.mak/",
+      "variants": [
+        {
+          "arabic": "حُوت",
+          "transliteration": "ḥūt"
+        }
+      ],
+      "allIpa": [
+        "/sa.mak/",
+        "/ħuːt/"
+      ]
+    },
+    {
+      "rank": 46,
+      "swadeshNo": 46,
+      "meaning": "bird",
+      "arabic": "طَائِر",
+      "transliteration": "ṭāʔir",
+      "ipa": "/tˤaː.ʔir/",
+      "variants": [
+        {
+          "arabic": "عُصْفُور",
+          "transliteration": "ʕuṣfūr"
+        }
+      ],
+      "allIpa": [
+        "/tˤaː.ʔir/",
+        "/ʕusˤ.fuːr/"
+      ]
+    },
+    {
+      "rank": 47,
+      "swadeshNo": 47,
+      "meaning": "dog",
+      "arabic": "كَلْب",
+      "transliteration": "kalb",
+      "ipa": "/kalb/",
+      "variants": null,
+      "allIpa": [
+        "/kalb/"
+      ]
+    },
+    {
+      "rank": 48,
+      "swadeshNo": 48,
+      "meaning": "louse",
+      "arabic": "قَمْل",
+      "transliteration": "qaml",
+      "ipa": "/qaml/",
+      "variants": null,
+      "allIpa": [
+        "/qaml/"
+      ]
+    },
+    {
+      "rank": 49,
+      "swadeshNo": 49,
+      "meaning": "snake",
+      "arabic": "حَنَش",
+      "transliteration": "ḥanaš",
+      "ipa": "/ħa.naʃ/",
+      "variants": [
+        {
+          "arabic": "ثُعْبَان",
+          "transliteration": "ṯuʕbān"
+        },
+        {
+          "arabic": "حَيَّة",
+          "transliteration": "ḥayya"
+        },
+        {
+          "arabic": "أَفْعًى",
+          "transliteration": "ʔafʕan"
+        }
+      ],
+      "allIpa": [
+        "/ħa.naʃ/",
+        "/θuʕ.baːn/",
+        "/ħaj.ja/",
+        "/ʔaf.ʕan/"
+      ]
+    },
+    {
+      "rank": 50,
+      "swadeshNo": 50,
+      "meaning": "worm",
+      "arabic": "دُود",
+      "transliteration": "dūd",
+      "ipa": "/duːd/",
+      "variants": null,
+      "allIpa": [
+        "/duːd/"
+      ]
+    },
+    {
+      "rank": 51,
+      "swadeshNo": 51,
+      "meaning": "tree",
+      "arabic": "شَجَرَة",
+      "transliteration": "šajara",
+      "ipa": "/ʃa.d͡ʒa.ra/",
+      "variants": null,
+      "allIpa": [
+        "/ʃa.d͡ʒa.ra/"
+      ]
+    },
+    {
+      "rank": 52,
+      "swadeshNo": 52,
+      "meaning": "forest",
+      "arabic": "غَابَة",
+      "transliteration": "ḡāba",
+      "ipa": "/ɣaː.ba/",
+      "variants": null,
+      "allIpa": [
+        "/ɣaː.ba/"
+      ]
+    },
+    {
+      "rank": 53,
+      "swadeshNo": 53,
+      "meaning": "stick",
+      "arabic": "عَصًا",
+      "transliteration": "ʕaṣan",
+      "ipa": "/ʕa.sˤan/",
+      "variants": null,
+      "allIpa": [
+        "/ʕa.sˤan/"
+      ]
+    },
+    {
+      "rank": 54,
+      "swadeshNo": 54,
+      "meaning": "fruit",
+      "arabic": "فَاكِهَة",
+      "transliteration": "fākiha",
+      "ipa": "/faː.ki.ha/",
+      "variants": null,
+      "allIpa": [
+        "/faː.ki.ha/"
+      ]
+    },
+    {
+      "rank": 55,
+      "swadeshNo": 55,
+      "meaning": "seed",
+      "arabic": "زَرْع",
+      "transliteration": "zarʕ",
+      "ipa": "/zarʕ/",
+      "variants": [
+        {
+          "arabic": "زَرِّيعَة",
+          "transliteration": "zarrīʕa"
+        }
+      ],
+      "allIpa": [
+        "/zarʕ/",
+        "/zar.riː.ʕa/"
+      ]
+    },
+    {
+      "rank": 56,
+      "swadeshNo": 56,
+      "meaning": "leaf",
+      "arabic": "وَرَقَة",
+      "transliteration": "waraqa",
+      "ipa": "/wa.ra.qa/",
+      "variants": null,
+      "allIpa": [
+        "/wa.ra.qa/"
+      ]
+    },
+    {
+      "rank": 57,
+      "swadeshNo": 57,
+      "meaning": "root",
+      "arabic": "جِذْر",
+      "transliteration": "jiḏr",
+      "ipa": "/d͡ʒiðr/",
+      "variants": [
+        {
+          "arabic": "جَذْر",
+          "transliteration": "jaḏr"
+        }
+      ],
+      "allIpa": [
+        "/d͡ʒiðr/",
+        "/d͡ʒaðr/"
+      ]
+    },
+    {
+      "rank": 58,
+      "swadeshNo": 58,
+      "meaning": "bark (of a tree)",
+      "arabic": "قِلْف",
+      "transliteration": "qilf",
+      "ipa": "/qilf/",
+      "variants": null,
+      "allIpa": [
+        "/qilf/"
+      ]
+    },
+    {
+      "rank": 59,
+      "swadeshNo": 59,
+      "meaning": "flower",
+      "arabic": "زَهْرَة",
+      "transliteration": "zahra",
+      "ipa": "/zah.ra/",
+      "variants": null,
+      "allIpa": [
+        "/zah.ra/"
+      ]
+    },
+    {
+      "rank": 60,
+      "swadeshNo": 60,
+      "meaning": "grass",
+      "arabic": "حَشِيش",
+      "transliteration": "ḥašīš",
+      "ipa": "/ħa.ʃiːʃ/",
+      "variants": null,
+      "allIpa": [
+        "/ħa.ʃiːʃ/"
+      ]
+    },
+    {
+      "rank": 61,
+      "swadeshNo": 61,
+      "meaning": "rope",
+      "arabic": "حَبْل",
+      "transliteration": "ḥabl",
+      "ipa": "/ħabl/",
+      "variants": null,
+      "allIpa": [
+        "/ħabl/"
+      ]
+    },
+    {
+      "rank": 62,
+      "swadeshNo": 62,
+      "meaning": "skin",
+      "arabic": "جِلْد",
+      "transliteration": "jild",
+      "ipa": "/d͡ʒild/",
+      "variants": null,
+      "allIpa": [
+        "/d͡ʒild/"
+      ]
+    },
+    {
+      "rank": 63,
+      "swadeshNo": 63,
+      "meaning": "meat",
+      "arabic": "لَحْم",
+      "transliteration": "laḥm",
+      "ipa": "/laħm/",
+      "variants": null,
+      "allIpa": [
+        "/laħm/"
+      ]
+    },
+    {
+      "rank": 64,
+      "swadeshNo": 64,
+      "meaning": "blood",
+      "arabic": "دَم",
+      "transliteration": "dam",
+      "ipa": "/dam/",
+      "variants": null,
+      "allIpa": [
+        "/dam/"
+      ]
+    },
+    {
+      "rank": 65,
+      "swadeshNo": 65,
+      "meaning": "bone",
+      "arabic": "عَظْم",
+      "transliteration": "ʕaẓm",
+      "ipa": "/ʕaðˤm/",
+      "variants": null,
+      "allIpa": [
+        "/ʕaðˤm/"
+      ]
+    },
+    {
+      "rank": 66,
+      "swadeshNo": 66,
+      "meaning": "fat (noun)",
+      "arabic": "دُهْن",
+      "transliteration": "duhn",
+      "ipa": "/duhn/",
+      "variants": null,
+      "allIpa": [
+        "/duhn/"
+      ]
+    },
+    {
+      "rank": 67,
+      "swadeshNo": 67,
+      "meaning": "egg",
+      "arabic": "بَيْضَة",
+      "transliteration": "bayḍa",
+      "ipa": "/baj.dˤa/",
+      "variants": null,
+      "allIpa": [
+        "/baj.dˤa/"
+      ]
+    },
+    {
+      "rank": 68,
+      "swadeshNo": 68,
+      "meaning": "horn",
+      "arabic": "قَرْن",
+      "transliteration": "qarn",
+      "ipa": "/qarn/",
+      "variants": null,
+      "allIpa": [
+        "/qarn/"
+      ]
+    },
+    {
+      "rank": 69,
+      "swadeshNo": 69,
+      "meaning": "tail",
+      "arabic": "ذَنَب",
+      "transliteration": "ḏanab",
+      "ipa": "/ða.nab/",
+      "variants": null,
+      "allIpa": [
+        "/ða.nab/"
+      ]
+    },
+    {
+      "rank": 70,
+      "swadeshNo": 70,
+      "meaning": "feather",
+      "arabic": "رِيشَة",
+      "transliteration": "rīša",
+      "ipa": "/riː.ʃa/",
+      "variants": null,
+      "allIpa": [
+        "/riː.ʃa/"
+      ]
+    },
+    {
+      "rank": 71,
+      "swadeshNo": 71,
+      "meaning": "hair",
+      "arabic": "شَعْر",
+      "transliteration": "šaʕr",
+      "ipa": "/ʃaʕr/",
+      "variants": null,
+      "allIpa": [
+        "/ʃaʕr/"
+      ]
+    },
+    {
+      "rank": 72,
+      "swadeshNo": 72,
+      "meaning": "head",
+      "arabic": "رَأْس",
+      "transliteration": "raʔs",
+      "ipa": "/raʔs/",
+      "variants": null,
+      "allIpa": [
+        "/raʔs/"
+      ]
+    },
+    {
+      "rank": 73,
+      "swadeshNo": 73,
+      "meaning": "ear",
+      "arabic": "أُذُن",
+      "transliteration": "ʔuḏun",
+      "ipa": "/ʔu.ðun/",
+      "variants": null,
+      "allIpa": [
+        "/ʔu.ðun/"
+      ]
+    },
+    {
+      "rank": 74,
+      "swadeshNo": 74,
+      "meaning": "eye",
+      "arabic": "عَيْن",
+      "transliteration": "ʕayn",
+      "ipa": "/ʕajn/",
+      "variants": null,
+      "allIpa": [
+        "/ʕajn/"
+      ]
+    },
+    {
+      "rank": 75,
+      "swadeshNo": 75,
+      "meaning": "nose",
+      "arabic": "أَنْف",
+      "transliteration": "ʔanf",
+      "ipa": "/ʔanf/",
+      "variants": null,
+      "allIpa": [
+        "/ʔanf/"
+      ]
+    },
+    {
+      "rank": 76,
+      "swadeshNo": 76,
+      "meaning": "mouth",
+      "arabic": "فَم",
+      "transliteration": "fam",
+      "ipa": "/fam/",
+      "variants": null,
+      "allIpa": [
+        "/fam/"
+      ]
+    },
+    {
+      "rank": 77,
+      "swadeshNo": 77,
+      "meaning": "tooth",
+      "arabic": "سِنّ",
+      "transliteration": "sinn",
+      "ipa": "/sinn/",
+      "variants": null,
+      "allIpa": [
+        "/sinn/"
+      ]
+    },
+    {
+      "rank": 78,
+      "swadeshNo": 78,
+      "meaning": "tongue (organ)",
+      "arabic": "لِسَان",
+      "transliteration": "lisān",
+      "ipa": "/li.saːn/",
+      "variants": null,
+      "allIpa": [
+        "/li.saːn/"
+      ]
+    },
+    {
+      "rank": 79,
+      "swadeshNo": 79,
+      "meaning": "fingernail",
+      "arabic": "ظُفْر",
+      "transliteration": "ẓufr",
+      "ipa": "/ðˤufr/",
+      "variants": null,
+      "allIpa": [
+        "/ðˤufr/"
+      ]
+    },
+    {
+      "rank": 80,
+      "swadeshNo": 80,
+      "meaning": "foot",
+      "arabic": "قَدَم",
+      "transliteration": "qadam",
+      "ipa": "/qa.dam/",
+      "variants": null,
+      "allIpa": [
+        "/qa.dam/"
+      ]
+    },
+    {
+      "rank": 81,
+      "swadeshNo": 81,
+      "meaning": "leg",
+      "arabic": "رِجْل",
+      "transliteration": "rijl",
+      "ipa": "/rid͡ʒl/",
+      "variants": null,
+      "allIpa": [
+        "/rid͡ʒl/"
+      ]
+    },
+    {
+      "rank": 82,
+      "swadeshNo": 82,
+      "meaning": "knee",
+      "arabic": "رُكْبَة",
+      "transliteration": "rukba",
+      "ipa": "/ruk.ba/",
+      "variants": null,
+      "allIpa": [
+        "/ruk.ba/"
+      ]
+    },
+    {
+      "rank": 83,
+      "swadeshNo": 83,
+      "meaning": "hand",
+      "arabic": "يَد",
+      "transliteration": "yad",
+      "ipa": "/jad/",
+      "variants": null,
+      "allIpa": [
+        "/jad/"
+      ]
+    },
+    {
+      "rank": 84,
+      "swadeshNo": 84,
+      "meaning": "wing",
+      "arabic": "كَنَف",
+      "transliteration": "kanaf",
+      "ipa": "/ka.naf/",
+      "variants": [
+        {
+          "arabic": "جَنَاح",
+          "transliteration": "janāḥ"
+        }
+      ],
+      "allIpa": [
+        "/ka.naf/",
+        "/d͡ʒa.naːħ/"
+      ]
+    },
+    {
+      "rank": 85,
+      "swadeshNo": 85,
+      "meaning": "belly",
+      "arabic": "بَطْن",
+      "transliteration": "baṭn",
+      "ipa": "/batˤn/",
+      "variants": null,
+      "allIpa": [
+        "/batˤn/"
+      ]
+    },
+    {
+      "rank": 86,
+      "swadeshNo": 86,
+      "meaning": "guts",
+      "arabic": "أَمْعَاء",
+      "transliteration": "ʔamʕāʔ",
+      "ipa": "/ʔam.ʕaːʔ/",
+      "variants": null,
+      "allIpa": [
+        "/ʔam.ʕaːʔ/"
+      ]
+    },
+    {
+      "rank": 87,
+      "swadeshNo": 87,
+      "meaning": "neck",
+      "arabic": "رَقَبَة",
+      "transliteration": "raqaba",
+      "ipa": "/ra.qa.ba/",
+      "variants": null,
+      "allIpa": [
+        "/ra.qa.ba/"
+      ]
+    },
+    {
+      "rank": 88,
+      "swadeshNo": 88,
+      "meaning": "back",
+      "arabic": "ظَهْر",
+      "transliteration": "ẓahr",
+      "ipa": "/ðˤahr/",
+      "variants": null,
+      "allIpa": [
+        "/ðˤahr/"
+      ]
+    },
+    {
+      "rank": 89,
+      "swadeshNo": 89,
+      "meaning": "breast",
+      "arabic": "ثَدْي",
+      "transliteration": "ṯady",
+      "ipa": "/θadj/",
+      "variants": [
+        {
+          "arabic": "صَدْر",
+          "transliteration": "ṣadr"
+        }
+      ],
+      "allIpa": [
+        "/θadj/",
+        "/sˤadr/"
+      ]
+    },
+    {
+      "rank": 90,
+      "swadeshNo": 90,
+      "meaning": "heart",
+      "arabic": "لُبّ",
+      "transliteration": "lubb",
+      "ipa": "/lubb/",
+      "variants": [
+        {
+          "arabic": "قَلْب",
+          "transliteration": "qalb"
+        }
+      ],
+      "allIpa": [
+        "/lubb/",
+        "/qalb/"
+      ]
+    },
+    {
+      "rank": 91,
+      "swadeshNo": 91,
+      "meaning": "liver",
+      "arabic": "كَبِد",
+      "transliteration": "kabid",
+      "ipa": "/ka.bid/",
+      "variants": null,
+      "allIpa": [
+        "/ka.bid/"
+      ]
+    },
+    {
+      "rank": 92,
+      "swadeshNo": 92,
+      "meaning": "to drink",
+      "arabic": "شَرِبَ",
+      "transliteration": "šariba",
+      "ipa": "/ʃa.ri.ba/",
+      "variants": null,
+      "allIpa": [
+        "/ʃa.ri.ba/"
+      ]
+    },
+    {
+      "rank": 93,
+      "swadeshNo": 93,
+      "meaning": "to eat",
+      "arabic": "أَكَلَ",
+      "transliteration": "ʔakala",
+      "ipa": "/ʔa.ka.la/",
+      "variants": null,
+      "allIpa": [
+        "/ʔa.ka.la/"
+      ]
+    },
+    {
+      "rank": 94,
+      "swadeshNo": 94,
+      "meaning": "to bite",
+      "arabic": "عَضَّ",
+      "transliteration": "ʕaḍḍa",
+      "ipa": "/ʕadˤ.dˤa/",
+      "variants": null,
+      "allIpa": [
+        "/ʕadˤ.dˤa/"
+      ]
+    },
+    {
+      "rank": 95,
+      "swadeshNo": 95,
+      "meaning": "to suck",
+      "arabic": "مَصَّ",
+      "transliteration": "maṣṣa",
+      "ipa": "/masˤ.sˤa/",
+      "variants": null,
+      "allIpa": [
+        "/masˤ.sˤa/"
+      ]
+    },
+    {
+      "rank": 96,
+      "swadeshNo": 96,
+      "meaning": "to spit",
+      "arabic": "بَصَقَ",
+      "transliteration": "baṣaqa",
+      "ipa": "/ba.sˤa.qa/",
+      "variants": null,
+      "allIpa": [
+        "/ba.sˤa.qa/"
+      ]
+    },
+    {
+      "rank": 97,
+      "swadeshNo": 97,
+      "meaning": "to vomit",
+      "arabic": "تَقَيَّأَ",
+      "transliteration": "taqayyaʔa",
+      "ipa": "/ta.qaj.ja.ʔa/",
+      "variants": null,
+      "allIpa": [
+        "/ta.qaj.ja.ʔa/"
+      ]
+    },
+    {
+      "rank": 98,
+      "swadeshNo": 98,
+      "meaning": "to blow",
+      "arabic": "نَفَخَ",
+      "transliteration": "nafaḵa",
+      "ipa": "/na.fa.xa/",
+      "variants": null,
+      "allIpa": [
+        "/na.fa.xa/"
+      ]
+    },
+    {
+      "rank": 99,
+      "swadeshNo": 99,
+      "meaning": "to breathe",
+      "arabic": "تَنَفَّسَ",
+      "transliteration": "tanaffasa",
+      "ipa": "/ta.naf.fa.sa/",
+      "variants": null,
+      "allIpa": [
+        "/ta.naf.fa.sa/"
+      ]
+    },
+    {
+      "rank": 100,
+      "swadeshNo": 100,
+      "meaning": "to laugh",
+      "arabic": "ضَحِكَ",
+      "transliteration": "ḍaḥika",
+      "ipa": "/dˤa.ħi.ka/",
+      "variants": null,
+      "allIpa": [
+        "/dˤa.ħi.ka/"
+      ]
+    },
+    {
+      "rank": 101,
+      "swadeshNo": 101,
+      "meaning": "to see",
+      "arabic": "رَأَى",
+      "transliteration": "raʔā",
+      "ipa": "/ra.ʔaː/",
+      "variants": null,
+      "allIpa": [
+        "/ra.ʔaː/"
+      ]
+    },
+    {
+      "rank": 102,
+      "swadeshNo": 102,
+      "meaning": "to hear",
+      "arabic": "سَمِعَ",
+      "transliteration": "samiʕa",
+      "ipa": "/sa.mi.ʕa/",
+      "variants": null,
+      "allIpa": [
+        "/sa.mi.ʕa/"
+      ]
+    },
+    {
+      "rank": 103,
+      "swadeshNo": 103,
+      "meaning": "to know",
+      "arabic": "عَرَفَ",
+      "transliteration": "ʕarafa",
+      "ipa": "/ʕa.ra.fa/",
+      "variants": null,
+      "allIpa": [
+        "/ʕa.ra.fa/"
+      ]
+    },
+    {
+      "rank": 104,
+      "swadeshNo": 104,
+      "meaning": "to think",
+      "arabic": "فَكَرَ",
+      "transliteration": "fakara",
+      "ipa": "/fa.ka.ra/",
+      "variants": null,
+      "allIpa": [
+        "/fa.ka.ra/"
+      ]
+    },
+    {
+      "rank": 105,
+      "swadeshNo": 105,
+      "meaning": "to smell",
+      "arabic": "شَمَّ",
+      "transliteration": "šamma",
+      "ipa": "/ʃam.ma/",
+      "variants": null,
+      "allIpa": [
+        "/ʃam.ma/"
+      ]
+    },
+    {
+      "rank": 106,
+      "swadeshNo": 106,
+      "meaning": "to fear",
+      "arabic": "خَافَ",
+      "transliteration": "ḵāfa",
+      "ipa": "/xaː.fa/",
+      "variants": null,
+      "allIpa": [
+        "/xaː.fa/"
+      ]
+    },
+    {
+      "rank": 107,
+      "swadeshNo": 107,
+      "meaning": "to sleep",
+      "arabic": "نَامَ",
+      "transliteration": "nāma",
+      "ipa": "/naː.ma/",
+      "variants": null,
+      "allIpa": [
+        "/naː.ma/"
+      ]
+    },
+    {
+      "rank": 108,
+      "swadeshNo": 108,
+      "meaning": "to live",
+      "arabic": "عَاشَ",
+      "transliteration": "ʕāša",
+      "ipa": "/ʕaː.ʃa/",
+      "variants": null,
+      "allIpa": [
+        "/ʕaː.ʃa/"
+      ]
+    },
+    {
+      "rank": 109,
+      "swadeshNo": 109,
+      "meaning": "to die",
+      "arabic": "مَاتَ",
+      "transliteration": "māta",
+      "ipa": "/maː.ta/",
+      "variants": null,
+      "allIpa": [
+        "/maː.ta/"
+      ]
+    },
+    {
+      "rank": 110,
+      "swadeshNo": 110,
+      "meaning": "to kill",
+      "arabic": "قَتَلَ",
+      "transliteration": "qatala",
+      "ipa": "/qa.ta.la/",
+      "variants": null,
+      "allIpa": [
+        "/qa.ta.la/"
+      ]
+    },
+    {
+      "rank": 111,
+      "swadeshNo": 111,
+      "meaning": "to fight",
+      "arabic": "قَاتَلَ",
+      "transliteration": "qātala",
+      "ipa": "/qaː.ta.la/",
+      "variants": null,
+      "allIpa": [
+        "/qaː.ta.la/"
+      ]
+    },
+    {
+      "rank": 112,
+      "swadeshNo": 112,
+      "meaning": "to hunt",
+      "arabic": "صَادَ",
+      "transliteration": "ṣāda",
+      "ipa": "/sˤaː.da/",
+      "variants": null,
+      "allIpa": [
+        "/sˤaː.da/"
+      ]
+    },
+    {
+      "rank": 113,
+      "swadeshNo": 113,
+      "meaning": "to hit",
+      "arabic": "ضَرَبَ",
+      "transliteration": "ḍaraba",
+      "ipa": "/dˤa.ra.ba/",
+      "variants": null,
+      "allIpa": [
+        "/dˤa.ra.ba/"
+      ]
+    },
+    {
+      "rank": 114,
+      "swadeshNo": 114,
+      "meaning": "to cut",
+      "arabic": "قَطَعَ",
+      "transliteration": "qaṭaʕa",
+      "ipa": "/qa.tˤa.ʕa/",
+      "variants": null,
+      "allIpa": [
+        "/qa.tˤa.ʕa/"
+      ]
+    },
+    {
+      "rank": 115,
+      "swadeshNo": 115,
+      "meaning": "to split",
+      "arabic": "شَقَّ",
+      "transliteration": "šaqqa",
+      "ipa": "/ʃaq.qa/",
+      "variants": null,
+      "allIpa": [
+        "/ʃaq.qa/"
+      ]
+    },
+    {
+      "rank": 116,
+      "swadeshNo": 116,
+      "meaning": "to stab",
+      "arabic": "طَعَنَ",
+      "transliteration": "ṭaʕana",
+      "ipa": "/tˤa.ʕa.na/",
+      "variants": null,
+      "allIpa": [
+        "/tˤa.ʕa.na/"
+      ]
+    },
+    {
+      "rank": 117,
+      "swadeshNo": 117,
+      "meaning": "to scratch",
+      "arabic": "خَدَشَ",
+      "transliteration": "ḵadaša",
+      "ipa": "/xa.da.ʃa/",
+      "variants": null,
+      "allIpa": [
+        "/xa.da.ʃa/"
+      ]
+    },
+    {
+      "rank": 118,
+      "swadeshNo": 118,
+      "meaning": "to dig",
+      "arabic": "حَفَرَ",
+      "transliteration": "ḥafara",
+      "ipa": "/ħa.fa.ra/",
+      "variants": null,
+      "allIpa": [
+        "/ħa.fa.ra/"
+      ]
+    },
+    {
+      "rank": 119,
+      "swadeshNo": 119,
+      "meaning": "to swim",
+      "arabic": "سَبَحَ",
+      "transliteration": "sabaḥa",
+      "ipa": "/sa.ba.ħa/",
+      "variants": [
+        {
+          "arabic": "عَامَ",
+          "transliteration": "ʕāma"
+        }
+      ],
+      "allIpa": [
+        "/sa.ba.ħa/",
+        "/ʕaː.ma/"
+      ]
+    },
+    {
+      "rank": 120,
+      "swadeshNo": 120,
+      "meaning": "to fly",
+      "arabic": "طَارَ",
+      "transliteration": "ṭāra",
+      "ipa": "/tˤaː.ra/",
+      "variants": null,
+      "allIpa": [
+        "/tˤaː.ra/"
+      ]
+    },
+    {
+      "rank": 121,
+      "swadeshNo": 121,
+      "meaning": "to walk",
+      "arabic": "مَشَى",
+      "transliteration": "mašā",
+      "ipa": "/ma.ʃaː/",
+      "variants": null,
+      "allIpa": [
+        "/ma.ʃaː/"
+      ]
+    },
+    {
+      "rank": 122,
+      "swadeshNo": 122,
+      "meaning": "to come",
+      "arabic": "جَاءَ",
+      "transliteration": "jāʔa",
+      "ipa": "/d͡ʒaː.ʔa/",
+      "variants": [
+        {
+          "arabic": "بَاءَ",
+          "transliteration": "bāʔa"
+        },
+        {
+          "arabic": "أَتَى",
+          "transliteration": "ʔatā"
+        }
+      ],
+      "allIpa": [
+        "/d͡ʒaː.ʔa/",
+        "/baː.ʔa/",
+        "/ʔa.taː/"
+      ]
+    },
+    {
+      "rank": 123,
+      "swadeshNo": 123,
+      "meaning": "to lie (as in a bed)",
+      "arabic": "رَقَدَ",
+      "transliteration": "raqada",
+      "ipa": "/ra.qa.da/",
+      "variants": null,
+      "allIpa": [
+        "/ra.qa.da/"
+      ]
+    },
+    {
+      "rank": 124,
+      "swadeshNo": 124,
+      "meaning": "to sit",
+      "arabic": "جَلَسَ",
+      "transliteration": "jalasa",
+      "ipa": "/d͡ʒa.la.sa/",
+      "variants": null,
+      "allIpa": [
+        "/d͡ʒa.la.sa/"
+      ]
+    },
+    {
+      "rank": 125,
+      "swadeshNo": 125,
+      "meaning": "to stand",
+      "arabic": "وَقَفَ",
+      "transliteration": "waqafa",
+      "ipa": "/wa.qa.fa/",
+      "variants": null,
+      "allIpa": [
+        "/wa.qa.fa/"
+      ]
+    },
+    {
+      "rank": 126,
+      "swadeshNo": 126,
+      "meaning": "to turn (intransitive)",
+      "arabic": "دَارَ",
+      "transliteration": "dāra",
+      "ipa": "/daː.ra/",
+      "variants": null,
+      "allIpa": [
+        "/daː.ra/"
+      ]
+    },
+    {
+      "rank": 127,
+      "swadeshNo": 127,
+      "meaning": "to fall",
+      "arabic": "وَقَعَ",
+      "transliteration": "waqaʕa",
+      "ipa": "/wa.qa.ʕa/",
+      "variants": [
+        {
+          "arabic": "سَقَطَ",
+          "transliteration": "saqaṭa"
+        },
+        {
+          "arabic": "طَاحَ",
+          "transliteration": "ṭāḥa"
+        }
+      ],
+      "allIpa": [
+        "/wa.qa.ʕa/",
+        "/sa.qa.tˤa/",
+        "/tˤaː.ħa/"
+      ]
+    },
+    {
+      "rank": 128,
+      "swadeshNo": 128,
+      "meaning": "to give",
+      "arabic": "أَعْطَى",
+      "transliteration": "ʔaʕṭā",
+      "ipa": "/ʔaʕ.tˤaː/",
+      "variants": null,
+      "allIpa": [
+        "/ʔaʕ.tˤaː/"
+      ]
+    },
+    {
+      "rank": 129,
+      "swadeshNo": 129,
+      "meaning": "to hold",
+      "arabic": "أَخَذَ",
+      "transliteration": "ʔaḵaḏa",
+      "ipa": "/ʔa.xa.ða/",
+      "variants": null,
+      "allIpa": [
+        "/ʔa.xa.ða/"
+      ]
+    },
+    {
+      "rank": 130,
+      "swadeshNo": 130,
+      "meaning": "to squeeze",
+      "arabic": "عَصَرَ",
+      "transliteration": "ʕaṣara",
+      "ipa": "/ʕa.sˤa.ra/",
+      "variants": null,
+      "allIpa": [
+        "/ʕa.sˤa.ra/"
+      ]
+    },
+    {
+      "rank": 131,
+      "swadeshNo": 131,
+      "meaning": "to rub",
+      "arabic": "حَكَّ",
+      "transliteration": "ḥakka",
+      "ipa": "/ħak.ka/",
+      "variants": null,
+      "allIpa": [
+        "/ħak.ka/"
+      ]
+    },
+    {
+      "rank": 132,
+      "swadeshNo": 132,
+      "meaning": "to wash",
+      "arabic": "غَسَلَ",
+      "transliteration": "ḡasala",
+      "ipa": "/ɣa.sa.la/",
+      "variants": null,
+      "allIpa": [
+        "/ɣa.sa.la/"
+      ]
+    },
+    {
+      "rank": 133,
+      "swadeshNo": 133,
+      "meaning": "to wipe",
+      "arabic": "مَحَا",
+      "transliteration": "maḥā",
+      "ipa": "/ma.ħaː/",
+      "variants": [
+        {
+          "arabic": "مَسَحَ",
+          "transliteration": "masaḥa"
+        }
+      ],
+      "allIpa": [
+        "/ma.ħaː/",
+        "/ma.sa.ħa/"
+      ]
+    },
+    {
+      "rank": 134,
+      "swadeshNo": 134,
+      "meaning": "to pull",
+      "arabic": "جَرَّ",
+      "transliteration": "jarra",
+      "ipa": "/d͡ʒar.ra/",
+      "variants": null,
+      "allIpa": [
+        "/d͡ʒar.ra/"
+      ]
+    },
+    {
+      "rank": 135,
+      "swadeshNo": 135,
+      "meaning": "to push",
+      "arabic": "دَفَعَ",
+      "transliteration": "dafaʕa",
+      "ipa": "/da.fa.ʕa/",
+      "variants": null,
+      "allIpa": [
+        "/da.fa.ʕa/"
+      ]
+    },
+    {
+      "rank": 136,
+      "swadeshNo": 136,
+      "meaning": "to throw",
+      "arabic": "رَمَى",
+      "transliteration": "ramā",
+      "ipa": "/ra.maː/",
+      "variants": null,
+      "allIpa": [
+        "/ra.maː/"
+      ]
+    },
+    {
+      "rank": 137,
+      "swadeshNo": 137,
+      "meaning": "to tie",
+      "arabic": "رَبَطَ",
+      "transliteration": "rabaṭa",
+      "ipa": "/ra.ba.tˤa/",
+      "variants": null,
+      "allIpa": [
+        "/ra.ba.tˤa/"
+      ]
+    },
+    {
+      "rank": 138,
+      "swadeshNo": 138,
+      "meaning": "to sew",
+      "arabic": "خَاطَ",
+      "transliteration": "ḵāṭa",
+      "ipa": "/xaː.tˤa/",
+      "variants": [
+        {
+          "arabic": "خَيَّطَ",
+          "transliteration": "ḵayyaṭa"
+        }
+      ],
+      "allIpa": [
+        "/xaː.tˤa/",
+        "/xaj.ja.tˤa/"
+      ]
+    },
+    {
+      "rank": 139,
+      "swadeshNo": 139,
+      "meaning": "to count",
+      "arabic": "عَدَّ",
+      "transliteration": "ʕadda",
+      "ipa": "/ʕad.da/",
+      "variants": null,
+      "allIpa": [
+        "/ʕad.da/"
+      ]
+    },
+    {
+      "rank": 140,
+      "swadeshNo": 140,
+      "meaning": "to say",
+      "arabic": "قَالَ",
+      "transliteration": "qāla",
+      "ipa": "/qaː.la/",
+      "variants": null,
+      "allIpa": [
+        "/qaː.la/"
+      ]
+    },
+    {
+      "rank": 141,
+      "swadeshNo": 141,
+      "meaning": "to sing",
+      "arabic": "غَنَّى",
+      "transliteration": "ḡannā",
+      "ipa": "/ɣan.naː/",
+      "variants": null,
+      "allIpa": [
+        "/ɣan.naː/"
+      ]
+    },
+    {
+      "rank": 142,
+      "swadeshNo": 142,
+      "meaning": "to play",
+      "arabic": "لَعِبَ",
+      "transliteration": "laʕiba",
+      "ipa": "/la.ʕi.ba/",
+      "variants": null,
+      "allIpa": [
+        "/la.ʕi.ba/"
+      ]
+    },
+    {
+      "rank": 143,
+      "swadeshNo": 143,
+      "meaning": "to float",
+      "arabic": "عَامَ",
+      "transliteration": "ʕāma",
+      "ipa": "/ʕaː.ma/",
+      "variants": [
+        {
+          "arabic": "طَفَا",
+          "transliteration": "ṭafā"
+        }
+      ],
+      "allIpa": [
+        "/ʕaː.ma/",
+        "/tˤa.faː/"
+      ]
+    },
+    {
+      "rank": 144,
+      "swadeshNo": 144,
+      "meaning": "to flow",
+      "arabic": "تَدَفَّقَ",
+      "transliteration": "tadaffaqa",
+      "ipa": "/ta.daf.fa.qa/",
+      "variants": null,
+      "allIpa": [
+        "/ta.daf.fa.qa/"
+      ]
+    },
+    {
+      "rank": 145,
+      "swadeshNo": 145,
+      "meaning": "to freeze",
+      "arabic": "جَمَدَ",
+      "transliteration": "jamada",
+      "ipa": "/d͡ʒa.ma.da/",
+      "variants": null,
+      "allIpa": [
+        "/d͡ʒa.ma.da/"
+      ]
+    },
+    {
+      "rank": 146,
+      "swadeshNo": 146,
+      "meaning": "to swell",
+      "arabic": "وَرِمَ",
+      "transliteration": "warima",
+      "ipa": "/wa.ri.ma/",
+      "variants": [
+        {
+          "arabic": "اِنْتَفَخَ",
+          "transliteration": "intafaḵa"
+        }
+      ],
+      "allIpa": [
+        "/wa.ri.ma/",
+        "/in.ta.fa.xa/"
+      ]
+    },
+    {
+      "rank": 147,
+      "swadeshNo": 147,
+      "meaning": "sun",
+      "arabic": "شَمْس",
+      "transliteration": "šams",
+      "ipa": "/ʃams/",
+      "variants": null,
+      "allIpa": [
+        "/ʃams/"
+      ]
+    },
+    {
+      "rank": 148,
+      "swadeshNo": 148,
+      "meaning": "moon",
+      "arabic": "قَمَر",
+      "transliteration": "qamar",
+      "ipa": "/qa.mar/",
+      "variants": null,
+      "allIpa": [
+        "/qa.mar/"
+      ]
+    },
+    {
+      "rank": 149,
+      "swadeshNo": 149,
+      "meaning": "star",
+      "arabic": "نَجْم",
+      "transliteration": "najm",
+      "ipa": "/nad͡ʒm/",
+      "variants": [
+        {
+          "arabic": "كَوْكَب",
+          "transliteration": "kawkab"
+        }
+      ],
+      "allIpa": [
+        "/nad͡ʒm/",
+        "/kaw.kab/"
+      ]
+    },
+    {
+      "rank": 150,
+      "swadeshNo": 150,
+      "meaning": "water",
+      "arabic": "مَاء",
+      "transliteration": "māʔ",
+      "ipa": "/maːʔ/",
+      "variants": null,
+      "allIpa": [
+        "/maːʔ/"
+      ]
+    },
+    {
+      "rank": 151,
+      "swadeshNo": 151,
+      "meaning": "rain",
+      "arabic": "مَطَر",
+      "transliteration": "maṭar",
+      "ipa": "/ma.tˤar/",
+      "variants": null,
+      "allIpa": [
+        "/ma.tˤar/"
+      ]
+    },
+    {
+      "rank": 152,
+      "swadeshNo": 152,
+      "meaning": "river",
+      "arabic": "نَهْر",
+      "transliteration": "nahr",
+      "ipa": "/nahr/",
+      "variants": [
+        {
+          "arabic": "نَهَر",
+          "transliteration": "nahar"
+        }
+      ],
+      "allIpa": [
+        "/nahr/",
+        "/na.har/"
+      ]
+    },
+    {
+      "rank": 153,
+      "swadeshNo": 153,
+      "meaning": "lake",
+      "arabic": "بُحَيْرَة",
+      "transliteration": "buḥayra",
+      "ipa": "/bu.ħaj.ra/",
+      "variants": null,
+      "allIpa": [
+        "/bu.ħaj.ra/"
+      ]
+    },
+    {
+      "rank": 154,
+      "swadeshNo": 154,
+      "meaning": "sea",
+      "arabic": "بَحْر",
+      "transliteration": "baḥr",
+      "ipa": "/baħr/",
+      "variants": [
+        {
+          "arabic": "يَمّ",
+          "transliteration": "yamm"
+        }
+      ],
+      "allIpa": [
+        "/baħr/",
+        "/jamm/"
+      ]
+    },
+    {
+      "rank": 155,
+      "swadeshNo": 155,
+      "meaning": "salt",
+      "arabic": "مِلْح",
+      "transliteration": "milḥ",
+      "ipa": "/milħ/",
+      "variants": null,
+      "allIpa": [
+        "/milħ/"
+      ]
+    },
+    {
+      "rank": 156,
+      "swadeshNo": 156,
+      "meaning": "stone",
+      "arabic": "حَجَر",
+      "transliteration": "ḥajar",
+      "ipa": "/ħa.d͡ʒar/",
+      "variants": null,
+      "allIpa": [
+        "/ħa.d͡ʒar/"
+      ]
+    },
+    {
+      "rank": 157,
+      "swadeshNo": 157,
+      "meaning": "sand",
+      "arabic": "رَمْل",
+      "transliteration": "raml",
+      "ipa": "/raml/",
+      "variants": null,
+      "allIpa": [
+        "/raml/"
+      ]
+    },
+    {
+      "rank": 158,
+      "swadeshNo": 158,
+      "meaning": "dust",
+      "arabic": "غُبَار",
+      "transliteration": "ḡubār",
+      "ipa": "/ɣu.baːr/",
+      "variants": null,
+      "allIpa": [
+        "/ɣu.baːr/"
+      ]
+    },
+    {
+      "rank": 159,
+      "swadeshNo": 159,
+      "meaning": "earth",
+      "arabic": "أَرْض",
+      "transliteration": "ʔarḍ",
+      "ipa": "/ʔardˤ/",
+      "variants": null,
+      "allIpa": [
+        "/ʔardˤ/"
+      ]
+    },
+    {
+      "rank": 160,
+      "swadeshNo": 160,
+      "meaning": "cloud",
+      "arabic": "سَحَابَة",
+      "transliteration": "saḥāba",
+      "ipa": "/sa.ħaː.ba/",
+      "variants": [
+        {
+          "arabic": "غَيْمَة",
+          "transliteration": "ḡayma"
+        },
+        {
+          "arabic": "غَمَامَة",
+          "transliteration": "ḡamāma"
+        },
+        {
+          "arabic": "عَنَانَة",
+          "transliteration": "ʕanāna"
+        }
+      ],
+      "allIpa": [
+        "/sa.ħaː.ba/",
+        "/ɣaj.ma/",
+        "/ɣa.maː.ma/",
+        "/ʕa.naː.na/"
+      ]
+    },
+    {
+      "rank": 161,
+      "swadeshNo": 161,
+      "meaning": "fog",
+      "arabic": "ضَبَاب",
+      "transliteration": "ḍabāb",
+      "ipa": "/dˤa.baːb/",
+      "variants": null,
+      "allIpa": [
+        "/dˤa.baːb/"
+      ]
+    },
+    {
+      "rank": 162,
+      "swadeshNo": 162,
+      "meaning": "sky",
+      "arabic": "سَمَاء",
+      "transliteration": "samāʔ",
+      "ipa": "/sa.maːʔ/",
+      "variants": null,
+      "allIpa": [
+        "/sa.maːʔ/"
+      ]
+    },
+    {
+      "rank": 163,
+      "swadeshNo": 163,
+      "meaning": "wind",
+      "arabic": "رِيح",
+      "transliteration": "rīḥ",
+      "ipa": "/riːħ/",
+      "variants": null,
+      "allIpa": [
+        "/riːħ/"
+      ]
+    },
+    {
+      "rank": 164,
+      "swadeshNo": 164,
+      "meaning": "snow",
+      "arabic": "ثَلْج",
+      "transliteration": "ṯalj",
+      "ipa": "/θald͡ʒ/",
+      "variants": null,
+      "allIpa": [
+        "/θald͡ʒ/"
+      ]
+    },
+    {
+      "rank": 165,
+      "swadeshNo": 165,
+      "meaning": "ice",
+      "arabic": "جَلِيد",
+      "transliteration": "jalīd",
+      "ipa": "/d͡ʒa.liːd/",
+      "variants": null,
+      "allIpa": [
+        "/d͡ʒa.liːd/"
+      ]
+    },
+    {
+      "rank": 166,
+      "swadeshNo": 166,
+      "meaning": "smoke",
+      "arabic": "دُخَان",
+      "transliteration": "duḵān",
+      "ipa": "/du.xaːn/",
+      "variants": [
+        {
+          "arabic": "دُخَّان",
+          "transliteration": "duḵḵān"
+        }
+      ],
+      "allIpa": [
+        "/du.xaːn/",
+        "/dux.xaːn/"
+      ]
+    },
+    {
+      "rank": 167,
+      "swadeshNo": 167,
+      "meaning": "fire",
+      "arabic": "نَارَ",
+      "transliteration": "nāra",
+      "ipa": "/naː.ra/",
+      "variants": null,
+      "allIpa": [
+        "/naː.ra/"
+      ]
+    },
+    {
+      "rank": 168,
+      "swadeshNo": 168,
+      "meaning": "ash",
+      "arabic": "رَمَاد",
+      "transliteration": "ramād",
+      "ipa": "/ra.maːd/",
+      "variants": null,
+      "allIpa": [
+        "/ra.maːd/"
+      ]
+    },
+    {
+      "rank": 169,
+      "swadeshNo": 169,
+      "meaning": "to burn",
+      "arabic": "حَرَقَ",
+      "transliteration": "ḥaraqa",
+      "ipa": "/ħa.ra.qa/",
+      "variants": null,
+      "allIpa": [
+        "/ħa.ra.qa/"
+      ]
+    },
+    {
+      "rank": 170,
+      "swadeshNo": 170,
+      "meaning": "road",
+      "arabic": "طَرِيق",
+      "transliteration": "ṭarīq",
+      "ipa": "/tˤa.riːq/",
+      "variants": null,
+      "allIpa": [
+        "/tˤa.riːq/"
+      ]
+    },
+    {
+      "rank": 171,
+      "swadeshNo": 171,
+      "meaning": "mountain",
+      "arabic": "جَبَل",
+      "transliteration": "jabal",
+      "ipa": "/d͡ʒa.bal/",
+      "variants": null,
+      "allIpa": [
+        "/d͡ʒa.bal/"
+      ]
+    },
+    {
+      "rank": 172,
+      "swadeshNo": 172,
+      "meaning": "red",
+      "arabic": "أَحْمَر",
+      "transliteration": "ʔaḥmar",
+      "ipa": "/ʔaħ.mar/",
+      "variants": null,
+      "allIpa": [
+        "/ʔaħ.mar/"
+      ]
+    },
+    {
+      "rank": 173,
+      "swadeshNo": 173,
+      "meaning": "green",
+      "arabic": "أَخْضَر",
+      "transliteration": "ʔaḵḍar",
+      "ipa": "/ʔax.dˤar/",
+      "variants": null,
+      "allIpa": [
+        "/ʔax.dˤar/"
+      ]
+    },
+    {
+      "rank": 174,
+      "swadeshNo": 174,
+      "meaning": "yellow",
+      "arabic": "أَصْفَر",
+      "transliteration": "ʔaṣfar",
+      "ipa": "/ʔasˤ.far/",
+      "variants": null,
+      "allIpa": [
+        "/ʔasˤ.far/"
+      ]
+    },
+    {
+      "rank": 175,
+      "swadeshNo": 175,
+      "meaning": "white",
+      "arabic": "أَبْيَض",
+      "transliteration": "ʔabyaḍ",
+      "ipa": "/ʔab.jadˤ/",
+      "variants": null,
+      "allIpa": [
+        "/ʔab.jadˤ/"
+      ]
+    },
+    {
+      "rank": 176,
+      "swadeshNo": 176,
+      "meaning": "black",
+      "arabic": "أَسْوَد",
+      "transliteration": "ʔaswad",
+      "ipa": "/ʔas.wad/",
+      "variants": null,
+      "allIpa": [
+        "/ʔas.wad/"
+      ]
+    },
+    {
+      "rank": 177,
+      "swadeshNo": 177,
+      "meaning": "night",
+      "arabic": "لَيْل",
+      "transliteration": "layl",
+      "ipa": "/lajl/",
+      "variants": null,
+      "allIpa": [
+        "/lajl/"
+      ]
+    },
+    {
+      "rank": 178,
+      "swadeshNo": 178,
+      "meaning": "day",
+      "arabic": "يَوْم",
+      "transliteration": "yawm",
+      "ipa": "/jawm/",
+      "variants": null,
+      "allIpa": [
+        "/jawm/"
+      ]
+    },
+    {
+      "rank": 179,
+      "swadeshNo": 179,
+      "meaning": "year",
+      "arabic": "سَنَة",
+      "transliteration": "sana",
+      "ipa": "/sa.na/",
+      "variants": [
+        {
+          "arabic": "عَام",
+          "transliteration": "ʕām"
+        }
+      ],
+      "allIpa": [
+        "/sa.na/",
+        "/ʕaːm/"
+      ]
+    },
+    {
+      "rank": 180,
+      "swadeshNo": 180,
+      "meaning": "warm",
+      "arabic": "دَافِئ",
+      "transliteration": "dāfiʔ",
+      "ipa": "/daː.fiʔ/",
+      "variants": null,
+      "allIpa": [
+        "/daː.fiʔ/"
+      ]
+    },
+    {
+      "rank": 181,
+      "swadeshNo": 181,
+      "meaning": "cold",
+      "arabic": "بَارِد",
+      "transliteration": "bārid",
+      "ipa": "/baː.rid/",
+      "variants": null,
+      "allIpa": [
+        "/baː.rid/"
+      ]
+    },
+    {
+      "rank": 182,
+      "swadeshNo": 182,
+      "meaning": "full",
+      "arabic": "مُمْتَلِئ",
+      "transliteration": "mumtaliʔ",
+      "ipa": "/mum.ta.liʔ/",
+      "variants": null,
+      "allIpa": [
+        "/mum.ta.liʔ/"
+      ]
+    },
+    {
+      "rank": 183,
+      "swadeshNo": 183,
+      "meaning": "new",
+      "arabic": "جَدِيد",
+      "transliteration": "jadīd",
+      "ipa": "/d͡ʒa.diːd/",
+      "variants": [
+        {
+          "arabic": "حَدِيث",
+          "transliteration": "ḥadīṯ"
+        }
+      ],
+      "allIpa": [
+        "/d͡ʒa.diːd/",
+        "/ħa.diːθ/"
+      ]
+    },
+    {
+      "rank": 184,
+      "swadeshNo": 184,
+      "meaning": "old",
+      "arabic": "قَدِيم",
+      "transliteration": "qadīm",
+      "ipa": "/qa.diːm/",
+      "variants": [
+        {
+          "arabic": "عَتِيق",
+          "transliteration": "ʕatīq"
+        }
+      ],
+      "allIpa": [
+        "/qa.diːm/",
+        "/ʕa.tiːq/"
+      ]
+    },
+    {
+      "rank": 185,
+      "swadeshNo": 185,
+      "meaning": "good",
+      "arabic": "طَيِّب",
+      "transliteration": "ṭayyib",
+      "ipa": "/tˤaj.jib/",
+      "variants": null,
+      "allIpa": [
+        "/tˤaj.jib/"
+      ]
+    },
+    {
+      "rank": 186,
+      "swadeshNo": 186,
+      "meaning": "bad",
+      "arabic": "سَيِّئ",
+      "transliteration": "sayyiʔ",
+      "ipa": "/saj.jiʔ/",
+      "variants": null,
+      "allIpa": [
+        "/saj.jiʔ/"
+      ]
+    },
+    {
+      "rank": 187,
+      "swadeshNo": 187,
+      "meaning": "rotten",
+      "arabic": "مُتَعَفِّن",
+      "transliteration": "mutaʕaffin",
+      "ipa": "/mu.ta.ʕaf.fin/",
+      "variants": null,
+      "allIpa": [
+        "/mu.ta.ʕaf.fin/"
+      ]
+    },
+    {
+      "rank": 188,
+      "swadeshNo": 188,
+      "meaning": "dirty",
+      "arabic": "قَذِر",
+      "transliteration": "qaḏir",
+      "ipa": "/qa.ðir/",
+      "variants": [
+        {
+          "arabic": "وَسِخ",
+          "transliteration": "wasiḵ"
+        }
+      ],
+      "allIpa": [
+        "/qa.ðir/",
+        "/wa.six/"
+      ]
+    },
+    {
+      "rank": 189,
+      "swadeshNo": 189,
+      "meaning": "straight",
+      "arabic": "مُسْتَقِيم",
+      "transliteration": "mustaqīm",
+      "ipa": "/mus.ta.qiːm/",
+      "variants": null,
+      "allIpa": [
+        "/mus.ta.qiːm/"
+      ]
+    },
+    {
+      "rank": 190,
+      "swadeshNo": 190,
+      "meaning": "round",
+      "arabic": "مُسْتَدِير",
+      "transliteration": "mustadīr",
+      "ipa": "/mus.ta.diːr/",
+      "variants": null,
+      "allIpa": [
+        "/mus.ta.diːr/"
+      ]
+    },
+    {
+      "rank": 191,
+      "swadeshNo": 191,
+      "meaning": "sharp (as a knife)",
+      "arabic": "حَادّ",
+      "transliteration": "ḥādd",
+      "ipa": "/ħaːdd/",
+      "variants": null,
+      "allIpa": [
+        "/ħaːdd/"
+      ]
+    },
+    {
+      "rank": 192,
+      "swadeshNo": 192,
+      "meaning": "dull (as a knife)",
+      "arabic": "ثَلِم",
+      "transliteration": "ṯalim",
+      "ipa": "/θa.lim/",
+      "variants": [
+        {
+          "arabic": "كَلِيل",
+          "transliteration": "kalīl"
+        }
+      ],
+      "allIpa": [
+        "/θa.lim/",
+        "/ka.liːl/"
+      ]
+    },
+    {
+      "rank": 193,
+      "swadeshNo": 193,
+      "meaning": "smooth",
+      "arabic": "نَاعِم",
+      "transliteration": "nāʕim",
+      "ipa": "/naː.ʕim/",
+      "variants": null,
+      "allIpa": [
+        "/naː.ʕim/"
+      ]
+    },
+    {
+      "rank": 194,
+      "swadeshNo": 194,
+      "meaning": "wet",
+      "arabic": "رَطْب",
+      "transliteration": "raṭb",
+      "ipa": "/ratˤb/",
+      "variants": null,
+      "allIpa": [
+        "/ratˤb/"
+      ]
+    },
+    {
+      "rank": 195,
+      "swadeshNo": 195,
+      "meaning": "dry",
+      "arabic": "جَافّ",
+      "transliteration": "jāff",
+      "ipa": "/d͡ʒaːff/",
+      "variants": [
+        {
+          "arabic": "يَابِس",
+          "transliteration": "yābis"
+        }
+      ],
+      "allIpa": [
+        "/d͡ʒaːff/",
+        "/jaː.bis/"
+      ]
+    },
+    {
+      "rank": 196,
+      "swadeshNo": 196,
+      "meaning": "correct",
+      "arabic": "صَحِيح",
+      "transliteration": "ṣaḥīḥ",
+      "ipa": "/sˤa.ħiːħ/",
+      "variants": null,
+      "allIpa": [
+        "/sˤa.ħiːħ/"
+      ]
+    },
+    {
+      "rank": 197,
+      "swadeshNo": 197,
+      "meaning": "near",
+      "arabic": "قَرِيب",
+      "transliteration": "qarīb",
+      "ipa": "/qa.riːb/",
+      "variants": null,
+      "allIpa": [
+        "/qa.riːb/"
+      ]
+    },
+    {
+      "rank": 198,
+      "swadeshNo": 198,
+      "meaning": "far",
+      "arabic": "بَعِيد",
+      "transliteration": "baʕīd",
+      "ipa": "/ba.ʕiːd/",
+      "variants": null,
+      "allIpa": [
+        "/ba.ʕiːd/"
+      ]
+    },
+    {
+      "rank": 199,
+      "swadeshNo": 199,
+      "meaning": "right",
+      "arabic": "يَمِين",
+      "transliteration": "yamīn",
+      "ipa": "/ja.miːn/",
+      "variants": null,
+      "allIpa": [
+        "/ja.miːn/"
+      ]
+    },
+    {
+      "rank": 200,
+      "swadeshNo": 200,
+      "meaning": "left",
+      "arabic": "شِمَال",
+      "transliteration": "šimāl",
+      "ipa": "/ʃi.maːl/",
+      "variants": [
+        {
+          "arabic": "يَسَار",
+          "transliteration": "yasār"
+        }
+      ],
+      "allIpa": [
+        "/ʃi.maːl/",
+        "/ja.saːr/"
+      ]
+    },
+    {
+      "rank": 201,
+      "swadeshNo": 201,
+      "meaning": "at",
+      "arabic": "عِنْدَ",
+      "transliteration": "ʕinda",
+      "ipa": "/ʕin.da/",
+      "variants": null,
+      "allIpa": [
+        "/ʕin.da/"
+      ]
+    },
+    {
+      "rank": 202,
+      "swadeshNo": 202,
+      "meaning": "in",
+      "arabic": "فِي",
+      "transliteration": "fī",
+      "ipa": "/fiː/",
+      "variants": [
+        {
+          "arabic": "بِ",
+          "transliteration": "bi"
+        }
+      ],
+      "allIpa": [
+        "/fiː/",
+        "/bi/"
+      ]
+    },
+    {
+      "rank": 203,
+      "swadeshNo": 203,
+      "meaning": "with",
+      "arabic": "مَعَ",
+      "transliteration": "maʕa",
+      "ipa": "/ma.ʕa/",
+      "variants": [
+        {
+          "arabic": "بِ",
+          "transliteration": "bi"
+        }
+      ],
+      "allIpa": [
+        "/ma.ʕa/",
+        "/bi/"
+      ]
+    },
+    {
+      "rank": 204,
+      "swadeshNo": 204,
+      "meaning": "and",
+      "arabic": "وَ",
+      "transliteration": "wa",
+      "ipa": "/wa/",
+      "variants": null,
+      "allIpa": [
+        "/wa/"
+      ]
+    },
+    {
+      "rank": 205,
+      "swadeshNo": 205,
+      "meaning": "if",
+      "arabic": "لَوْ",
+      "transliteration": "law",
+      "ipa": "/law/",
+      "variants": [
+        {
+          "arabic": "إِذَا",
+          "transliteration": "ʔiḏā"
+        },
+        {
+          "arabic": "إِنْ",
+          "transliteration": "ʔin"
+        }
+      ],
+      "allIpa": [
+        "/law/",
+        "/ʔi.ðaː/",
+        "/ʔin/"
+      ]
+    },
+    {
+      "rank": 206,
+      "swadeshNo": 206,
+      "meaning": "because",
+      "arabic": "لِأَنَّ",
+      "transliteration": "liʔanna",
+      "ipa": "/li.ʔan.na/",
+      "variants": [
+        {
+          "arabic": "بِسَبَبِ",
+          "transliteration": "bisababi"
+        },
+        {
+          "arabic": "حَيْثُ",
+          "transliteration": "ḥayṯu"
+        }
+      ],
+      "allIpa": [
+        "/li.ʔan.na/",
+        "/bi.sa.ba.bi/",
+        "/ħaj.θu/"
+      ]
+    },
+    {
+      "rank": 207,
+      "swadeshNo": 207,
+      "meaning": "name",
+      "arabic": "اِسْم",
+      "transliteration": "ism",
+      "ipa": "/ism/",
+      "variants": null,
+      "allIpa": [
+        "/ism/"
+      ]
+    }
+  ]
+}

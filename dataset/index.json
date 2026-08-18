@@ -1,0 +1,76 @@
+{
+  "title": "Arabic Experiences — vocabulary datasets",
+  "retrievedAt": "2026-08-16",
+  "schema": {
+    "id": "stable dataset id",
+    "source": "name, url, license, retrievedAt",
+    "context": "variety, kind, notes",
+    "entries": "arabic plus optional meaning, transliteration, frequency, pos, root, category"
+  },
+  "datasets": [
+    {
+      "file": "camel-msa-top-5000.json",
+      "id": "camel-msa-top-5000",
+      "title": "CAMeL MSA frequency list (top 5000)",
+      "wordCount": 5000,
+      "sourceUrl": "https://github.com/CAMeL-Lab/Camel_Arabic_Frequency_Lists"
+    },
+    {
+      "file": "msa-top-5000-with-glosses.json",
+      "id": "msa-top-5000-with-glosses",
+      "title": "Top 5000+ Modern Standard Arabic words with English glosses",
+      "wordCount": 5301,
+      "sourceUrl": "http://www.modernstandardarabic.com/top-5000-arabic-words/"
+    },
+    {
+      "file": "opensubtitles-arabic-top-5000.json",
+      "id": "opensubtitles-arabic-top-5000",
+      "title": "OpenSubtitles Arabic frequency list (top 5000)",
+      "wordCount": 5000,
+      "sourceUrl": "https://github.com/hermitdave/FrequencyWords"
+    },
+    {
+      "file": "wikipedia-arabic-top-5000.json",
+      "id": "wikipedia-arabic-top-5000",
+      "title": "Arabic Wikipedia word frequency (top 5000)",
+      "wordCount": 5000,
+      "sourceUrl": "https://github.com/IlyaSemenov/wikipedia-word-frequency"
+    },
+    {
+      "file": "wikivoyage-egyptian-arabic-phrasebook.json",
+      "id": "wikivoyage-egyptian-arabic-phrasebook",
+      "title": "Wikivoyage Egyptian Arabic phrasebook",
+      "wordCount": 206,
+      "sourceUrl": "https://en.wikivoyage.org/wiki/Egyptian_Arabic_phrasebook"
+    },
+    {
+      "file": "wikivoyage-msa-phrasebook.json",
+      "id": "wikivoyage-msa-phrasebook",
+      "title": "Wikivoyage Modern Standard Arabic phrasebook",
+      "wordCount": 414,
+      "sourceUrl": "https://en.wikivoyage.org/wiki/Arabic_phrasebook"
+    },
+    {
+      "file": "wiktionary-arabic-swadesh.json",
+      "id": "wiktionary-arabic-swadesh",
+      "title": "Arabic Swadesh list",
+      "wordCount": 207,
+      "sourceUrl": "https://en.wiktionary.org/wiki/Appendix:Arabic_Swadesh_list"
+    },
+    {
+      "file": "wiktionary-quran-lemmas.json",
+      "id": "wiktionary-quran-lemmas",
+      "title": "Quranic Arabic lemma frequency list",
+      "wordCount": 3000,
+      "sourceUrl": "https://en.wiktionary.org/wiki/Appendix:Arabic_Frequency_List_from_Quran"
+    },
+    {
+      "file": "wiktionary-quranic-verbs.json",
+      "id": "wiktionary-quranic-verbs",
+      "title": "Quranic Arabic verbs",
+      "wordCount": 1475,
+      "sourceUrl": "https://en.wiktionary.org/wiki/Appendix:Arabic_Quranic_Verbs"
+    }
+  ],
+  "wordCount": 25603
+}
