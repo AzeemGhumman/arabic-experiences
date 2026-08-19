@@ -3,7 +3,7 @@ import type { LanguagePack } from "@/locales/types"
 export const ur: LanguagePack = {
   meta: { code: "ur", name: "Urdu", nativeName: "اردو" },
   ui: {
-    nav: { home: "ہوم", progress: "ترقی", trip: "سفر", profile: "پروفائل" },
+    nav: { home: "ہوم", prep: "تیاری", progress: "ترقی", trip: "گائیڈ", profile: "پروفائل" },
     common: {
       active: "فعال",
       back: "واپس",
@@ -26,14 +26,50 @@ export const ur: LanguagePack = {
       playAgain: "دوبارہ کھیلیں",
       backToMap: "نقشے پر واپس",
     },
+    prep: {
+      kicker: "تیاری",
+      title: "کھیلنے سے پہلے پڑھیں",
+      body: "تیاری کے سیشن موضوع کے حساب سے الفاظ سکھاتے ہیں۔ کبھی بھی دوبارہ کریں — مشن کھولنے کی ضرورت نہیں۔",
+      sessionsDone: "سیشن مکمل",
+      footer: "ہر تیاری کئی مشن میں مدد کر سکتی ہے۔ مشن یہاں بھی واپس لنک کرتے ہیں۔",
+      stage: "مرحلہ {level}",
+      forMission: "اس مشن کے لیے",
+      viewAll: "تمام تیاری",
+      markComplete: "مکمل نشان لگائیں",
+      markIncomplete: "نامکمل نشان لگائیں",
+      bookmarksTitle: "نشان زد",
+      bookmarksEmpty: "مطالعے میں الفاظ بُک مارک کریں — یہاں جمع ہوں گے۔",
+      bookmarksSummary: "جائزے کے لیے {count}",
+      bookmarksPageTitle: "جائزے کے لیے نشان زد",
+      bookmarksPageBody: "تیاری میں نشان زد الفاظ۔ محفوظ کرنے کے لیے Save changes دبائیں۔",
+      saveBookmarks: "تبدیلیاں محفوظ کریں ({count})",
+      topics: {
+        numbers: {
+          title: "اعداد",
+          body: "گنتی، ترتیب، اور حقیقی حالات میں اعداد پہچانیں۔",
+        },
+        navigation: {
+          title: "سمت",
+          body: "ٹیکسی کے الفاظ، راستے، اور راستہ تلاش کرنا۔",
+        },
+        food: {
+          title: "کھانا",
+          body: "آرڈر، اپنی پسند، اور کھانا ختم کرنا۔",
+        },
+        colors: {
+          title: "رنگ",
+          body: "رنگوں کے نام — بنیادی سے گہرے رنگوں تک۔",
+        },
+      },
+    },
     onboarding: {
       kicker: "خوش آمدید",
-      title: "آپ کون سا سفر طے کریں گے؟",
-      body: "ایک وقت میں ایک سفر۔ بعد میں پروفائل سے بدل سکتے ہیں — ہر سفر کی ترقی الگ محفوظ رہتی ہے۔",
+      title: "حقیقی مہمات کے ذریعے عربی سیکھیں",
+      body: "شروع کرنے کی جگہ چنیں۔ بعد میں پروفائل سے بدل سکتے ہیں — ہر سفر کی ترقی الگ محفوظ رہتی ہے۔",
     },
     profile: {
       kicker: "پروفائل",
-      title: "یہ ساتھی آپ کے مطابق",
+      title: "یہ ایپ آپ کے مطابق",
       activeJourney: "فعال سفر",
       activeJourneyBody: "اس سفر میں {total} میں سے {done} مشن۔ دوسرے سفر کی اپنی ترقی الگ رہتی ہے۔",
       switchJourney: "سفر بدلیں",
@@ -64,6 +100,9 @@ export const ur: LanguagePack = {
       wordsTitle: "وہ الفاظ جو آپ نے سیکھے",
       wordsBody: "سفر بدلنے پر یہ یہیں رہتے ہیں۔ دوسرے راستے کی اپنی فہرست ہے۔",
       wordsEmpty: "ابھی کوئی لفظ جمع نہیں — منظر یا مشن کے بعد آتے ہیں۔",
+      bookmarksTitle: "دوبارہ دیکھنے کے لیے",
+      bookmarksBody: "تیاری میں نشان زد الفاظ — نشان ہٹانے کے لیے ٹیپ کریں۔",
+      bookmarksEmpty: "یہاں جمع کرنے کے لیے مطالعے میں الفاظ بُک مارک کریں۔",
     },
     journeys: {
       switchKicker: "سفر بدلیں",
@@ -77,7 +116,7 @@ export const ur: LanguagePack = {
       switchConfirmTitle: "{journey} پر جائیں؟",
       switchConfirmBody:
         "{current} کی ترقی ختم نہیں ہوگی۔ {journey} کا اپنا الگ ریکارڈ ہے۔",
-      comingSoonBody: "یہ سفر ابھی پیش نظر میں نہیں ہے۔ فی الحال عمرہ کی تیاری منتخب کریں۔",
+      comingSoonBody: "یہ سفر ابھی پیش نظر میں نہیں ہے۔ فی الحال عمرہ کے لیے عربی منتخب کریں۔",
       cardCurrent: "موجودہ سفر",
       cardJourney: "سفر",
       onThisJourney: "آپ اس سفر پر ہیں",
@@ -103,6 +142,7 @@ export const ur: LanguagePack = {
       comingSoonTitle: "جلد آ رہا ہے",
       comingSoonBody: "یہ مشن ابھی پیش نظر میں نہیں ہے۔ فی الحال ٹیکسی سے ہوٹل والا مشن آزمائیں۔",
       comingSoonDismiss: "ٹھیک ہے",
+      lockedBody: "نقشے پر پچھلی جگہ مکمل کرنے کے بعد کھلے گا۔",
     },
     adventure: {
       mission: "مشن",
@@ -120,6 +160,7 @@ export const ur: LanguagePack = {
       wordsUsed: "استعمال شدہ الفاظ",
       wordsInLesson: "اس سبق کے الفاظ",
       backToMission: "مشن پر واپس",
+      backToPrep: "تیاری پر واپس",
       studyAgain: "دوبارہ پڑھیں",
       directions: {
         left: "بائیں",
@@ -137,19 +178,35 @@ export const ur: LanguagePack = {
       core: "بنیادی",
       notStarted: "شروع نہیں",
     },
+    companion: {
+      kicker: "گائیڈ",
+      titleUmrah: "عمرہ کے دنوں کے لیے",
+      titleHajj: "حج کے دنوں کے لیے",
+      body: "مناسک کا فوری حوالہ — زبان کے مشن سے الگ۔",
+      ritesTitle: "عمرہ کے مناسک",
+      ritesBody: "ایک خاکہ جو سفر پر کھلا رکھ سکتے ہیں۔ جہاں مواد ہے وہاں شیٹ کھلتی ہے۔",
+      openHaram: "کھولیں: مسجد الحرام میں داخلہ",
+      hajjDaysTitle: "حج کے دن",
+      hajjDaysBody: "دنوں کا تسلسل۔ ہر لمحے کی شیٹ یہاں آئے گی۔",
+      laterTitle: "بعد میں",
+      laterBody: "وہ اوزار جو وہاں درکار ہو سکتے ہیں، مشن کے اندر نہیں بلکہ یہاں۔",
+      backToGuide: "گائیڈ پر واپس",
+      disclaimer:
+        "صرف ابتدائی مواد۔ مذہبی رہنمائی استعمال سے پہلے اہل علما سے تصدیق ہونی چاہیے۔ یہ نسک یا سرکاری رہنمائی کا متبادل نہیں۔",
+    },
   },
   journeys: {
     umrah: {
-      title: "عمرہ کی تیاری",
-      description: "سامان سے لے کر کعبہ کے سامنے کھڑے ہونے تک ایک پرسکون ساتھی۔",
-      onboardingLabel: "عمرہ کی تیاری",
-      onboardingHint: "آنے سے پہلے اور دوران کے دنوں کا ساتھی",
+      title: "عمرہ کے لیے عربی",
+      description: "وہ عربی سیکھیں جو آپ کو درکار ہوگی — مشن بہ مشن۔",
+      onboardingLabel: "عمرہ کے لیے عربی",
+      onboardingHint: "حقیقی حالات: ہوائی اڈہ، ٹیکسی، ہوٹل، حرم",
     },
     hajj: {
-      title: "حج کی تیاری",
-      description: "حج کے دنوں کو چیک لسٹ نہیں، سفر سمجھیں۔",
-      onboardingLabel: "حج کی تیاری",
-      onboardingHint: "دنوں کو سفر کی طرح چلیں",
+      title: "حج کے لیے عربی",
+      description: "حج کے دنوں کے لیے درکار عربی سیکھیں۔",
+      onboardingLabel: "حج کے لیے عربی",
+      onboardingHint: "حج کے دنوں کے حقیقی حالات",
     },
     arabic: {
       title: "حقیقی زندگی کے لیے عربی",

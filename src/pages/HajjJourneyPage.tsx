@@ -13,7 +13,7 @@ export function HajjJourneyPage() {
       kicker="Hajj"
       kickerClassName="text-gold"
       title="Arabic for the days of Hajj"
-      intro="Each situation is a mission. Prep for that situation is the vocabulary and tools. The rites cheat sheet lives in the Trip tab."
+      intro="Each situation is a mission. Prep for that situation is the vocabulary and tools. The rites cheat sheet lives in the Guide tab."
     >
       {taxi ? (
         <AdventureCard

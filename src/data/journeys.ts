@@ -3,8 +3,8 @@ import type { Journey, JourneyCategory } from "@/lib/storage"
 export const journeys: Journey[] = [
   {
     id: "umrah",
-    title: "Prepare for Umrah",
-    description: "A calm companion from packing to standing before the Kaaba.",
+    title: "Arabic for Umrah",
+    description: "Learn the Arabic you'll need — mission by mission.",
     category: "umrah",
     progress: 28,
     status: "in-progress",
@@ -13,8 +13,8 @@ export const journeys: Journey[] = [
   },
   {
     id: "hajj",
-    title: "Prepare for Hajj",
-    description: "Walk the days of Hajj as a journey, not a checklist.",
+    title: "Arabic for Hajj",
+    description: "Learn the Arabic you'll need for the days of Hajj.",
     category: "hajj",
     progress: 0,
     status: "coming-soon",

@@ -1,15 +1,15 @@
 import { useParams, useSearchParams, useNavigate } from "react-router-dom"
 import { AdventurePlayer } from "@/components/adventure/AdventurePlayer"
 import { BackButton } from "@/components/app-shell/BackButton"
+import { isMissionImplemented, isPrepImplemented } from "@/data/learning/availability"
 import { getAdventure } from "@/data/learning/adventures"
 import { getSideMission } from "@/data/learning/side-missions"
-import { isMissionReleased } from "@/data/learning/mission-graph"
 import { useI18n } from "@/lib/i18n"
 
 export function AdventurePage() {
   const { id = "" } = useParams()
   const adventure = getAdventure(id)
-  if (!isMissionReleased(id) || !adventure?.playable) {
+  if (!isMissionImplemented(id) || !adventure?.playable) {
     return (
       <div className="py-16">
         <BackButton />
@@ -29,7 +29,7 @@ export function SideMissionPage() {
   const navigate = useNavigate()
   const { t } = useI18n()
   const from = search.get("from")
-  const returnTo = from ? `/missions/${from}` : undefined
+  const returnTo = from === "prep" ? "/prep" : from ? `/missions/${from}` : undefined
   const mission = getSideMission(id)
   if (!mission) {
     return (
@@ -39,7 +39,7 @@ export function SideMissionPage() {
       </div>
     )
   }
-  if (!isMissionReleased(id) || !mission.playable) {
+  if (!isPrepImplemented(id) || !mission.playable) {
     return (
       <div className="space-y-5 py-16">
         <BackButton />

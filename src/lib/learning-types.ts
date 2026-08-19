@@ -224,11 +224,29 @@ export type AdventureRun = {
   advanced?: boolean
 }
 
+/** Topic bucket for the prep catalog, e.g. numbers, navigation, colors. */
+export type PrepTopicId = "numbers" | "navigation" | "food" | "colors"
+
+export type PrepTopic = {
+  id: PrepTopicId
+  title: string
+  description: string
+  order: number
+}
+
 export type SideMission = {
   id: string
   title: string
   eyebrow: string
   description: string
+  /** Catalog topic — groups sessions in the Prep library. */
+  topicId: PrepTopicId
+  /** Order within the topic (1 = first stage). */
+  level: number
+  /** Short level name used in titles, e.g. "Basic", "More". */
+  levelName: string
+  /** Adventures this prep supports. Canonical many-to-one mapping. */
+  adventureIds: string[]
   unlockAfterAdventureIds: string[]
   vocabularyGain: number
   estimatedMinutes: number

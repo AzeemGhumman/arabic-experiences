@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
+import { StudyVocabList } from "@/components/adventure/StudyVocabList"
 import { PlayAudioButton } from "@/components/audio/PlayAudioButton"
 import { ExperienceScene, MiniMap, sceneForExperience } from "@/components/adventure/ExperienceScenes"
 import { OptionButton, RegisterBadge } from "@/components/adventure/AdventureBits"
@@ -42,7 +43,7 @@ export function AdventurePlayer({
   onStudyComplete?: () => void
   skipIntro?: boolean
 }) {
-  const { completeAdventure, discoverWord } = useAppState()
+  const { completeAdventure, discoverWord, toggleBookmark } = useAppState()
   const { progress } = useActiveJourney()
   const { t } = useI18n()
   const [session, setSession] = useState(0)
@@ -112,6 +113,7 @@ export function AdventurePlayer({
         kind={runBundle.kind}
         returnTo={returnTo}
         capabilityId={side?.capabilityId ?? (adventure ? Object.keys(adventure.capabilityRewards)[0] : undefined)}
+        prepCompleted={side ? progress.completedSideMissionIds.includes(experienceId) : false}
         onReplay={() => {
           const nextSession = session + 1
           const nextBundle = createRunById(experienceId, progress.capabilities, `${experienceId}-${nextSession}`)
@@ -164,7 +166,9 @@ export function AdventurePlayer({
           complication={runBundle.run.selectedComplicationId}
           showTransliteration={showTransliteration}
           showTranslation={showTranslation}
+          bookmarkedIds={progress.bookmarkedVocab}
           onDiscover={discoverWord}
+          onToggleBookmark={toggleBookmark}
           onContinue={next}
           onFinishStudy={finishStudy}
         />
@@ -193,7 +197,9 @@ function StepView({
   complication,
   showTransliteration,
   showTranslation,
+  bookmarkedIds,
   onDiscover,
+  onToggleBookmark,
   onContinue,
   onFinishStudy,
 }: {
@@ -204,7 +210,9 @@ function StepView({
   complication?: string
   showTransliteration: boolean
   showTranslation: boolean
+  bookmarkedIds: string[]
   onDiscover: (id: string) => void
+  onToggleBookmark: (id: string) => void
   onContinue: () => void
   onFinishStudy: () => void
 }) {
@@ -260,7 +268,9 @@ function StepView({
         packId={experienceId}
         groups={step.groups}
         resources={getStudyResources(experienceId)}
+        bookmarkedIds={bookmarkedIds}
         onDiscover={onDiscover}
+        onToggleBookmark={onToggleBookmark}
         onFinish={onFinishStudy}
       />
     )
@@ -328,15 +338,20 @@ function StudyStep({
   packId,
   groups,
   resources,
+  bookmarkedIds,
   onDiscover,
+  onToggleBookmark,
   onFinish,
 }: {
   packId: string
   groups: StudyGroup[]
   resources: StudyResource[]
+  bookmarkedIds: string[]
   onDiscover: (id: string) => void
+  onToggleBookmark: (id: string) => void
   onFinish: () => void
 }) {
+  const { t } = useI18n()
   const discovered = useRef(false)
 
   useEffect(() => {
@@ -349,50 +364,15 @@ function StudyStep({
 
   return (
     <div className="space-y-6">
-      {groups.map((group) => (
-        <section key={group.title} className="space-y-3">
-          {group.scene ? <ExperienceScene scene={group.scene} compact className="h-32 w-full" /> : null}
-          <div>
-            <h2 className="font-display text-xl leading-tight">{group.title}</h2>
-            {group.intro ? <p className="mt-1 text-sm text-muted-foreground">{group.intro}</p> : null}
-          </div>
-          <div className="overflow-hidden rounded-3xl border border-border bg-card">
-            {group.vocabIds.map((id, index) => {
-              const word = getLearningWord(id)
-              if (!word) return null
-              return (
-                <article
-                  key={id}
-                  className={
-                    index > 0
-                      ? "grid grid-cols-2 border-t border-border"
-                      : "grid grid-cols-2"
-                  }
-                >
-                  <div className="flex min-w-0 flex-col justify-center border-r border-border px-4 py-3.5">
-                    <p className="text-sm font-medium text-ink">{word.meaning}</p>
-                    {word.transliteration ? (
-                      <p className="mt-0.5 text-xs italic text-ink-soft">{word.transliteration}</p>
-                    ) : null}
-                    <div className="mt-1.5">
-                      <RegisterBadge register={word.register} />
-                    </div>
-                  </div>
-                  <div className="flex min-w-0 items-center justify-end gap-2 px-4 py-3.5">
-                    <p className="arabic-text text-2xl leading-none" dir="rtl">
-                      {word.arabic}
-                    </p>
-                    <PlayAudioButton packId={packId} clipId={id} variant="ghost" />
-                  </div>
-                </article>
-              )
-            })}
-          </div>
-        </section>
-      ))}
+      <StudyVocabList
+        packId={packId}
+        groups={groups}
+        isBookmarked={(id) => bookmarkedIds.includes(id)}
+        onToggleBookmark={onToggleBookmark}
+      />
       <StudyResources items={resources} />
       <Button type="button" className="w-full" variant="terracotta" onClick={onFinish}>
-        Done studying
+        {t("common.done")}
       </Button>
     </div>
   )
@@ -678,6 +658,7 @@ function Completion({
   advanced,
   kind,
   capabilityId,
+  prepCompleted = false,
   returnTo,
   onReplay,
 }: {
@@ -689,10 +670,12 @@ function Completion({
   advanced?: boolean
   kind: "adventure" | "side"
   capabilityId?: string
+  prepCompleted?: boolean
   returnTo?: string
   onReplay: () => void
 }) {
   const { resetTabToRoot } = useTabNavigation()
+  const { setPrepCompleted } = useAppState()
   const { t, capability: capabilityCopy } = useI18n()
   const capability = capabilityId ? getCapability(capabilityId as "navigation") : undefined
   const localizedCapability = capabilityId ? capabilityCopy(capabilityId) : undefined
@@ -754,12 +737,27 @@ function Completion({
           to={isStudy ? (returnTo ?? "/") : "/"}
           className="flex min-h-12 items-center justify-center rounded-full bg-terracotta font-semibold text-white"
         >
-          {isStudy ? (returnTo ? t("adventure.backToMission") : t("common.backToMap")) : t("common.backToMap")}
+          {isStudy
+            ? returnTo
+              ? returnTo.startsWith("/prep")
+                ? t("adventure.backToPrep")
+                : t("adventure.backToMission")
+              : t("common.backToMap")
+            : t("common.backToMap")}
         </Link>
       )}
       <Button variant="outline" className="w-full" onClick={onReplay}>
         {isStudy ? t("adventure.studyAgain") : t("common.playAgain")}
       </Button>
+      {isStudy && experienceId && prepCompleted ? (
+        <button
+          type="button"
+          className="w-full text-center text-sm font-semibold text-muted-foreground"
+          onClick={() => setPrepCompleted(experienceId, false)}
+        >
+          {t("prep.markIncomplete")}
+        </button>
+      ) : null}
     </div>
   )
 }

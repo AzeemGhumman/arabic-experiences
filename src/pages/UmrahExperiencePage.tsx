@@ -5,9 +5,11 @@ import { SupplicationCard } from "@/components/vocabulary/SupplicationCard"
 import { Button } from "@/components/ui/button"
 import { haramExperience } from "@/data/umrah"
 import { useAppState } from "@/lib/app-state"
+import { useI18n } from "@/lib/i18n"
 import { BackButton } from "@/components/app-shell/BackButton"
 
 export function UmrahExperiencePage() {
+  const { t } = useI18n()
   const { state, setShowTransliteration, setShowTranslation, practiceSupplication } =
     useAppState()
 
@@ -20,7 +22,7 @@ export function UmrahExperiencePage() {
       <header>
         <BackButton />
         <p className="text-[11px] font-semibold tracking-[0.2em] text-terracotta uppercase">
-          {haramExperience.kicker}
+          {t("companion.kicker")}
         </p>
         <h1 className="font-display mt-2 text-3xl leading-tight">{haramExperience.title}</h1>
         <p className="mt-2 text-sm italic text-ink-soft">{haramExperience.atmosphere}</p>
@@ -66,7 +68,7 @@ export function UmrahExperiencePage() {
         variant="terracotta"
         asChild
       >
-        <Link to="/companion">Back to companion</Link>
+        <Link to="/companion">{t("companion.backToGuide")}</Link>
       </Button>
       <p className="text-xs leading-relaxed text-muted-foreground">{haramExperience.disclaimer}</p>
     </div>

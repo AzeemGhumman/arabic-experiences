@@ -35,6 +35,7 @@ export type LanguagePack = {
   ui: {
     nav: {
       home: string
+      prep: string
       progress: string
       trip: string
       profile: string
@@ -60,6 +61,25 @@ export type LanguagePack = {
       switchJourney: string
       playAgain: string
       backToMap: string
+    }
+    prep: {
+      kicker: string
+      title: string
+      body: string
+      sessionsDone: string
+      footer: string
+      stage: string
+      forMission: string
+      viewAll: string
+      markComplete: string
+      markIncomplete: string
+      bookmarksTitle: string
+      bookmarksEmpty: string
+      bookmarksSummary: string
+      bookmarksPageTitle: string
+      bookmarksPageBody: string
+      saveBookmarks: string
+      topics: Record<string, { title: string; body: string }>
     }
     onboarding: {
       kicker: string
@@ -98,6 +118,9 @@ export type LanguagePack = {
       wordsTitle: string
       wordsBody: string
       wordsEmpty: string
+      bookmarksTitle: string
+      bookmarksBody: string
+      bookmarksEmpty: string
     }
     journeys: {
       switchKicker: string
@@ -134,6 +157,7 @@ export type LanguagePack = {
       comingSoonTitle: string
       comingSoonBody: string
       comingSoonDismiss: string
+      lockedBody: string
     }
     adventure: {
       mission: string
@@ -151,6 +175,7 @@ export type LanguagePack = {
       wordsUsed: string
       wordsInLesson: string
       backToMission: string
+      backToPrep: string
       studyAgain: string
       directions: {
         left: string
@@ -167,6 +192,21 @@ export type LanguagePack = {
       explore: string
       core: string
       notStarted: string
+    }
+    companion: {
+      kicker: string
+      titleUmrah: string
+      titleHajj: string
+      body: string
+      ritesTitle: string
+      ritesBody: string
+      openHaram: string
+      hajjDaysTitle: string
+      hajjDaysBody: string
+      laterTitle: string
+      laterBody: string
+      backToGuide: string
+      disclaimer: string
     }
   }
   journeys: Record<JourneyCategory, JourneyStrings>

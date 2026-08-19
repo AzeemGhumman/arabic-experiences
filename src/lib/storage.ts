@@ -84,6 +84,7 @@ export type JourneyProgress = {
   adventurePlayCounts: Record<string, number>
   discoveredVocab: string[]
   wordConfidence: Record<string, Confidence>
+  bookmarkedVocab: string[]
 }
 
 export type AppState = {
@@ -113,6 +114,7 @@ export function emptyJourneyProgress(): JourneyProgress {
     adventurePlayCounts: {},
     discoveredVocab: [],
     wordConfidence: {},
+    bookmarkedVocab: [],
   }
 }
 
@@ -140,6 +142,7 @@ type LegacyState = Partial<AppState> & {
   adventurePlayCounts?: Record<string, number>
   discoveredVocab?: string[]
   wordConfidence?: Record<string, Confidence>
+  bookmarkedVocab?: string[]
 }
 
 export function getJourneyProgress(state: AppState, journeyId = state.activeJourneyId): JourneyProgress {
@@ -170,6 +173,7 @@ export function migrateState(parsed: LegacyState): AppState {
         adventurePlayCounts: parsed.adventurePlayCounts ?? {},
         discoveredVocab: parsed.discoveredVocab ?? [],
         wordConfidence: parsed.wordConfidence ?? {},
+        bookmarkedVocab: parsed.bookmarkedVocab ?? [],
       },
     }
   }
@@ -181,6 +185,13 @@ export function migrateState(parsed: LegacyState): AppState {
     base.journeyProgress = {
       ...base.journeyProgress,
       [base.activeJourneyId]: emptyJourneyProgress(),
+    }
+  }
+
+  for (const id of Object.keys(base.journeyProgress)) {
+    const progress = base.journeyProgress[id as JourneyCategory]
+    if (progress && !progress.bookmarkedVocab) {
+      base.journeyProgress[id as JourneyCategory] = { ...progress, bookmarkedVocab: [] }
     }
   }
 

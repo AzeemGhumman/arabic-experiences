@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { Check, ChevronDown, Star } from "lucide-react"
+import { Check, ChevronDown, Lock, Star } from "lucide-react"
+import { missionAvailability } from "@/data/learning/availability"
 import { SceneMark, sceneForExperience } from "@/components/adventure/ExperienceScenes"
 import {
   Button,
@@ -19,7 +20,6 @@ import {
   currentModuleId,
   edgesInStage,
   graphStages,
-  isMissionReleased,
   isNodeUnlocked,
   localCenter,
   moduleHeight,
@@ -127,7 +127,7 @@ function PathModule({
         type="button"
         onClick={onToggle}
         aria-expanded={open}
-        className="relative z-10 flex w-full items-center gap-3 border-b border-border/60 bg-paper px-4 py-3 text-start"
+        className="relative z-10 flex w-full cursor-pointer items-center gap-3 border-b border-border/60 bg-paper px-4 py-3 text-start"
       >
         <span className="min-w-0 flex-1">
           <span className="flex items-center gap-2">
@@ -164,10 +164,9 @@ function PathModule({
 
           {nodes.map((node) => {
             const completed = completedIds.includes(node.id)
-            const unlocked = isNodeUnlocked(node, completedIds)
-            const released = isMissionReleased(node.id)
-            const interactive = released
-            const openPlace = released && unlocked && !completed
+            const availability = missionAvailability(node.id, completedIds, node)
+            const canVisit = availability === "open" || availability === "locked" || availability === "done"
+            const openPlace = availability === "open"
             const side = node.kind === "side"
             const point = localCenter(node, layout, stage)
 
@@ -182,18 +181,24 @@ function PathModule({
                       className={cn(
                         "border-[3px] shadow-md",
                         side ? "size-11" : "size-14",
-                        completed && "border-sage",
-                        !completed && released && unlocked && "border-terracotta",
-                        !completed && released && unlocked && openPlace && !side && "animate-map-pulse",
-                        !completed && (!released || !unlocked) && "border-border/70 grayscale",
+                        availability === "done" && "border-sage",
+                        availability === "open" && "border-terracotta",
+                        availability === "open" && openPlace && !side && "animate-map-pulse",
+                        (availability === "locked" || availability === "coming-soon") &&
+                          "border-border/70 grayscale",
                       )}
                     />
-                    {completed ? (
+                    {availability === "done" ? (
                       <span className="absolute -end-0.5 -bottom-0.5 flex size-5 items-center justify-center rounded-full border-2 border-paper bg-sage text-white">
                         <Check className="size-3" strokeWidth={3} />
                       </span>
                     ) : null}
-                    {side && !completed ? (
+                    {availability === "locked" ? (
+                      <span className="absolute -end-0.5 -bottom-0.5 flex size-5 items-center justify-center rounded-full border-2 border-paper bg-secondary text-muted-foreground">
+                        <Lock className="size-2.5" strokeWidth={2.5} />
+                      </span>
+                    ) : null}
+                    {side && availability !== "done" && availability !== "coming-soon" ? (
                       <span className="absolute -end-1 -top-1 flex size-[18px] items-center justify-center rounded-full border-2 border-paper bg-gold text-white">
                         <Star className="size-2.5" strokeWidth={0} fill="currentColor" />
                       </span>
@@ -204,9 +209,9 @@ function PathModule({
                   className={cn(
                     "map-label absolute left-1/2 w-full -translate-x-1/2 text-center font-semibold leading-tight",
                     side ? "top-[26px] text-[11px]" : "top-[30px] text-[11px]",
-                    completed && "text-sage-deep",
-                    !completed && released && unlocked && "text-terracotta",
-                    !completed && (!released || !unlocked) && "text-muted-foreground",
+                    availability === "done" && "text-sage-deep",
+                    availability === "open" && "text-terracotta",
+                    (availability === "locked" || availability === "coming-soon") && "text-muted-foreground",
                   )}
                 >
                   {label}
@@ -220,11 +225,14 @@ function PathModule({
                 className="absolute"
                 style={{ left: `${(point.x / PATH_WIDTH) * 100}%`, top: `${(point.y / height) * 100}%` }}
               >
-                {interactive ? (
+                {canVisit ? (
                   <Link
                     to={`/missions/${node.id}`}
                     aria-label={completed ? `${label}, ${t("common.done")}` : label}
-                    className={cn("relative block -translate-x-1/2", side ? "w-[4.5rem]" : "w-[5.75rem]")}
+                    className={cn(
+                      "relative block -translate-x-1/2 cursor-pointer",
+                      side ? "w-[4.5rem]" : "w-[5.75rem]",
+                    )}
                   >
                     {stamp}
                   </Link>
@@ -234,7 +242,7 @@ function PathModule({
                     aria-label={`${label}, ${t("mission.comingSoonTitle")}`}
                     onClick={() => setSoonLabel(label)}
                     className={cn(
-                      "relative block -translate-x-1/2 cursor-default",
+                      "relative block -translate-x-1/2 cursor-pointer",
                       side ? "w-[4.5rem]" : "w-[5.75rem]",
                     )}
                   >

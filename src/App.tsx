@@ -11,6 +11,8 @@ import { RestaurantScenarioPage } from "@/pages/RestaurantScenarioPage"
 import { GardenScenarioPage } from "@/pages/GardenScenarioPage"
 import { VocabularyDetailPage } from "@/pages/VocabularyDetailPage"
 import { ProgressPage } from "@/pages/ProgressPage"
+import { PrepPage } from "@/pages/PrepPage"
+import { PrepBookmarksPage } from "@/pages/PrepBookmarksPage"
 import { ProfilePage } from "@/pages/ProfilePage"
 import { AdventurePage, SideMissionPage } from "@/pages/AdventurePage"
 import { MissionPlacePage } from "@/pages/MissionPlacePage"
@@ -39,6 +41,8 @@ export default function App() {
             <Route path="/journeys/quran/garden" element={<GardenScenarioPage />} />
             <Route path="/vocabulary/:id" element={<VocabularyDetailPage />} />
             <Route path="/learn" element={<Navigate to="/progress" replace />} />
+            <Route path="/prep" element={<PrepPage />} />
+            <Route path="/prep/bookmarks" element={<PrepBookmarksPage />} />
             <Route path="/progress" element={<ProgressPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/profile/journeys" element={<JourneySwitchPage />} />

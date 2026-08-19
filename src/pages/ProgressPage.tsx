@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import type { ReactNode } from "react"
 import { ProgressRing } from "@/components/progress/ProgressRing"
+import { BookmarksSummaryLink } from "@/components/prep/BookmarksSummaryLink"
 import { capabilities } from "@/data/learning/capabilities"
 import { adventures } from "@/data/learning/adventures"
 import { getVocabByIds } from "@/data/vocabulary"
@@ -33,6 +34,7 @@ export function ProgressPage() {
     return acc
   }, {})
   const wordCount = sceneWords.length + adventureWords.length
+  const bookmarkCount = progress.bookmarkedVocab.length
 
   const canDo = [
     ...adventures
@@ -53,7 +55,7 @@ export function ProgressPage() {
   const nextId = graph
     ? nextPlayableAdventure([...progress.completedAdventureIds, ...progress.completedSideMissionIds], graph)
     : undefined
-  const empty = canDo.length === 0 && wordCount === 0
+  const empty = canDo.length === 0 && wordCount === 0 && bookmarkCount === 0
 
   return (
     <div className="space-y-6 pb-8">
@@ -135,6 +137,12 @@ export function ProgressPage() {
               </div>
             </section>
           ) : null}
+
+          <section className="space-y-2">
+            <h2 className="font-display text-xl">{t("progress.bookmarksTitle")}</h2>
+            <p className="text-sm text-muted-foreground">{t("progress.bookmarksBody")}</p>
+            <BookmarksSummaryLink count={bookmarkCount} />
+          </section>
 
           <section className="space-y-5">
             <div>

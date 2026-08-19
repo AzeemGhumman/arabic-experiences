@@ -21,6 +21,9 @@ type AppStateContextValue = {
   setShowTranslation: (value: boolean) => void
   discoverWord: (id: string) => void
   setConfidence: (id: string, confidence: Confidence) => void
+  toggleBookmark: (id: string) => void
+  setBookmarkedVocab: (ids: string[]) => void
+  setPrepCompleted: (id: string, completed: boolean) => void
   completeScenario: (id: string) => void
   askRestaurantItem: (id: string) => void
   markGardenCelebrated: () => void
@@ -130,6 +133,39 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
           patchActiveProgress(current, (progress) => ({
             ...progress,
             wordConfidence: { ...progress.wordConfidence, [id]: confidence },
+          })),
+        )
+      },
+      toggleBookmark: (id) => {
+        setState((current) =>
+          patchActiveProgress(current, (progress) => {
+            const bookmarked = progress.bookmarkedVocab.includes(id)
+            return {
+              ...progress,
+              bookmarkedVocab: bookmarked
+                ? progress.bookmarkedVocab.filter((item) => item !== id)
+                : [...progress.bookmarkedVocab, id],
+            }
+          }),
+        )
+      },
+      setBookmarkedVocab: (ids) => {
+        setState((current) =>
+          patchActiveProgress(current, (progress) => ({
+            ...progress,
+            bookmarkedVocab: [...new Set(ids)],
+          })),
+        )
+      },
+      setPrepCompleted: (id, completed) => {
+        setState((current) =>
+          patchActiveProgress(current, (progress) => ({
+            ...progress,
+            completedSideMissionIds: completed
+              ? progress.completedSideMissionIds.includes(id)
+                ? progress.completedSideMissionIds
+                : [...progress.completedSideMissionIds, id]
+              : progress.completedSideMissionIds.filter((item) => item !== id),
           })),
         )
       },

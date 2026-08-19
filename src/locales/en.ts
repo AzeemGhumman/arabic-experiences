@@ -3,7 +3,7 @@ import type { LanguagePack } from "@/locales/types"
 export const en: LanguagePack = {
   meta: { code: "en", name: "English", nativeName: "English" },
   ui: {
-    nav: { home: "Home", progress: "Progress", trip: "Trip", profile: "Profile" },
+    nav: { home: "Home", prep: "Prep", progress: "Progress", trip: "Guide", profile: "Profile" },
     common: {
       active: "Active",
       back: "Back",
@@ -26,14 +26,50 @@ export const en: LanguagePack = {
       playAgain: "Play again",
       backToMap: "Back to map",
     },
+    prep: {
+      kicker: "Prep",
+      title: "Study before you play",
+      body: "Prep sessions build vocabulary by topic. Replay anytime — you do not need to open a mission first.",
+      sessionsDone: "sessions complete",
+      footer: "Each prep can support several missions. Missions link back here too.",
+      stage: "Stage {level}",
+      forMission: "For this mission",
+      viewAll: "All prep sessions",
+      markComplete: "Mark as done",
+      markIncomplete: "Mark as not done",
+      bookmarksTitle: "Bookmarked",
+      bookmarksEmpty: "Bookmark words while studying to collect them here.",
+      bookmarksSummary: "{count} saved for review",
+      bookmarksPageTitle: "Bookmarked for review",
+      bookmarksPageBody: "Words you flagged in prep. Changes are saved when you tap Save changes.",
+      saveBookmarks: "Save changes ({count})",
+      topics: {
+        numbers: {
+          title: "Numbers",
+          body: "Count, order, and recognize numbers in real situations.",
+        },
+        navigation: {
+          title: "Navigation",
+          body: "Taxi words, directions, and finding your way.",
+        },
+        food: {
+          title: "Food",
+          body: "Ordering, customizing, and closing a meal.",
+        },
+        colors: {
+          title: "Colors",
+          body: "Name and recognize colors — from basics to richer shades.",
+        },
+      },
+    },
     onboarding: {
       kicker: "Welcome",
-      title: "Which journey will you walk?",
-      body: "One journey at a time. You can switch later from Profile — progress in each journey is kept separately.",
+      title: "Learn Arabic through real adventures",
+      body: "Pick where to start. You can switch later from Profile — progress in each journey is kept separately.",
     },
     profile: {
       kicker: "Profile",
-      title: "How this companion meets you",
+      title: "How this app meets you",
       activeJourney: "Active journey",
       activeJourneyBody: "{done} of {total} missions in this journey. Other journeys keep their own progress.",
       switchJourney: "Switch journey",
@@ -64,6 +100,9 @@ export const en: LanguagePack = {
       wordsTitle: "Words you have met",
       wordsBody: "They stay here if you switch journeys. The other path has its own list.",
       wordsEmpty: "No words collected yet — they appear after a scene or mission.",
+      bookmarksTitle: "Bookmarked for review",
+      bookmarksBody: "Words you flagged in prep — tap to remove the bookmark.",
+      bookmarksEmpty: "Bookmark words while studying to collect them here.",
     },
     journeys: {
       switchKicker: "Switch journey",
@@ -77,7 +116,7 @@ export const en: LanguagePack = {
       switchConfirmTitle: "Switch to {journey}?",
       switchConfirmBody:
         "Your progress on {current} will not be reset. {journey} keeps its own record, separate from this one.",
-      comingSoonBody: "This journey is not in the preview yet. For now, choose Prepare for Umrah.",
+      comingSoonBody: "This journey is not in the preview yet. For now, choose Arabic for Umrah.",
       cardCurrent: "Current journey",
       cardJourney: "Journey",
       onThisJourney: "You're on this journey",
@@ -103,6 +142,7 @@ export const en: LanguagePack = {
       comingSoonTitle: "Coming soon",
       comingSoonBody: "This mission is not in the preview yet. For now, try Taxi to the hotel.",
       comingSoonDismiss: "Got it",
+      lockedBody: "Opens after the previous place on the map.",
     },
     adventure: {
       mission: "Mission",
@@ -120,6 +160,7 @@ export const en: LanguagePack = {
       wordsUsed: "Words you used",
       wordsInLesson: "Words in this lesson",
       backToMission: "Back to mission",
+      backToPrep: "Back to prep",
       studyAgain: "Study again",
       directions: {
         left: "Left",
@@ -137,19 +178,35 @@ export const en: LanguagePack = {
       core: "Core",
       notStarted: "Not started",
     },
+    companion: {
+      kicker: "Guide",
+      titleUmrah: "For the days of Umrah",
+      titleHajj: "For the days of Hajj",
+      body: "A quick reference for the rites — separate from your language missions.",
+      ritesTitle: "Umrah rites",
+      ritesBody: "An outline you can keep open on the trip. Sheets open where content exists.",
+      openHaram: "Open: Entering Masjid al-Haram",
+      hajjDaysTitle: "Hajj days",
+      hajjDaysBody: "The sequence of the days. Sheets for each moment will land here.",
+      laterTitle: "Coming later",
+      laterBody: "Tools you might want on the ground, kept here rather than inside a mission.",
+      backToGuide: "Back to guide",
+      disclaimer:
+        "Prototype content only. Religious guidance should be reviewed by qualified scholars before production use. This is not a replacement for Nusuk or official guidance.",
+    },
   },
   journeys: {
     umrah: {
-      title: "Prepare for Umrah",
-      description: "A calm companion from packing to standing before the Kaaba.",
-      onboardingLabel: "Prepare for Umrah",
-      onboardingHint: "A companion for the days before and during",
+      title: "Arabic for Umrah",
+      description: "Learn the Arabic you'll need — mission by mission.",
+      onboardingLabel: "Arabic for Umrah",
+      onboardingHint: "Real situations: airport, taxi, hotel, Haram",
     },
     hajj: {
-      title: "Prepare for Hajj",
-      description: "Walk the days of Hajj as a journey, not a checklist.",
-      onboardingLabel: "Prepare for Hajj",
-      onboardingHint: "Walk the days as a journey",
+      title: "Arabic for Hajj",
+      description: "Learn the Arabic you'll need for the days of Hajj.",
+      onboardingLabel: "Arabic for Hajj",
+      onboardingHint: "Real situations across the days of Hajj",
     },
     arabic: {
       title: "Arabic for Real Life",

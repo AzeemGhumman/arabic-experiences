@@ -1,23 +1,22 @@
 import { Link, useNavigate, useParams } from "react-router-dom"
+import type { MouseEvent } from "react"
 import { Check, Compass } from "lucide-react"
 import { ExperienceScene, sceneForExperience } from "@/components/adventure/ExperienceScenes"
 import { BackButton } from "@/components/app-shell/BackButton"
+import {
+  missionAvailability,
+  prepAvailability,
+} from "@/data/learning/availability"
 import { getAdventure } from "@/data/learning/adventures"
 import { getPracticesForMission } from "@/data/learning/prep"
-import {
-  graphForJourney,
-  isMissionPlayable,
-  isMissionReleased,
-  isNodeUnlocked,
-  stageForNode,
-} from "@/data/learning/mission-graph"
+import { graphForJourney, isMissionPlayable, stageForNode } from "@/data/learning/mission-graph"
 import { useActiveJourney, useAppState } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
 
 export function MissionPlacePage() {
   const { id = "" } = useParams()
   const navigate = useNavigate()
-  const { state, completeAdventure } = useAppState()
+  const { state, completeAdventure, setPrepCompleted } = useAppState()
   const { progress } = useActiveJourney()
   const { t, adventure: adventureCopy, stage: stageLabel, mission } = useI18n()
   const graph = graphForJourney(state.activeJourneyId)
@@ -25,20 +24,24 @@ export function MissionPlacePage() {
   const adventure = getAdventure(id)
   const localized = adventureCopy(id)
   const practices = getPracticesForMission(id)
-  const unlocked = node ? isNodeUnlocked(node, progress.completedAdventureIds) : false
-  const completed = progress.completedAdventureIds.includes(id)
+  const availability = missionAvailability(id, progress.completedAdventureIds, node)
+  const unlocked = availability === "open" || availability === "done"
+  const completed = availability === "done"
   const playable = isMissionPlayable(id)
-  const released = isMissionReleased(id)
-  const playHref = released && unlocked && playable ? `/adventures/${id}?from=${id}` : undefined
-  const canContinue = Boolean(released && adventure && !adventure.playable && unlocked && !completed)
+  const playHref = availability === "open" && playable ? `/adventures/${id}?from=${id}` : undefined
+  const canContinue = Boolean(availability === "open" && adventure && !adventure.playable && !completed)
   const playCount = progress.adventurePlayCounts?.[id] ?? 0
   const stage = graph && node ? stageForNode(graph, node) : undefined
   const title = localized?.title ?? (node ? mission(node.id, node.label) : t("mission.place"))
   const subtitle = localized?.subtitle ?? adventure?.subtitle
   const description = localized?.description ?? adventure?.description
-  const status = completed ? t("common.done") : unlocked ? t("common.open") : t("common.locked")
+  const status = completed
+    ? t("common.done")
+    : availability === "locked"
+      ? t("common.locked")
+      : t("common.open")
 
-  if (!released && (node || adventure)) {
+  if (availability === "coming-soon" && (node || adventure)) {
     return (
       <div className="space-y-5 pb-10">
         <BackButton />
@@ -137,44 +140,85 @@ export function MissionPlacePage() {
           >
             {t("progress.continueJourney")}
           </button>
-        ) : !unlocked ? (
+        ) : availability === "locked" ? (
           <p className="rounded-3xl bg-secondary/80 px-4 py-3 text-sm text-muted-foreground">
-            Opens after the previous place.
-          </p>
-        ) : completed ? (
-          <p className="rounded-3xl bg-secondary/80 px-4 py-3 text-sm text-muted-foreground">
-            Mission coming soon.
+            {t("mission.lockedBody")}
           </p>
         ) : null}
       </div>
 
       {practices.length > 0 ? (
         <section className="space-y-2">
-          <p className="text-[11px] font-semibold tracking-[0.16em] text-sky-deep uppercase">Practice</p>
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-[11px] font-semibold tracking-[0.16em] text-sky-deep uppercase">
+              {t("prep.forMission")}
+            </p>
+            <Link to="/prep" className="text-xs font-semibold text-sky-deep">
+              {t("prep.viewAll")}
+            </Link>
+          </div>
           {practices.map((practice) => {
             const done = progress.completedSideMissionIds.includes(practice.id)
-            const href =
-              practice.playable && isMissionReleased(practice.id)
-                ? `/side-missions/${practice.id}?from=${id}`
-                : undefined
+            const access = prepAvailability(practice.id)
+            const href = access === "open" ? `/side-missions/${practice.id}?from=${id}` : undefined
+
+            function toggleDone(event: MouseEvent) {
+              event.preventDefault()
+              event.stopPropagation()
+              setPrepCompleted(practice.id, !done)
+            }
+
+            const card = (
+              <>
+                <Compass className="size-4 shrink-0 text-sky-deep" />
+                <span className="min-w-0 flex-1">
+                  <span className="font-display block text-base leading-tight">{practice.title}</span>
+                  {practice.minutes ? (
+                    <span className="mt-0.5 block text-xs text-muted-foreground">
+                      {practice.minutes} {t("common.min")}
+                    </span>
+                  ) : null}
+                </span>
+                {access === "open" ? (
+                  <button
+                    type="button"
+                    aria-label={done ? t("prep.markIncomplete") : t("prep.markComplete")}
+                    aria-pressed={done}
+                    onClick={toggleDone}
+                    className={`flex size-9 shrink-0 items-center justify-center rounded-full border-2 transition ${
+                      done
+                        ? "border-sage bg-sage text-white"
+                        : "border-border/80 bg-paper text-transparent hover:border-sage/40"
+                    }`}
+                  >
+                    <Check className={`size-4 stroke-[3] ${done ? "opacity-100" : "opacity-0"}`} />
+                  </button>
+                ) : null}
+              </>
+            )
+
+            if (!href) {
+              return (
+                <div
+                  key={practice.id}
+                  className="flex items-center gap-3 rounded-2xl border border-dashed border-border bg-card/60 px-4 py-3 opacity-80"
+                >
+                  {card}
+                </div>
+              )
+            }
+
             return (
               <Link
                 key={practice.id}
-                to={href ?? "#"}
-                aria-disabled={!href}
-                className="flex items-center gap-3 rounded-2xl border border-sky/25 bg-sky/10 px-4 py-3"
+                to={href}
+                className={`flex items-center gap-3 rounded-2xl border px-4 py-3 ${
+                  done
+                    ? "border-sage/35 bg-sage/12 hover:bg-sage/18"
+                    : "border-sky/25 bg-sky/10 hover:bg-sky/15"
+                }`}
               >
-                <Compass className="size-4 shrink-0 text-sky-deep" />
-                <span className="min-w-0 flex-1">
-                  <span className="flex items-center gap-2">
-                    <span className="font-display text-base leading-tight">{practice.title}</span>
-                    {done ? <Check className="size-3.5 text-sage-deep" /> : null}
-                  </span>
-                  <span className="mt-0.5 block text-xs text-muted-foreground">
-                    {done ? t("common.done") : practice.playable ? t("common.open") : "Soon"}
-                    {practice.minutes ? ` · ~${practice.minutes} ${t("common.min")}` : ""}
-                  </span>
-                </span>
+                {card}
               </Link>
             )
           })}

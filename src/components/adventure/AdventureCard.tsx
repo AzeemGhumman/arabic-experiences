@@ -3,7 +3,7 @@ import { Compass } from "lucide-react"
 import { ExperienceScene, sceneForExperience } from "@/components/adventure/ExperienceScenes"
 import { Badge } from "@/components/ui/badge"
 import type { Adventure } from "@/lib/learning-types"
-import { isMissionReleased } from "@/data/learning/mission-graph"
+import { isMissionImplemented } from "@/data/learning/availability"
 import { cn } from "@/lib/utils"
 
 export function AdventureCard({
@@ -15,8 +15,8 @@ export function AdventureCard({
   completed?: boolean
   plays?: number
 }) {
-  const released = isMissionReleased(adventure.id)
-  const to = released && adventure.playable ? `/adventures/${adventure.id}` : undefined
+  const implemented = isMissionImplemented(adventure.id)
+  const to = implemented && adventure.playable ? `/adventures/${adventure.id}` : undefined
   return (
     <article
       className={cn(
@@ -40,7 +40,7 @@ export function AdventureCard({
               <p className="mt-1 text-sm text-muted-foreground">{adventure.subtitle}</p>
             </div>
             <Badge className={completed ? "bg-sage/15 text-sage-deep" : "bg-secondary"}>
-              {completed ? "Done" : released && adventure.playable ? "Start" : "Soon"}
+              {completed ? "Done" : implemented && adventure.playable ? "Start" : "Coming soon"}
             </Badge>
           </div>
           <p className="mt-2 text-xs font-semibold text-ink-soft">
@@ -58,7 +58,7 @@ export function AdventureCard({
             Play
           </Link>
         ) : null}
-        {released ? (
+        {implemented ? (
           <Link
             to={`/missions/${adventure.id}`}
             className="flex min-h-11 flex-1 items-center justify-center rounded-full border border-border text-sm font-semibold text-sky-deep"
