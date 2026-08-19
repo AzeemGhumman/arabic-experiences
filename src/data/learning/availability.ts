@@ -43,5 +43,5 @@ export function availabilityLabelKey(availability: ContentAvailability) {
 }
 
 export function canOpenMissionPlace(id: string) {
-  return isMissionImplemented(id) || Boolean(getAdventure(id))
+  return isMissionImplemented(id)
 }

@@ -7,65 +7,84 @@ import { useAppState } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
-export function PrepSessionRow({ item }: { item: PrepCatalogSession }) {
+export function PrepDoneButton({
+  item,
+  className,
+}: {
+  item: PrepCatalogSession
+  className?: string
+}) {
   const { t } = useI18n()
   const { setPrepCompleted } = useAppState()
   const { session, completed } = item
   const access = prepAvailability(session.id)
-  const href = access === "open" ? `/side-missions/${session.id}?from=prep` : undefined
+  if (access !== "open") return null
 
   function toggleDone(event: MouseEvent) {
     event.preventDefault()
     event.stopPropagation()
-    if (access !== "open") return
     setPrepCompleted(session.id, !completed)
   }
 
-  const meta =
-    access === "coming-soon"
-      ? t("journeys.statusComingSoon")
-      : session.estimatedMinutes
-        ? `${session.estimatedMinutes} ${t("common.min")}`
-        : null
-
-  const rowClass = cn(
-    "flex min-h-10 items-center gap-2 px-3 py-2",
-    access === "open" && completed && "bg-sage/10",
-    access === "open" && !completed && "bg-sky/[0.06]",
-    access === "coming-soon" && "opacity-70",
+  return (
+    <button
+      type="button"
+      aria-label={completed ? t("prep.markIncomplete") : t("prep.markComplete")}
+      aria-pressed={completed}
+      onClick={toggleDone}
+      className={cn(
+        "flex size-7 shrink-0 items-center justify-center rounded-full border-2 transition",
+        completed
+          ? "border-sage bg-sage text-white"
+          : "border-border/70 bg-paper hover:border-sage/50",
+        className,
+      )}
+    >
+      <Check className={cn("size-4 stroke-[3]", completed ? "text-white opacity-100" : "opacity-0")} />
+    </button>
   )
+}
+
+export function PrepSessionRow({
+  item,
+  label,
+  className,
+  compact,
+}: {
+  item: PrepCatalogSession
+  label?: string
+  className?: string
+  compact?: boolean
+}) {
+  const { t } = useI18n()
+  const { session, completed } = item
+  const access = prepAvailability(session.id)
+  const href = access === "open" ? `/side-missions/${session.id}?from=prep` : undefined
+  const status = access === "coming-soon" ? t("journeys.statusComingSoon") : null
 
   const inner = (
     <>
-      <span className="min-w-0 flex-1 truncate text-sm font-medium leading-tight">{session.title}</span>
-      {meta ? <span className="shrink-0 text-[11px] text-muted-foreground">{meta}</span> : null}
-      {access === "open" ? (
-        <button
-          type="button"
-          aria-label={completed ? t("prep.markIncomplete") : t("prep.markComplete")}
-          aria-pressed={completed}
-          onClick={toggleDone}
-          className={cn(
-            "flex size-8 shrink-0 items-center justify-center rounded-full border-2 transition",
-            completed
-              ? "border-sage bg-sage text-white"
-              : "border-border/70 bg-paper hover:border-sage/50",
-          )}
-        >
-          <Check
-            className={cn("size-4 stroke-[3]", completed ? "text-white opacity-100" : "opacity-0")}
-          />
-        </button>
-      ) : null}
+      <span className="min-w-0 flex-1 truncate text-sm font-medium leading-tight">
+        {label ?? status}
+      </span>
+      <PrepDoneButton item={item} className={compact ? "size-6" : undefined} />
     </>
   )
 
+  const surface = cn(
+    "flex items-center",
+    compact ? "min-h-8 py-0.5 pe-0.5" : "min-h-11 gap-2 px-3 py-2",
+    className,
+    access === "open" && completed && "bg-sage/10",
+    access === "coming-soon" && "opacity-70",
+  )
+
   if (!href) {
-    return <div className={rowClass}>{inner}</div>
+    return <div className={surface}>{inner}</div>
   }
 
   return (
-    <Link to={href} className={cn(rowClass, "transition hover:bg-sky/10")}>
+    <Link to={href} className={cn(surface, "transition hover:bg-sky/10")}>
       {inner}
     </Link>
   )

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "style": "Flat travel gouache for a calm Umrah companion app. Palette: cream #f7f1e8, ink #3a2f26, terracotta #c4785a, sage #6e8b74, gold #c4a35a, dusty sky #7ba8b8. One centered object per square, generous margin, no text, no logos, no photoreal faces, not 3D, not cute cartoon.",
+  "sheetSize": 1024,
+  "grid": { "cols": 2, "rows": 2 },
+  "gutterInset": 0.04,
+  "sheets": [
+    {
+      "id": "arrive",
+      "tiles": [
+        { "id": "packing", "subject": "closed brown leather suitcase with a small gold clasp" },
+        { "id": "airport", "subject": "simple cream airport terminal silhouette with a small dusty-blue doorway" },
+        { "id": "transport", "subject": "gold Saudi taxi sedan from the side, two dark wheels, sage-tinted road" },
+        { "id": "navigation", "subject": "round cream compass with a terracotta diamond needle, thin ink outline" }
+      ]
+    },
+    {
+      "id": "city",
+      "tiles": [
+        { "id": "hotel", "subject": "cream hotel building with a few dusty-blue windows and a terracotta door" },
+        { "id": "room-service", "subject": "neatly folded cream towels on a simple hotel bed" },
+        { "id": "money", "subject": "two gold riyal coins overlapping, no numerals" },
+        { "id": "food", "subject": "round brown table with a cream plate and a terracotta bowl" }
+      ]
+    },
+    {
+      "id": "market",
+      "tiles": [
+        { "id": "shopping", "subject": "terracotta market tote bag with a simple ink handle" },
+        { "id": "colors", "subject": "four paint circles: terracotta, sage, gold, dusty sky on cream" },
+        { "id": "clothes", "subject": "folded white ihram cloth with a thin gold band, modest still life" },
+        { "id": "time", "subject": "round cream analog clock with terracotta hands, no numerals" }
+      ]
+    },
+    {
+      "id": "people",
+      "tiles": [
+        { "id": "polite", "subject": "two small faceless cream figures slightly bowing toward each other" },
+        { "id": "family", "subject": "three small faceless cream figures standing together, simple silhouettes" },
+        { "id": "health", "subject": "cream medicine bottle with a sage plus mark, no text" },
+        { "id": "body", "subject": "simple faceless ink-line standing figure, calm medical diagram style" }
+      ]
+    },
+    {
+      "id": "worship",
+      "tiles": [
+        { "id": "haram", "subject": "distant respectful view of the Kaaba as a small black cube with a gold band in a cream courtyard, no crowds, no faces" },
+        { "id": "ritual", "subject": "two soft beige hills with a terracotta dashed walking path between them" },
+        { "id": "nabawi", "subject": "simple cream mosque with a single sage-green dome, respectful and uncrowded" },
+        { "id": "barber", "subject": "terracotta-handled scissors crossed, still life, no people" }
+      ]
+    },
+    {
+      "id": "words",
+      "tiles": [
+        { "id": "numbers", "subject": "a single cream ceramic tile showing a large ink Arabic eight, no other characters" },
+        { "id": "geography", "subject": "two simple city silhouettes: a cream cube shrine and a sage-green dome on a tan ridge" },
+        { "id": "actions", "subject": "a small faceless walking figure in terracotta on a cream path" },
+        { "id": "adjectives", "subject": "one large sage rectangle beside one small gold rectangle, simple comparison" }
+      ]
+    },
+    {
+      "id": "outdoors",
+      "tiles": [
+        { "id": "nature", "subject": "gold sun over a sage tree casting a cool blue pool of shade" },
+        { "id": "hajj", "subject": "cluster of simple white peaked tents on beige ground, Mina camp, no people" },
+        { "id": "nature-alt", "subject": "clay water jug in shade under a sage tree" },
+        { "id": "hajj-alt", "subject": "simple cream Hajj bus near white tents, no people" }
+      ]
+    }
+  ]
+}

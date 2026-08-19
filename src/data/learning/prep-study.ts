@@ -1,4 +1,5 @@
 import type { StudyGroup } from "@/lib/learning-types"
+import type { VocabBookmark } from "@/lib/bookmarks"
 import { createRunById } from "@/lib/adventure-engine"
 import { sideMissions, getSideMission } from "@/data/learning/side-missions"
 
@@ -23,14 +24,12 @@ export type PrepBookmarkSection = {
   bookmarkIds: string[]
 }
 
-/** Prep sessions that contain at least one initially bookmarked word. */
-export function getPrepBookmarkSections(initialBookmarkIds: string[]): PrepBookmarkSection[] {
-  const initial = new Set(initialBookmarkIds)
+/** Prep sessions that contain at least one initially bookmarked word from that session. */
+export function getPrepBookmarkSections(bookmarks: VocabBookmark[]): PrepBookmarkSection[] {
   return sideMissions.flatMap((session) => {
     const groups = getPrepStudyGroups(session.id)
     if (!groups) return []
-    const sessionWordIds = groups.flatMap((group) => group.vocabIds)
-    const bookmarkIds = sessionWordIds.filter((id) => initial.has(id))
+    const bookmarkIds = bookmarks.filter((item) => item.sessionId === session.id).map((item) => item.wordId)
     if (bookmarkIds.length === 0) return []
     return [{ sessionId: session.id, title: session.title, groups, bookmarkIds }]
   })

@@ -1,6 +1,9 @@
 import { supportedLanguages } from "@/locales"
 import type { SupportedLanguage } from "@/locales"
 import { isJourneyReleased } from "@/data/journeys"
+import { normalizeBookmarks, type VocabBookmark } from "@/lib/bookmarks"
+
+export type { VocabBookmark }
 
 export type JourneyCategory = "umrah" | "hajj" | "arabic" | "quran"
 
@@ -84,7 +87,7 @@ export type JourneyProgress = {
   adventurePlayCounts: Record<string, number>
   discoveredVocab: string[]
   wordConfidence: Record<string, Confidence>
-  bookmarkedVocab: string[]
+  bookmarkedVocab: VocabBookmark[]
 }
 
 export type AppState = {
@@ -101,6 +104,8 @@ export type AppState = {
   gardenCelebrated: boolean
   practicedSupplications: string[]
   visitCount: number
+  mapIntroDismissed: boolean
+  mockSignedIn: boolean
 }
 
 export const STORAGE_KEY = "arabic-experiences-state"
@@ -132,6 +137,8 @@ export const defaultAppState: AppState = {
   gardenCelebrated: false,
   practicedSupplications: [],
   visitCount: 1,
+  mapIntroDismissed: false,
+  mockSignedIn: false,
 }
 
 type LegacyState = Partial<AppState> & {
@@ -142,7 +149,7 @@ type LegacyState = Partial<AppState> & {
   adventurePlayCounts?: Record<string, number>
   discoveredVocab?: string[]
   wordConfidence?: Record<string, Confidence>
-  bookmarkedVocab?: string[]
+  bookmarkedVocab?: unknown
 }
 
 export function getJourneyProgress(state: AppState, journeyId = state.activeJourneyId): JourneyProgress {
@@ -173,7 +180,7 @@ export function migrateState(parsed: LegacyState): AppState {
         adventurePlayCounts: parsed.adventurePlayCounts ?? {},
         discoveredVocab: parsed.discoveredVocab ?? [],
         wordConfidence: parsed.wordConfidence ?? {},
-        bookmarkedVocab: parsed.bookmarkedVocab ?? [],
+        bookmarkedVocab: normalizeBookmarks(parsed.bookmarkedVocab),
       },
     }
   }
@@ -181,6 +188,8 @@ export function migrateState(parsed: LegacyState): AppState {
   if (!base.activeJourneyId) base.activeJourneyId = "umrah"
   if (!isJourneyReleased(base.activeJourneyId)) base.activeJourneyId = "umrah"
   if (!supportedLanguages.includes(base.language)) base.language = "en"
+  if (typeof base.mapIntroDismissed !== "boolean") base.mapIntroDismissed = false
+  if (typeof base.mockSignedIn !== "boolean") base.mockSignedIn = false
   if (!base.journeyProgress[base.activeJourneyId]) {
     base.journeyProgress = {
       ...base.journeyProgress,
@@ -190,8 +199,10 @@ export function migrateState(parsed: LegacyState): AppState {
 
   for (const id of Object.keys(base.journeyProgress)) {
     const progress = base.journeyProgress[id as JourneyCategory]
-    if (progress && !progress.bookmarkedVocab) {
-      base.journeyProgress[id as JourneyCategory] = { ...progress, bookmarkedVocab: [] }
+    if (!progress) continue
+    base.journeyProgress[id as JourneyCategory] = {
+      ...progress,
+      bookmarkedVocab: normalizeBookmarks(progress.bookmarkedVocab),
     }
   }
 
@@ -223,6 +234,8 @@ export function saveState(state: AppState) {
     gardenCelebrated: state.gardenCelebrated,
     practicedSupplications: state.practicedSupplications,
     visitCount: state.visitCount,
+    mapIntroDismissed: Boolean(state.mapIntroDismissed),
+    mockSignedIn: Boolean(state.mockSignedIn),
   }
   localStorage.setItem(STORAGE_KEY, JSON.stringify(clean))
 }

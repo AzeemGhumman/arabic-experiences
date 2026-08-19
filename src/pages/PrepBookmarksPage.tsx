@@ -7,19 +7,28 @@ import {
   filterStudyGroups,
   getPrepBookmarkSections,
 } from "@/data/learning/prep-study"
+import { bookmarkKey, parseBookmarkKey, toggleBookmarkInList } from "@/lib/bookmarks"
 import { useActiveJourney, useAppState } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
+
+function keysFromBookmarks(items: { sessionId: string; wordId: string }[]) {
+  return new Set(items.map((item) => bookmarkKey(item.sessionId, item.wordId)))
+}
 
 export function PrepBookmarksPage() {
   const { setBookmarkedVocab } = useAppState()
   const { progress } = useActiveJourney()
   const { t } = useI18n()
 
-  const [savedIds, setSavedIds] = useState(() => new Set(progress.bookmarkedVocab))
-  const [stagedIds, setStagedIds] = useState(() => new Set(progress.bookmarkedVocab))
+  const [savedKeys, setSavedKeys] = useState(() => keysFromBookmarks(progress.bookmarkedVocab))
+  const [stagedKeys, setStagedKeys] = useState(() => keysFromBookmarks(progress.bookmarkedVocab))
 
-  const sections = useMemo(() => getPrepBookmarkSections([...savedIds]), [savedIds])
+  const savedBookmarks = useMemo(
+    () => [...savedKeys].flatMap((key) => parseBookmarkKey(key) ?? []),
+    [savedKeys],
+  )
+  const sections = useMemo(() => getPrepBookmarkSections(savedBookmarks), [savedBookmarks])
 
   const [activeSessionId, setActiveSessionId] = useState(() => sections[0]?.sessionId ?? "")
 
@@ -30,7 +39,7 @@ export function PrepBookmarksPage() {
   }, [sections, activeSessionId])
 
   const activeSection = sections.find((section) => section.sessionId === activeSessionId) ?? sections[0]
-  const changeCount = bookmarkChangeCount(savedIds, stagedIds)
+  const changeCount = bookmarkChangeCount(savedKeys, stagedKeys)
 
   const visibleIds = useMemo(() => {
     if (!activeSection) return new Set<string>()
@@ -41,19 +50,19 @@ export function PrepBookmarksPage() {
     ? filterStudyGroups(activeSection.groups, visibleIds)
     : []
 
-  function toggleStaged(id: string) {
-    setStagedIds((current) => {
-      const next = new Set(current)
-      if (next.has(id)) next.delete(id)
-      else next.add(id)
-      return next
+  function toggleStaged(wordId: string) {
+    if (!activeSection) return
+    const sessionId = activeSection.sessionId
+    setStagedKeys((current) => {
+      const items = [...current].flatMap((key) => parseBookmarkKey(key) ?? [])
+      return keysFromBookmarks(toggleBookmarkInList(items, sessionId, wordId))
     })
   }
 
   function saveChanges() {
-    const next = new Set(stagedIds)
-    setBookmarkedVocab([...next])
-    setSavedIds(next)
+    const next = [...stagedKeys].flatMap((key) => parseBookmarkKey(key) ?? [])
+    setBookmarkedVocab(next)
+    setSavedKeys(new Set(stagedKeys))
   }
 
   if (sections.length === 0) {
@@ -107,8 +116,11 @@ export function PrepBookmarksPage() {
         <StudyVocabList
           packId={activeSection.sessionId}
           groups={filteredGroups}
-          isBookmarked={(id) => stagedIds.has(id)}
-          isPendingRemoval={(id) => savedIds.has(id) && !stagedIds.has(id)}
+          isBookmarked={(id) => stagedKeys.has(bookmarkKey(activeSection.sessionId, id))}
+          isPendingRemoval={(id) =>
+            savedKeys.has(bookmarkKey(activeSection.sessionId, id)) &&
+            !stagedKeys.has(bookmarkKey(activeSection.sessionId, id))
+          }
           onToggleBookmark={toggleStaged}
         />
       ) : null}

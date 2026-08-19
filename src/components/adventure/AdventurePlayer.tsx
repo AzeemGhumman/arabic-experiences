@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
-import { StudyVocabList } from "@/components/adventure/StudyVocabList"
+import { PrepStudyView } from "@/components/prep/PrepStudyView"
 import { PlayAudioButton } from "@/components/audio/PlayAudioButton"
 import { ExperienceScene, MiniMap, sceneForExperience } from "@/components/adventure/ExperienceScenes"
 import { OptionButton, RegisterBadge } from "@/components/adventure/AdventureBits"
@@ -17,6 +17,8 @@ import { createRunById } from "@/lib/adventure-engine"
 import { getStudyResources } from "@/data/learning/study-resources"
 import { StudyResources } from "@/components/adventure/StudyResources"
 import { useI18n } from "@/lib/i18n"
+import type { VocabBookmark } from "@/lib/bookmarks"
+import { hasBookmark } from "@/lib/bookmarks"
 import type { AdventureStep, DirectionAction, GpsInstruction, SceneFocus, StudyGroup, StudyResource } from "@/lib/learning-types"
 
 function useDirectionLabels() {
@@ -166,7 +168,7 @@ export function AdventurePlayer({
           complication={runBundle.run.selectedComplicationId}
           showTransliteration={showTransliteration}
           showTranslation={showTranslation}
-          bookmarkedIds={progress.bookmarkedVocab}
+          bookmarkedVocab={progress.bookmarkedVocab}
           onDiscover={discoverWord}
           onToggleBookmark={toggleBookmark}
           onContinue={next}
@@ -197,7 +199,7 @@ function StepView({
   complication,
   showTransliteration,
   showTranslation,
-  bookmarkedIds,
+  bookmarkedVocab,
   onDiscover,
   onToggleBookmark,
   onContinue,
@@ -210,9 +212,9 @@ function StepView({
   complication?: string
   showTransliteration: boolean
   showTranslation: boolean
-  bookmarkedIds: string[]
+  bookmarkedVocab: VocabBookmark[]
   onDiscover: (id: string) => void
-  onToggleBookmark: (id: string) => void
+  onToggleBookmark: (sessionId: string, wordId: string) => void
   onContinue: () => void
   onFinishStudy: () => void
 }) {
@@ -268,7 +270,7 @@ function StepView({
         packId={experienceId}
         groups={step.groups}
         resources={getStudyResources(experienceId)}
-        bookmarkedIds={bookmarkedIds}
+        bookmarkedVocab={bookmarkedVocab}
         onDiscover={onDiscover}
         onToggleBookmark={onToggleBookmark}
         onFinish={onFinishStudy}
@@ -338,7 +340,7 @@ function StudyStep({
   packId,
   groups,
   resources,
-  bookmarkedIds,
+  bookmarkedVocab,
   onDiscover,
   onToggleBookmark,
   onFinish,
@@ -346,9 +348,9 @@ function StudyStep({
   packId: string
   groups: StudyGroup[]
   resources: StudyResource[]
-  bookmarkedIds: string[]
+  bookmarkedVocab: VocabBookmark[]
   onDiscover: (id: string) => void
-  onToggleBookmark: (id: string) => void
+  onToggleBookmark: (sessionId: string, wordId: string) => void
   onFinish: () => void
 }) {
   const { t } = useI18n()
@@ -364,11 +366,12 @@ function StudyStep({
 
   return (
     <div className="space-y-6">
-      <StudyVocabList
+      <PrepStudyView
+        sessionId={packId}
         packId={packId}
         groups={groups}
-        isBookmarked={(id) => bookmarkedIds.includes(id)}
-        onToggleBookmark={onToggleBookmark}
+        isBookmarked={(id) => hasBookmark(bookmarkedVocab, packId, id)}
+        onToggleBookmark={(id) => onToggleBookmark(packId, id)}
       />
       <StudyResources items={resources} />
       <Button type="button" className="w-full" variant="terracotta" onClick={onFinish}>

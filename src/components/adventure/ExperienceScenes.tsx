@@ -304,18 +304,20 @@ function SceneArt({
   return (
     <svg viewBox={box} className="h-full w-full" aria-hidden>
       {scene === "immigration" ? <ImmigrationArt uid={uid} mark={mark} /> : null}
-      {scene === "airport" ? <AirportArt uid={uid} mark={mark} /> : null}
-      {scene === "taxi" ? <TaxiArt uid={uid} mark={mark} /> : null}
-      {scene === "restaurant" || scene === "food" ? <TableArt uid={uid} mark={mark} extra={scene === "food"} /> : null}
-      {scene === "tawaf" ? <TawafArt uid={uid} mark={mark} /> : null}
+      {scene === "airport" || scene === "packing" ? <AirportArt uid={uid} mark={mark} /> : null}
+      {scene === "taxi" || scene === "hotel-lobby" ? <TaxiArt uid={uid} mark={mark} /> : null}
+      {scene === "restaurant" || scene === "food" || scene === "market" || scene === "hotel-room" ? (
+        <TableArt uid={uid} mark={mark} extra={scene === "food" || scene === "market"} />
+      ) : null}
+      {scene === "tawaf" || scene === "haram-courtyard" ? <TawafArt uid={uid} mark={mark} /> : null}
       {scene === "zamzam" ? <ZamzamArt uid={uid} mark={mark} /> : null}
       {scene === "sai" ? <SaiArt uid={uid} mark={mark} /> : null}
       {scene === "barber" ? <BarberArt uid={uid} mark={mark} /> : null}
       {scene === "bus" ? <BusArt uid={uid} mark={mark} /> : null}
       {scene === "lost" ? <LostArt uid={uid} mark={mark} /> : null}
-      {scene === "madinah" ? <MadinahArt uid={uid} mark={mark} /> : null}
-      {scene === "emergency" ? <EmergencyArt uid={uid} mark={mark} /> : null}
-      {scene === "numbers" ? <NumbersArt uid={uid} mark={mark} /> : null}
+      {scene === "madinah" || scene === "nabawi-courtyard" ? <MadinahArt uid={uid} mark={mark} /> : null}
+      {scene === "emergency" || scene === "pharmacy" ? <EmergencyArt uid={uid} mark={mark} /> : null}
+      {scene === "numbers" || scene === "clock" ? <NumbersArt uid={uid} mark={mark} /> : null}
       {scene === "haram-gate" || scene === "street" || scene === "crowd" ? (
         <GateMark crowd={scene === "crowd"} />
       ) : null}

@@ -102,3 +102,8 @@ This is the pilgrimage Arabic engine added on top of the original scenes.
 
 **Adaptive selection:** `buildTaxi` in `builders.ts` checks `capabilities.navigation >= 2` and switches to GPS-style instructions. That is the demo of side missions changing a later adventure.
 
+### 7. Audio and images
+
+- **Audio:** `npm run audio:build` — source in `src/data/learning/audio-packs.source.json`, clips in `public/audio/`.
+- **Images:** 2×2 contact sheets, cropped to webp. Full agent workflow is in [`docs/README-images.md`](docs/README-images.md). Give that file to a new chat before generating more art.
+

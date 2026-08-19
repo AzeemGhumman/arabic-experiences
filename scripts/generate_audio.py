@@ -21,13 +21,16 @@ OUT_DIR = ROOT / "public/audio"
 VOICE = "ar-SA-HamedNeural"
 
 
-async def synthesize(text: str, out_path: Path) -> None:
+async def synthesize(text: str, out_path: Path, voice: str, *, force: bool = False) -> None:
+    if out_path.exists() and not force:
+        return
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    communicate = edge_tts.Communicate(text, VOICE)
+    communicate = edge_tts.Communicate(text, voice)
     await communicate.save(str(out_path))
 
 
 async def main() -> None:
+    force = "--force" in sys.argv
     source = json.loads(SOURCE.read_text(encoding="utf-8"))
     voice = source.get("voice", VOICE)
     manifest = {
@@ -38,17 +41,29 @@ async def main() -> None:
         "packs": {},
     }
 
+    total = sum(len(p["clips"]) for p in source["packs"].values())
+    generated = 0
+    skipped = 0
+
     for pack_id, pack in source["packs"].items():
         manifest["packs"][pack_id] = {"clips": {}}
         for clip_id, arabic in pack["clips"].items():
             rel = f"/audio/packs/{pack_id}/{clip_id}.mp3"
             out_path = OUT_DIR / "packs" / pack_id / f"{clip_id}.mp3"
-            print(f"  {pack_id}/{clip_id} …")
-            await synthesize(arabic, out_path)
+            if out_path.exists() and not force:
+                skipped += 1
+            else:
+                generated += 1
+                print(f"  [{generated}/{total - skipped}] {pack_id}/{clip_id} …")
+                await synthesize(arabic, out_path, voice, force=force)
             manifest["packs"][pack_id]["clips"][clip_id] = {
                 "src": rel,
                 "arabic": arabic,
             }
+
+    if skipped:
+        print(f"\nSkipped {skipped} existing clips (use --force to regenerate)")
+    print(f"Generated {generated} new clips")
 
     manifest_path = OUT_DIR / "manifest.json"
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

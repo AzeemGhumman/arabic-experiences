@@ -311,17 +311,83 @@ export const arabicGraph: MissionGraph = {
 
 export function isNodeUnlocked(node: MissionNode, completedIds: string[]) {
   if (completedIds.includes(node.id)) return true
-  if (node.requires.length === 0) return true
+  const required = playableAncestorIds(node)
+  if (required.length === 0) return true
   return node.requireAny
-    ? node.requires.some((id) => completedIds.includes(id))
-    : node.requires.every((id) => completedIds.includes(id))
+    ? required.some((id) => completedIds.includes(id))
+    : required.every((id) => completedIds.includes(id))
+}
+
+/** Walk past unplayable parents so preview gaps (e.g. Passport) do not block Gate. */
+function playableAncestorIds(node: MissionNode, seen = new Set<string>()): string[] {
+  const catalog = nodesFor(node)
+  const found: string[] = []
+  for (const id of node.requires) {
+    if (seen.has(id)) continue
+    seen.add(id)
+    if (isMissionPlayable(id)) {
+      found.push(id)
+      continue
+    }
+    const parent = catalog.find((item) => item.id === id)
+    if (parent) found.push(...playableAncestorIds(parent, seen))
+  }
+  return [...new Set(found)]
+}
+
+function nodesFor(node: MissionNode): MissionNode[] {
+  const umrah = umrahGraph.nodes.find((item) => item.id === node.id)
+  if (umrah && sameRequires(umrah, node)) return umrahGraph.nodes
+  const arabic = arabicGraph.nodes.find((item) => item.id === node.id)
+  if (arabic && sameRequires(arabic, node)) return arabicGraph.nodes
+  if (umrah) return umrahGraph.nodes
+  if (arabic) return arabicGraph.nodes
+  return []
+}
+
+function sameRequires(a: MissionNode, b: MissionNode) {
+  return a.requires.length === b.requires.length && a.requires.every((id, index) => id === b.requires[index])
 }
 
 /** Missions available in the current preview release. Expand as content ships. */
 const PREVIEW_RELEASED_MISSION_IDS = new Set([
   "taxi-hotel",
-  "master-navigation",
+  "find-haram",
+  "enter-haram",
+  "order-dinner",
+  // Prep catalog — all implemented sessions
   "numbers-everywhere",
+  "numbers-to-100",
+  "polite-basic",
+  "packing-basic",
+  "master-navigation",
+  "navigation-gps",
+  "transport-basic",
+  "airport-basic",
+  "geography-basic",
+  "hotel-basic",
+  "room-service-basic",
+  "money-basic",
+  "explore-food",
+  "food-menu",
+  "shopping-basic",
+  "colors-basic",
+  "colors-extended",
+  "clothes-basic",
+  "time-basic",
+  "family-basic",
+  "family-more",
+  "haram-basic",
+  "haram-more",
+  "ritual-basic",
+  "nabawi-basic",
+  "barber-basic",
+  "health-basic",
+  "body-basic",
+  "actions-basic",
+  "adjectives-basic",
+  "nature-basic",
+  "hajj-places-basic",
 ])
 
 export function isMissionReleased(id: string) {

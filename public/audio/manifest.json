@@ -2,60 +2,8 @@
   "version": 1,
   "voice": "ar-SA-HamedNeural",
   "register": "msa",
-  "generatedAt": "2026-08-18T09:48:00.530389+00:00",
+  "generatedAt": "2026-08-19T07:03:34.881551+00:00",
   "packs": {
-    "master-navigation": {
-      "clips": {
-        "hotel": {
-          "src": "/audio/packs/master-navigation/hotel.mp3",
-          "arabic": "فندق"
-        },
-        "please": {
-          "src": "/audio/packs/master-navigation/please.mp3",
-          "arabic": "لو سمحت"
-        },
-        "stop-here": {
-          "src": "/audio/packs/master-navigation/stop-here.mp3",
-          "arabic": "وقف هنا"
-        },
-        "how-much": {
-          "src": "/audio/packs/master-navigation/how-much.mp3",
-          "arabic": "كم؟"
-        },
-        "right": {
-          "src": "/audio/packs/master-navigation/right.mp3",
-          "arabic": "يمين"
-        },
-        "left": {
-          "src": "/audio/packs/master-navigation/left.mp3",
-          "arabic": "يسار"
-        },
-        "opposite": {
-          "src": "/audio/packs/master-navigation/opposite.mp3",
-          "arabic": "مقابل"
-        },
-        "behind": {
-          "src": "/audio/packs/master-navigation/behind.mp3",
-          "arabic": "خلف"
-        },
-        "signal": {
-          "src": "/audio/packs/master-navigation/signal.mp3",
-          "arabic": "إشارة"
-        },
-        "continue-straight": {
-          "src": "/audio/packs/master-navigation/continue-straight.mp3",
-          "arabic": "استمر مباشرةً"
-        },
-        "turn-right": {
-          "src": "/audio/packs/master-navigation/turn-right.mp3",
-          "arabic": "انعطف يمينًا"
-        },
-        "you-arrived": {
-          "src": "/audio/packs/master-navigation/you-arrived.mp3",
-          "arabic": "لقد وصلت إلى وجهتك"
-        }
-      }
-    },
     "numbers-everywhere": {
       "clips": {
         "n1": {
@@ -152,12 +100,1868 @@
         }
       }
     },
-    "taxi-hotel": {
+    "numbers-to-100": {
       "clips": {
+        "n20": {
+          "src": "/audio/packs/numbers-to-100/n20.mp3",
+          "arabic": "عشرون"
+        },
+        "n30": {
+          "src": "/audio/packs/numbers-to-100/n30.mp3",
+          "arabic": "ثلاثون"
+        },
+        "n40": {
+          "src": "/audio/packs/numbers-to-100/n40.mp3",
+          "arabic": "أربعون"
+        },
+        "n50": {
+          "src": "/audio/packs/numbers-to-100/n50.mp3",
+          "arabic": "خمسون"
+        },
+        "n60": {
+          "src": "/audio/packs/numbers-to-100/n60.mp3",
+          "arabic": "ستون"
+        },
+        "n70": {
+          "src": "/audio/packs/numbers-to-100/n70.mp3",
+          "arabic": "سبعون"
+        },
+        "n80": {
+          "src": "/audio/packs/numbers-to-100/n80.mp3",
+          "arabic": "ثمانون"
+        },
+        "n90": {
+          "src": "/audio/packs/numbers-to-100/n90.mp3",
+          "arabic": "تسعون"
+        },
+        "n100": {
+          "src": "/audio/packs/numbers-to-100/n100.mp3",
+          "arabic": "مئة"
+        },
+        "n21": {
+          "src": "/audio/packs/numbers-to-100/n21.mp3",
+          "arabic": "واحد وعشرون"
+        },
+        "n35": {
+          "src": "/audio/packs/numbers-to-100/n35.mp3",
+          "arabic": "خمسة وثلاثون"
+        },
+        "n48": {
+          "src": "/audio/packs/numbers-to-100/n48.mp3",
+          "arabic": "ثمانية وأربعون"
+        },
+        "n72": {
+          "src": "/audio/packs/numbers-to-100/n72.mp3",
+          "arabic": "اثنان وسبعون"
+        },
+        "n99": {
+          "src": "/audio/packs/numbers-to-100/n99.mp3",
+          "arabic": "تسعة وتسعون"
+        },
+        "number": {
+          "src": "/audio/packs/numbers-to-100/number.mp3",
+          "arabic": "رقم"
+        },
+        "gate": {
+          "src": "/audio/packs/numbers-to-100/gate.mp3",
+          "arabic": "باب"
+        },
+        "camp": {
+          "src": "/audio/packs/numbers-to-100/camp.mp3",
+          "arabic": "مخيم"
+        },
+        "room-number": {
+          "src": "/audio/packs/numbers-to-100/room-number.mp3",
+          "arabic": "رقم"
+        }
+      }
+    },
+    "polite-basic": {
+      "clips": {
+        "greeting": {
+          "src": "/audio/packs/polite-basic/greeting.mp3",
+          "arabic": "السلام عليكم"
+        },
+        "greeting-response": {
+          "src": "/audio/packs/polite-basic/greeting-response.mp3",
+          "arabic": "وعليكم السلام"
+        },
+        "peace-praise": {
+          "src": "/audio/packs/polite-basic/peace-praise.mp3",
+          "arabic": "الحمد لله"
+        },
+        "please": {
+          "src": "/audio/packs/polite-basic/please.mp3",
+          "arabic": "لو سمحت"
+        },
+        "thank-you": {
+          "src": "/audio/packs/polite-basic/thank-you.mp3",
+          "arabic": "شكراً"
+        },
+        "thank-you-much": {
+          "src": "/audio/packs/polite-basic/thank-you-much.mp3",
+          "arabic": "شكراً جزيلاً"
+        },
+        "welcome": {
+          "src": "/audio/packs/polite-basic/welcome.mp3",
+          "arabic": "عفواً"
+        },
+        "sorry": {
+          "src": "/audio/packs/polite-basic/sorry.mp3",
+          "arabic": "آسف"
+        },
+        "excuse-me": {
+          "src": "/audio/packs/polite-basic/excuse-me.mp3",
+          "arabic": "عذراً"
+        },
+        "dont-understand": {
+          "src": "/audio/packs/polite-basic/dont-understand.mp3",
+          "arabic": "لا أفهم"
+        },
+        "yes": {
+          "src": "/audio/packs/polite-basic/yes.mp3",
+          "arabic": "نعم"
+        },
+        "no": {
+          "src": "/audio/packs/polite-basic/no.mp3",
+          "arabic": "لا"
+        }
+      }
+    },
+    "packing-basic": {
+      "clips": {
+        "passport": {
+          "src": "/audio/packs/packing-basic/passport.mp3",
+          "arabic": "جواز سفر"
+        },
+        "visa": {
+          "src": "/audio/packs/packing-basic/visa.mp3",
+          "arabic": "تأشيرة"
+        },
+        "copy-passport": {
+          "src": "/audio/packs/packing-basic/copy-passport.mp3",
+          "arabic": "نسخة جواز"
+        },
+        "riyal": {
+          "src": "/audio/packs/packing-basic/riyal.mp3",
+          "arabic": "ريال"
+        },
+        "card": {
+          "src": "/audio/packs/packing-basic/card.mp3",
+          "arabic": "بطاقة"
+        },
+        "ihram": {
+          "src": "/audio/packs/packing-basic/ihram.mp3",
+          "arabic": "إحرام"
+        },
+        "sandals": {
+          "src": "/audio/packs/packing-basic/sandals.mp3",
+          "arabic": "نعال"
+        },
+        "belt-bag": {
+          "src": "/audio/packs/packing-basic/belt-bag.mp3",
+          "arabic": "حقيبة خصر"
+        },
+        "abaya": {
+          "src": "/audio/packs/packing-basic/abaya.mp3",
+          "arabic": "عباءة"
+        },
+        "headscarf": {
+          "src": "/audio/packs/packing-basic/headscarf.mp3",
+          "arabic": "طرحة"
+        },
+        "medicine": {
+          "src": "/audio/packs/packing-basic/medicine.mp3",
+          "arabic": "دواء"
+        },
+        "sunscreen": {
+          "src": "/audio/packs/packing-basic/sunscreen.mp3",
+          "arabic": "واقي شمس"
+        },
+        "towel": {
+          "src": "/audio/packs/packing-basic/towel.mp3",
+          "arabic": "منشفة"
+        },
+        "toothbrush": {
+          "src": "/audio/packs/packing-basic/toothbrush.mp3",
+          "arabic": "فرشاة أسنان"
+        },
+        "charger": {
+          "src": "/audio/packs/packing-basic/charger.mp3",
+          "arabic": "شاحن"
+        },
+        "umbrella": {
+          "src": "/audio/packs/packing-basic/umbrella.mp3",
+          "arabic": "مظلة"
+        },
+        "snacks": {
+          "src": "/audio/packs/packing-basic/snacks.mp3",
+          "arabic": "وجبات خفيفة"
+        }
+      }
+    },
+    "master-navigation": {
+      "clips": {
+        "hotel": {
+          "src": "/audio/packs/master-navigation/hotel.mp3",
+          "arabic": "فندق"
+        },
+        "please": {
+          "src": "/audio/packs/master-navigation/please.mp3",
+          "arabic": "لو سمحت"
+        },
+        "stop-here": {
+          "src": "/audio/packs/master-navigation/stop-here.mp3",
+          "arabic": "وقف هنا"
+        },
+        "how-much": {
+          "src": "/audio/packs/master-navigation/how-much.mp3",
+          "arabic": "كم؟"
+        },
         "right": {
-          "src": "/audio/packs/taxi-hotel/right.mp3",
+          "src": "/audio/packs/master-navigation/right.mp3",
           "arabic": "يمين"
         },
+        "left": {
+          "src": "/audio/packs/master-navigation/left.mp3",
+          "arabic": "يسار"
+        },
+        "continue-straight": {
+          "src": "/audio/packs/master-navigation/continue-straight.mp3",
+          "arabic": "استمر مباشرةً"
+        },
+        "turn-right": {
+          "src": "/audio/packs/master-navigation/turn-right.mp3",
+          "arabic": "انعطف يمينًا"
+        },
+        "you-arrived": {
+          "src": "/audio/packs/master-navigation/you-arrived.mp3",
+          "arabic": "لقد وصلت إلى وجهتك"
+        },
+        "opposite": {
+          "src": "/audio/packs/master-navigation/opposite.mp3",
+          "arabic": "مقابل"
+        },
+        "behind": {
+          "src": "/audio/packs/master-navigation/behind.mp3",
+          "arabic": "خلف"
+        },
+        "signal": {
+          "src": "/audio/packs/master-navigation/signal.mp3",
+          "arabic": "إشارة"
+        }
+      }
+    },
+    "navigation-gps": {
+      "clips": {
+        "turn-right": {
+          "src": "/audio/packs/navigation-gps/turn-right.mp3",
+          "arabic": "انعطف يمينًا"
+        },
+        "turn-left": {
+          "src": "/audio/packs/navigation-gps/turn-left.mp3",
+          "arabic": "انعطف يسارًا"
+        },
+        "continue-straight": {
+          "src": "/audio/packs/navigation-gps/continue-straight.mp3",
+          "arabic": "استمر مباشرةً"
+        },
+        "after-meters": {
+          "src": "/audio/packs/navigation-gps/after-meters.mp3",
+          "arabic": "بعد مائة متر"
+        },
+        "you-arrived": {
+          "src": "/audio/packs/navigation-gps/you-arrived.mp3",
+          "arabic": "لقد وصلت إلى وجهتك"
+        },
+        "second-left": {
+          "src": "/audio/packs/navigation-gps/second-left.mp3",
+          "arabic": "خذ ثاني يسار"
+        },
+        "signal": {
+          "src": "/audio/packs/navigation-gps/signal.mp3",
+          "arabic": "إشارة"
+        },
+        "bridge": {
+          "src": "/audio/packs/navigation-gps/bridge.mp3",
+          "arabic": "جسر"
+        },
+        "intersection": {
+          "src": "/audio/packs/navigation-gps/intersection.mp3",
+          "arabic": "تقاطع"
+        },
+        "opposite": {
+          "src": "/audio/packs/navigation-gps/opposite.mp3",
+          "arabic": "مقابل"
+        },
+        "behind": {
+          "src": "/audio/packs/navigation-gps/behind.mp3",
+          "arabic": "خلف"
+        }
+      }
+    },
+    "transport-basic": {
+      "clips": {
+        "taxi": {
+          "src": "/audio/packs/transport-basic/taxi.mp3",
+          "arabic": "تاكسي"
+        },
+        "bus": {
+          "src": "/audio/packs/transport-basic/bus.mp3",
+          "arabic": "باص"
+        },
+        "car": {
+          "src": "/audio/packs/transport-basic/car.mp3",
+          "arabic": "سيارة"
+        },
+        "seat": {
+          "src": "/audio/packs/transport-basic/seat.mp3",
+          "arabic": "مقعد"
+        },
+        "station": {
+          "src": "/audio/packs/transport-basic/station.mp3",
+          "arabic": "محطة"
+        },
+        "airport": {
+          "src": "/audio/packs/transport-basic/airport.mp3",
+          "arabic": "المطار"
+        },
+        "train-station": {
+          "src": "/audio/packs/transport-basic/train-station.mp3",
+          "arabic": "محطة القطار"
+        },
+        "stop-here": {
+          "src": "/audio/packs/transport-basic/stop-here.mp3",
+          "arabic": "وقف هنا"
+        },
+        "toward": {
+          "src": "/audio/packs/transport-basic/toward.mp3",
+          "arabic": "إلى"
+        },
+        "here": {
+          "src": "/audio/packs/transport-basic/here.mp3",
+          "arabic": "هنا"
+        },
+        "there": {
+          "src": "/audio/packs/transport-basic/there.mp3",
+          "arabic": "هناك"
+        },
+        "please": {
+          "src": "/audio/packs/transport-basic/please.mp3",
+          "arabic": "لو سمحت"
+        }
+      }
+    },
+    "airport-basic": {
+      "clips": {
+        "passport": {
+          "src": "/audio/packs/airport-basic/passport.mp3",
+          "arabic": "جواز سفر"
+        },
+        "officer": {
+          "src": "/audio/packs/airport-basic/officer.mp3",
+          "arabic": "موظف"
+        },
+        "window-counter": {
+          "src": "/audio/packs/airport-basic/window-counter.mp3",
+          "arabic": "شباك"
+        },
+        "wait": {
+          "src": "/audio/packs/airport-basic/wait.mp3",
+          "arabic": "انتظر"
+        },
+        "please": {
+          "src": "/audio/packs/airport-basic/please.mp3",
+          "arabic": "لو سمحت"
+        },
+        "bag": {
+          "src": "/audio/packs/airport-basic/bag.mp3",
+          "arabic": "شنطة"
+        },
+        "exit-sign": {
+          "src": "/audio/packs/airport-basic/exit-sign.mp3",
+          "arabic": "خروج"
+        },
+        "taxi": {
+          "src": "/audio/packs/airport-basic/taxi.mp3",
+          "arabic": "تاكسي"
+        },
+        "where-is": {
+          "src": "/audio/packs/airport-basic/where-is.mp3",
+          "arabic": "أين الباب؟"
+        },
+        "airport": {
+          "src": "/audio/packs/airport-basic/airport.mp3",
+          "arabic": "المطار"
+        },
+        "hotel": {
+          "src": "/audio/packs/airport-basic/hotel.mp3",
+          "arabic": "فندق"
+        },
+        "makkah": {
+          "src": "/audio/packs/airport-basic/makkah.mp3",
+          "arabic": "مكة"
+        },
+        "madinah": {
+          "src": "/audio/packs/airport-basic/madinah.mp3",
+          "arabic": "المدينة"
+        }
+      }
+    },
+    "geography-basic": {
+      "clips": {
+        "makkah": {
+          "src": "/audio/packs/geography-basic/makkah.mp3",
+          "arabic": "مكة"
+        },
+        "madinah": {
+          "src": "/audio/packs/geography-basic/madinah.mp3",
+          "arabic": "المدينة"
+        },
+        "jeddah": {
+          "src": "/audio/packs/geography-basic/jeddah.mp3",
+          "arabic": "جدة"
+        },
+        "holy-land": {
+          "src": "/audio/packs/geography-basic/holy-land.mp3",
+          "arabic": "الأراضي المقدسة"
+        },
+        "airport": {
+          "src": "/audio/packs/geography-basic/airport.mp3",
+          "arabic": "المطار"
+        },
+        "taxi": {
+          "src": "/audio/packs/geography-basic/taxi.mp3",
+          "arabic": "تاكسي"
+        },
+        "bus": {
+          "src": "/audio/packs/geography-basic/bus.mp3",
+          "arabic": "باص"
+        },
+        "toward": {
+          "src": "/audio/packs/geography-basic/toward.mp3",
+          "arabic": "إلى"
+        }
+      }
+    },
+    "hotel-basic": {
+      "clips": {
+        "hotel": {
+          "src": "/audio/packs/hotel-basic/hotel.mp3",
+          "arabic": "فندق"
+        },
+        "reception": {
+          "src": "/audio/packs/hotel-basic/reception.mp3",
+          "arabic": "استقبال"
+        },
+        "room": {
+          "src": "/audio/packs/hotel-basic/room.mp3",
+          "arabic": "غرفة"
+        },
+        "room-number": {
+          "src": "/audio/packs/hotel-basic/room-number.mp3",
+          "arabic": "رقم"
+        },
+        "floor": {
+          "src": "/audio/packs/hotel-basic/floor.mp3",
+          "arabic": "طابق"
+        },
+        "elevator": {
+          "src": "/audio/packs/hotel-basic/elevator.mp3",
+          "arabic": "مصعد"
+        },
+        "key": {
+          "src": "/audio/packs/hotel-basic/key.mp3",
+          "arabic": "مفتاح"
+        },
+        "bathroom": {
+          "src": "/audio/packs/hotel-basic/bathroom.mp3",
+          "arabic": "حمام"
+        },
+        "bed": {
+          "src": "/audio/packs/hotel-basic/bed.mp3",
+          "arabic": "سرير"
+        },
+        "ac": {
+          "src": "/audio/packs/hotel-basic/ac.mp3",
+          "arabic": "مكيف"
+        },
+        "luggage": {
+          "src": "/audio/packs/hotel-basic/luggage.mp3",
+          "arabic": "أمتعة"
+        },
+        "where-is": {
+          "src": "/audio/packs/hotel-basic/where-is.mp3",
+          "arabic": "أين الباب؟"
+        },
+        "please": {
+          "src": "/audio/packs/hotel-basic/please.mp3",
+          "arabic": "لو سمحت"
+        },
+        "here": {
+          "src": "/audio/packs/hotel-basic/here.mp3",
+          "arabic": "هنا"
+        },
+        "there": {
+          "src": "/audio/packs/hotel-basic/there.mp3",
+          "arabic": "هناك"
+        }
+      }
+    },
+    "room-service-basic": {
+      "clips": {
+        "towel": {
+          "src": "/audio/packs/room-service-basic/towel.mp3",
+          "arabic": "منشفة"
+        },
+        "clean": {
+          "src": "/audio/packs/room-service-basic/clean.mp3",
+          "arabic": "نظيف"
+        },
+        "please": {
+          "src": "/audio/packs/room-service-basic/please.mp3",
+          "arabic": "لو سمحت"
+        },
+        "i-want": {
+          "src": "/audio/packs/room-service-basic/i-want.mp3",
+          "arabic": "أريد"
+        },
+        "i-want-saudi": {
+          "src": "/audio/packs/room-service-basic/i-want-saudi.mp3",
+          "arabic": "أبغى"
+        },
+        "broken": {
+          "src": "/audio/packs/room-service-basic/broken.mp3",
+          "arabic": "معطل"
+        },
+        "ac": {
+          "src": "/audio/packs/room-service-basic/ac.mp3",
+          "arabic": "مكيف"
+        },
+        "bathroom": {
+          "src": "/audio/packs/room-service-basic/bathroom.mp3",
+          "arabic": "حمام"
+        },
+        "help": {
+          "src": "/audio/packs/room-service-basic/help.mp3",
+          "arabic": "مساعدة"
+        },
+        "help-me": {
+          "src": "/audio/packs/room-service-basic/help-me.mp3",
+          "arabic": "ساعدني"
+        },
+        "here": {
+          "src": "/audio/packs/room-service-basic/here.mp3",
+          "arabic": "هنا"
+        },
+        "there": {
+          "src": "/audio/packs/room-service-basic/there.mp3",
+          "arabic": "هناك"
+        },
+        "room": {
+          "src": "/audio/packs/room-service-basic/room.mp3",
+          "arabic": "غرفة"
+        },
+        "floor": {
+          "src": "/audio/packs/room-service-basic/floor.mp3",
+          "arabic": "طابق"
+        }
+      }
+    },
+    "money-basic": {
+      "clips": {
+        "how-much": {
+          "src": "/audio/packs/money-basic/how-much.mp3",
+          "arabic": "كم؟"
+        },
+        "how-much-price": {
+          "src": "/audio/packs/money-basic/how-much-price.mp3",
+          "arabic": "كم السعر؟"
+        },
+        "how-much-saudi": {
+          "src": "/audio/packs/money-basic/how-much-saudi.mp3",
+          "arabic": "بكم؟"
+        },
+        "riyal": {
+          "src": "/audio/packs/money-basic/riyal.mp3",
+          "arabic": "ريال"
+        },
+        "this-one": {
+          "src": "/audio/packs/money-basic/this-one.mp3",
+          "arabic": "هذا"
+        },
+        "that-one": {
+          "src": "/audio/packs/money-basic/that-one.mp3",
+          "arabic": "ذاك"
+        },
+        "expensive": {
+          "src": "/audio/packs/money-basic/expensive.mp3",
+          "arabic": "غالي"
+        },
+        "cheap": {
+          "src": "/audio/packs/money-basic/cheap.mp3",
+          "arabic": "رخيص"
+        },
+        "too-expensive": {
+          "src": "/audio/packs/money-basic/too-expensive.mp3",
+          "arabic": "غالي جداً"
+        },
+        "cash": {
+          "src": "/audio/packs/money-basic/cash.mp3",
+          "arabic": "نقد"
+        },
+        "card": {
+          "src": "/audio/packs/money-basic/card.mp3",
+          "arabic": "بطاقة"
+        },
+        "the-bill": {
+          "src": "/audio/packs/money-basic/the-bill.mp3",
+          "arabic": "الحساب، لو سمحت"
+        },
+        "please": {
+          "src": "/audio/packs/money-basic/please.mp3",
+          "arabic": "لو سمحت"
+        },
+        "change-money": {
+          "src": "/audio/packs/money-basic/change-money.mp3",
+          "arabic": "الباقي"
+        }
+      }
+    },
+    "explore-food": {
+      "clips": {
+        "without": {
+          "src": "/audio/packs/explore-food/without.mp3",
+          "arabic": "بدون"
+        },
+        "with": {
+          "src": "/audio/packs/explore-food/with.mp3",
+          "arabic": "مع"
+        },
+        "spicy": {
+          "src": "/audio/packs/explore-food/spicy.mp3",
+          "arabic": "حار"
+        },
+        "hot": {
+          "src": "/audio/packs/explore-food/hot.mp3",
+          "arabic": "حار"
+        },
+        "cold": {
+          "src": "/audio/packs/explore-food/cold.mp3",
+          "arabic": "بارد"
+        },
+        "juice": {
+          "src": "/audio/packs/explore-food/juice.mp3",
+          "arabic": "عصير"
+        },
+        "vegetables": {
+          "src": "/audio/packs/explore-food/vegetables.mp3",
+          "arabic": "خضار"
+        },
+        "plate": {
+          "src": "/audio/packs/explore-food/plate.mp3",
+          "arabic": "طبق"
+        },
+        "the-bill": {
+          "src": "/audio/packs/explore-food/the-bill.mp3",
+          "arabic": "الحساب، لو سمحت"
+        }
+      }
+    },
+    "food-menu": {
+      "clips": {
+        "chicken": {
+          "src": "/audio/packs/food-menu/chicken.mp3",
+          "arabic": "دجاج"
+        },
+        "meat": {
+          "src": "/audio/packs/food-menu/meat.mp3",
+          "arabic": "لحم"
+        },
+        "rice": {
+          "src": "/audio/packs/food-menu/rice.mp3",
+          "arabic": "أرز"
+        },
+        "bread": {
+          "src": "/audio/packs/food-menu/bread.mp3",
+          "arabic": "خبز"
+        },
+        "vegetables": {
+          "src": "/audio/packs/food-menu/vegetables.mp3",
+          "arabic": "خضار"
+        },
+        "fruit": {
+          "src": "/audio/packs/food-menu/fruit.mp3",
+          "arabic": "فاكهة"
+        },
+        "water": {
+          "src": "/audio/packs/food-menu/water.mp3",
+          "arabic": "ماء"
+        },
+        "water-saudi": {
+          "src": "/audio/packs/food-menu/water-saudi.mp3",
+          "arabic": "موية"
+        },
+        "tea": {
+          "src": "/audio/packs/food-menu/tea.mp3",
+          "arabic": "شاي"
+        },
+        "coffee": {
+          "src": "/audio/packs/food-menu/coffee.mp3",
+          "arabic": "قهوة"
+        },
+        "juice": {
+          "src": "/audio/packs/food-menu/juice.mp3",
+          "arabic": "عصير"
+        },
+        "plate": {
+          "src": "/audio/packs/food-menu/plate.mp3",
+          "arabic": "طبق"
+        },
+        "cup": {
+          "src": "/audio/packs/food-menu/cup.mp3",
+          "arabic": "كوب"
+        },
+        "spoon": {
+          "src": "/audio/packs/food-menu/spoon.mp3",
+          "arabic": "ملعقة"
+        },
+        "fork": {
+          "src": "/audio/packs/food-menu/fork.mp3",
+          "arabic": "شوكة"
+        },
+        "i-want": {
+          "src": "/audio/packs/food-menu/i-want.mp3",
+          "arabic": "أريد"
+        },
+        "i-want-saudi": {
+          "src": "/audio/packs/food-menu/i-want-saudi.mp3",
+          "arabic": "أبغى"
+        },
+        "please": {
+          "src": "/audio/packs/food-menu/please.mp3",
+          "arabic": "لو سمحت"
+        },
+        "the-bill": {
+          "src": "/audio/packs/food-menu/the-bill.mp3",
+          "arabic": "الحساب، لو سمحت"
+        }
+      }
+    },
+    "shopping-basic": {
+      "clips": {
+        "market": {
+          "src": "/audio/packs/shopping-basic/market.mp3",
+          "arabic": "سوق"
+        },
+        "shop": {
+          "src": "/audio/packs/shopping-basic/shop.mp3",
+          "arabic": "محل"
+        },
+        "this-one": {
+          "src": "/audio/packs/shopping-basic/this-one.mp3",
+          "arabic": "هذا"
+        },
+        "that-one": {
+          "src": "/audio/packs/shopping-basic/that-one.mp3",
+          "arabic": "ذاك"
+        },
+        "how-much": {
+          "src": "/audio/packs/shopping-basic/how-much.mp3",
+          "arabic": "كم؟"
+        },
+        "how-much-saudi": {
+          "src": "/audio/packs/shopping-basic/how-much-saudi.mp3",
+          "arabic": "بكم؟"
+        },
+        "dates": {
+          "src": "/audio/packs/shopping-basic/dates.mp3",
+          "arabic": "تمر"
+        },
+        "perfume": {
+          "src": "/audio/packs/shopping-basic/perfume.mp3",
+          "arabic": "عطر"
+        },
+        "prayer-beads": {
+          "src": "/audio/packs/shopping-basic/prayer-beads.mp3",
+          "arabic": "سبحة"
+        },
+        "souvenir": {
+          "src": "/audio/packs/shopping-basic/souvenir.mp3",
+          "arabic": "تذكار"
+        },
+        "ihram": {
+          "src": "/audio/packs/shopping-basic/ihram.mp3",
+          "arabic": "إحرام"
+        },
+        "size": {
+          "src": "/audio/packs/shopping-basic/size.mp3",
+          "arabic": "مقاس"
+        },
+        "big": {
+          "src": "/audio/packs/shopping-basic/big.mp3",
+          "arabic": "كبير"
+        },
+        "small": {
+          "src": "/audio/packs/shopping-basic/small.mp3",
+          "arabic": "صغير"
+        },
+        "expensive": {
+          "src": "/audio/packs/shopping-basic/expensive.mp3",
+          "arabic": "غالي"
+        },
+        "cheap": {
+          "src": "/audio/packs/shopping-basic/cheap.mp3",
+          "arabic": "رخيص"
+        }
+      }
+    },
+    "colors-basic": {
+      "clips": {
+        "color-red": {
+          "src": "/audio/packs/colors-basic/color-red.mp3",
+          "arabic": "أحمر"
+        },
+        "color-green": {
+          "src": "/audio/packs/colors-basic/color-green.mp3",
+          "arabic": "أخضر"
+        },
+        "color-white": {
+          "src": "/audio/packs/colors-basic/color-white.mp3",
+          "arabic": "أبيض"
+        },
+        "color-black": {
+          "src": "/audio/packs/colors-basic/color-black.mp3",
+          "arabic": "أسود"
+        },
+        "color-yellow": {
+          "src": "/audio/packs/colors-basic/color-yellow.mp3",
+          "arabic": "أصفر"
+        },
+        "color-blue": {
+          "src": "/audio/packs/colors-basic/color-blue.mp3",
+          "arabic": "أزرق"
+        },
+        "color-brown": {
+          "src": "/audio/packs/colors-basic/color-brown.mp3",
+          "arabic": "بني"
+        },
+        "color-gray": {
+          "src": "/audio/packs/colors-basic/color-gray.mp3",
+          "arabic": "رمادي"
+        }
+      }
+    },
+    "colors-extended": {
+      "clips": {
+        "color-light": {
+          "src": "/audio/packs/colors-extended/color-light.mp3",
+          "arabic": "فاتح"
+        },
+        "color-dark": {
+          "src": "/audio/packs/colors-extended/color-dark.mp3",
+          "arabic": "غامق"
+        },
+        "color-gold": {
+          "src": "/audio/packs/colors-extended/color-gold.mp3",
+          "arabic": "ذهبي"
+        },
+        "color-white": {
+          "src": "/audio/packs/colors-extended/color-white.mp3",
+          "arabic": "أبيض"
+        },
+        "color-black": {
+          "src": "/audio/packs/colors-extended/color-black.mp3",
+          "arabic": "أسود"
+        },
+        "color-blue": {
+          "src": "/audio/packs/colors-extended/color-blue.mp3",
+          "arabic": "أزرق"
+        },
+        "color-green": {
+          "src": "/audio/packs/colors-extended/color-green.mp3",
+          "arabic": "أخضر"
+        },
+        "color-brown": {
+          "src": "/audio/packs/colors-extended/color-brown.mp3",
+          "arabic": "بني"
+        },
+        "color-gray": {
+          "src": "/audio/packs/colors-extended/color-gray.mp3",
+          "arabic": "رمادي"
+        },
+        "color-red": {
+          "src": "/audio/packs/colors-extended/color-red.mp3",
+          "arabic": "أحمر"
+        }
+      }
+    },
+    "clothes-basic": {
+      "clips": {
+        "ihram": {
+          "src": "/audio/packs/clothes-basic/ihram.mp3",
+          "arabic": "إحرام"
+        },
+        "sandals": {
+          "src": "/audio/packs/clothes-basic/sandals.mp3",
+          "arabic": "نعال"
+        },
+        "belt-bag": {
+          "src": "/audio/packs/clothes-basic/belt-bag.mp3",
+          "arabic": "حقيبة خصر"
+        },
+        "abaya": {
+          "src": "/audio/packs/clothes-basic/abaya.mp3",
+          "arabic": "عباءة"
+        },
+        "headscarf": {
+          "src": "/audio/packs/clothes-basic/headscarf.mp3",
+          "arabic": "طرحة"
+        },
+        "size": {
+          "src": "/audio/packs/clothes-basic/size.mp3",
+          "arabic": "مقاس"
+        },
+        "big": {
+          "src": "/audio/packs/clothes-basic/big.mp3",
+          "arabic": "كبير"
+        },
+        "small": {
+          "src": "/audio/packs/clothes-basic/small.mp3",
+          "arabic": "صغير"
+        },
+        "try-on": {
+          "src": "/audio/packs/clothes-basic/try-on.mp3",
+          "arabic": "أجرب"
+        },
+        "how-much-saudi": {
+          "src": "/audio/packs/clothes-basic/how-much-saudi.mp3",
+          "arabic": "بكم؟"
+        },
+        "laundry": {
+          "src": "/audio/packs/clothes-basic/laundry.mp3",
+          "arabic": "مغسلة"
+        },
+        "clean": {
+          "src": "/audio/packs/clothes-basic/clean.mp3",
+          "arabic": "نظيف"
+        },
+        "towel": {
+          "src": "/audio/packs/clothes-basic/towel.mp3",
+          "arabic": "منشفة"
+        }
+      }
+    },
+    "time-basic": {
+      "clips": {
+        "now": {
+          "src": "/audio/packs/time-basic/now.mp3",
+          "arabic": "الآن"
+        },
+        "today": {
+          "src": "/audio/packs/time-basic/today.mp3",
+          "arabic": "اليوم"
+        },
+        "tomorrow": {
+          "src": "/audio/packs/time-basic/tomorrow.mp3",
+          "arabic": "غداً"
+        },
+        "when": {
+          "src": "/audio/packs/time-basic/when.mp3",
+          "arabic": "متى؟"
+        },
+        "hour": {
+          "src": "/audio/packs/time-basic/hour.mp3",
+          "arabic": "ساعة"
+        },
+        "minute": {
+          "src": "/audio/packs/time-basic/minute.mp3",
+          "arabic": "دقيقة"
+        },
+        "half-hour": {
+          "src": "/audio/packs/time-basic/half-hour.mp3",
+          "arabic": "نصف ساعة"
+        },
+        "how-many-minutes": {
+          "src": "/audio/packs/time-basic/how-many-minutes.mp3",
+          "arabic": "كم دقيقة؟"
+        },
+        "after": {
+          "src": "/audio/packs/time-basic/after.mp3",
+          "arabic": "بعد"
+        },
+        "before": {
+          "src": "/audio/packs/time-basic/before.mp3",
+          "arabic": "قبل"
+        },
+        "morning": {
+          "src": "/audio/packs/time-basic/morning.mp3",
+          "arabic": "صباح"
+        },
+        "evening": {
+          "src": "/audio/packs/time-basic/evening.mp3",
+          "arabic": "مساء"
+        },
+        "wait": {
+          "src": "/audio/packs/time-basic/wait.mp3",
+          "arabic": "انتظر"
+        }
+      }
+    },
+    "family-basic": {
+      "clips": {
+        "my-family": {
+          "src": "/audio/packs/family-basic/my-family.mp3",
+          "arabic": "عائلتي"
+        },
+        "my-group": {
+          "src": "/audio/packs/family-basic/my-group.mp3",
+          "arabic": "مجموعتي"
+        },
+        "my-husband": {
+          "src": "/audio/packs/family-basic/my-husband.mp3",
+          "arabic": "زوجي"
+        },
+        "my-wife": {
+          "src": "/audio/packs/family-basic/my-wife.mp3",
+          "arabic": "زوجتي"
+        },
+        "my-son": {
+          "src": "/audio/packs/family-basic/my-son.mp3",
+          "arabic": "ابني"
+        },
+        "my-daughter": {
+          "src": "/audio/packs/family-basic/my-daughter.mp3",
+          "arabic": "ابنتي"
+        },
+        "looking-for": {
+          "src": "/audio/packs/family-basic/looking-for.mp3",
+          "arabic": "أبحث عن"
+        },
+        "child": {
+          "src": "/audio/packs/family-basic/child.mp3",
+          "arabic": "طفل"
+        },
+        "phone": {
+          "src": "/audio/packs/family-basic/phone.mp3",
+          "arabic": "هاتف"
+        },
+        "gate": {
+          "src": "/audio/packs/family-basic/gate.mp3",
+          "arabic": "باب"
+        },
+        "hotel": {
+          "src": "/audio/packs/family-basic/hotel.mp3",
+          "arabic": "فندق"
+        },
+        "i-am-lost-m": {
+          "src": "/audio/packs/family-basic/i-am-lost-m.mp3",
+          "arabic": "أنا ضايع"
+        },
+        "i-am-lost-f": {
+          "src": "/audio/packs/family-basic/i-am-lost-f.mp3",
+          "arabic": "أنا ضايعة"
+        },
+        "help-me": {
+          "src": "/audio/packs/family-basic/help-me.mp3",
+          "arabic": "ساعدني"
+        },
+        "where-is": {
+          "src": "/audio/packs/family-basic/where-is.mp3",
+          "arabic": "أين الباب؟"
+        }
+      }
+    },
+    "family-more": {
+      "clips": {
+        "father": {
+          "src": "/audio/packs/family-more/father.mp3",
+          "arabic": "أب"
+        },
+        "mother": {
+          "src": "/audio/packs/family-more/mother.mp3",
+          "arabic": "أم"
+        },
+        "brother": {
+          "src": "/audio/packs/family-more/brother.mp3",
+          "arabic": "أخ"
+        },
+        "sister": {
+          "src": "/audio/packs/family-more/sister.mp3",
+          "arabic": "أخت"
+        },
+        "son": {
+          "src": "/audio/packs/family-more/son.mp3",
+          "arabic": "ابن"
+        },
+        "daughter": {
+          "src": "/audio/packs/family-more/daughter.mp3",
+          "arabic": "ابنة"
+        },
+        "grandfather": {
+          "src": "/audio/packs/family-more/grandfather.mp3",
+          "arabic": "جد"
+        },
+        "uncle": {
+          "src": "/audio/packs/family-more/uncle.mp3",
+          "arabic": "عم"
+        },
+        "children": {
+          "src": "/audio/packs/family-more/children.mp3",
+          "arabic": "أطفال"
+        },
+        "families": {
+          "src": "/audio/packs/family-more/families.mp3",
+          "arabic": "عائلات"
+        },
+        "my-family": {
+          "src": "/audio/packs/family-more/my-family.mp3",
+          "arabic": "عائلتي"
+        },
+        "my-group": {
+          "src": "/audio/packs/family-more/my-group.mp3",
+          "arabic": "مجموعتي"
+        },
+        "with": {
+          "src": "/audio/packs/family-more/with.mp3",
+          "arabic": "مع"
+        },
+        "here": {
+          "src": "/audio/packs/family-more/here.mp3",
+          "arabic": "هنا"
+        },
+        "there": {
+          "src": "/audio/packs/family-more/there.mp3",
+          "arabic": "هناك"
+        }
+      }
+    },
+    "haram-basic": {
+      "clips": {
+        "haram": {
+          "src": "/audio/packs/haram-basic/haram.mp3",
+          "arabic": "الحرم"
+        },
+        "kaaba": {
+          "src": "/audio/packs/haram-basic/kaaba.mp3",
+          "arabic": "الكعبة"
+        },
+        "mataf": {
+          "src": "/audio/packs/haram-basic/mataf.mp3",
+          "arabic": "المطاف"
+        },
+        "courtyard": {
+          "src": "/audio/packs/haram-basic/courtyard.mp3",
+          "arabic": "ساحة"
+        },
+        "gate": {
+          "src": "/audio/packs/haram-basic/gate.mp3",
+          "arabic": "باب"
+        },
+        "entrance": {
+          "src": "/audio/packs/haram-basic/entrance.mp3",
+          "arabic": "مدخل"
+        },
+        "tawaf": {
+          "src": "/audio/packs/haram-basic/tawaf.mp3",
+          "arabic": "طواف"
+        },
+        "circuit": {
+          "src": "/audio/packs/haram-basic/circuit.mp3",
+          "arabic": "شوط"
+        },
+        "black-stone": {
+          "src": "/audio/packs/haram-basic/black-stone.mp3",
+          "arabic": "الحجر الأسود"
+        },
+        "safa": {
+          "src": "/audio/packs/haram-basic/safa.mp3",
+          "arabic": "الصفا"
+        },
+        "marwah": {
+          "src": "/audio/packs/haram-basic/marwah.mp3",
+          "arabic": "المروة"
+        },
+        "masaa": {
+          "src": "/audio/packs/haram-basic/masaa.mp3",
+          "arabic": "المسعى"
+        },
+        "sai": {
+          "src": "/audio/packs/haram-basic/sai.mp3",
+          "arabic": "سعي"
+        },
+        "zamzam": {
+          "src": "/audio/packs/haram-basic/zamzam.mp3",
+          "arabic": "زمزم"
+        },
+        "water": {
+          "src": "/audio/packs/haram-basic/water.mp3",
+          "arabic": "ماء"
+        },
+        "cup": {
+          "src": "/audio/packs/haram-basic/cup.mp3",
+          "arabic": "كوب"
+        },
+        "drinking-area": {
+          "src": "/audio/packs/haram-basic/drinking-area.mp3",
+          "arabic": "مكان الشرب"
+        },
+        "where-is": {
+          "src": "/audio/packs/haram-basic/where-is.mp3",
+          "arabic": "أين الباب؟"
+        },
+        "where-is-saudi": {
+          "src": "/audio/packs/haram-basic/where-is-saudi.mp3",
+          "arabic": "وين الباب؟"
+        }
+      }
+    },
+    "haram-more": {
+      "clips": {
+        "walk": {
+          "src": "/audio/packs/haram-more/walk.mp3",
+          "arabic": "امشِ"
+        },
+        "wait": {
+          "src": "/audio/packs/haram-more/wait.mp3",
+          "arabic": "انتظر"
+        },
+        "stop": {
+          "src": "/audio/packs/haram-more/stop.mp3",
+          "arabic": "وقف"
+        },
+        "enter": {
+          "src": "/audio/packs/haram-more/enter.mp3",
+          "arabic": "ادخل"
+        },
+        "exit-cmd": {
+          "src": "/audio/packs/haram-more/exit-cmd.mp3",
+          "arabic": "اخرج"
+        },
+        "men": {
+          "src": "/audio/packs/haram-more/men.mp3",
+          "arabic": "رجال"
+        },
+        "women": {
+          "src": "/audio/packs/haram-more/women.mp3",
+          "arabic": "نساء"
+        },
+        "families": {
+          "src": "/audio/packs/haram-more/families.mp3",
+          "arabic": "عائلات"
+        },
+        "prayer": {
+          "src": "/audio/packs/haram-more/prayer.mp3",
+          "arabic": "صلاة"
+        },
+        "rakah": {
+          "src": "/audio/packs/haram-more/rakah.mp3",
+          "arabic": "ركعة"
+        },
+        "wudu": {
+          "src": "/audio/packs/haram-more/wudu.mp3",
+          "arabic": "وضوء"
+        },
+        "open": {
+          "src": "/audio/packs/haram-more/open.mp3",
+          "arabic": "مفتوح"
+        },
+        "closed": {
+          "src": "/audio/packs/haram-more/closed.mp3",
+          "arabic": "مغلق"
+        },
+        "prohibited": {
+          "src": "/audio/packs/haram-more/prohibited.mp3",
+          "arabic": "ممنوع"
+        },
+        "up": {
+          "src": "/audio/packs/haram-more/up.mp3",
+          "arabic": "فوق"
+        },
+        "down": {
+          "src": "/audio/packs/haram-more/down.mp3",
+          "arabic": "تحت"
+        },
+        "floor": {
+          "src": "/audio/packs/haram-more/floor.mp3",
+          "arabic": "طابق"
+        },
+        "this-way": {
+          "src": "/audio/packs/haram-more/this-way.mp3",
+          "arabic": "من هنا"
+        },
+        "near": {
+          "src": "/audio/packs/haram-more/near.mp3",
+          "arabic": "قريب"
+        },
+        "far": {
+          "src": "/audio/packs/haram-more/far.mp3",
+          "arabic": "بعيد"
+        }
+      }
+    },
+    "ritual-basic": {
+      "clips": {
+        "ihram": {
+          "src": "/audio/packs/ritual-basic/ihram.mp3",
+          "arabic": "إحرام"
+        },
+        "tawaf": {
+          "src": "/audio/packs/ritual-basic/tawaf.mp3",
+          "arabic": "طواف"
+        },
+        "sai": {
+          "src": "/audio/packs/ritual-basic/sai.mp3",
+          "arabic": "سعي"
+        },
+        "talbiyah": {
+          "src": "/audio/packs/ritual-basic/talbiyah.mp3",
+          "arabic": "تلبية"
+        },
+        "wudu": {
+          "src": "/audio/packs/ritual-basic/wudu.mp3",
+          "arabic": "وضوء"
+        },
+        "prayer": {
+          "src": "/audio/packs/ritual-basic/prayer.mp3",
+          "arabic": "صلاة"
+        },
+        "walk": {
+          "src": "/audio/packs/ritual-basic/walk.mp3",
+          "arabic": "امشِ"
+        },
+        "start": {
+          "src": "/audio/packs/ritual-basic/start.mp3",
+          "arabic": "ابدأ"
+        },
+        "finished": {
+          "src": "/audio/packs/ritual-basic/finished.mp3",
+          "arabic": "انتهى"
+        },
+        "go-back": {
+          "src": "/audio/packs/ritual-basic/go-back.mp3",
+          "arabic": "ارجع"
+        },
+        "circuit": {
+          "src": "/audio/packs/ritual-basic/circuit.mp3",
+          "arabic": "شوط"
+        },
+        "faster": {
+          "src": "/audio/packs/ritual-basic/faster.mp3",
+          "arabic": "أسرع"
+        },
+        "open": {
+          "src": "/audio/packs/ritual-basic/open.mp3",
+          "arabic": "مفتوح"
+        },
+        "closed": {
+          "src": "/audio/packs/ritual-basic/closed.mp3",
+          "arabic": "مغلق"
+        },
+        "wait": {
+          "src": "/audio/packs/ritual-basic/wait.mp3",
+          "arabic": "انتظر"
+        },
+        "enter": {
+          "src": "/audio/packs/ritual-basic/enter.mp3",
+          "arabic": "ادخل"
+        },
+        "prohibited": {
+          "src": "/audio/packs/ritual-basic/prohibited.mp3",
+          "arabic": "ممنوع"
+        }
+      }
+    },
+    "nabawi-basic": {
+      "clips": {
+        "nabawi": {
+          "src": "/audio/packs/nabawi-basic/nabawi.mp3",
+          "arabic": "المسجد النبوي"
+        },
+        "madinah": {
+          "src": "/audio/packs/nabawi-basic/madinah.mp3",
+          "arabic": "المدينة"
+        },
+        "green-dome": {
+          "src": "/audio/packs/nabawi-basic/green-dome.mp3",
+          "arabic": "القبة الخضراء"
+        },
+        "courtyard": {
+          "src": "/audio/packs/nabawi-basic/courtyard.mp3",
+          "arabic": "ساحة"
+        },
+        "gate": {
+          "src": "/audio/packs/nabawi-basic/gate.mp3",
+          "arabic": "باب"
+        },
+        "entrance": {
+          "src": "/audio/packs/nabawi-basic/entrance.mp3",
+          "arabic": "مدخل"
+        },
+        "prophet-mosque-q": {
+          "src": "/audio/packs/nabawi-basic/prophet-mosque-q.mp3",
+          "arabic": "أين المسجد النبوي؟"
+        },
+        "where-is": {
+          "src": "/audio/packs/nabawi-basic/where-is.mp3",
+          "arabic": "أين الباب؟"
+        },
+        "where-is-saudi": {
+          "src": "/audio/packs/nabawi-basic/where-is-saudi.mp3",
+          "arabic": "وين الباب؟"
+        },
+        "near": {
+          "src": "/audio/packs/nabawi-basic/near.mp3",
+          "arabic": "قريب"
+        },
+        "far": {
+          "src": "/audio/packs/nabawi-basic/far.mp3",
+          "arabic": "بعيد"
+        },
+        "rawdah": {
+          "src": "/audio/packs/nabawi-basic/rawdah.mp3",
+          "arabic": "الروضة"
+        },
+        "prayer": {
+          "src": "/audio/packs/nabawi-basic/prayer.mp3",
+          "arabic": "صلاة"
+        },
+        "wudu": {
+          "src": "/audio/packs/nabawi-basic/wudu.mp3",
+          "arabic": "وضوء"
+        },
+        "men": {
+          "src": "/audio/packs/nabawi-basic/men.mp3",
+          "arabic": "رجال"
+        },
+        "women": {
+          "src": "/audio/packs/nabawi-basic/women.mp3",
+          "arabic": "نساء"
+        }
+      }
+    },
+    "barber-basic": {
+      "clips": {
+        "shave": {
+          "src": "/audio/packs/barber-basic/shave.mp3",
+          "arabic": "حلق"
+        },
+        "trim": {
+          "src": "/audio/packs/barber-basic/trim.mp3",
+          "arabic": "تقصير"
+        },
+        "complete-cut": {
+          "src": "/audio/packs/barber-basic/complete-cut.mp3",
+          "arabic": "كامل"
+        },
+        "hair": {
+          "src": "/audio/packs/barber-basic/hair.mp3",
+          "arabic": "شعر"
+        },
+        "clippers": {
+          "src": "/audio/packs/barber-basic/clippers.mp3",
+          "arabic": "ماكينة"
+        },
+        "a-little": {
+          "src": "/audio/packs/barber-basic/a-little.mp3",
+          "arabic": "قليل"
+        },
+        "only": {
+          "src": "/audio/packs/barber-basic/only.mp3",
+          "arabic": "فقط"
+        },
+        "how-much": {
+          "src": "/audio/packs/barber-basic/how-much.mp3",
+          "arabic": "كم؟"
+        },
+        "how-much-saudi": {
+          "src": "/audio/packs/barber-basic/how-much-saudi.mp3",
+          "arabic": "بكم؟"
+        },
+        "please": {
+          "src": "/audio/packs/barber-basic/please.mp3",
+          "arabic": "لو سمحت"
+        },
+        "the-bill": {
+          "src": "/audio/packs/barber-basic/the-bill.mp3",
+          "arabic": "الحساب، لو سمحت"
+        }
+      }
+    },
+    "health-basic": {
+      "clips": {
+        "sick": {
+          "src": "/audio/packs/health-basic/sick.mp3",
+          "arabic": "مريض"
+        },
+        "tired": {
+          "src": "/audio/packs/health-basic/tired.mp3",
+          "arabic": "تعبان"
+        },
+        "it-hurts": {
+          "src": "/audio/packs/health-basic/it-hurts.mp3",
+          "arabic": "يؤلمني"
+        },
+        "fever": {
+          "src": "/audio/packs/health-basic/fever.mp3",
+          "arabic": "حمى"
+        },
+        "thirsty": {
+          "src": "/audio/packs/health-basic/thirsty.mp3",
+          "arabic": "عطشان"
+        },
+        "pharmacy": {
+          "src": "/audio/packs/health-basic/pharmacy.mp3",
+          "arabic": "صيدلية"
+        },
+        "doctor": {
+          "src": "/audio/packs/health-basic/doctor.mp3",
+          "arabic": "طبيب"
+        },
+        "hospital": {
+          "src": "/audio/packs/health-basic/hospital.mp3",
+          "arabic": "مستشفى"
+        },
+        "help": {
+          "src": "/audio/packs/health-basic/help.mp3",
+          "arabic": "مساعدة"
+        },
+        "help-me": {
+          "src": "/audio/packs/health-basic/help-me.mp3",
+          "arabic": "ساعدني"
+        },
+        "medicine": {
+          "src": "/audio/packs/health-basic/medicine.mp3",
+          "arabic": "دواء"
+        },
+        "water": {
+          "src": "/audio/packs/health-basic/water.mp3",
+          "arabic": "ماء"
+        },
+        "allergy": {
+          "src": "/audio/packs/health-basic/allergy.mp3",
+          "arabic": "حساسية"
+        }
+      }
+    },
+    "body-basic": {
+      "clips": {
+        "head": {
+          "src": "/audio/packs/body-basic/head.mp3",
+          "arabic": "رأس"
+        },
+        "hair": {
+          "src": "/audio/packs/body-basic/hair.mp3",
+          "arabic": "شعر"
+        },
+        "eye": {
+          "src": "/audio/packs/body-basic/eye.mp3",
+          "arabic": "عين"
+        },
+        "ear": {
+          "src": "/audio/packs/body-basic/ear.mp3",
+          "arabic": "أذن"
+        },
+        "throat": {
+          "src": "/audio/packs/body-basic/throat.mp3",
+          "arabic": "حلق"
+        },
+        "hand": {
+          "src": "/audio/packs/body-basic/hand.mp3",
+          "arabic": "يد"
+        },
+        "chest": {
+          "src": "/audio/packs/body-basic/chest.mp3",
+          "arabic": "صدر"
+        },
+        "stomach": {
+          "src": "/audio/packs/body-basic/stomach.mp3",
+          "arabic": "بطن"
+        },
+        "back": {
+          "src": "/audio/packs/body-basic/back.mp3",
+          "arabic": "ظهر"
+        },
+        "foot": {
+          "src": "/audio/packs/body-basic/foot.mp3",
+          "arabic": "قدم"
+        },
+        "leg": {
+          "src": "/audio/packs/body-basic/leg.mp3",
+          "arabic": "رجل"
+        },
+        "it-hurts": {
+          "src": "/audio/packs/body-basic/it-hurts.mp3",
+          "arabic": "يؤلمني"
+        },
+        "here": {
+          "src": "/audio/packs/body-basic/here.mp3",
+          "arabic": "هنا"
+        },
+        "doctor": {
+          "src": "/audio/packs/body-basic/doctor.mp3",
+          "arabic": "طبيب"
+        },
+        "pharmacy": {
+          "src": "/audio/packs/body-basic/pharmacy.mp3",
+          "arabic": "صيدلية"
+        }
+      }
+    },
+    "actions-basic": {
+      "clips": {
+        "walk": {
+          "src": "/audio/packs/actions-basic/walk.mp3",
+          "arabic": "امشِ"
+        },
+        "come": {
+          "src": "/audio/packs/actions-basic/come.mp3",
+          "arabic": "تعال"
+        },
+        "enter": {
+          "src": "/audio/packs/actions-basic/enter.mp3",
+          "arabic": "ادخل"
+        },
+        "exit-cmd": {
+          "src": "/audio/packs/actions-basic/exit-cmd.mp3",
+          "arabic": "اخرج"
+        },
+        "go-back": {
+          "src": "/audio/packs/actions-basic/go-back.mp3",
+          "arabic": "ارجع"
+        },
+        "faster": {
+          "src": "/audio/packs/actions-basic/faster.mp3",
+          "arabic": "أسرع"
+        },
+        "wait": {
+          "src": "/audio/packs/actions-basic/wait.mp3",
+          "arabic": "انتظر"
+        },
+        "stop": {
+          "src": "/audio/packs/actions-basic/stop.mp3",
+          "arabic": "وقف"
+        },
+        "start": {
+          "src": "/audio/packs/actions-basic/start.mp3",
+          "arabic": "ابدأ"
+        },
+        "finished": {
+          "src": "/audio/packs/actions-basic/finished.mp3",
+          "arabic": "انتهى"
+        },
+        "prohibited": {
+          "src": "/audio/packs/actions-basic/prohibited.mp3",
+          "arabic": "ممنوع"
+        },
+        "open": {
+          "src": "/audio/packs/actions-basic/open.mp3",
+          "arabic": "مفتوح"
+        },
+        "closed": {
+          "src": "/audio/packs/actions-basic/closed.mp3",
+          "arabic": "مغلق"
+        },
+        "this-way": {
+          "src": "/audio/packs/actions-basic/this-way.mp3",
+          "arabic": "من هنا"
+        },
+        "toward": {
+          "src": "/audio/packs/actions-basic/toward.mp3",
+          "arabic": "إلى"
+        }
+      }
+    },
+    "adjectives-basic": {
+      "clips": {
+        "big": {
+          "src": "/audio/packs/adjectives-basic/big.mp3",
+          "arabic": "كبير"
+        },
+        "small": {
+          "src": "/audio/packs/adjectives-basic/small.mp3",
+          "arabic": "صغير"
+        },
+        "heavy": {
+          "src": "/audio/packs/adjectives-basic/heavy.mp3",
+          "arabic": "ثقيل"
+        },
+        "light-weight": {
+          "src": "/audio/packs/adjectives-basic/light-weight.mp3",
+          "arabic": "خفيف"
+        },
+        "new": {
+          "src": "/audio/packs/adjectives-basic/new.mp3",
+          "arabic": "جديد"
+        },
+        "old": {
+          "src": "/audio/packs/adjectives-basic/old.mp3",
+          "arabic": "قديم"
+        },
+        "clean": {
+          "src": "/audio/packs/adjectives-basic/clean.mp3",
+          "arabic": "نظيف"
+        },
+        "broken": {
+          "src": "/audio/packs/adjectives-basic/broken.mp3",
+          "arabic": "معطل"
+        },
+        "hot": {
+          "src": "/audio/packs/adjectives-basic/hot.mp3",
+          "arabic": "حار"
+        },
+        "cold": {
+          "src": "/audio/packs/adjectives-basic/cold.mp3",
+          "arabic": "بارد"
+        },
+        "near": {
+          "src": "/audio/packs/adjectives-basic/near.mp3",
+          "arabic": "قريب"
+        },
+        "far": {
+          "src": "/audio/packs/adjectives-basic/far.mp3",
+          "arabic": "بعيد"
+        },
+        "tired": {
+          "src": "/audio/packs/adjectives-basic/tired.mp3",
+          "arabic": "تعبان"
+        }
+      }
+    },
+    "nature-basic": {
+      "clips": {
+        "sun": {
+          "src": "/audio/packs/nature-basic/sun.mp3",
+          "arabic": "شمس"
+        },
+        "hot": {
+          "src": "/audio/packs/nature-basic/hot.mp3",
+          "arabic": "حار"
+        },
+        "sand": {
+          "src": "/audio/packs/nature-basic/sand.mp3",
+          "arabic": "رمل"
+        },
+        "wind": {
+          "src": "/audio/packs/nature-basic/wind.mp3",
+          "arabic": "ريح"
+        },
+        "shade": {
+          "src": "/audio/packs/nature-basic/shade.mp3",
+          "arabic": "ظل"
+        },
+        "tired": {
+          "src": "/audio/packs/nature-basic/tired.mp3",
+          "arabic": "تعبان"
+        },
+        "thirsty": {
+          "src": "/audio/packs/nature-basic/thirsty.mp3",
+          "arabic": "عطشان"
+        },
+        "water": {
+          "src": "/audio/packs/nature-basic/water.mp3",
+          "arabic": "ماء"
+        },
+        "water-saudi": {
+          "src": "/audio/packs/nature-basic/water-saudi.mp3",
+          "arabic": "موية"
+        },
+        "please": {
+          "src": "/audio/packs/nature-basic/please.mp3",
+          "arabic": "لو سمحت"
+        }
+      }
+    },
+    "hajj-places-basic": {
+      "clips": {
+        "mina": {
+          "src": "/audio/packs/hajj-places-basic/mina.mp3",
+          "arabic": "منى"
+        },
+        "arafat": {
+          "src": "/audio/packs/hajj-places-basic/arafat.mp3",
+          "arabic": "عرفات"
+        },
+        "muzdalifah": {
+          "src": "/audio/packs/hajj-places-basic/muzdalifah.mp3",
+          "arabic": "مزدلفة"
+        },
+        "jamarat": {
+          "src": "/audio/packs/hajj-places-basic/jamarat.mp3",
+          "arabic": "الجمرات"
+        },
+        "makkah": {
+          "src": "/audio/packs/hajj-places-basic/makkah.mp3",
+          "arabic": "مكة"
+        },
+        "camp": {
+          "src": "/audio/packs/hajj-places-basic/camp.mp3",
+          "arabic": "مخيم"
+        },
+        "tent": {
+          "src": "/audio/packs/hajj-places-basic/tent.mp3",
+          "arabic": "خيمة"
+        },
+        "bus": {
+          "src": "/audio/packs/hajj-places-basic/bus.mp3",
+          "arabic": "باص"
+        },
+        "seat": {
+          "src": "/audio/packs/hajj-places-basic/seat.mp3",
+          "arabic": "مقعد"
+        },
+        "station": {
+          "src": "/audio/packs/hajj-places-basic/station.mp3",
+          "arabic": "محطة"
+        },
+        "number": {
+          "src": "/audio/packs/hajj-places-basic/number.mp3",
+          "arabic": "رقم"
+        },
+        "wait": {
+          "src": "/audio/packs/hajj-places-basic/wait.mp3",
+          "arabic": "انتظر"
+        },
+        "throw-stones": {
+          "src": "/audio/packs/hajj-places-basic/throw-stones.mp3",
+          "arabic": "رمي"
+        },
+        "day-of-arafah": {
+          "src": "/audio/packs/hajj-places-basic/day-of-arafah.mp3",
+          "arabic": "يوم عرفة"
+        },
+        "walk": {
+          "src": "/audio/packs/hajj-places-basic/walk.mp3",
+          "arabic": "امشِ"
+        },
+        "stop": {
+          "src": "/audio/packs/hajj-places-basic/stop.mp3",
+          "arabic": "وقف"
+        }
+      }
+    },
+    "find-haram": {
+      "clips": {
+        "straight": {
+          "src": "/audio/packs/find-haram/straight.mp3",
+          "arabic": "على طول"
+        },
+        "right": {
+          "src": "/audio/packs/find-haram/right.mp3",
+          "arabic": "يمين"
+        }
+      }
+    },
+    "enter-haram": {
+      "clips": {
+        "straight": {
+          "src": "/audio/packs/enter-haram/straight.mp3",
+          "arabic": "على طول"
+        }
+      }
+    },
+    "taxi-hotel": {
+      "clips": {
         "left": {
           "src": "/audio/packs/taxi-hotel/left.mp3",
           "arabic": "يسار"
@@ -168,7 +1972,7 @@
         },
         "gps-second-left": {
           "src": "/audio/packs/taxi-hotel/gps-second-left.mp3",
-          "arabic": "بعد ٢٠٠ متر، خذ ثاني يسار"
+          "arabic": "بعد مائة متر، خذ ثاني يسار"
         },
         "gps-stop-opposite-hotel": {
           "src": "/audio/packs/taxi-hotel/gps-stop-opposite-hotel.mp3",

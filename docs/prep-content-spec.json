@@ -1,0 +1,1833 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-19T06:55:18.967Z",
+  "topics": [
+    {
+      "id": "numbers",
+      "title": "Numbers",
+      "description": "Count, order, and recognize numbers in real situations.",
+      "order": 1
+    },
+    {
+      "id": "polite",
+      "title": "Polite essentials",
+      "description": "Greetings, thanks, and phrases that open every conversation.",
+      "order": 2
+    },
+    {
+      "id": "packing",
+      "title": "Umrah packing",
+      "description": "Documents, ihram, and what goes in your bag.",
+      "order": 3
+    },
+    {
+      "id": "navigation",
+      "title": "Navigation",
+      "description": "Taxi words, directions, and finding your way.",
+      "order": 4
+    },
+    {
+      "id": "transport",
+      "title": "Transportation",
+      "description": "Taxi, bus, car, and station vocabulary.",
+      "order": 5
+    },
+    {
+      "id": "airport",
+      "title": "Airport & arrival",
+      "description": "Passport, bags, exit, and the taxi stand.",
+      "order": 6
+    },
+    {
+      "id": "geography",
+      "title": "Holy cities",
+      "description": "Makkah, Madinah, Jeddah, and the route between them.",
+      "order": 7
+    },
+    {
+      "id": "hotel",
+      "title": "Hotel",
+      "description": "Room, floor, elevator, and reception.",
+      "order": 8
+    },
+    {
+      "id": "room-service",
+      "title": "Room service",
+      "description": "Towels, clean room, and reporting problems.",
+      "order": 9
+    },
+    {
+      "id": "money",
+      "title": "Money & prices",
+      "description": "How much, riyals, cash, card, and the bill.",
+      "order": 10
+    },
+    {
+      "id": "food",
+      "title": "Food",
+      "description": "Ordering, customizing, and closing a meal.",
+      "order": 11
+    },
+    {
+      "id": "shopping",
+      "title": "Shopping",
+      "description": "Market stalls, souvenirs, and asking the price.",
+      "order": 12
+    },
+    {
+      "id": "colors",
+      "title": "Colors",
+      "description": "Name and recognize colors — from basics to richer shades.",
+      "order": 13
+    },
+    {
+      "id": "clothes",
+      "title": "Clothes & ihram",
+      "description": "Garments, sandals, and asking for a size.",
+      "order": 14
+    },
+    {
+      "id": "time",
+      "title": "Time",
+      "description": "Now, today, tomorrow, and wait times.",
+      "order": 15
+    },
+    {
+      "id": "family",
+      "title": "Family",
+      "description": "Your group and who you are looking for.",
+      "order": 16
+    },
+    {
+      "id": "haram",
+      "title": "Masjid al-Haram",
+      "description": "Places, gates, and finding your way inside.",
+      "order": 17
+    },
+    {
+      "id": "ritual",
+      "title": "Umrah actions",
+      "description": "Stage words and movement language — not rulings.",
+      "order": 18
+    },
+    {
+      "id": "nabawi",
+      "title": "Masjid an-Nabawi",
+      "description": "Place names and directions in Madinah.",
+      "order": 19
+    },
+    {
+      "id": "barber",
+      "title": "Barber",
+      "description": "Shave, trim, and paying after Umrah.",
+      "order": 20
+    },
+    {
+      "id": "health",
+      "title": "Medicine & health",
+      "description": "Sick, pharmacy, and common ailments.",
+      "order": 21
+    },
+    {
+      "id": "body",
+      "title": "Body parts",
+      "description": "Point to where it hurts.",
+      "order": 22
+    },
+    {
+      "id": "actions",
+      "title": "Actions",
+      "description": "Walk, wait, stop, enter — by situation.",
+      "order": 23
+    },
+    {
+      "id": "adjectives",
+      "title": "Adjectives",
+      "description": "Big, small, clean, hot, and cold.",
+      "order": 24
+    },
+    {
+      "id": "nature",
+      "title": "Heat & comfort",
+      "description": "Sun, shade, water, and tired outdoors.",
+      "order": 25
+    },
+    {
+      "id": "hajj",
+      "title": "Hajj places",
+      "description": "Mina, Arafat, buses, and camps.",
+      "order": 26
+    }
+  ],
+  "sessions": [
+    {
+      "id": "numbers-everywhere",
+      "topicId": "numbers",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Numbers - Basic",
+      "description": "Study numbers 1–10, first–third, then 11–20.",
+      "adventureIds": [
+        "airport-arrival",
+        "taxi-hotel",
+        "find-haram",
+        "enter-haram",
+        "begin-tawaf",
+        "complete-sai",
+        "order-dinner",
+        "hajj-bus"
+      ],
+      "unlockAfterAdventureIds": [
+        "find-haram",
+        "order-dinner",
+        "enter-haram",
+        "taxi-hotel"
+      ],
+      "vocabularyGain": 23,
+      "estimatedMinutes": 5,
+      "capabilityId": "numbers",
+      "canNowDo": "Recognize numbers 1–20 and first, second, third.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "1–10",
+          "scene": "numbers",
+          "vocabIds": [
+            "n1",
+            "n2",
+            "n3",
+            "n4",
+            "n5",
+            "n6",
+            "n7",
+            "n8",
+            "n9",
+            "n10"
+          ]
+        },
+        {
+          "title": "First, second, third",
+          "vocabIds": [
+            "first",
+            "second",
+            "third"
+          ]
+        },
+        {
+          "title": "11–20",
+          "vocabIds": [
+            "n11",
+            "n12",
+            "n13",
+            "n14",
+            "n15",
+            "n16",
+            "n17",
+            "n18",
+            "n19",
+            "n20"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "numbers-to-100",
+      "topicId": "numbers",
+      "level": 2,
+      "levelName": "More",
+      "title": "Numbers - More",
+      "description": "Tens, compounds, and numbers on signs up to 100.",
+      "adventureIds": [
+        "hajj-bus",
+        "taxi-hotel",
+        "order-dinner"
+      ],
+      "unlockAfterAdventureIds": [
+        "numbers-everywhere"
+      ],
+      "vocabularyGain": 18,
+      "estimatedMinutes": 6,
+      "capabilityId": "numbers",
+      "canNowDo": "Read bus numbers, prices, and room numbers up to 100.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Tens",
+          "intro": "Bus lines, prices, and room floors use these constantly.",
+          "scene": "bus",
+          "vocabIds": [
+            "n20",
+            "n30",
+            "n40",
+            "n50",
+            "n60",
+            "n70",
+            "n80",
+            "n90",
+            "n100"
+          ]
+        },
+        {
+          "title": "Combining",
+          "intro": "21 = twenty + one. Listen for the pattern.",
+          "scene": "numbers",
+          "vocabIds": [
+            "n21",
+            "n35",
+            "n48",
+            "n72",
+            "n99"
+          ]
+        },
+        {
+          "title": "On signs",
+          "intro": "Gate numbers and camp numbers.",
+          "scene": "haram-gate",
+          "vocabIds": [
+            "number",
+            "gate",
+            "camp",
+            "room-number"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "polite-basic",
+      "topicId": "polite",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Polite essentials - Basic",
+      "description": "Greetings, thanks, please, and when you don't understand.",
+      "adventureIds": [
+        "airport-arrival",
+        "find-haram",
+        "enter-haram",
+        "order-dinner",
+        "taxi-hotel",
+        "lost-group"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 12,
+      "estimatedMinutes": 4,
+      "capabilityId": "family",
+      "canNowDo": "Greet people, say please and thank you, and ask for clarification.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Opening a conversation",
+          "intro": "You will hear this dozens of times a day.",
+          "scene": "crowd",
+          "vocabIds": [
+            "greeting",
+            "greeting-response",
+            "peace-praise"
+          ]
+        },
+        {
+          "title": "Courtesy",
+          "vocabIds": [
+            "please",
+            "thank-you",
+            "thank-you-much",
+            "welcome",
+            "sorry",
+            "excuse-me"
+          ]
+        },
+        {
+          "title": "When you get stuck",
+          "vocabIds": [
+            "dont-understand",
+            "yes",
+            "no"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "packing-basic",
+      "topicId": "packing",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Umrah packing - Basic",
+      "description": "Documents, ihram, and comfort items for your bag.",
+      "adventureIds": [
+        "airport-arrival",
+        "immigration"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 14,
+      "estimatedMinutes": 5,
+      "capabilityId": "transportation",
+      "canNowDo": "Name essentials in your bag and documents you carry.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Documents & money",
+          "scene": "airport",
+          "vocabIds": [
+            "passport",
+            "visa",
+            "copy-passport",
+            "riyal",
+            "card"
+          ]
+        },
+        {
+          "title": "Ihram & wear",
+          "scene": "airport",
+          "vocabIds": [
+            "ihram",
+            "sandals",
+            "belt-bag",
+            "abaya",
+            "headscarf"
+          ]
+        },
+        {
+          "title": "Health & comfort",
+          "vocabIds": [
+            "medicine",
+            "sunscreen",
+            "towel",
+            "toothbrush",
+            "charger",
+            "umbrella",
+            "snacks"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "master-navigation",
+      "topicId": "navigation",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Navigation - Basic",
+      "description": "Taxi words first, then follow a short Arabic GPS.",
+      "adventureIds": [
+        "airport-arrival",
+        "taxi-hotel",
+        "find-haram",
+        "enter-haram"
+      ],
+      "unlockAfterAdventureIds": [
+        "find-haram",
+        "enter-haram",
+        "taxi-hotel"
+      ],
+      "vocabularyGain": 18,
+      "estimatedMinutes": 5,
+      "capabilityId": "navigation",
+      "canNowDo": "Use taxi words and follow simple spoken directions.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "In the taxi",
+          "intro": "A few words get you into a taxi and back to the hotel.",
+          "scene": "taxi",
+          "vocabIds": [
+            "hotel",
+            "please",
+            "stop-here",
+            "how-much"
+          ]
+        },
+        {
+          "title": "On the route",
+          "intro": "Words you hear when a driver gives directions.",
+          "scene": "map",
+          "vocabIds": [
+            "right",
+            "left",
+            "continue-straight",
+            "turn-right",
+            "you-arrived"
+          ]
+        },
+        {
+          "title": "Around landmarks",
+          "intro": "Useful when the route passes signals and buildings.",
+          "scene": "street",
+          "vocabIds": [
+            "opposite",
+            "behind",
+            "signal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "navigation-gps",
+      "topicId": "navigation",
+      "level": 2,
+      "levelName": "More",
+      "title": "Navigation - More",
+      "description": "Turn-by-turn GPS Arabic and landmark words.",
+      "adventureIds": [
+        "taxi-hotel",
+        "find-haram"
+      ],
+      "unlockAfterAdventureIds": [
+        "master-navigation"
+      ],
+      "vocabularyGain": 14,
+      "estimatedMinutes": 6,
+      "capabilityId": "navigation",
+      "canNowDo": "Follow GPS-style turn-by-turn Arabic.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Turn-by-turn",
+          "scene": "map",
+          "vocabIds": [
+            "turn-right",
+            "turn-left",
+            "continue-straight",
+            "after-meters",
+            "you-arrived",
+            "second-left"
+          ]
+        },
+        {
+          "title": "Landmarks",
+          "scene": "street",
+          "vocabIds": [
+            "signal",
+            "bridge",
+            "intersection",
+            "opposite",
+            "behind"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "transport-basic",
+      "topicId": "transport",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Transportation - Basic",
+      "description": "Taxi, bus, car, and station words.",
+      "adventureIds": [
+        "airport-arrival",
+        "taxi-hotel",
+        "hajj-bus"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 12,
+      "estimatedMinutes": 4,
+      "capabilityId": "transportation",
+      "canNowDo": "Name vehicles and stations when traveling.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Vehicles",
+          "scene": "taxi",
+          "vocabIds": [
+            "taxi",
+            "bus",
+            "car",
+            "seat"
+          ]
+        },
+        {
+          "title": "Places",
+          "scene": "airport",
+          "vocabIds": [
+            "station",
+            "airport",
+            "train-station",
+            "stop-here"
+          ]
+        },
+        {
+          "title": "Directions",
+          "vocabIds": [
+            "toward",
+            "here",
+            "there",
+            "please"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "airport-basic",
+      "topicId": "airport",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Airport & arrival - Basic",
+      "description": "Passport desk, bags, exit, and taxi stand.",
+      "adventureIds": [
+        "immigration",
+        "airport-arrival"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 12,
+      "estimatedMinutes": 4,
+      "capabilityId": "transportation",
+      "canNowDo": "Navigate airport arrivals in Arabic.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "At the desk",
+          "scene": "immigration",
+          "vocabIds": [
+            "passport",
+            "officer",
+            "window-counter",
+            "wait",
+            "please"
+          ]
+        },
+        {
+          "title": "Finding your way",
+          "scene": "airport",
+          "vocabIds": [
+            "bag",
+            "exit-sign",
+            "taxi",
+            "where-is"
+          ]
+        },
+        {
+          "title": "Onward travel",
+          "vocabIds": [
+            "airport",
+            "hotel",
+            "makkah",
+            "madinah"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "geography-basic",
+      "topicId": "geography",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Holy cities - Basic",
+      "description": "Makkah, Madinah, Jeddah, and the airport on a simple map.",
+      "adventureIds": [
+        "taxi-hotel",
+        "hajj-bus",
+        "day-madinah"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 8,
+      "estimatedMinutes": 4,
+      "capabilityId": "transportation",
+      "canNowDo": "Name Makkah, Madinah, Jeddah, and the airport.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Holy cities",
+          "scene": "map",
+          "vocabIds": [
+            "makkah",
+            "madinah",
+            "jeddah",
+            "holy-land"
+          ]
+        },
+        {
+          "title": "Arrival",
+          "scene": "airport",
+          "vocabIds": [
+            "airport",
+            "taxi",
+            "bus",
+            "toward"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hotel-basic",
+      "topicId": "hotel",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Hotel - Basic",
+      "description": "Room, floor, elevator, and key at the hotel.",
+      "adventureIds": [
+        "taxi-hotel",
+        "lost-group"
+      ],
+      "unlockAfterAdventureIds": [
+        "taxi-hotel"
+      ],
+      "vocabularyGain": 14,
+      "estimatedMinutes": 5,
+      "capabilityId": "hotel",
+      "canNowDo": "Find your room, use the elevator, and name basic hotel places.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Finding your room",
+          "intro": "The reception desk and elevator.",
+          "scene": "taxi",
+          "vocabIds": [
+            "hotel",
+            "reception",
+            "room",
+            "room-number",
+            "floor",
+            "elevator",
+            "key"
+          ]
+        },
+        {
+          "title": "In the room",
+          "scene": "restaurant",
+          "vocabIds": [
+            "bathroom",
+            "bed",
+            "ac",
+            "luggage"
+          ]
+        },
+        {
+          "title": "Asking",
+          "vocabIds": [
+            "where-is",
+            "please",
+            "here",
+            "there"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "room-service-basic",
+      "topicId": "room-service",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Room service - Basic",
+      "description": "Towels, clean room, and reporting a broken AC.",
+      "adventureIds": [
+        "taxi-hotel"
+      ],
+      "unlockAfterAdventureIds": [
+        "hotel-basic"
+      ],
+      "vocabularyGain": 10,
+      "estimatedMinutes": 4,
+      "capabilityId": "hotel",
+      "canNowDo": "Request towels, report a broken AC, and ask to clean the room.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Requests",
+          "scene": "restaurant",
+          "vocabIds": [
+            "towel",
+            "clean",
+            "please",
+            "i-want",
+            "i-want-saudi"
+          ]
+        },
+        {
+          "title": "Problems",
+          "vocabIds": [
+            "broken",
+            "ac",
+            "bathroom",
+            "help",
+            "help-me"
+          ]
+        },
+        {
+          "title": "Delivery words",
+          "vocabIds": [
+            "here",
+            "there",
+            "room",
+            "floor"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "money-basic",
+      "topicId": "money",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Money & prices - Basic",
+      "description": "How much, riyals, cash, card, and the bill.",
+      "adventureIds": [
+        "order-dinner",
+        "barber",
+        "taxi-hotel"
+      ],
+      "unlockAfterAdventureIds": [
+        "order-dinner"
+      ],
+      "vocabularyGain": 12,
+      "estimatedMinutes": 5,
+      "capabilityId": "money",
+      "canNowDo": "Ask how much something costs and ask for the bill.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Asking the price",
+          "scene": "restaurant",
+          "vocabIds": [
+            "how-much",
+            "how-much-price",
+            "how-much-saudi",
+            "riyal",
+            "this-one",
+            "that-one"
+          ]
+        },
+        {
+          "title": "Reacting",
+          "vocabIds": [
+            "expensive",
+            "cheap",
+            "too-expensive"
+          ]
+        },
+        {
+          "title": "Paying",
+          "vocabIds": [
+            "cash",
+            "card",
+            "the-bill",
+            "please",
+            "change-money"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "explore-food",
+      "topicId": "food",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Food - Basic",
+      "description": "Study with / without, spice, juice, and ordering for a group.",
+      "adventureIds": [
+        "find-zamzam",
+        "order-dinner"
+      ],
+      "unlockAfterAdventureIds": [
+        "order-dinner"
+      ],
+      "vocabularyGain": 14,
+      "estimatedMinutes": 5,
+      "capabilityId": "food",
+      "canNowDo": "Order with / without and for a small group.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "With and without",
+          "intro": "Customize a meal — spice, sugar, and what to leave out.",
+          "scene": "food",
+          "vocabIds": [
+            "without",
+            "with",
+            "spicy",
+            "hot",
+            "cold"
+          ]
+        },
+        {
+          "title": "More on the table",
+          "intro": "Juice, vegetables, and plates when ordering for a group.",
+          "scene": "restaurant",
+          "vocabIds": [
+            "juice",
+            "vegetables",
+            "plate"
+          ]
+        },
+        {
+          "title": "Closing the meal",
+          "intro": "Ask for the bill when you are done.",
+          "scene": "restaurant",
+          "vocabIds": [
+            "the-bill"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food-menu",
+      "topicId": "food",
+      "level": 2,
+      "levelName": "More",
+      "title": "Food - More",
+      "description": "Dishes, drinks, tableware, and closing the meal.",
+      "adventureIds": [
+        "order-dinner",
+        "find-zamzam"
+      ],
+      "unlockAfterAdventureIds": [
+        "explore-food"
+      ],
+      "vocabularyGain": 16,
+      "estimatedMinutes": 6,
+      "capabilityId": "food",
+      "canNowDo": "Name common dishes and table items when ordering for a group.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Main dishes",
+          "scene": "food",
+          "vocabIds": [
+            "chicken",
+            "meat",
+            "rice",
+            "bread",
+            "vegetables",
+            "fruit"
+          ]
+        },
+        {
+          "title": "Drinks",
+          "scene": "restaurant",
+          "vocabIds": [
+            "water",
+            "water-saudi",
+            "tea",
+            "coffee",
+            "juice"
+          ]
+        },
+        {
+          "title": "Tableware",
+          "vocabIds": [
+            "plate",
+            "cup",
+            "spoon",
+            "fork"
+          ]
+        },
+        {
+          "title": "Ordering",
+          "vocabIds": [
+            "i-want",
+            "i-want-saudi",
+            "please",
+            "the-bill"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shopping-basic",
+      "topicId": "shopping",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Shopping - Basic",
+      "description": "Market stalls, souvenirs, dates, and asking the price.",
+      "adventureIds": [
+        "order-dinner"
+      ],
+      "unlockAfterAdventureIds": [
+        "order-dinner"
+      ],
+      "vocabularyGain": 14,
+      "estimatedMinutes": 5,
+      "capabilityId": "money",
+      "canNowDo": "Buy dates, perfume, and souvenirs with basic price questions.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "At the stall",
+          "scene": "food",
+          "vocabIds": [
+            "market",
+            "shop",
+            "this-one",
+            "that-one",
+            "how-much",
+            "how-much-saudi"
+          ]
+        },
+        {
+          "title": "Umrah souvenirs",
+          "vocabIds": [
+            "dates",
+            "perfume",
+            "prayer-beads",
+            "souvenir",
+            "ihram"
+          ]
+        },
+        {
+          "title": "Size & price",
+          "vocabIds": [
+            "size",
+            "big",
+            "small",
+            "expensive",
+            "cheap"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colors-basic",
+      "topicId": "colors",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Colors - Basic",
+      "description": "Red, blue, green, white, black — the colors you meet first.",
+      "adventureIds": [
+        "taxi-hotel",
+        "find-haram"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 10,
+      "estimatedMinutes": 4,
+      "capabilityId": "navigation",
+      "canNowDo": "Name basic colors in Arabic.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "On the road",
+          "intro": "Signs, taxi colors, and abaya colors.",
+          "scene": "street",
+          "vocabIds": [
+            "color-red",
+            "color-green",
+            "color-white",
+            "color-black",
+            "color-yellow"
+          ]
+        },
+        {
+          "title": "More common colors",
+          "vocabIds": [
+            "color-blue",
+            "color-brown",
+            "color-gray"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colors-extended",
+      "topicId": "colors",
+      "level": 2,
+      "levelName": "More",
+      "title": "Colors - More",
+      "description": "Light, dark, and mixed shades for richer descriptions.",
+      "adventureIds": [
+        "taxi-hotel",
+        "find-haram"
+      ],
+      "unlockAfterAdventureIds": [
+        "colors-basic"
+      ],
+      "vocabularyGain": 12,
+      "estimatedMinutes": 5,
+      "capabilityId": "navigation",
+      "canNowDo": "Describe colors with more nuance.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Light and dark",
+          "intro": "Describe shades when shopping.",
+          "scene": "food",
+          "vocabIds": [
+            "color-light",
+            "color-dark",
+            "color-gold",
+            "color-white",
+            "color-black"
+          ]
+        },
+        {
+          "title": "Describe something",
+          "intro": "Light blue bag, dark green sign.",
+          "vocabIds": [
+            "color-blue",
+            "color-green",
+            "color-brown",
+            "color-gray",
+            "color-red"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clothes-basic",
+      "topicId": "clothes",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Clothes & ihram - Basic",
+      "description": "Ihram, sandals, abaya, and asking for a size.",
+      "adventureIds": [
+        "airport-arrival"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 10,
+      "estimatedMinutes": 4,
+      "capabilityId": "haram",
+      "canNowDo": "Name ihram, sandals, and ask for a size when buying clothes.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Ihram & footwear",
+          "scene": "food",
+          "vocabIds": [
+            "ihram",
+            "sandals",
+            "belt-bag",
+            "abaya",
+            "headscarf"
+          ]
+        },
+        {
+          "title": "Shopping for fit",
+          "vocabIds": [
+            "size",
+            "big",
+            "small",
+            "try-on",
+            "how-much-saudi"
+          ]
+        },
+        {
+          "title": "Care",
+          "vocabIds": [
+            "laundry",
+            "clean",
+            "towel"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "time-basic",
+      "topicId": "time",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Time - Basic",
+      "description": "Now, today, tomorrow, and how many minutes.",
+      "adventureIds": [
+        "hajj-bus",
+        "taxi-hotel"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 12,
+      "estimatedMinutes": 5,
+      "capabilityId": "time",
+      "canNowDo": "Understand now, today, tomorrow, and simple wait times.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Right now",
+          "scene": "numbers",
+          "vocabIds": [
+            "now",
+            "today",
+            "tomorrow",
+            "when"
+          ]
+        },
+        {
+          "title": "How long",
+          "vocabIds": [
+            "hour",
+            "minute",
+            "half-hour",
+            "how-many-minutes",
+            "after",
+            "before"
+          ]
+        },
+        {
+          "title": "Day parts",
+          "vocabIds": [
+            "morning",
+            "evening",
+            "wait"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family-basic",
+      "topicId": "family",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Family - Basic",
+      "description": "My family, my group, and who you are looking for.",
+      "adventureIds": [
+        "lost-group"
+      ],
+      "unlockAfterAdventureIds": [
+        "lost-group"
+      ],
+      "vocabularyGain": 12,
+      "estimatedMinutes": 5,
+      "capabilityId": "family",
+      "canNowDo": "Say who you are looking for when separated from your group.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Your group",
+          "scene": "lost",
+          "vocabIds": [
+            "my-family",
+            "my-group",
+            "my-husband",
+            "my-wife",
+            "my-son",
+            "my-daughter"
+          ]
+        },
+        {
+          "title": "Looking for someone",
+          "vocabIds": [
+            "looking-for",
+            "child",
+            "phone",
+            "gate",
+            "hotel"
+          ]
+        },
+        {
+          "title": "If you are lost",
+          "vocabIds": [
+            "i-am-lost-m",
+            "i-am-lost-f",
+            "help-me",
+            "where-is"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "family-more",
+      "topicId": "family",
+      "level": 2,
+      "levelName": "More",
+      "title": "Family - More",
+      "description": "Father, mother, brother, sister, and extended family.",
+      "adventureIds": [
+        "lost-group"
+      ],
+      "unlockAfterAdventureIds": [
+        "family-basic"
+      ],
+      "vocabularyGain": 12,
+      "estimatedMinutes": 5,
+      "capabilityId": "family",
+      "canNowDo": "Name close and extended family members.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Close family",
+          "scene": "lost",
+          "vocabIds": [
+            "father",
+            "mother",
+            "brother",
+            "sister",
+            "son",
+            "daughter"
+          ]
+        },
+        {
+          "title": "Extended",
+          "vocabIds": [
+            "grandfather",
+            "uncle",
+            "children",
+            "families"
+          ]
+        },
+        {
+          "title": "Describing your group",
+          "vocabIds": [
+            "my-family",
+            "my-group",
+            "with",
+            "here",
+            "there"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haram-basic",
+      "topicId": "haram",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Masjid al-Haram - Basic",
+      "description": "Ka'bah, Zamzam, Safa, Marwah, and finding your way.",
+      "adventureIds": [
+        "find-haram",
+        "enter-haram",
+        "begin-tawaf",
+        "find-zamzam",
+        "complete-sai"
+      ],
+      "unlockAfterAdventureIds": [
+        "find-haram"
+      ],
+      "vocabularyGain": 16,
+      "estimatedMinutes": 6,
+      "capabilityId": "haram",
+      "canNowDo": "Name key places inside Masjid al-Haram and ask where they are.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "The building",
+          "scene": "tawaf",
+          "vocabIds": [
+            "haram",
+            "kaaba",
+            "mataf",
+            "courtyard",
+            "gate",
+            "entrance"
+          ]
+        },
+        {
+          "title": "Ritual places",
+          "intro": "Words you hear — not a fiqh lesson.",
+          "scene": "tawaf",
+          "vocabIds": [
+            "tawaf",
+            "circuit",
+            "black-stone",
+            "safa",
+            "marwah",
+            "masaa",
+            "sai"
+          ]
+        },
+        {
+          "title": "Finding things",
+          "scene": "zamzam",
+          "vocabIds": [
+            "zamzam",
+            "water",
+            "cup",
+            "drinking-area",
+            "where-is",
+            "where-is-saudi"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "haram-more",
+      "topicId": "haram",
+      "level": 2,
+      "levelName": "More",
+      "title": "Masjid al-Haram - More",
+      "description": "Crowd instructions, wudu, and floors inside the Haram.",
+      "adventureIds": [
+        "enter-haram",
+        "begin-tawaf"
+      ],
+      "unlockAfterAdventureIds": [
+        "haram-basic"
+      ],
+      "vocabularyGain": 14,
+      "estimatedMinutes": 5,
+      "capabilityId": "haram",
+      "canNowDo": "Understand crowd instructions and facilities in the Haram.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Crowd instructions",
+          "scene": "crowd",
+          "vocabIds": [
+            "walk",
+            "wait",
+            "stop",
+            "enter",
+            "exit-cmd",
+            "men",
+            "women",
+            "families"
+          ]
+        },
+        {
+          "title": "Prayer & wudu",
+          "vocabIds": [
+            "prayer",
+            "rakah",
+            "wudu",
+            "open",
+            "closed",
+            "prohibited"
+          ]
+        },
+        {
+          "title": "Floors & directions",
+          "vocabIds": [
+            "up",
+            "down",
+            "floor",
+            "this-way",
+            "near",
+            "far"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ritual-basic",
+      "topicId": "ritual",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Umrah actions - Basic",
+      "description": "Tawaf, Sa'i, ihram, and movement words — language only.",
+      "adventureIds": [
+        "begin-tawaf",
+        "complete-sai"
+      ],
+      "unlockAfterAdventureIds": [
+        "begin-tawaf"
+      ],
+      "vocabularyGain": 12,
+      "estimatedMinutes": 5,
+      "capabilityId": "haram",
+      "canNowDo": "Recognize words for Umrah stages and common movement instructions.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Stages",
+          "intro": "One word per stage — language only.",
+          "scene": "tawaf",
+          "vocabIds": [
+            "ihram",
+            "tawaf",
+            "sai",
+            "talbiyah",
+            "wudu",
+            "prayer"
+          ]
+        },
+        {
+          "title": "Movement",
+          "scene": "sai",
+          "vocabIds": [
+            "walk",
+            "start",
+            "finished",
+            "go-back",
+            "circuit",
+            "faster"
+          ]
+        },
+        {
+          "title": "States",
+          "vocabIds": [
+            "open",
+            "closed",
+            "wait",
+            "enter",
+            "prohibited"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nabawi-basic",
+      "topicId": "nabawi",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Masjid an-Nabawi - Basic",
+      "description": "Masjid an-Nabawi, Green Dome, and asking the way in Madinah.",
+      "adventureIds": [
+        "day-madinah"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 10,
+      "estimatedMinutes": 5,
+      "capabilityId": "haram",
+      "canNowDo": "Ask for Masjid an-Nabawi and recognize key place names in Madinah.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "The mosque",
+          "scene": "madinah",
+          "vocabIds": [
+            "nabawi",
+            "madinah",
+            "green-dome",
+            "courtyard",
+            "gate",
+            "entrance"
+          ]
+        },
+        {
+          "title": "Asking the way",
+          "vocabIds": [
+            "prophet-mosque-q",
+            "where-is",
+            "where-is-saudi",
+            "near",
+            "far"
+          ]
+        },
+        {
+          "title": "Inside",
+          "intro": "Word recognition only.",
+          "vocabIds": [
+            "rawdah",
+            "prayer",
+            "wudu",
+            "men",
+            "women"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "barber-basic",
+      "topicId": "barber",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Barber - Basic",
+      "description": "Shave, trim, a little, and paying at the barber.",
+      "adventureIds": [
+        "barber"
+      ],
+      "unlockAfterAdventureIds": [
+        "barber"
+      ],
+      "vocabularyGain": 10,
+      "estimatedMinutes": 4,
+      "capabilityId": "haram",
+      "canNowDo": "Ask for a full shave or a trim and say only a little.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "What you want",
+          "scene": "barber",
+          "vocabIds": [
+            "shave",
+            "trim",
+            "complete-cut",
+            "hair",
+            "clippers",
+            "a-little",
+            "only"
+          ]
+        },
+        {
+          "title": "Paying",
+          "vocabIds": [
+            "how-much",
+            "how-much-saudi",
+            "please",
+            "the-bill"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health-basic",
+      "topicId": "health",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Medicine & health - Basic",
+      "description": "Sick, pharmacy, medicine, and it hurts.",
+      "adventureIds": [
+        "something-wrong"
+      ],
+      "unlockAfterAdventureIds": [
+        "something-wrong"
+      ],
+      "vocabularyGain": 12,
+      "estimatedMinutes": 5,
+      "capabilityId": "health",
+      "canNowDo": "Say you feel sick, find a pharmacy, and ask for medicine.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "How you feel",
+          "scene": "emergency",
+          "vocabIds": [
+            "sick",
+            "tired",
+            "it-hurts",
+            "fever",
+            "thirsty"
+          ]
+        },
+        {
+          "title": "Getting help",
+          "vocabIds": [
+            "pharmacy",
+            "doctor",
+            "hospital",
+            "help",
+            "help-me"
+          ]
+        },
+        {
+          "title": "Medicine",
+          "scene": "emergency",
+          "vocabIds": [
+            "medicine",
+            "water",
+            "allergy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "body-basic",
+      "topicId": "body",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Body parts - Basic",
+      "description": "Head, hand, foot, stomach — and it hurts here.",
+      "adventureIds": [
+        "barber",
+        "something-wrong"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 10,
+      "estimatedMinutes": 4,
+      "capabilityId": "health",
+      "canNowDo": "Point to where it hurts and name basic body parts.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Head & face",
+          "vocabIds": [
+            "head",
+            "hair",
+            "eye",
+            "ear",
+            "throat"
+          ]
+        },
+        {
+          "title": "Torso & limbs",
+          "vocabIds": [
+            "hand",
+            "chest",
+            "stomach",
+            "back",
+            "foot",
+            "leg"
+          ]
+        },
+        {
+          "title": "It hurts here",
+          "vocabIds": [
+            "it-hurts",
+            "here",
+            "doctor",
+            "pharmacy"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "actions-basic",
+      "topicId": "actions",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Actions - Basic",
+      "description": "Walk, wait, stop, enter — sorted by situation.",
+      "adventureIds": [
+        "enter-haram",
+        "complete-sai",
+        "taxi-hotel"
+      ],
+      "unlockAfterAdventureIds": [
+        "enter-haram"
+      ],
+      "vocabularyGain": 14,
+      "estimatedMinutes": 5,
+      "capabilityId": "navigation",
+      "canNowDo": "Recognize movement, waiting, and permission instructions.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Movement",
+          "intro": "Instructions to keep moving.",
+          "scene": "crowd",
+          "vocabIds": [
+            "walk",
+            "come",
+            "enter",
+            "exit-cmd",
+            "go-back",
+            "faster"
+          ]
+        },
+        {
+          "title": "Waiting & stopping",
+          "vocabIds": [
+            "wait",
+            "stop",
+            "start",
+            "finished"
+          ]
+        },
+        {
+          "title": "Permission & signs",
+          "vocabIds": [
+            "prohibited",
+            "open",
+            "closed",
+            "this-way",
+            "toward"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adjectives-basic",
+      "topicId": "adjectives",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Adjectives - Basic",
+      "description": "Big, small, clean, broken, hot, cold.",
+      "adventureIds": [
+        "taxi-hotel",
+        "order-dinner"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 10,
+      "estimatedMinutes": 4,
+      "capabilityId": "navigation",
+      "canNowDo": "Describe size, temperature, and condition when shopping or at the hotel.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Size",
+          "vocabIds": [
+            "big",
+            "small",
+            "heavy",
+            "light-weight"
+          ]
+        },
+        {
+          "title": "Condition",
+          "vocabIds": [
+            "new",
+            "old",
+            "clean",
+            "broken"
+          ]
+        },
+        {
+          "title": "Comfort",
+          "vocabIds": [
+            "hot",
+            "cold",
+            "near",
+            "far",
+            "tired"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nature-basic",
+      "topicId": "nature",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Heat & comfort - Basic",
+      "description": "Sun, heat, shade, and asking for water outdoors.",
+      "adventureIds": [
+        "hajj-bus",
+        "something-wrong"
+      ],
+      "unlockAfterAdventureIds": [],
+      "vocabularyGain": 8,
+      "estimatedMinutes": 4,
+      "capabilityId": "health",
+      "canNowDo": "Ask for water and shade when waiting outdoors.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Outdoors",
+          "scene": "bus",
+          "vocabIds": [
+            "sun",
+            "hot",
+            "sand",
+            "wind",
+            "shade"
+          ]
+        },
+        {
+          "title": "How you feel",
+          "vocabIds": [
+            "tired",
+            "thirsty",
+            "water",
+            "water-saudi",
+            "please"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "hajj-places-basic",
+      "topicId": "hajj",
+      "level": 1,
+      "levelName": "Basic",
+      "title": "Hajj places - Basic",
+      "description": "Mina, Arafat, Muzdalifah, Jamarat, and Hajj buses.",
+      "adventureIds": [
+        "hajj-bus"
+      ],
+      "unlockAfterAdventureIds": [
+        "hajj-bus"
+      ],
+      "vocabularyGain": 14,
+      "estimatedMinutes": 6,
+      "capabilityId": "hajj-locations",
+      "canNowDo": "Name Mina, Arafat, Muzdalifah, and Jamarat on a day-by-day map.",
+      "playable": true,
+      "groups": [
+        {
+          "title": "Places",
+          "scene": "bus",
+          "vocabIds": [
+            "mina",
+            "arafat",
+            "muzdalifah",
+            "jamarat",
+            "makkah",
+            "camp",
+            "tent"
+          ]
+        },
+        {
+          "title": "Transport",
+          "vocabIds": [
+            "bus",
+            "seat",
+            "station",
+            "number",
+            "wait"
+          ]
+        },
+        {
+          "title": "Words you hear",
+          "intro": "Language only — not a fiqh lesson.",
+          "vocabIds": [
+            "throw-stones",
+            "day-of-arafah",
+            "walk",
+            "stop"
+          ]
+        }
+      ]
+    }
+  ]
+}

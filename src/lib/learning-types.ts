@@ -182,6 +182,14 @@ export type AdventureScene =
   | "emergency"
   | "airport"
   | "immigration"
+  | "hotel-lobby"
+  | "hotel-room"
+  | "market"
+  | "packing"
+  | "pharmacy"
+  | "haram-courtyard"
+  | "nabawi-courtyard"
+  | "clock"
 
 export type SceneFocus = "place" | "guard" | "plaque" | "doors" | "stairs"
 
@@ -225,7 +233,33 @@ export type AdventureRun = {
 }
 
 /** Topic bucket for the prep catalog, e.g. numbers, navigation, colors. */
-export type PrepTopicId = "numbers" | "navigation" | "food" | "colors"
+export type PrepTopicId =
+  | "numbers"
+  | "navigation"
+  | "food"
+  | "colors"
+  | "money"
+  | "hotel"
+  | "haram"
+  | "polite"
+  | "packing"
+  | "barber"
+  | "shopping"
+  | "health"
+  | "nabawi"
+  | "ritual"
+  | "time"
+  | "clothes"
+  | "body"
+  | "family"
+  | "adjectives"
+  | "geography"
+  | "nature"
+  | "actions"
+  | "transport"
+  | "airport"
+  | "room-service"
+  | "hajj"
 
 export type PrepTopic = {
   id: PrepTopicId

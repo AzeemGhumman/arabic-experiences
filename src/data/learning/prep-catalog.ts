@@ -57,6 +57,45 @@ export function buildPrepCatalog(completedSideMissionIds: string[]): PrepCatalog
     .filter((topic) => topic.sessions.length > 0)
 }
 
+export type PrepShelfId = "arrive" | "stay" | "worship" | "speak"
+
+export const prepShelves: { id: PrepShelfId; topicIds: PrepTopicId[] }[] = [
+  {
+    id: "arrive",
+    topicIds: ["packing", "airport", "transport", "navigation", "geography", "numbers", "polite"],
+  },
+  {
+    id: "stay",
+    topicIds: ["hotel", "room-service", "food", "money", "shopping", "time"],
+  },
+  {
+    id: "worship",
+    topicIds: ["haram", "ritual", "nabawi", "barber", "clothes", "hajj"],
+  },
+  {
+    id: "speak",
+    topicIds: ["family", "health", "body", "actions", "adjectives", "colors", "nature"],
+  },
+]
+
+export type PrepCatalogShelf = {
+  id: PrepShelfId
+  topics: PrepCatalogTopic[]
+}
+
+export function groupPrepCatalog(catalog: PrepCatalogTopic[]): PrepCatalogShelf[] {
+  const byId = new Map(catalog.map((topic) => [topic.topic.id, topic]))
+  return prepShelves
+    .map((shelf) => ({
+      id: shelf.id,
+      topics: shelf.topicIds.flatMap((id) => {
+        const topic = byId.get(id)
+        return topic ? [topic] : []
+      }),
+    }))
+    .filter((shelf) => shelf.topics.length > 0)
+}
+
 /** Adventures linked to a prep session. */
 export function getAdventuresForPrep(prepId: string) {
   const session = getSideMission(prepId)

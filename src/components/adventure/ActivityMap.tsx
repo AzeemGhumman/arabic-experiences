@@ -31,6 +31,7 @@ import {
   type ModuleStatus,
   type PathStage,
 } from "@/data/learning/mission-graph"
+import { HomeAboutButton } from "@/components/home/HomeAboutButton"
 import { useI18n } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
@@ -49,7 +50,6 @@ export function ActivityMap({
     return { stage, next, nodes, edges: edgesInStage(graph, stage, next) }
   })
   const hereId = currentModuleId(modules, completedIds)
-  const done = completedIds.filter((id) => graph.nodes.some((node) => node.id === id)).length
   const [expanded, setExpanded] = useState<Record<string, boolean>>({})
   const { t } = useI18n()
 
@@ -64,9 +64,12 @@ export function ActivityMap({
 
   return (
     <section className="overflow-hidden rounded-[1.75rem] border border-border pb-4">
-      <div className="flex items-baseline justify-between px-4 pt-4 pb-2">
-        <h2 className="font-display text-lg">{t("map.yourJourney")}</h2>
-        <span className="text-xs text-muted-foreground">{done}/{graph.nodes.length}</span>
+      <div className="px-4 pt-4 pb-2">
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="font-display text-lg">{t("map.yourJourney")}</h2>
+          <HomeAboutButton />
+        </div>
+        <p className="mt-1 text-sm leading-snug text-muted-foreground">{t("map.lede")}</p>
       </div>
       <div className="space-y-2.5 bg-muted/35 px-3 pt-2">
         {modules.map((mod) => {
@@ -114,7 +117,7 @@ function PathModule({
   const viewBox = `0 0 ${PATH_WIDTH} ${height}`
   const here = status === "here"
   const { t, stage: stageLabel, mission } = useI18n()
-  const [soonLabel, setSoonLabel] = useState<string | null>(null)
+  const [blocked, setBlocked] = useState<{ kind: "soon" | "locked"; label: string } | null>(null)
 
   return (
     <article
@@ -165,7 +168,7 @@ function PathModule({
           {nodes.map((node) => {
             const completed = completedIds.includes(node.id)
             const availability = missionAvailability(node.id, completedIds, node)
-            const canVisit = availability === "open" || availability === "locked" || availability === "done"
+            const canVisit = availability === "open" || availability === "done"
             const openPlace = availability === "open"
             const side = node.kind === "side"
             const point = localCenter(node, layout, stage)
@@ -193,7 +196,7 @@ function PathModule({
                         <Check className="size-3" strokeWidth={3} />
                       </span>
                     ) : null}
-                    {availability === "locked" ? (
+                    {availability === "locked" || availability === "coming-soon" ? (
                       <span className="absolute -end-0.5 -bottom-0.5 flex size-5 items-center justify-center rounded-full border-2 border-paper bg-secondary text-muted-foreground">
                         <Lock className="size-2.5" strokeWidth={2.5} />
                       </span>
@@ -239,8 +242,13 @@ function PathModule({
                 ) : (
                   <button
                     type="button"
-                    aria-label={`${label}, ${t("mission.comingSoonTitle")}`}
-                    onClick={() => setSoonLabel(label)}
+                    aria-label={`${label}, ${availability === "locked" ? t("common.locked") : t("mission.comingSoonTitle")}`}
+                    onClick={() =>
+                      setBlocked({
+                        kind: availability === "locked" ? "locked" : "soon",
+                        label,
+                      })
+                    }
                     className={cn(
                       "relative block -translate-x-1/2 cursor-pointer",
                       side ? "w-[4.5rem]" : "w-[5.75rem]",
@@ -255,11 +263,15 @@ function PathModule({
         </div>
       ) : null}
 
-      <Dialog open={Boolean(soonLabel)} onOpenChange={(open) => !open && setSoonLabel(null)}>
+      <Dialog open={Boolean(blocked)} onOpenChange={(open) => !open && setBlocked(null)}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>{t("mission.comingSoonTitle")}</DialogTitle>
-            <DialogDescription>{t("mission.comingSoonBody")}</DialogDescription>
+            <DialogTitle>
+              {blocked?.kind === "locked" ? t("common.locked") : t("mission.comingSoonTitle")}
+            </DialogTitle>
+            <DialogDescription>
+              {blocked?.kind === "locked" ? t("mission.lockedBody") : t("mission.comingSoonBody")}
+            </DialogDescription>
           </DialogHeader>
           <DialogClose asChild>
             <Button className="mt-4 w-full" variant="terracotta">

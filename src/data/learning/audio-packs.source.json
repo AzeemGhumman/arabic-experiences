@@ -2,23 +2,6 @@
   "voice": "ar-SA-HamedNeural",
   "register": "msa",
   "packs": {
-    "master-navigation": {
-      "kind": "prep",
-      "clips": {
-        "hotel": "فندق",
-        "please": "لو سمحت",
-        "stop-here": "وقف هنا",
-        "how-much": "كم؟",
-        "right": "يمين",
-        "left": "يسار",
-        "opposite": "مقابل",
-        "behind": "خلف",
-        "signal": "إشارة",
-        "continue-straight": "استمر مباشرةً",
-        "turn-right": "انعطف يمينًا",
-        "you-arrived": "لقد وصلت إلى وجهتك"
-      }
-    },
     "numbers-everywhere": {
       "kind": "prep",
       "clips": {
@@ -47,13 +30,609 @@
         "n20": "عشرون"
       }
     },
+    "numbers-to-100": {
+      "kind": "prep",
+      "clips": {
+        "n20": "عشرون",
+        "n30": "ثلاثون",
+        "n40": "أربعون",
+        "n50": "خمسون",
+        "n60": "ستون",
+        "n70": "سبعون",
+        "n80": "ثمانون",
+        "n90": "تسعون",
+        "n100": "مئة",
+        "n21": "واحد وعشرون",
+        "n35": "خمسة وثلاثون",
+        "n48": "ثمانية وأربعون",
+        "n72": "اثنان وسبعون",
+        "n99": "تسعة وتسعون",
+        "number": "رقم",
+        "gate": "باب",
+        "camp": "مخيم",
+        "room-number": "رقم"
+      }
+    },
+    "polite-basic": {
+      "kind": "prep",
+      "clips": {
+        "greeting": "السلام عليكم",
+        "greeting-response": "وعليكم السلام",
+        "peace-praise": "الحمد لله",
+        "please": "لو سمحت",
+        "thank-you": "شكراً",
+        "thank-you-much": "شكراً جزيلاً",
+        "welcome": "عفواً",
+        "sorry": "آسف",
+        "excuse-me": "عذراً",
+        "dont-understand": "لا أفهم",
+        "yes": "نعم",
+        "no": "لا"
+      }
+    },
+    "packing-basic": {
+      "kind": "prep",
+      "clips": {
+        "passport": "جواز سفر",
+        "visa": "تأشيرة",
+        "copy-passport": "نسخة جواز",
+        "riyal": "ريال",
+        "card": "بطاقة",
+        "ihram": "إحرام",
+        "sandals": "نعال",
+        "belt-bag": "حقيبة خصر",
+        "abaya": "عباءة",
+        "headscarf": "طرحة",
+        "medicine": "دواء",
+        "sunscreen": "واقي شمس",
+        "towel": "منشفة",
+        "toothbrush": "فرشاة أسنان",
+        "charger": "شاحن",
+        "umbrella": "مظلة",
+        "snacks": "وجبات خفيفة"
+      }
+    },
+    "master-navigation": {
+      "kind": "prep",
+      "clips": {
+        "hotel": "فندق",
+        "please": "لو سمحت",
+        "stop-here": "وقف هنا",
+        "how-much": "كم؟",
+        "right": "يمين",
+        "left": "يسار",
+        "continue-straight": "استمر مباشرةً",
+        "turn-right": "انعطف يمينًا",
+        "you-arrived": "لقد وصلت إلى وجهتك",
+        "opposite": "مقابل",
+        "behind": "خلف",
+        "signal": "إشارة"
+      }
+    },
+    "navigation-gps": {
+      "kind": "prep",
+      "clips": {
+        "turn-right": "انعطف يمينًا",
+        "turn-left": "انعطف يسارًا",
+        "continue-straight": "استمر مباشرةً",
+        "after-meters": "بعد مائة متر",
+        "you-arrived": "لقد وصلت إلى وجهتك",
+        "second-left": "خذ ثاني يسار",
+        "signal": "إشارة",
+        "bridge": "جسر",
+        "intersection": "تقاطع",
+        "opposite": "مقابل",
+        "behind": "خلف"
+      }
+    },
+    "transport-basic": {
+      "kind": "prep",
+      "clips": {
+        "taxi": "تاكسي",
+        "bus": "باص",
+        "car": "سيارة",
+        "seat": "مقعد",
+        "station": "محطة",
+        "airport": "المطار",
+        "train-station": "محطة القطار",
+        "stop-here": "وقف هنا",
+        "toward": "إلى",
+        "here": "هنا",
+        "there": "هناك",
+        "please": "لو سمحت"
+      }
+    },
+    "airport-basic": {
+      "kind": "prep",
+      "clips": {
+        "passport": "جواز سفر",
+        "officer": "موظف",
+        "window-counter": "شباك",
+        "wait": "انتظر",
+        "please": "لو سمحت",
+        "bag": "شنطة",
+        "exit-sign": "خروج",
+        "taxi": "تاكسي",
+        "where-is": "أين الباب؟",
+        "airport": "المطار",
+        "hotel": "فندق",
+        "makkah": "مكة",
+        "madinah": "المدينة"
+      }
+    },
+    "geography-basic": {
+      "kind": "prep",
+      "clips": {
+        "makkah": "مكة",
+        "madinah": "المدينة",
+        "jeddah": "جدة",
+        "holy-land": "الأراضي المقدسة",
+        "airport": "المطار",
+        "taxi": "تاكسي",
+        "bus": "باص",
+        "toward": "إلى"
+      }
+    },
+    "hotel-basic": {
+      "kind": "prep",
+      "clips": {
+        "hotel": "فندق",
+        "reception": "استقبال",
+        "room": "غرفة",
+        "room-number": "رقم",
+        "floor": "طابق",
+        "elevator": "مصعد",
+        "key": "مفتاح",
+        "bathroom": "حمام",
+        "bed": "سرير",
+        "ac": "مكيف",
+        "luggage": "أمتعة",
+        "where-is": "أين الباب؟",
+        "please": "لو سمحت",
+        "here": "هنا",
+        "there": "هناك"
+      }
+    },
+    "room-service-basic": {
+      "kind": "prep",
+      "clips": {
+        "towel": "منشفة",
+        "clean": "نظيف",
+        "please": "لو سمحت",
+        "i-want": "أريد",
+        "i-want-saudi": "أبغى",
+        "broken": "معطل",
+        "ac": "مكيف",
+        "bathroom": "حمام",
+        "help": "مساعدة",
+        "help-me": "ساعدني",
+        "here": "هنا",
+        "there": "هناك",
+        "room": "غرفة",
+        "floor": "طابق"
+      }
+    },
+    "money-basic": {
+      "kind": "prep",
+      "clips": {
+        "how-much": "كم؟",
+        "how-much-price": "كم السعر؟",
+        "how-much-saudi": "بكم؟",
+        "riyal": "ريال",
+        "this-one": "هذا",
+        "that-one": "ذاك",
+        "expensive": "غالي",
+        "cheap": "رخيص",
+        "too-expensive": "غالي جداً",
+        "cash": "نقد",
+        "card": "بطاقة",
+        "the-bill": "الحساب، لو سمحت",
+        "please": "لو سمحت",
+        "change-money": "الباقي"
+      }
+    },
+    "explore-food": {
+      "kind": "prep",
+      "clips": {
+        "without": "بدون",
+        "with": "مع",
+        "spicy": "حار",
+        "hot": "حار",
+        "cold": "بارد",
+        "juice": "عصير",
+        "vegetables": "خضار",
+        "plate": "طبق",
+        "the-bill": "الحساب، لو سمحت"
+      }
+    },
+    "food-menu": {
+      "kind": "prep",
+      "clips": {
+        "chicken": "دجاج",
+        "meat": "لحم",
+        "rice": "أرز",
+        "bread": "خبز",
+        "vegetables": "خضار",
+        "fruit": "فاكهة",
+        "water": "ماء",
+        "water-saudi": "موية",
+        "tea": "شاي",
+        "coffee": "قهوة",
+        "juice": "عصير",
+        "plate": "طبق",
+        "cup": "كوب",
+        "spoon": "ملعقة",
+        "fork": "شوكة",
+        "i-want": "أريد",
+        "i-want-saudi": "أبغى",
+        "please": "لو سمحت",
+        "the-bill": "الحساب، لو سمحت"
+      }
+    },
+    "shopping-basic": {
+      "kind": "prep",
+      "clips": {
+        "market": "سوق",
+        "shop": "محل",
+        "this-one": "هذا",
+        "that-one": "ذاك",
+        "how-much": "كم؟",
+        "how-much-saudi": "بكم؟",
+        "dates": "تمر",
+        "perfume": "عطر",
+        "prayer-beads": "سبحة",
+        "souvenir": "تذكار",
+        "ihram": "إحرام",
+        "size": "مقاس",
+        "big": "كبير",
+        "small": "صغير",
+        "expensive": "غالي",
+        "cheap": "رخيص"
+      }
+    },
+    "colors-basic": {
+      "kind": "prep",
+      "clips": {
+        "color-red": "أحمر",
+        "color-green": "أخضر",
+        "color-white": "أبيض",
+        "color-black": "أسود",
+        "color-yellow": "أصفر",
+        "color-blue": "أزرق",
+        "color-brown": "بني",
+        "color-gray": "رمادي"
+      }
+    },
+    "colors-extended": {
+      "kind": "prep",
+      "clips": {
+        "color-light": "فاتح",
+        "color-dark": "غامق",
+        "color-gold": "ذهبي",
+        "color-white": "أبيض",
+        "color-black": "أسود",
+        "color-blue": "أزرق",
+        "color-green": "أخضر",
+        "color-brown": "بني",
+        "color-gray": "رمادي",
+        "color-red": "أحمر"
+      }
+    },
+    "clothes-basic": {
+      "kind": "prep",
+      "clips": {
+        "ihram": "إحرام",
+        "sandals": "نعال",
+        "belt-bag": "حقيبة خصر",
+        "abaya": "عباءة",
+        "headscarf": "طرحة",
+        "size": "مقاس",
+        "big": "كبير",
+        "small": "صغير",
+        "try-on": "أجرب",
+        "how-much-saudi": "بكم؟",
+        "laundry": "مغسلة",
+        "clean": "نظيف",
+        "towel": "منشفة"
+      }
+    },
+    "time-basic": {
+      "kind": "prep",
+      "clips": {
+        "now": "الآن",
+        "today": "اليوم",
+        "tomorrow": "غداً",
+        "when": "متى؟",
+        "hour": "ساعة",
+        "minute": "دقيقة",
+        "half-hour": "نصف ساعة",
+        "how-many-minutes": "كم دقيقة؟",
+        "after": "بعد",
+        "before": "قبل",
+        "morning": "صباح",
+        "evening": "مساء",
+        "wait": "انتظر"
+      }
+    },
+    "family-basic": {
+      "kind": "prep",
+      "clips": {
+        "my-family": "عائلتي",
+        "my-group": "مجموعتي",
+        "my-husband": "زوجي",
+        "my-wife": "زوجتي",
+        "my-son": "ابني",
+        "my-daughter": "ابنتي",
+        "looking-for": "أبحث عن",
+        "child": "طفل",
+        "phone": "هاتف",
+        "gate": "باب",
+        "hotel": "فندق",
+        "i-am-lost-m": "أنا ضايع",
+        "i-am-lost-f": "أنا ضايعة",
+        "help-me": "ساعدني",
+        "where-is": "أين الباب؟"
+      }
+    },
+    "family-more": {
+      "kind": "prep",
+      "clips": {
+        "father": "أب",
+        "mother": "أم",
+        "brother": "أخ",
+        "sister": "أخت",
+        "son": "ابن",
+        "daughter": "ابنة",
+        "grandfather": "جد",
+        "uncle": "عم",
+        "children": "أطفال",
+        "families": "عائلات",
+        "my-family": "عائلتي",
+        "my-group": "مجموعتي",
+        "with": "مع",
+        "here": "هنا",
+        "there": "هناك"
+      }
+    },
+    "haram-basic": {
+      "kind": "prep",
+      "clips": {
+        "haram": "الحرم",
+        "kaaba": "الكعبة",
+        "mataf": "المطاف",
+        "courtyard": "ساحة",
+        "gate": "باب",
+        "entrance": "مدخل",
+        "tawaf": "طواف",
+        "circuit": "شوط",
+        "black-stone": "الحجر الأسود",
+        "safa": "الصفا",
+        "marwah": "المروة",
+        "masaa": "المسعى",
+        "sai": "سعي",
+        "zamzam": "زمزم",
+        "water": "ماء",
+        "cup": "كوب",
+        "drinking-area": "مكان الشرب",
+        "where-is": "أين الباب؟",
+        "where-is-saudi": "وين الباب؟"
+      }
+    },
+    "haram-more": {
+      "kind": "prep",
+      "clips": {
+        "walk": "امشِ",
+        "wait": "انتظر",
+        "stop": "وقف",
+        "enter": "ادخل",
+        "exit-cmd": "اخرج",
+        "men": "رجال",
+        "women": "نساء",
+        "families": "عائلات",
+        "prayer": "صلاة",
+        "rakah": "ركعة",
+        "wudu": "وضوء",
+        "open": "مفتوح",
+        "closed": "مغلق",
+        "prohibited": "ممنوع",
+        "up": "فوق",
+        "down": "تحت",
+        "floor": "طابق",
+        "this-way": "من هنا",
+        "near": "قريب",
+        "far": "بعيد"
+      }
+    },
+    "ritual-basic": {
+      "kind": "prep",
+      "clips": {
+        "ihram": "إحرام",
+        "tawaf": "طواف",
+        "sai": "سعي",
+        "talbiyah": "تلبية",
+        "wudu": "وضوء",
+        "prayer": "صلاة",
+        "walk": "امشِ",
+        "start": "ابدأ",
+        "finished": "انتهى",
+        "go-back": "ارجع",
+        "circuit": "شوط",
+        "faster": "أسرع",
+        "open": "مفتوح",
+        "closed": "مغلق",
+        "wait": "انتظر",
+        "enter": "ادخل",
+        "prohibited": "ممنوع"
+      }
+    },
+    "nabawi-basic": {
+      "kind": "prep",
+      "clips": {
+        "nabawi": "المسجد النبوي",
+        "madinah": "المدينة",
+        "green-dome": "القبة الخضراء",
+        "courtyard": "ساحة",
+        "gate": "باب",
+        "entrance": "مدخل",
+        "prophet-mosque-q": "أين المسجد النبوي؟",
+        "where-is": "أين الباب؟",
+        "where-is-saudi": "وين الباب؟",
+        "near": "قريب",
+        "far": "بعيد",
+        "rawdah": "الروضة",
+        "prayer": "صلاة",
+        "wudu": "وضوء",
+        "men": "رجال",
+        "women": "نساء"
+      }
+    },
+    "barber-basic": {
+      "kind": "prep",
+      "clips": {
+        "shave": "حلق",
+        "trim": "تقصير",
+        "complete-cut": "كامل",
+        "hair": "شعر",
+        "clippers": "ماكينة",
+        "a-little": "قليل",
+        "only": "فقط",
+        "how-much": "كم؟",
+        "how-much-saudi": "بكم؟",
+        "please": "لو سمحت",
+        "the-bill": "الحساب، لو سمحت"
+      }
+    },
+    "health-basic": {
+      "kind": "prep",
+      "clips": {
+        "sick": "مريض",
+        "tired": "تعبان",
+        "it-hurts": "يؤلمني",
+        "fever": "حمى",
+        "thirsty": "عطشان",
+        "pharmacy": "صيدلية",
+        "doctor": "طبيب",
+        "hospital": "مستشفى",
+        "help": "مساعدة",
+        "help-me": "ساعدني",
+        "medicine": "دواء",
+        "water": "ماء",
+        "allergy": "حساسية"
+      }
+    },
+    "body-basic": {
+      "kind": "prep",
+      "clips": {
+        "head": "رأس",
+        "hair": "شعر",
+        "eye": "عين",
+        "ear": "أذن",
+        "throat": "حلق",
+        "hand": "يد",
+        "chest": "صدر",
+        "stomach": "بطن",
+        "back": "ظهر",
+        "foot": "قدم",
+        "leg": "رجل",
+        "it-hurts": "يؤلمني",
+        "here": "هنا",
+        "doctor": "طبيب",
+        "pharmacy": "صيدلية"
+      }
+    },
+    "actions-basic": {
+      "kind": "prep",
+      "clips": {
+        "walk": "امشِ",
+        "come": "تعال",
+        "enter": "ادخل",
+        "exit-cmd": "اخرج",
+        "go-back": "ارجع",
+        "faster": "أسرع",
+        "wait": "انتظر",
+        "stop": "وقف",
+        "start": "ابدأ",
+        "finished": "انتهى",
+        "prohibited": "ممنوع",
+        "open": "مفتوح",
+        "closed": "مغلق",
+        "this-way": "من هنا",
+        "toward": "إلى"
+      }
+    },
+    "adjectives-basic": {
+      "kind": "prep",
+      "clips": {
+        "big": "كبير",
+        "small": "صغير",
+        "heavy": "ثقيل",
+        "light-weight": "خفيف",
+        "new": "جديد",
+        "old": "قديم",
+        "clean": "نظيف",
+        "broken": "معطل",
+        "hot": "حار",
+        "cold": "بارد",
+        "near": "قريب",
+        "far": "بعيد",
+        "tired": "تعبان"
+      }
+    },
+    "nature-basic": {
+      "kind": "prep",
+      "clips": {
+        "sun": "شمس",
+        "hot": "حار",
+        "sand": "رمل",
+        "wind": "ريح",
+        "shade": "ظل",
+        "tired": "تعبان",
+        "thirsty": "عطشان",
+        "water": "ماء",
+        "water-saudi": "موية",
+        "please": "لو سمحت"
+      }
+    },
+    "hajj-places-basic": {
+      "kind": "prep",
+      "clips": {
+        "mina": "منى",
+        "arafat": "عرفات",
+        "muzdalifah": "مزدلفة",
+        "jamarat": "الجمرات",
+        "makkah": "مكة",
+        "camp": "مخيم",
+        "tent": "خيمة",
+        "bus": "باص",
+        "seat": "مقعد",
+        "station": "محطة",
+        "number": "رقم",
+        "wait": "انتظر",
+        "throw-stones": "رمي",
+        "day-of-arafah": "يوم عرفة",
+        "walk": "امشِ",
+        "stop": "وقف"
+      }
+    },
+    "find-haram": {
+      "kind": "mission",
+      "clips": {
+        "straight": "على طول",
+        "right": "يمين"
+      }
+    },
+    "enter-haram": {
+      "kind": "mission",
+      "clips": {
+        "straight": "على طول"
+      }
+    },
     "taxi-hotel": {
       "kind": "mission",
       "clips": {
-        "right": "يمين",
         "left": "يسار",
         "gps-continue-straight": "استمر مباشرةً",
-        "gps-second-left": "بعد ٢٠٠ متر، خذ ثاني يسار",
+        "gps-second-left": "بعد مائة متر، خذ ثاني يسار",
         "gps-stop-opposite-hotel": "قف مقابل الفندق",
         "gps-arrived": "لقد وصلت إلى وجهتك",
         "decision-stop-here": "وقف هنا لو سمحت"

@@ -41,13 +41,17 @@ export function MissionPlacePage() {
       ? t("common.locked")
       : t("common.open")
 
-  if (availability === "coming-soon" && (node || adventure)) {
+  if ((availability === "coming-soon" || availability === "locked") && (node || adventure)) {
     return (
       <div className="space-y-5 pb-10">
         <BackButton />
         <div className="rounded-3xl border border-border bg-card px-5 py-10 text-center">
-          <p className="font-display text-2xl leading-tight">{t("mission.comingSoonTitle")}</p>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{t("mission.comingSoonBody")}</p>
+          <p className="font-display text-2xl leading-tight">
+            {availability === "locked" ? t("common.locked") : t("mission.comingSoonTitle")}
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+            {availability === "locked" ? t("mission.lockedBody") : t("mission.comingSoonBody")}
+          </p>
         </div>
       </div>
     )

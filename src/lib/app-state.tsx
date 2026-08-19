@@ -4,6 +4,8 @@ import { getJourney, isJourneyReleased, journeys } from "@/data/journeys"
 import { graphForJourney } from "@/data/learning/mission-graph"
 import type { CapabilityId } from "@/lib/learning-types"
 import type { AppState, Confidence, JourneyCategory, JourneyProgress } from "@/lib/storage"
+import type { VocabBookmark } from "@/lib/bookmarks"
+import { toggleBookmarkInList } from "@/lib/bookmarks"
 import {
   defaultAppState,
   emptyJourneyProgress,
@@ -21,8 +23,8 @@ type AppStateContextValue = {
   setShowTranslation: (value: boolean) => void
   discoverWord: (id: string) => void
   setConfidence: (id: string, confidence: Confidence) => void
-  toggleBookmark: (id: string) => void
-  setBookmarkedVocab: (ids: string[]) => void
+  toggleBookmark: (sessionId: string, wordId: string) => void
+  setBookmarkedVocab: (items: VocabBookmark[]) => void
   setPrepCompleted: (id: string, completed: boolean) => void
   completeScenario: (id: string) => void
   askRestaurantItem: (id: string) => void
@@ -38,6 +40,8 @@ type AppStateContextValue = {
     outcome: string
   }) => void
   deleteAllData: () => void
+  dismissMapIntro: () => void
+  setMockSignedIn: (value: boolean) => void
 }
 
 const AppStateContext = createContext<AppStateContextValue | null>(null)
@@ -136,24 +140,19 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
           })),
         )
       },
-      toggleBookmark: (id) => {
-        setState((current) =>
-          patchActiveProgress(current, (progress) => {
-            const bookmarked = progress.bookmarkedVocab.includes(id)
-            return {
-              ...progress,
-              bookmarkedVocab: bookmarked
-                ? progress.bookmarkedVocab.filter((item) => item !== id)
-                : [...progress.bookmarkedVocab, id],
-            }
-          }),
-        )
-      },
-      setBookmarkedVocab: (ids) => {
+      toggleBookmark: (sessionId, wordId) => {
         setState((current) =>
           patchActiveProgress(current, (progress) => ({
             ...progress,
-            bookmarkedVocab: [...new Set(ids)],
+            bookmarkedVocab: toggleBookmarkInList(progress.bookmarkedVocab, sessionId, wordId),
+          })),
+        )
+      },
+      setBookmarkedVocab: (items) => {
+        setState((current) =>
+          patchActiveProgress(current, (progress) => ({
+            ...progress,
+            bookmarkedVocab: items,
           })),
         )
       },
@@ -245,6 +244,16 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       },
       deleteAllData: () => {
         setState({ ...defaultAppState })
+      },
+      dismissMapIntro: () => {
+        setState((current) =>
+          current.mapIntroDismissed ? current : { ...current, mapIntroDismissed: true },
+        )
+      },
+      setMockSignedIn: (value) => {
+        setState((current) =>
+          current.mockSignedIn === value ? current : { ...current, mockSignedIn: value },
+        )
       },
     }),
     [state],

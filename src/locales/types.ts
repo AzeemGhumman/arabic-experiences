@@ -61,6 +61,7 @@ export type LanguagePack = {
       switchJourney: string
       playAgain: string
       backToMap: string
+      percentComplete: string
     }
     prep: {
       kicker: string
@@ -79,12 +80,38 @@ export type LanguagePack = {
       bookmarksPageTitle: string
       bookmarksPageBody: string
       saveBookmarks: string
+      shelves: Record<string, { title: string; body: string }>
       topics: Record<string, { title: string; body: string }>
     }
     onboarding: {
-      kicker: string
       title: string
+      subtitle: string
       body: string
+      cta: string
+    }
+    homeAbout: {
+      openHelp: string
+      about: string
+      dialogTitle: string
+      philosophyKicker: string
+      philosophyTitle: string
+      philosophyBody: string
+      tabsTitle: string
+      tabs: {
+        home: string
+        prep: string
+        progress: string
+        trip: string
+        profile: string
+      }
+      featuresTitle: string
+      features: {
+        missions: { title: string; body: string }
+        toolkit: { title: string; body: string }
+        listen: { title: string; body: string }
+        progress: { title: string; body: string }
+        journeys: { title: string; body: string }
+      }
     }
     profile: {
       kicker: string
@@ -144,6 +171,13 @@ export type LanguagePack = {
     map: {
       yourJourney: string
       youreIn: string
+      lede: string
+      howTitle: string
+      howMission: string
+      howPrep: string
+      howGuide: string
+      howDismiss: string
+      howStart: string
     }
     mission: {
       place: string
@@ -207,6 +241,14 @@ export type LanguagePack = {
       laterBody: string
       backToGuide: string
       disclaimer: string
+    }
+    auth: {
+      logIn: string
+      account: string
+      mockName: string
+      mockEmail: string
+      mockBody: string
+      logOut: string
     }
   }
   journeys: Record<JourneyCategory, JourneyStrings>
