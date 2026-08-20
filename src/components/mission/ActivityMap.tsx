@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Link } from "react-router-dom"
 import { Check, ChevronDown, Lock, Star } from "lucide-react"
 import { missionAvailability } from "@/data/learning/availability"
@@ -118,6 +118,37 @@ function PathModule({
   const here = status === "here"
   const { t, chapter: chapterLabel, mission } = useI18n()
   const [blocked, setBlocked] = useState<{ kind: "soon" | "locked"; label: string } | null>(null)
+  const [blockedDialogOpen, setBlockedDialogOpen] = useState(false)
+  const blockedCloseTimer = useRef<number | null>(null)
+
+  useEffect(() => {
+    return () => {
+      if (blockedCloseTimer.current !== null) {
+        window.clearTimeout(blockedCloseTimer.current)
+      }
+    }
+  }, [])
+
+  function showBlocked(payload: { kind: "soon" | "locked"; label: string }) {
+    if (blockedCloseTimer.current !== null) {
+      window.clearTimeout(blockedCloseTimer.current)
+      blockedCloseTimer.current = null
+    }
+    setBlocked(payload)
+    setBlockedDialogOpen(true)
+  }
+
+  function hideBlockedDialog() {
+    setBlockedDialogOpen(false)
+    if (blockedCloseTimer.current !== null) {
+      window.clearTimeout(blockedCloseTimer.current)
+    }
+    // Keep dialog copy until the close animation finishes so it doesn't flash "Coming soon".
+    blockedCloseTimer.current = window.setTimeout(() => {
+      setBlocked(null)
+      blockedCloseTimer.current = null
+    }, 200)
+  }
 
   return (
     <article
@@ -188,8 +219,8 @@ function PathModule({
                         availability === "done" && "border-sage",
                         availability === "open" && "border-terracotta",
                         availability === "open" && openPlace && !side && "animate-map-pulse",
-                        (availability === "locked" || availability === "coming-soon") &&
-                          "border-border/70 grayscale",
+                        availability === "locked" && "border-border/70 grayscale",
+                        availability === "coming-soon" && "border-border/70 opacity-60 grayscale",
                       )}
                     />
                     {availability === "done" ? (
@@ -197,7 +228,7 @@ function PathModule({
                         <Check className="size-3" strokeWidth={3} />
                       </span>
                     ) : null}
-                    {availability === "locked" || availability === "coming-soon" ? (
+                    {availability === "locked" ? (
                       <span className="absolute -end-0.5 -bottom-0.5 flex size-5 items-center justify-center rounded-full border-2 border-paper bg-secondary text-muted-foreground">
                         <Lock className="size-2.5" strokeWidth={2.5} />
                       </span>
@@ -245,7 +276,7 @@ function PathModule({
                     type="button"
                     aria-label={`${label}, ${availability === "locked" ? t("common.locked") : t("mission.comingSoonTitle")}`}
                     onClick={() =>
-                      setBlocked({
+                      showBlocked({
                         kind: availability === "locked" ? "locked" : "soon",
                         label,
                       })
@@ -264,7 +295,7 @@ function PathModule({
         </div>
       ) : null}
 
-      <Dialog open={Boolean(blocked)} onOpenChange={(open) => !open && setBlocked(null)}>
+      <Dialog open={blockedDialogOpen} onOpenChange={(open) => !open && hideBlockedDialog()}>
         <DialogContent>
           <DialogHeader>
             <DialogTitle>

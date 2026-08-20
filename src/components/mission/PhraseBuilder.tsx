@@ -1,6 +1,8 @@
 import { useRef, useState } from "react"
 import type { PointerEvent as ReactPointerEvent } from "react"
 import { Button } from "@/components/ui/button"
+import { shuffleAvoidingOrder } from "@/components/mission/MissionBits"
+import { useI18n } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
 type DragState = {
@@ -14,18 +16,23 @@ type DragState = {
   activated: boolean
 }
 
+type CheckState = "idle" | "wrong" | "correct"
+
 export function PhraseBuilder({
   prompt,
   tokens,
   correctOrder,
-  onContinue,
+  onSolved,
 }: {
-  prompt: string
+  prompt?: string
   tokens: string[]
   correctOrder: string[]
-  onContinue: () => void
+  onSolved: () => void
 }) {
+  const { t } = useI18n()
   const [built, setBuilt] = useState<string[]>([])
+  const [check, setCheck] = useState<CheckState>("idle")
+  const [pool] = useState(() => shuffleAvoidingOrder(tokens, correctOrder))
   const [draggingId, setDraggingId] = useState<string | null>(null)
   const [overTray, setOverTray] = useState(false)
   const trayRef = useRef<HTMLDivElement>(null)
@@ -35,9 +42,18 @@ export function PhraseBuilder({
   const overRef = useRef(false)
   const frameRef = useRef<number>(0)
 
-  const unused = remainingTokens(tokens, built)
-  const matches = built.join("|") === correctOrder.join("|")
+  const solved = check === "correct"
+  const unused = remainingTokens(pool, built)
   const complete = built.length === correctOrder.length
+
+  function updateBuilt(next: string[] | ((items: string[]) => string[])) {
+    if (solved) return
+    setBuilt((current) => {
+      const value = typeof next === "function" ? next(current) : next
+      return value
+    })
+    setCheck("idle")
+  }
 
   function placeGhost(x: number, y: number) {
     const ghost = ghostRef.current
@@ -51,6 +67,7 @@ export function PhraseBuilder({
     index: number,
     token: string,
   ) {
+    if (solved) return
     event.preventDefault()
     event.currentTarget.setPointerCapture(event.pointerId)
     dragRef.current = {
@@ -109,10 +126,10 @@ export function PhraseBuilder({
     cancelAnimationFrame(frameRef.current)
     const at = insertRef.current
     if (!current.moved) {
-      if (current.from === "pool") setBuilt((items) => [...items, current.token])
-      else setBuilt((items) => items.filter((_, index) => index !== current.index))
+      if (current.from === "pool") updateBuilt((items) => [...items, current.token])
+      else updateBuilt((items) => items.filter((_, index) => index !== current.index))
     } else if (at != null) {
-      setBuilt((items) => dropToken(items, current, at))
+      updateBuilt((items) => dropToken(items, current, at))
     }
     dragRef.current = null
     insertRef.current = null
@@ -123,9 +140,26 @@ export function PhraseBuilder({
     if (ghost) ghost.dataset.show = "false"
   }
 
+  function submit() {
+    if (!complete || solved) return
+    if (built.join("|") === correctOrder.join("|")) {
+      setCheck("correct")
+      onSolved()
+      return
+    }
+    setCheck("wrong")
+  }
+
+  function showAnswer() {
+    if (solved) return
+    setBuilt(correctOrder)
+    setCheck("correct")
+    onSolved()
+  }
+
   return (
     <div className="space-y-4">
-      <p className="text-sm text-muted-foreground">{prompt}</p>
+      {prompt ? <p className="text-sm text-muted-foreground">{prompt}</p> : null}
       <div className="relative">
         <div
           ref={trayRef}
@@ -133,7 +167,13 @@ export function PhraseBuilder({
           lang="ar"
           className={cn(
             "flex min-h-20 flex-wrap items-center justify-start gap-2 rounded-3xl border border-dashed bg-paper p-3 transition-colors",
-            overTray ? "border-sage bg-sage/10" : "border-border",
+            solved
+              ? "border-sage bg-sage/10"
+              : check === "wrong"
+                ? "border-terracotta/70 bg-terracotta/5"
+                : overTray
+                  ? "border-sage bg-sage/10"
+                  : "border-border",
           )}
         >
           {built.map((token, index) => (
@@ -142,6 +182,7 @@ export function PhraseBuilder({
               token={token}
               built
               dimmed={draggingId === `built-${index}`}
+              locked={solved}
               dataIndex={index}
               onPointerDown={(event) => startDrag(event, "built", index, token)}
               onPointerMove={moveDrag}
@@ -160,19 +201,21 @@ export function PhraseBuilder({
           </p>
         ) : null}
       </div>
-      <div dir="rtl" lang="ar" className="flex flex-wrap justify-start gap-2">
-        {unused.map((token, index) => (
-          <Chip
-            key={`pool-${token}-${index}`}
-            token={token}
-            dimmed={draggingId === `pool-${index}`}
-            onPointerDown={(event) => startDrag(event, "pool", index, token)}
-            onPointerMove={moveDrag}
-            onPointerUp={endDrag}
-            onPointerCancel={endDrag}
-          />
-        ))}
-      </div>
+      {!solved ? (
+        <div dir="rtl" lang="ar" className="flex flex-wrap justify-start gap-2">
+          {unused.map((token, index) => (
+            <Chip
+              key={`pool-${token}-${index}`}
+              token={token}
+              dimmed={draggingId === `pool-${index}`}
+              onPointerDown={(event) => startDrag(event, "pool", index, token)}
+              onPointerMove={moveDrag}
+              onPointerUp={endDrag}
+              onPointerCancel={endDrag}
+            />
+          ))}
+        </div>
+      ) : null}
       <div
         ref={ghostRef}
         data-show="false"
@@ -180,16 +223,27 @@ export function PhraseBuilder({
         lang="ar"
         className="arabic-text pointer-events-none fixed top-0 left-0 z-50 rounded-full bg-sage px-3 py-2 text-xl text-white shadow-lg will-change-transform data-[show=false]:hidden"
       />
-      <div className="flex gap-2">
-        <Button variant="outline" className="flex-1" onClick={() => setBuilt([])}>
-          Reset
-        </Button>
-        <Button className="flex-1" disabled={!complete || !matches} onClick={onContinue}>
-          Continue
-        </Button>
-      </div>
-      {complete && !matches ? (
-        <p className="text-sm text-muted-foreground">Not quite. Reorder the line so it reads right to left.</p>
+      {!solved ? (
+        <>
+          <div className="flex gap-2">
+            <Button variant="outline" className="flex-1" onClick={() => updateBuilt([])}>
+              {t("play.reset")}
+            </Button>
+            <Button className="flex-1" variant="terracotta" disabled={!complete} onClick={submit}>
+              {t("play.submit")}
+            </Button>
+          </div>
+          {check === "wrong" ? (
+            <p className="text-sm text-muted-foreground">{t("play.phraseNotQuite")}</p>
+          ) : null}
+          <button
+            type="button"
+            className="text-sm font-medium text-terracotta underline-offset-2 hover:underline"
+            onClick={showAnswer}
+          >
+            {t("play.showAnswer")}
+          </button>
+        </>
       ) : null}
     </div>
   )
@@ -199,6 +253,7 @@ function Chip({
   token,
   built,
   dimmed,
+  locked,
   dataIndex,
   onPointerDown,
   onPointerMove,
@@ -208,6 +263,7 @@ function Chip({
   token: string
   built?: boolean
   dimmed?: boolean
+  locked?: boolean
   dataIndex?: number
   onPointerDown: (event: ReactPointerEvent<HTMLButtonElement>) => void
   onPointerMove: (event: ReactPointerEvent<HTMLButtonElement>) => void
@@ -218,8 +274,10 @@ function Chip({
     <button
       type="button"
       data-built-index={dataIndex}
+      disabled={locked}
       className={cn(
-        "arabic-text touch-none cursor-grab rounded-full px-3 py-2 text-xl select-none active:cursor-grabbing",
+        "arabic-text touch-none rounded-full px-3 py-2 text-xl select-none",
+        locked ? "cursor-default" : "cursor-grab active:cursor-grabbing",
         built ? "bg-secondary" : "border border-border bg-card",
         dimmed && "opacity-40",
       )}

@@ -13,9 +13,11 @@ import {
 import { languageOptions } from "@/locales"
 import { useActiveJourney, useAppState } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
+import { useTabNavigation } from "@/lib/tab-navigation"
 import type { UiLanguage } from "@/lib/storage"
 
 export function ProfilePage() {
+  const { resetTabToRoot } = useTabNavigation()
   const { state, setLanguage, deleteAllData } = useAppState()
   const { t, journey: journeyCopy } = useI18n()
   const { journey, stats } = useActiveJourney()
@@ -99,6 +101,7 @@ export function ProfilePage() {
                 onClick={() => {
                   setConfirmDelete(false)
                   deleteAllData()
+                  resetTabToRoot("home")
                 }}
               >
                 {t("common.deleteEverything")}

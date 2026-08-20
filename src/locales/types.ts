@@ -183,6 +183,7 @@ export type LanguagePack = {
       place: string
       placeNotFound: string
       startMission: string
+      replayMission: string
       markDone: string
       studyFirst: string
       richerVocab: string
@@ -192,12 +193,39 @@ export type LanguagePack = {
       comingSoonBody: string
       comingSoonDismiss: string
       lockedBody: string
+      lessonsBeforeStart: string
+      lessonsBeforeStartBody: string
+      lessonsProgress: string
+      lessonsHeading: string
+      finishLessonsToStart: string
+      startMissionLockedTooltipLead: string
+      backToPlace: string
     }
     play: {
       mission: string
       study: string
       listen: string
       listenAgain: string
+      showArabicHint: string
+      showTranslationHint: string
+      howWouldYouRespond: string
+      listenToOptions: string
+      hiddenArabicOption: string
+      tryAnother: string
+      buildYourReply: string
+      submit: string
+      reset: string
+      showAnswer: string
+      phraseNotQuite: string
+      matchItems: string
+      dragMatchHint: string
+      emptySlot: string
+      resetWrong: string
+      matchNotQuite: string
+      matchWrongPair: string
+      leaveMissionTitle: string
+      leaveMissionBody: string
+      leaveMission: string
       continue: string
       noticeWords: string
       arrive: string

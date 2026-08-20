@@ -25,7 +25,6 @@ export function getPracticesForMission(missionId: string) {
       title: lesson.title,
       description: lesson.description,
       playable: lesson.playable,
-      minutes: lesson.estimatedMinutes,
       topicId: lesson.topicId,
       level: lesson.level,
     }))

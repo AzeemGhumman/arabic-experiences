@@ -13,6 +13,142 @@ function arabicOf(id: string) {
   return getLearningWord(id)?.arabic ?? id
 }
 
+/** MCQ option with spoken Arabic audio for immersive response mode. */
+function spokenOption(id: string, label: string, arabic: string, audioId = `opt-${id}`) {
+  return { id, label, arabic, audioId }
+}
+
+export function buildImmigration(ctx: MissionBuildContext): MissionRun {
+  const profile = pick(ctx.rand, [
+    { nameAr: "أزيم", countryAr: "باكستان", countryEn: "Pakistan" },
+    { nameAr: "فاطمة", countryAr: "الهند", countryEn: "India" },
+    { nameAr: "سارة", countryAr: "بريطانيا", countryEn: "Britain" },
+  ])
+
+  const companion = pick(ctx.rand, [
+    {
+      id: "family",
+      audioId: "with-whom",
+      officerArabic: "مع من أنت؟",
+      promptEnglish: "Who are you with?",
+      question: "How do you answer?",
+      correctId: "with-family",
+      feedback: "The officer notes your family and continues.",
+    },
+    {
+      id: "father",
+      audioId: "with-whom",
+      officerArabic: "مع من أنت؟",
+      promptEnglish: "Who are you with?",
+      question: "How do you answer?",
+      correctId: "with-father",
+      feedback: "The officer nods and moves on.",
+    },
+  ])
+
+  const vocabIds = uniqueIds([
+    "greeting",
+    "greeting-response",
+    "passport",
+    "thank-you",
+    "yes",
+    "no",
+    "my-family",
+    "please",
+    "bag",
+    "phone",
+    "ihram",
+    "sandals",
+    "charger",
+    "medicine",
+  ])
+
+  const steps: MissionStep[] = [
+    {
+      type: "context",
+      title: "Passport control",
+      body: "You have just landed in Saudi Arabia for Umrah. An immigration officer calls you forward to the desk.",
+      scene: "immigration",
+    },
+    {
+      type: "listen",
+      prompt: "The officer looks up and greets you.",
+      promptEnglish: "Peace be upon you",
+      question: "How would you respond?",
+      arabic: arabicOf("greeting"),
+      audioId: "greeting",
+      options: [
+        spokenOption("greeting-response", "And upon you peace", arabicOf("greeting-response")),
+        spokenOption("thank-you", "Thank you", arabicOf("thank-you")),
+        spokenOption("please", "Please", arabicOf("please")),
+      ],
+      correctId: "greeting-response",
+      feedback: "The officer nods and continues.",
+    },
+    {
+      type: "listen",
+      prompt: "The officer holds out his hand.",
+      promptEnglish: "Your passport, please",
+      question: "What does he want?",
+      arabic: "جواز السفر، من فضلك",
+      audioId: "passport-please",
+      options: [
+        spokenOption("passport", "Passport", arabicOf("passport")),
+        spokenOption("bag", "Suitcase", arabicOf("bag")),
+        spokenOption("phone", "Phone", arabicOf("phone")),
+      ],
+      correctId: "passport",
+      feedback: "You hand over your passport.",
+    },
+    {
+      type: "match",
+      prompt: "While he checks your papers, he glances at the open bag beside you.",
+      question: "Match each item to its Arabic name.",
+      itemIds: ["ihram", "sandals", "charger", "medicine"],
+      feedback: "Good packing for Umrah — the officer nods and keeps typing.",
+    },
+    {
+      type: "phrase",
+      prompt: "The officer asks why you are here.",
+      audioId: "why-here",
+      officerArabic: "لماذا أنت هنا؟",
+      promptEnglish: "Why are you here?",
+      tokens: ["أنا", "هنا", "للعمرة"],
+      correctOrder: ["أنا", "هنا", "للعمرة"],
+      feedback: "You say: أنا هنا للعمرة. The officer nods.",
+    },
+    {
+      type: "listen",
+      prompt: "The officer stamps your passport and hands it back.",
+      promptEnglish: "Go ahead",
+      question: "How do you reply?",
+      arabic: "تفضل",
+      audioId: "proceed",
+      options: [
+        spokenOption("thank-you", "Thank you", arabicOf("thank-you")),
+        spokenOption("please", "Please", arabicOf("please")),
+        spokenOption("greeting-response", "And upon you peace", arabicOf("greeting-response")),
+      ],
+      correctId: "thank-you",
+      feedback: "You step away from the desk. Passport control is done.",
+    },
+  ]
+
+  return {
+    id: `immigration-${profile.nameAr}-${companion.id}`,
+    missionId: "immigration",
+    seed: "",
+    selectedVocabularyIds: vocabIds,
+    variables: {
+      learnerName: profile.nameAr,
+      learnerCountry: profile.countryAr,
+      companion: companion.id,
+    },
+    steps,
+    outcome: "You passed passport control and introduced yourself in Arabic.",
+  }
+}
+
 export function buildFindHaram(ctx: MissionBuildContext): MissionRun {
   const gate = pick(ctx.rand, [79, 84, 1, 5, 8])
   const dir1 = pick(ctx.rand, ["right", "left", "straight"] as const)

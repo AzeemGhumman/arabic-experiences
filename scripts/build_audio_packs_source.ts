@@ -69,6 +69,19 @@ function collectMissionAudio(run: MissionRun, packId: string) {
     if (step.type === "listen" && step.audioId) {
       addClip(packId, "mission", step.audioId, step.arabic)
     }
+    if (step.type === "choice" && step.audioId && step.arabic) {
+      addClip(packId, "mission", step.audioId, step.arabic)
+    }
+    if (step.type === "phrase" && step.audioId && step.officerArabic) {
+      addClip(packId, "mission", step.audioId, step.officerArabic)
+    }
+    if (step.type === "listen" || step.type === "choice") {
+      for (const option of step.options) {
+        if (option.audioId && option.arabic) {
+          addClip(packId, "mission", option.audioId, option.arabic)
+        }
+      }
+    }
     if (step.type === "gps") {
       for (const instr of step.instructions) {
         if (instr.audioId) addClip(packId, "mission", instr.audioId, instr.arabic)

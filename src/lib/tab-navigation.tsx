@@ -9,6 +9,8 @@ import {
   type ReactNode,
 } from "react"
 import { useLocation, useNavigate, useNavigationType } from "react-router-dom"
+import { returnPathFromFromParam } from "@/lib/navigation"
+import { useMissionNavigationGuardOptional } from "@/lib/mission-navigation-guard"
 
 export type TabId = "home" | "study" | "progress" | "companion" | "profile"
 
@@ -42,6 +44,26 @@ function pathKey(pathname: string, search: string) {
   return `${pathname}${search}`
 }
 
+function resolveBackTarget(
+  tab: TabId,
+  stack: string[],
+  explicitFallback?: string,
+  fromQueryFallback?: string,
+) {
+  const tabRoot = TAB_ROOTS[tab]
+  const contextualFallback = explicitFallback ?? fromQueryFallback
+
+  if (stack.length > 1) {
+    const destination = stack.at(-2) ?? tabRoot
+    if (contextualFallback && destination === tabRoot && contextualFallback !== tabRoot) {
+      return contextualFallback
+    }
+    return destination
+  }
+
+  return contextualFallback ?? tabRoot
+}
+
 type TabNavigationContextValue = {
   activeTab: TabId
   switchTab: (tab: TabId) => void
@@ -55,15 +77,23 @@ export function TabNavigationProvider({ children }: { children: ReactNode }) {
   const location = useLocation()
   const navigate = useNavigate()
   const navigationType = useNavigationType()
+  const guard = useMissionNavigationGuardOptional()
   const stacksRef = useRef(initialStacks())
   const skipStackUpdate = useRef(false)
+  const crossTabReturnRef = useRef<string | null>(null)
+  const prevLocationRef = useRef({ pathname: location.pathname, search: location.search })
 
   const current = pathKey(location.pathname, location.search)
   const activeTab = getTabForPath(location.pathname)
 
   useEffect(() => {
+    const prev = prevLocationRef.current
+    const prevKey = pathKey(prev.pathname, prev.search)
+    const prevTab = getTabForPath(prev.pathname)
+
     if (skipStackUpdate.current) {
       skipStackUpdate.current = false
+      prevLocationRef.current = { pathname: location.pathname, search: location.search }
       return
     }
 
@@ -72,51 +102,100 @@ export function TabNavigationProvider({ children }: { children: ReactNode }) {
     const stack = stacks[tab]
 
     if (navigationType === "POP") {
+      crossTabReturnRef.current = null
       const index = stack.lastIndexOf(current)
       if (index >= 0) {
         stacks[tab] = stack.slice(0, index + 1)
       }
+      prevLocationRef.current = { pathname: location.pathname, search: location.search }
       return
+    }
+
+    if (navigationType === "PUSH" && prevKey !== current) {
+      if (prevTab !== tab) {
+        crossTabReturnRef.current = prevKey
+      } else {
+        crossTabReturnRef.current = null
+      }
     }
 
     if (navigationType === "REPLACE") {
-      if (stack.at(-1) === current) return
+      crossTabReturnRef.current = null
+      if (stack.at(-1) === current) {
+        prevLocationRef.current = { pathname: location.pathname, search: location.search }
+        return
+      }
       stacks[tab] = [...stack.slice(0, -1), current]
+      prevLocationRef.current = { pathname: location.pathname, search: location.search }
       return
     }
 
-    if (stack.at(-1) === current) return
+    if (stack.at(-1) === current) {
+      prevLocationRef.current = { pathname: location.pathname, search: location.search }
+      return
+    }
     stacks[tab] = [...stack, current]
-  }, [current, location.pathname, navigationType])
+    prevLocationRef.current = { pathname: location.pathname, search: location.search }
+  }, [current, location.pathname, location.search, navigationType])
 
   const switchTab = useCallback(
     (tab: TabId) => {
-      const target = stacksRef.current[tab].at(-1) ?? TAB_ROOTS[tab]
-      if (pathKey(location.pathname, location.search) === target) return
-      skipStackUpdate.current = true
-      navigate(target)
+      const doSwitch = () => {
+        crossTabReturnRef.current = null
+        const target = stacksRef.current[tab].at(-1) ?? TAB_ROOTS[tab]
+        if (pathKey(location.pathname, location.search) === target) return
+        skipStackUpdate.current = true
+        navigate(target)
+      }
+
+      const currentTab = getTabForPath(location.pathname)
+      if (guard?.missionInProgress && tab !== currentTab) {
+        guard.guardNavigation(doSwitch)
+        return
+      }
+      doSwitch()
     },
-    [location.pathname, location.search, navigate],
+    [guard, location.pathname, location.search, navigate],
   )
 
   const goBack = useCallback(
     (fallback?: string) => {
-      const tab = getTabForPath(location.pathname)
-      const stack = stacksRef.current[tab]
-      if (stack.length > 1) {
-        const nextStack = stack.slice(0, -1)
-        stacksRef.current[tab] = nextStack
+      const doBack = () => {
+        const tab = getTabForPath(location.pathname)
+        const stack = stacksRef.current[tab]
+        const fromQueryFallback = returnPathFromFromParam(new URLSearchParams(location.search).get("from"))
+
+        if (crossTabReturnRef.current) {
+          const target = crossTabReturnRef.current
+          crossTabReturnRef.current = null
+          if (stack.length > 1) {
+            stacksRef.current[tab] = stack.slice(0, -1)
+          }
+          skipStackUpdate.current = true
+          navigate(target)
+          return
+        }
+
+        const target = resolveBackTarget(tab, stack, fallback, fromQueryFallback)
+        if (stack.length > 1) {
+          stacksRef.current[tab] = stack.slice(0, -1)
+        }
         skipStackUpdate.current = true
-        navigate(nextStack.at(-1) ?? TAB_ROOTS[tab])
+        navigate(target)
+      }
+
+      if (guard?.missionInProgress) {
+        guard.guardNavigation(doBack)
         return
       }
-      navigate(fallback ?? TAB_ROOTS[tab])
+      doBack()
     },
-    [location.pathname, navigate],
+    [guard, location.pathname, location.search, navigate],
   )
 
   const resetTabToRoot = useCallback(
     (tab: TabId = getTabForPath(location.pathname)) => {
+      crossTabReturnRef.current = null
       stacksRef.current[tab] = [TAB_ROOTS[tab]]
       skipStackUpdate.current = true
       navigate(TAB_ROOTS[tab])

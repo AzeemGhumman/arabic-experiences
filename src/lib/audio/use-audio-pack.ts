@@ -16,6 +16,7 @@ export function useAudioPack(packId: string) {
       const ok = await playClip(packId, clipId)
       if (activeRef.current === clipId) {
         setPlayingId(null)
+        activeRef.current = null
       }
       return ok
     },

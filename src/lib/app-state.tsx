@@ -26,6 +26,7 @@ type AppStateContextValue = {
   toggleBookmark: (lessonId: string, wordId: string) => void
   setBookmarkedVocab: (items: VocabBookmark[]) => void
   setLessonCompleted: (id: string, completed: boolean) => void
+  markLessonOpened: (id: string) => void
   practiceSupplication: (id: string) => void
   completeMission: (input: {
     id: string
@@ -154,14 +155,28 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
       },
       setLessonCompleted: (id, completed) => {
         setState((current) =>
-          patchActiveProgress(current, (progress) => ({
-            ...progress,
-            completedLessonIds: completed
-              ? progress.completedLessonIds.includes(id)
-                ? progress.completedLessonIds
-                : [...progress.completedLessonIds, id]
-              : progress.completedLessonIds.filter((item) => item !== id),
-          })),
+          patchActiveProgress(current, (progress) => {
+            if (completed && !progress.openedLessonIds.includes(id)) return progress
+            return {
+              ...progress,
+              completedLessonIds: completed
+                ? progress.completedLessonIds.includes(id)
+                  ? progress.completedLessonIds
+                  : [...progress.completedLessonIds, id]
+                : progress.completedLessonIds.filter((item) => item !== id),
+            }
+          }),
+        )
+      },
+      markLessonOpened: (id) => {
+        setState((current) =>
+          patchActiveProgress(current, (progress) => {
+            if (progress.openedLessonIds.includes(id)) return progress
+            return {
+              ...progress,
+              openedLessonIds: [...progress.openedLessonIds, id],
+            }
+          }),
         )
       },
       practiceSupplication: (id) => {
@@ -213,6 +228,10 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
                 kind === "lesson" && !progress.completedLessonIds.includes(id)
                   ? [...progress.completedLessonIds, id]
                   : progress.completedLessonIds,
+              openedLessonIds:
+                kind === "lesson" && !progress.openedLessonIds.includes(id)
+                  ? [...progress.openedLessonIds, id]
+                  : progress.openedLessonIds,
             }
           }),
         )

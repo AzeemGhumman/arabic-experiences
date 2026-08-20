@@ -80,9 +80,9 @@
       "id": "mission-arrival",
       "kind": "missions",
       "tiles": [
-        { "id": "taxi-hotel", "subject": "gold Saudi taxi sedan seen from the front three-quarter at a hotel curb, small cream hotel sign post with terracotta cap, sage-tinted road, no people" },
+        { "id": "immigration", "subject": "passport control counter: open cream passport and terracotta ink stamp on a slate desk, small booth window with sage shade behind, faceless cream figure silhouette in the window, no text, no numerals" },
         { "id": "airport-arrival", "subject": "brown rolling suitcase standing beside a cream airport exit door with dusty-blue glass panels, bright arrivals hall, no people" },
-        { "id": "immigration", "subject": "open cream passport showing blank pages beside a small terracotta desk window with a sage-green shade, no text, no numerals" },
+        { "id": "taxi-hotel", "subject": "gold Saudi taxi sedan seen from the front three-quarter at a hotel curb, small cream hotel sign post with terracotta cap, sage-tinted road, no people" },
         { "id": "find-haram", "subject": "cream pointed arch gate with a terracotta lantern hanging in the opening, dusty sky, no crowds" }
       ]
     },
@@ -114,6 +114,16 @@
         { "id": "tents-alt", "subject": "simple cream bus with dusty-blue windows beside white peaked tents, no people" },
         { "id": "lantern-alt", "subject": "simple gold hanging lantern on cream ground, still life" },
         { "id": "basin-alt", "subject": "round clay wash basin on cream ground, still life" }
+      ]
+    },
+    {
+      "id": "umrah-pack",
+      "kind": "items",
+      "tiles": [
+        { "id": "ihram", "subject": "neatly folded white ihram cloth with a thin gold band, modest still life on cream" },
+        { "id": "sandals", "subject": "simple brown open sandals side by side, still life on cream" },
+        { "id": "charger", "subject": "cream phone charger brick and coiled cable with a terracotta tip, still life" },
+        { "id": "medicine", "subject": "cream medicine bottle with a sage plus mark, no text, still life" }
       ]
     }
   ]

@@ -14,3 +14,13 @@ export const missionImageSrc: Record<string, string> = {
   barber: "/images/missions/barber.webp",
   "day-madinah": "/images/missions/day-madinah.webp",
 }
+
+/** Wide banners for mission place / play frames (falls back to square stamp). */
+export const missionBannerSrc: Record<string, string> = {
+  immigration: "/images/missions/immigration-banner.webp",
+}
+
+export function missionSceneImage(missionId: string, wide = false) {
+  if (wide && missionBannerSrc[missionId]) return missionBannerSrc[missionId]
+  return missionImageSrc[missionId]
+}

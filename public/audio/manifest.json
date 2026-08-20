@@ -2,7 +2,7 @@
   "version": 1,
   "voice": "ar-SA-HamedNeural",
   "register": "msa",
-  "generatedAt": "2026-08-19T07:03:34.881551+00:00",
+  "generatedAt": "2026-08-20T07:34:47.264379+00:00",
   "packs": {
     "numbers-everywhere": {
       "clips": {
@@ -166,13 +166,13 @@
           "src": "/audio/packs/numbers-to-100/gate.mp3",
           "arabic": "باب"
         },
-        "room-number": {
-          "src": "/audio/packs/numbers-to-100/room-number.mp3",
-          "arabic": "رقم"
-        },
         "bus": {
           "src": "/audio/packs/numbers-to-100/bus.mp3",
           "arabic": "باص"
+        },
+        "room-number": {
+          "src": "/audio/packs/numbers-to-100/room-number.mp3",
+          "arabic": "رقم"
         }
       }
     },
@@ -1872,32 +1872,52 @@
         }
       }
     },
-    "find-haram": {
+    "immigration": {
       "clips": {
-        "straight": {
-          "src": "/audio/packs/find-haram/straight.mp3",
-          "arabic": "على طول"
+        "greeting": {
+          "src": "/audio/packs/immigration/greeting.mp3",
+          "arabic": "السلام عليكم"
         },
-        "right": {
-          "src": "/audio/packs/find-haram/right.mp3",
-          "arabic": "يمين"
-        }
-      }
-    },
-    "enter-haram": {
-      "clips": {
-        "straight": {
-          "src": "/audio/packs/enter-haram/straight.mp3",
-          "arabic": "على طول"
+        "opt-greeting-response": {
+          "src": "/audio/packs/immigration/opt-greeting-response.mp3",
+          "arabic": "وعليكم السلام"
+        },
+        "opt-thank-you": {
+          "src": "/audio/packs/immigration/opt-thank-you.mp3",
+          "arabic": "شكراً"
+        },
+        "opt-please": {
+          "src": "/audio/packs/immigration/opt-please.mp3",
+          "arabic": "لو سمحت"
+        },
+        "passport-please": {
+          "src": "/audio/packs/immigration/passport-please.mp3",
+          "arabic": "جواز السفر، من فضلك"
+        },
+        "opt-passport": {
+          "src": "/audio/packs/immigration/opt-passport.mp3",
+          "arabic": "جواز سفر"
+        },
+        "opt-bag": {
+          "src": "/audio/packs/immigration/opt-bag.mp3",
+          "arabic": "شنطة"
+        },
+        "opt-phone": {
+          "src": "/audio/packs/immigration/opt-phone.mp3",
+          "arabic": "هاتف"
+        },
+        "why-here": {
+          "src": "/audio/packs/immigration/why-here.mp3",
+          "arabic": "لماذا أنت هنا؟"
+        },
+        "proceed": {
+          "src": "/audio/packs/immigration/proceed.mp3",
+          "arabic": "تفضل"
         }
       }
     },
     "taxi-hotel": {
       "clips": {
-        "left": {
-          "src": "/audio/packs/taxi-hotel/left.mp3",
-          "arabic": "يسار"
-        },
         "gps-continue-straight": {
           "src": "/audio/packs/taxi-hotel/gps-continue-straight.mp3",
           "arabic": "استمر مباشرةً"

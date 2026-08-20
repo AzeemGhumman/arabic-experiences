@@ -593,23 +593,24 @@
         "please": "لو سمحت"
       }
     },
-    "find-haram": {
+    "immigration": {
       "kind": "mission",
       "clips": {
-        "straight": "على طول",
-        "right": "يمين"
-      }
-    },
-    "enter-haram": {
-      "kind": "mission",
-      "clips": {
-        "straight": "على طول"
+        "greeting": "السلام عليكم",
+        "opt-greeting-response": "وعليكم السلام",
+        "opt-thank-you": "شكراً",
+        "opt-please": "لو سمحت",
+        "passport-please": "جواز السفر، من فضلك",
+        "opt-passport": "جواز سفر",
+        "opt-bag": "شنطة",
+        "opt-phone": "هاتف",
+        "why-here": "لماذا أنت هنا؟",
+        "proceed": "تفضل"
       }
     },
     "taxi-hotel": {
       "kind": "mission",
       "clips": {
-        "left": "يسار",
         "gps-continue-straight": "استمر مباشرةً",
         "gps-second-left": "بعد مائة متر، خذ ثاني يسار",
         "gps-stop-opposite-hotel": "قف مقابل الفندق",

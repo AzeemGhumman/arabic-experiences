@@ -49,9 +49,9 @@ export type PathPoint = { x: number; y: number }
  * Side stamps alternate left/right, each below the last.
  */
 const NODE_POS: Record<string, PathPoint> = {
-  "taxi-hotel": { x: 180, y: 64 },
+  immigration: { x: 180, y: 64 },
   "airport-arrival": { x: 214, y: 152 },
-  immigration: { x: 146, y: 268 },
+  "taxi-hotel": { x: 180, y: 240 },
   "find-haram": { x: 214, y: 72 },
   "enter-haram": { x: 154, y: 156 },
   "begin-tawaf": { x: 146, y: 268 },
@@ -266,10 +266,10 @@ export const umrahGraph: MissionGraph = {
     { id: "madinah", label: "Madinah", row: 9 },
   ],
   nodes: [
-    spine("taxi-hotel", "Taxi", 0, 1, []),
-    spine("airport-arrival", "Airport", 1, 1, ["taxi-hotel"]),
-    spine("immigration", "Passport", 2, 1, ["airport-arrival"]),
-    spine("find-haram", "Gate", 3, 1, ["immigration"]),
+    spine("immigration", "Passport", 0, 1, []),
+    spine("airport-arrival", "Airport", 1, 1, ["immigration"]),
+    spine("taxi-hotel", "Taxi", 2, 1, ["airport-arrival"]),
+    spine("find-haram", "Gate", 3, 1, ["taxi-hotel"]),
     side("order-dinner", "Dinner", 3, 0, ["find-haram"]),
     spine("enter-haram", "Enter", 4, 1, ["find-haram"]),
     side("lost-group", "Lost?", 4, 0, ["enter-haram"]),
@@ -281,9 +281,9 @@ export const umrahGraph: MissionGraph = {
     spine("day-madinah", "Madinah", 9, 1, ["barber"]),
   ],
   edges: [
-    walk("taxi-hotel", "airport-arrival"),
-    walk("airport-arrival", "immigration"),
-    walk("immigration", "find-haram"),
+    walk("immigration", "airport-arrival"),
+    walk("airport-arrival", "taxi-hotel"),
+    walk("taxi-hotel", "find-haram"),
     walk("find-haram", "enter-haram"),
     walk("find-haram", "order-dinner", "side"),
     walk("enter-haram", "begin-tawaf"),
@@ -298,42 +298,14 @@ export const umrahGraph: MissionGraph = {
 
 export function isNodeUnlocked(node: MissionNode, completedIds: string[]) {
   if (completedIds.includes(node.id)) return true
-  const required = playableAncestorIds(node)
-  if (required.length === 0) return true
+  if (node.requires.length === 0) return true
   return node.requireAny
-    ? required.some((id) => completedIds.includes(id))
-    : required.every((id) => completedIds.includes(id))
-}
-
-/** Walk past unplayable parents so preview gaps (e.g. Passport) do not block Gate. */
-function playableAncestorIds(node: MissionNode, seen = new Set<string>()): string[] {
-  const catalog = nodesFor(node)
-  const found: string[] = []
-  for (const id of node.requires) {
-    if (seen.has(id)) continue
-    seen.add(id)
-    if (isMissionPlayable(id)) {
-      found.push(id)
-      continue
-    }
-    const parent = catalog.find((item) => item.id === id)
-    if (parent) found.push(...playableAncestorIds(parent, seen))
-  }
-  return [...new Set(found)]
-}
-
-function nodesFor(node: MissionNode): MissionNode[] {
-  if (umrahGraph.nodes.some((item) => item.id === node.id)) return umrahGraph.nodes
-  return []
+    ? node.requires.some((id) => completedIds.includes(id))
+    : node.requires.every((id) => completedIds.includes(id))
 }
 
 /** Map missions available in the current preview. Expand as content ships. */
-const PREVIEW_RELEASED_MISSION_IDS = new Set([
-  "taxi-hotel",
-  "find-haram",
-  "enter-haram",
-  "order-dinner",
-])
+const PREVIEW_RELEASED_MISSION_IDS = new Set(["immigration"])
 
 /** Study lessons available in the current preview. */
 const PREVIEW_RELEASED_LESSON_IDS = new Set([

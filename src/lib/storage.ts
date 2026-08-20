@@ -35,6 +35,8 @@ export type UmrahStep = {
 export type JourneyProgress = {
   completedMissionIds: string[]
   completedLessonIds: string[]
+  /** Lessons the learner has opened at least once (Study tab or mission page). */
+  openedLessonIds: string[]
   capabilities: Record<string, 0 | 1 | 2 | 3>
   missionOutcomes: Record<string, string>
   missionPlayCounts: Record<string, number>
@@ -64,6 +66,7 @@ export function emptyJourneyProgress(): JourneyProgress {
   return {
     completedMissionIds: [],
     completedLessonIds: [],
+    openedLessonIds: [],
     capabilities: {},
     missionOutcomes: {},
     missionPlayCounts: {},
@@ -92,6 +95,7 @@ function readJourneyProgress(raw: unknown): JourneyProgress {
   return {
     completedMissionIds: Array.isArray(progress.completedMissionIds) ? progress.completedMissionIds : [],
     completedLessonIds: Array.isArray(progress.completedLessonIds) ? progress.completedLessonIds : [],
+    openedLessonIds: Array.isArray(progress.openedLessonIds) ? progress.openedLessonIds : [],
     capabilities: progress.capabilities ?? {},
     missionOutcomes: progress.missionOutcomes ?? {},
     missionPlayCounts: progress.missionPlayCounts ?? {},

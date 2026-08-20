@@ -2,6 +2,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import { AppShell } from "@/components/app-shell/AppShell"
 import { AppStateProvider } from "@/lib/app-state"
 import { I18nProvider } from "@/lib/i18n"
+import { MissionNavigationGuardProvider } from "@/lib/mission-navigation-guard"
 import { TabNavigationProvider } from "@/lib/tab-navigation"
 import { HomePage } from "@/pages/HomePage"
 import { CompanionPage } from "@/pages/CompanionPage"
@@ -17,28 +18,30 @@ import { MissionPlacePage } from "@/pages/MissionPlacePage"
 export default function App() {
   return (
     <BrowserRouter>
-      <TabNavigationProvider>
-        <AppStateProvider>
-          <I18nProvider>
-          <Routes>
-          <Route element={<AppShell />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/companion" element={<CompanionPage />} />
-            <Route path="/companion/umrah/haram" element={<UmrahExperiencePage />} />
-            <Route path="/play/:id" element={<MissionPlayPage />} />
-            <Route path="/missions/:id" element={<MissionPlacePage />} />
-            <Route path="/lessons/:id" element={<LessonPage />} />
-            <Route path="/study" element={<StudyPage />} />
-            <Route path="/study/bookmarks" element={<StudyBookmarksPage />} />
-            <Route path="/progress" element={<ProgressPage />} />
-            <Route path="/profile" element={<ProfilePage />} />
-            <Route path="/profile/journeys" element={<JourneySwitchPage />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Route>
-          </Routes>
-          </I18nProvider>
-        </AppStateProvider>
-      </TabNavigationProvider>
+      <AppStateProvider>
+        <I18nProvider>
+          <MissionNavigationGuardProvider>
+            <TabNavigationProvider>
+              <Routes>
+                <Route element={<AppShell />}>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/companion" element={<CompanionPage />} />
+                  <Route path="/companion/umrah/haram" element={<UmrahExperiencePage />} />
+                  <Route path="/play/:id" element={<MissionPlayPage />} />
+                  <Route path="/missions/:id" element={<MissionPlacePage />} />
+                  <Route path="/lessons/:id" element={<LessonPage />} />
+                  <Route path="/study" element={<StudyPage />} />
+                  <Route path="/study/bookmarks" element={<StudyBookmarksPage />} />
+                  <Route path="/progress" element={<ProgressPage />} />
+                  <Route path="/profile" element={<ProfilePage />} />
+                  <Route path="/profile/journeys" element={<JourneySwitchPage />} />
+                  <Route path="*" element={<Navigate to="/" replace />} />
+                </Route>
+              </Routes>
+            </TabNavigationProvider>
+          </MissionNavigationGuardProvider>
+        </I18nProvider>
+      </AppStateProvider>
     </BrowserRouter>
   )
 }

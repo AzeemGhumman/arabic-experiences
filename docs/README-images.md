@@ -201,7 +201,7 @@ Missions (`kind: "missions"`):
 
 | Sheet id | Tiles (TL, TR, BL, BR) |
 | --- | --- |
-| `mission-arrival` | taxi-hotel, airport-arrival, immigration, find-haram |
+| `mission-arrival` | immigration, airport-arrival, taxi-hotel, find-haram |
 | `mission-haram` | enter-haram, begin-tawaf, find-zamzam, complete-sai |
 | `mission-city` | order-dinner, lost-group, something-wrong, barber |
 | `mission-beyond` | day-madinah, tents-alt, lantern-alt, basin-alt (only `day-madinah` is wired) |

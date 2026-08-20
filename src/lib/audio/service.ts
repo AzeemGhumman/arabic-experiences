@@ -7,6 +7,10 @@ let manifestCache: AudioManifest | null = null
 const audioCache = new Map<string, HTMLAudioElement>()
 const prefetching = new Set<string>()
 
+/** Currently playing element — enforces single-audio-at-a-time globally. */
+let activeAudio: HTMLAudioElement | null = null
+let playbackGeneration = 0
+
 function clipKey(packId: string, clipId: string) {
   return `${packId}:${clipId}`
 }
@@ -55,16 +59,46 @@ export async function prefetchAudioPack(packId: string) {
   }
 }
 
+/** Stop whatever is currently playing globally. */
+export function stopAll() {
+  playbackGeneration += 1
+  if (activeAudio) {
+    activeAudio.pause()
+    activeAudio.currentTime = 0
+    activeAudio = null
+  }
+}
+
 export async function playClip(packId: string, clipId: string): Promise<boolean> {
+  stopAll()
   const meta = await getClipMeta(packId, clipId)
   if (!meta) return false
   const audio = getAudioElement(packId, clipId, meta.src)
-  audio.pause()
   audio.currentTime = 0
+  const generation = playbackGeneration
+  activeAudio = audio
   try {
     await audio.play()
-    return true
+    await new Promise<void>((resolve) => {
+      const cleanup = () => {
+        audio.removeEventListener("ended", onEnd)
+        audio.removeEventListener("pause", onPause)
+      }
+      const onEnd = () => {
+        cleanup()
+        resolve()
+      }
+      const onPause = () => {
+        cleanup()
+        resolve()
+      }
+      audio.addEventListener("ended", onEnd)
+      audio.addEventListener("pause", onPause)
+    })
+    if (generation === playbackGeneration && activeAudio === audio) activeAudio = null
+    return generation === playbackGeneration
   } catch {
+    if (generation === playbackGeneration && activeAudio === audio) activeAudio = null
     return false
   }
 }
@@ -74,4 +108,9 @@ export function stopClip(packId: string, clipId: string) {
   if (!audio) return
   audio.pause()
   audio.currentTime = 0
+  if (activeAudio === audio) activeAudio = null
+}
+
+export function isPlaying() {
+  return activeAudio !== null && !activeAudio.paused
 }

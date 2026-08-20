@@ -1,5 +1,5 @@
 import { useId } from "react"
-import { missionImageSrc } from "@/data/learning/mission-images"
+import { missionImageSrc, missionSceneImage } from "@/data/learning/mission-images"
 import { cn } from "@/lib/utils"
 import type { MissionScene, DirectionAction, SceneFocus } from "@/lib/learning-types"
 
@@ -65,7 +65,7 @@ export function ExperienceScene({
 }: ExperienceSceneProps) {
   const height = thumb ? "h-full" : compact ? "h-28" : "h-48"
   const streetLike = scene === "haram-gate" || scene === "street" || scene === "crowd"
-  const src = missionId ? missionImageSrc[missionId] : undefined
+  const src = missionId ? missionSceneImage(missionId, true) : undefined
   const usePhoto = Boolean(src) && !interactive
 
   return (
@@ -231,10 +231,10 @@ function StreetScene({
         stroke={focus === "plaque" ? "#c4785a" : "#c4a35a"}
         strokeWidth={focus === "plaque" ? 2.5 : 1.5}
       />
-      <text x="53" y="57" textAnchor="middle" fontSize="9" fill="#6b5c4f" fontFamily="Noto Naskh Arabic, serif">
+      <text x="53" y="57" textAnchor="middle" fontSize="9" fill="#6b5c4f" fontFamily="Noto Sans Arabic, sans-serif">
         باب
       </text>
-      <text x="53" y="70" textAnchor="middle" fontSize="12" fill="#3a2f26" fontWeight="700" fontFamily="Noto Naskh Arabic, serif">
+      <text x="53" y="70" textAnchor="middle" fontSize="12" fill="#3a2f26" fontWeight="700" fontFamily="Noto Sans Arabic, sans-serif">
         {gate}
       </text>
 
@@ -357,19 +357,57 @@ function GateMark({ crowd }: { crowd?: boolean }) {
 }
 
 function ImmigrationArt({ uid, mark }: { uid: string; mark?: boolean }) {
+  if (mark) {
+    return (
+      <g>
+        <rect width="80" height="80" fill="#f0e4cc" />
+        <rect x="8" y="8" width="64" height="36" rx="4" fill="#d5e3ea" />
+        <rect x="18" y="14" width="44" height="24" rx="3" fill="#fffdf8" stroke="#c4785a" strokeWidth="2" />
+        <rect x="22" y="18" width="14" height="16" rx="1.5" fill="#efe4d4" />
+        <circle cx="29" cy="16" r="4" fill="#e8d5c4" />
+        <rect x="40" y="22" width="16" height="10" rx="1" fill="#6e8b74" opacity="0.35" />
+        <rect x="10" y="46" width="60" height="22" rx="3" fill="#6b7c86" />
+        <rect x="16" y="52" width="22" height="12" rx="1.5" fill="#fffdf8" stroke="#3a2f26" strokeWidth="1" />
+        <rect x="42" y="54" width="14" height="10" rx="1" fill="#c4a35a" />
+        <circle cx="56" cy="59" r="3" fill="#c4785a" />
+      </g>
+    )
+  }
+
   return (
     <g>
       <defs>
-        <linearGradient id={`${uid}-i`} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#e8eef2" />
-          <stop offset="100%" stopColor="#c5d3dc" />
+        <linearGradient id={`${uid}-i-sky`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#e4eef3" />
+          <stop offset="55%" stopColor="#d2e0e8" />
+          <stop offset="100%" stopColor="#f0e4cc" />
+        </linearGradient>
+        <linearGradient id={`${uid}-i-desk`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#7a8b94" />
+          <stop offset="100%" stopColor="#5c6b74" />
         </linearGradient>
       </defs>
-      <rect width="100%" height="100%" fill={`url(#${uid}-i)`} />
-      <rect x={mark ? 18 : 90} y={mark ? 28 : 88} width={mark ? 44 : 180} height={mark ? 26 : 70} rx="4" fill="#6b7c86" />
-      <rect x={mark ? 24 : 110} y={mark ? 18 : 60} width={mark ? 16 : 48} height={mark ? 14 : 36} rx="2" fill="#efe4d4" />
-      <circle cx={mark ? 32 : 134} cy={mark ? 14 : 48} r={mark ? 5 : 12} fill="#e8d5c4" />
-      <rect x={mark ? 46 : 200} y={mark ? 34 : 102} width={mark ? 10 : 36} height={mark ? 8 : 22} rx="1" fill="#c4a35a" />
+      <rect width="360" height="200" fill={`url(#${uid}-i-sky)`} />
+      {/* Hall wall strip */}
+      <rect x="0" y="118" width="360" height="82" fill="#efe4d4" />
+      {/* Counter booth window */}
+      <rect x="108" y="28" width="144" height="92" rx="8" fill="#fffdf8" stroke="#c4785a" strokeWidth="3" />
+      <rect x="116" y="36" width="128" height="56" rx="4" fill="#d8e6ed" />
+      {/* Faceless officer */}
+      <circle cx="180" cy="52" r="14" fill="#e8d5c4" />
+      <rect x="160" y="64" width="40" height="28" rx="6" fill="#6e8b74" />
+      {/* Desk counter */}
+      <rect x="40" y="120" width="280" height="56" rx="6" fill={`url(#${uid}-i-desk)`} />
+      <rect x="40" y="114" width="280" height="10" rx="3" fill="#8a9aa3" />
+      {/* Open passport */}
+      <rect x="78" y="128" width="52" height="36" rx="3" fill="#fffdf8" stroke="#3a2f26" strokeWidth="1.5" />
+      <line x1="104" y1="128" x2="104" y2="164" stroke="#e6d9c6" strokeWidth="2" />
+      <rect x="84" y="136" width="14" height="8" rx="1" fill="#efe4d4" />
+      <rect x="110" y="136" width="14" height="8" rx="1" fill="#efe4d4" />
+      {/* Stamp pad + stamp */}
+      <rect x="220" y="136" width="36" height="24" rx="3" fill="#c4a35a" />
+      <circle cx="270" cy="148" r="10" fill="#c4785a" />
+      <circle cx="270" cy="148" r="5" fill="#b4684c" />
     </g>
   )
 }

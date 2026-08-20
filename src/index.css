@@ -6,7 +6,7 @@
 @theme inline {
   --font-sans: "Figtree", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Fraunces", ui-serif, Georgia, serif;
-  --font-arabic: "Noto Naskh Arabic", "Times New Roman", serif;
+  --font-arabic: "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -50,6 +50,7 @@
 
 :root {
   --radius: 1rem;
+  --font-arabic: "Noto Sans Arabic", sans-serif;
   --background: #f4ede3;
   --foreground: #3a2f26;
   --card: #fffdf8;
@@ -87,13 +88,13 @@
   }
 
   html[lang="ur"] .font-display {
-    font-family: "Noto Naskh Arabic", var(--font-display);
+    font-family: "Noto Sans Arabic", var(--font-display);
     line-height: 1.55;
   }
 
-  /* Nastaliq breaks Latin spaces; Naskh handles Urdu UI text cleanly. */
+  /* Nastaliq breaks Latin spaces; Noto Sans Arabic handles Urdu UI text cleanly. */
   html[lang="ur"] .font-urdu {
-    font-family: "Noto Naskh Arabic", serif;
+    font-family: "Noto Sans Arabic", sans-serif;
   }
 
   html[lang="ur"] .uppercase {
@@ -129,17 +130,24 @@
   }
 
   .font-arabic {
-    font-family: var(--font-arabic);
+    font-family: "Noto Sans Arabic", sans-serif;
     direction: rtl;
     unicode-bidi: isolate;
   }
 
   .arabic-text {
-    font-family: var(--font-arabic);
+    font-family: "Noto Sans Arabic", sans-serif;
     direction: rtl;
     unicode-bidi: isolate;
     font-size: 1.4em;
     line-height: 1.6;
+  }
+
+  .arabic-hidden-tape {
+    background: linear-gradient(168deg, #f0e6d4 0%, #e8dcc8 52%, #ded0b8 100%);
+    box-shadow:
+      0 1px 2px rgb(58 47 38 / 0.14),
+      inset 0 1px 0 rgb(255 255 255 / 0.45);
   }
 
   h1,

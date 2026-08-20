@@ -2,36 +2,35 @@ import type { MouseEvent } from "react"
 import { Link } from "react-router-dom"
 import { Check } from "lucide-react"
 import { lessonAvailability } from "@/data/learning/availability"
+import { isLessonOpened } from "@/data/learning/mission-prerequisites"
 import type { CatalogLesson } from "@/data/learning/study-catalog"
-import { useAppState } from "@/lib/app-state"
+import { useActiveJourney, useAppState } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
-export function LessonDoneButton({
-  item,
+export function LessonCompleteCheckbox({
+  lessonId,
+  completed,
   className,
+  onToggle,
 }: {
-  item: CatalogLesson
+  lessonId: string
+  completed: boolean
   className?: string
+  onToggle: (event: MouseEvent) => void
 }) {
   const { t } = useI18n()
-  const { setLessonCompleted } = useAppState()
-  const { lesson, completed } = item
-  const access = lessonAvailability(lesson.id)
-  if (access !== "open") return null
-
-  function toggleDone(event: MouseEvent) {
-    event.preventDefault()
-    event.stopPropagation()
-    setLessonCompleted(lesson.id, !completed)
-  }
+  const { progress } = useActiveJourney()
+  const access = lessonAvailability(lessonId)
+  const opened = isLessonOpened(lessonId, progress.openedLessonIds)
+  if (access !== "open" || !opened) return null
 
   return (
     <button
       type="button"
       aria-label={completed ? t("study.markIncomplete") : t("study.markComplete")}
       aria-pressed={completed}
-      onClick={toggleDone}
+      onClick={onToggle}
       className={cn(
         "flex size-7 shrink-0 items-center justify-center rounded-full border-2 transition",
         completed
@@ -42,6 +41,32 @@ export function LessonDoneButton({
     >
       <Check className={cn("size-4 stroke-[3]", completed ? "text-white opacity-100" : "opacity-0")} />
     </button>
+  )
+}
+
+export function LessonDoneButton({
+  item,
+  className,
+}: {
+  item: CatalogLesson
+  className?: string
+}) {
+  const { setLessonCompleted } = useAppState()
+  const { lesson, completed } = item
+
+  function toggleDone(event: MouseEvent) {
+    event.preventDefault()
+    event.stopPropagation()
+    setLessonCompleted(lesson.id, !completed)
+  }
+
+  return (
+    <LessonCompleteCheckbox
+      lessonId={lesson.id}
+      completed={completed}
+      className={className}
+      onToggle={toggleDone}
+    />
   )
 }
 

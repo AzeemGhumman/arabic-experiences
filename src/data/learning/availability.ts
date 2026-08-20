@@ -1,6 +1,13 @@
 import { getMission } from "@/data/learning/missions"
 import { getLesson } from "@/data/learning/lessons"
-import { isLessonReleased, isMissionReleased, isNodeUnlocked, type MissionNode } from "@/data/learning/mission-graph"
+import {
+  isLessonReleased,
+  isMissionReleased,
+  isMissionPlayable,
+  isNodeUnlocked,
+  type MissionNode,
+} from "@/data/learning/mission-graph"
+import { areMissionPrerequisitesMet } from "@/data/learning/mission-prerequisites"
 
 /** Shared availability for missions and study lessons. */
 export type ContentAvailability = "done" | "open" | "locked" | "coming-soon"
@@ -28,8 +35,9 @@ export function missionAvailability(
   node?: MissionNode,
 ): ContentAvailability {
   if (completedIds.includes(id)) return "done"
-  if (!isMissionImplemented(id)) return "coming-soon"
-  if (node && !isNodeUnlocked(node, completedIds)) return "locked"
+  const locked = node ? !isNodeUnlocked(node, completedIds) : false
+  if (!isMissionImplemented(id)) return locked ? "locked" : "coming-soon"
+  if (locked) return "locked"
   return "open"
 }
 
@@ -42,4 +50,18 @@ export function availabilityLabelKey(availability: ContentAvailability) {
 
 export function canOpenMissionPlace(id: string) {
   return isMissionImplemented(id)
+}
+
+/** Map is unlocked, mission is playable, and linked study lessons are done. */
+export function canStartMission(
+  missionId: string,
+  completedMissionIds: string[],
+  completedLessonIds: string[],
+  node?: MissionNode,
+) {
+  const availability = missionAvailability(missionId, completedMissionIds, node)
+  if (availability !== "open" && availability !== "done") return false
+  if (!isMissionPlayable(missionId)) return false
+  if (availability === "done") return true
+  return areMissionPrerequisitesMet(missionId, completedLessonIds)
 }

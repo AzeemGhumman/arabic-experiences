@@ -1,7 +1,7 @@
 import { ArrowLeft } from "lucide-react"
 import { useTabNavigation } from "@/lib/tab-navigation"
 
-export function BackButton({ to = "/" }: { to?: string }) {
+export function BackButton({ to }: { to?: string }) {
   const { goBack } = useTabNavigation()
 
   return (

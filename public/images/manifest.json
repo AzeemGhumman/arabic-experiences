@@ -40,6 +40,13 @@
     "lost-group": "/images/missions/lost-group.webp",
     "something-wrong": "/images/missions/something-wrong.webp",
     "barber": "/images/missions/barber.webp",
-    "day-madinah": "/images/missions/day-madinah.webp"
+    "day-madinah": "/images/missions/day-madinah.webp",
+    "immigration-banner": "/images/missions/immigration-banner.webp"
+  },
+  "items": {
+    "ihram": "/images/items/ihram.webp",
+    "sandals": "/images/items/sandals.webp",
+    "charger": "/images/items/charger.webp",
+    "medicine": "/images/items/medicine.webp"
   }
 }

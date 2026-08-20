@@ -3,7 +3,12 @@ import { Link } from "react-router-dom"
 import { StudyView } from "@/components/study/StudyView"
 import { PlayAudioButton } from "@/components/audio/PlayAudioButton"
 import { ExperienceScene, MiniMap, sceneForExperience } from "@/components/mission/ExperienceScenes"
-import { OptionButton, RegisterBadge } from "@/components/mission/MissionBits"
+import { MissionAudioHints } from "@/components/mission/MissionAudioHints"
+import { OfficerPromptStep } from "@/components/mission/OfficerPromptStep"
+import { MissionCelebration } from "@/components/mission/MissionCelebration"
+import { MissionStepDebugNav } from "@/components/mission/MissionStepDebugNav"
+import { MatchItemsStep } from "@/components/mission/MatchItemsStep"
+import { OptionButton, RegisterBadge, useMcqAnswer, useShuffledOptions } from "@/components/mission/MissionBits"
 import { PhraseBuilder } from "@/components/mission/PhraseBuilder"
 import { BackButton } from "@/components/app-shell/BackButton"
 import { Button } from "@/components/ui/button"
@@ -12,6 +17,7 @@ import { getCapability } from "@/data/learning/capabilities"
 import { getLesson } from "@/data/learning/lessons"
 import { getLearningWord } from "@/data/learning/words"
 import { useActiveJourney, useAppState } from "@/lib/app-state"
+import { useMissionNavigationGuard } from "@/lib/mission-navigation-guard"
 import { useTabNavigation } from "@/lib/tab-navigation"
 import { createRunById } from "@/lib/mission-engine"
 import { getStudyResources } from "@/data/learning/study-resources"
@@ -48,6 +54,7 @@ export function MissionPlayer({
   const { completeMission, discoverWord, toggleBookmark } = useAppState()
   const { progress } = useActiveJourney()
   const { t } = useI18n()
+  const { setMissionInProgress } = useMissionNavigationGuard()
   const [session, setSession] = useState(0)
   const [runBundle, setRunBundle] = useState(() =>
     createRunById(experienceId, progress.capabilities, `${experienceId}-0`),
@@ -70,6 +77,11 @@ export function MissionPlayer({
   const stepTotal = skipsContext ? steps.length - 1 : steps.length
   const stepNumber = skipsContext ? stepIndex : stepIndex + 1
 
+  useEffect(() => {
+    setMissionInProgress(!finished)
+    return () => setMissionInProgress(false)
+  }, [finished, setMissionInProgress])
+
   function saveProgress() {
     if (saved) return
     completeMission({
@@ -87,6 +99,12 @@ export function MissionPlayer({
   function finish() {
     saveProgress()
     setFinished(true)
+  }
+
+  function jumpToStep(index: number) {
+    if (index < 0 || index >= steps.length) return
+    setFinished(false)
+    setStepIndex(index)
   }
 
   function finishStudy() {
@@ -134,7 +152,7 @@ export function MissionPlayer({
   return (
     <div className="space-y-5 pb-10">
       <header>
-        <BackButton />
+        <BackButton to={returnTo} />
         <p className="text-[11px] font-semibold tracking-[0.18em] text-terracotta uppercase">
           {runBundle.kind === "lesson" ? t("play.study") : t("play.mission")}
         </p>
@@ -157,6 +175,10 @@ export function MissionPlayer({
           </>
         ) : null}
       </header>
+
+      {!isStudySession ? (
+        <MissionStepDebugNav steps={steps} stepIndex={stepIndex} onJump={jumpToStep} />
+      ) : null}
 
       {step ? (
         <StepView
@@ -222,6 +244,7 @@ function StepView({
   const sceneFrame = !ownsScene ? (
     <ExperienceScene
       scene={scene}
+      missionId={experienceId}
       compact
       gateNumber={variables.gateNumber}
       complication={
@@ -238,7 +261,12 @@ function StepView({
   if (step.type === "context") {
     return (
       <div className="space-y-4">
-        <ExperienceScene scene={step.scene} gateNumber={variables.gateNumber} focus="place" />
+        <ExperienceScene
+          scene={step.scene}
+          missionId={experienceId}
+          gateNumber={variables.gateNumber}
+          focus="place"
+        />
         <h2 className="font-display text-2xl">{step.title}</h2>
         <p className="text-sm leading-relaxed text-muted-foreground">{step.body}</p>
         <Button className="w-full" variant="terracotta" onClick={onContinue}>
@@ -282,10 +310,71 @@ function StepView({
     return (
       <div className="space-y-4">
         {sceneFrame}
-        <PhraseBuilder
+        <PhraseReplyStep
+          packId={experienceId}
           prompt={step.prompt}
+          audioId={step.audioId}
+          officerArabic={step.officerArabic}
+          audioTranslation={step.promptEnglish}
+          question={step.question}
+          feedback={step.feedback}
           tokens={step.tokens}
           correctOrder={step.correctOrder}
+          onContinue={onContinue}
+        />
+      </div>
+    )
+  }
+
+  if (step.type === "match") {
+    return (
+      <div className="space-y-4">
+        {sceneFrame}
+        <MatchItemsStep
+          prompt={step.prompt}
+          question={step.question}
+          itemIds={step.itemIds}
+          feedback={step.feedback}
+          onContinue={onContinue}
+        />
+      </div>
+    )
+  }
+
+  if (step.type === "listen" && step.audioId) {
+    return (
+      <div className="space-y-4">
+        {sceneFrame}
+        <OfficerPromptStep
+          packId={experienceId}
+          prompt={step.prompt}
+          audioTranslation={step.promptEnglish}
+          officerArabic={step.arabic}
+          audioId={step.audioId}
+          question={step.question}
+          options={step.options}
+          correctId={step.correctId}
+          feedback={step.feedback}
+          onContinue={onContinue}
+        />
+      </div>
+    )
+  }
+
+  if (step.type === "choice" && step.audioId) {
+    return (
+      <div className="space-y-4">
+        {sceneFrame}
+        <OfficerPromptStep
+          packId={experienceId}
+          prompt={step.prompt}
+          audioTranslation={step.promptEnglish}
+          officerArabic={step.arabic}
+          audioId={step.audioId}
+          question={step.question}
+          options={step.options}
+          correctId={step.correctId}
+          feedback={step.feedback}
           onContinue={onContinue}
         />
       </div>
@@ -375,6 +464,58 @@ function StudyStep({
       <StudyResources items={resources} />
       <Button type="button" className="w-full" variant="terracotta" onClick={onFinish}>
         {t("common.done")}
+      </Button>
+    </div>
+  )
+}
+
+function PhraseReplyStep({
+  packId,
+  prompt,
+  audioId,
+  officerArabic,
+  audioTranslation,
+  question,
+  feedback,
+  tokens,
+  correctOrder,
+  onContinue,
+}: {
+  packId: string
+  prompt: string
+  audioId?: string
+  officerArabic?: string
+  audioTranslation?: string
+  question?: string
+  feedback?: string
+  tokens: string[]
+  correctOrder: string[]
+  onContinue: () => void
+}) {
+  const { t } = useI18n()
+  const [solved, setSolved] = useState(false)
+  const questionText = question ?? t("play.buildYourReply")
+
+  return (
+    <div className="space-y-3">
+      {audioId ? (
+        <MissionAudioHints
+          prompt={prompt}
+          packId={packId}
+          utterances={[{ audioId, arabic: officerArabic, translation: audioTranslation }]}
+        />
+      ) : (
+        <p className="rounded-2xl border border-border/60 bg-secondary/35 px-3 py-2.5 text-sm leading-snug text-muted-foreground">
+          {prompt}
+        </p>
+      )}
+      <p className="text-sm font-medium text-ink">{questionText}</p>
+      <PhraseBuilder tokens={tokens} correctOrder={correctOrder} onSolved={() => setSolved(true)} />
+      {solved && feedback ? (
+        <p className="rounded-2xl bg-sage/10 px-4 py-3 text-sm leading-relaxed text-sage-deep">{feedback}</p>
+      ) : null}
+      <Button className="w-full" variant="terracotta" disabled={!solved} onClick={onContinue}>
+        {t("play.continue")}
       </Button>
     </div>
   )
@@ -470,46 +611,41 @@ function ChoiceStep({
   showTranslation?: boolean
   onContinue: () => void
 }) {
-  const [selected, setSelected] = useState<string | null>(null)
-  const revealed = Boolean(selected)
-  const correct = selected === correctId
+  const { t } = useI18n()
+  const shuffledOptions = useShuffledOptions(options)
+  const { solved, select, optionState, showOptionDetail, selectedId } = useMcqAnswer(correctId)
   const clipId = audioId
   const immersiveMode = !showTransliteration && !showTranslation
-  const arabicFirst = immersiveMode && options.some((option) => option.arabic)
+  const arabicFirst = immersiveMode && shuffledOptions.some((option) => option.arabic)
   return (
     <div className="space-y-4">
       {situation ? <p className="rounded-2xl bg-secondary/70 px-4 py-3 text-sm leading-relaxed">{situation}</p> : null}
       <p className="text-sm font-medium text-ink">{prompt}</p>
       {listen && clipId ? (
-        <PlayAudioButton
-          packId={packId}
-          clipId={clipId}
-          autoPlay
-          size="default"
-          label="Listen"
-        />
+        <div className="flex justify-center py-0.5">
+          <PlayAudioButton packId={packId} clipId={clipId} size="icon" variant="secondary" label={t("play.listen")} />
+        </div>
       ) : null}
-      {arabic && (!listen || revealed) ? <p className="arabic-text text-center text-4xl">{arabic}</p> : null}
+      {arabic && (!listen || selectedId !== null) ? <p className="arabic-text text-center text-4xl">{arabic}</p> : null}
       <div className="grid gap-2">
-        {options.map((option) => (
+        {shuffledOptions.map((option) => (
           <OptionButton
             key={option.id}
-            selected={selected === option.id}
-            correct={option.id === correctId}
-            revealed={revealed}
-            onClick={() => setSelected(option.id)}
+            state={optionState(option.id)}
+            disabled={solved}
+            onClick={() => select(option.id)}
           >
             {arabicFirst && option.arabic ? (
               <>
                 <span className="arabic-text block text-xl leading-relaxed">{option.arabic}</span>
-                {revealed ? (
+                {showOptionDetail(option.id) ? (
                   <span className="mt-1 block text-sm font-normal text-muted-foreground">{option.label}</span>
                 ) : null}
               </>
             ) : (
               <>
                 <span className="block">{option.label}</span>
-                {option.arabic && (!immersiveMode || revealed) ? (
+                {option.arabic && (!immersiveMode || showOptionDetail(option.id)) ? (
                   <span className="arabic-text mt-1 block text-xl font-normal">{option.arabic}</span>
                 ) : null}
               </>
@@ -517,10 +653,10 @@ function ChoiceStep({
           </OptionButton>
         ))}
       </div>
-      {revealed && feedback ? <p className="text-sm text-muted-foreground">{feedback}</p> : null}
-      {revealed && !correct ? <p className="text-sm text-muted-foreground">Try another answer.</p> : null}
-      <Button className="w-full" disabled={!correct} onClick={onContinue}>
-        Continue
+      {solved && feedback ? <p className="text-sm text-muted-foreground">{feedback}</p> : null}
+      {!solved && selectedId ? <p className="text-sm text-muted-foreground">{t("play.tryAnother")}</p> : null}
+      <Button className="w-full" disabled={!solved} onClick={onContinue}>
+        {t("play.continue")}
       </Button>
     </div>
   )
@@ -539,8 +675,7 @@ function DirectionStep({
 }) {
   const { t } = useI18n()
   const directionLabel = useDirectionLabels()
-  const [selected, setSelected] = useState<DirectionAction | null>(null)
-  const correct = selected === step.correct
+  const { solved, select, optionState, selectedId } = useMcqAnswer(step.correct)
   const street = isStreetScene(scene)
   return (
     <div className="space-y-4">
@@ -551,30 +686,31 @@ function DirectionStep({
           focus={step.correct === "up" ? "stairs" : "doors"}
           interactive
           availableDirections={step.options}
-          selectedDirection={selected}
+          selectedDirection={selectedId as DirectionAction | null}
           correctDirection={step.correct}
-          highlight={correct ? step.correct : undefined}
-          onChooseDirection={setSelected}
+          highlight={solved ? step.correct : undefined}
+          onChooseDirection={(direction) => {
+            if (!solved) select(direction)
+          }}
         />
       ) : (
-        <MiniMap highlight={selected && correct ? step.correct : undefined} />
+        <MiniMap highlight={solved ? step.correct : undefined} />
       )}
       <p className="text-sm text-muted-foreground">{step.prompt}</p>
-      {selected ? <p className="arabic-text text-center text-4xl">{step.arabic}</p> : null}
+      {selectedId ? <p className="arabic-text text-center text-4xl">{step.arabic}</p> : null}
       <div className="grid grid-cols-2 gap-2">
         {step.options.map((option) => (
           <OptionButton
             key={option}
-            selected={selected === option}
-            correct={option === step.correct}
-            revealed={Boolean(selected)}
-            onClick={() => setSelected(option)}
+            state={optionState(option)}
+            disabled={solved}
+            onClick={() => select(option)}
           >
             {directionLabel[option]}
           </OptionButton>
         ))}
       </div>
-      <Button className="w-full" disabled={!correct} onClick={onContinue}>
+      <Button className="w-full" disabled={!solved} onClick={onContinue}>
         {t("play.continue")}
       </Button>
     </div>
@@ -594,58 +730,86 @@ function GpsStep({
   showTranslation: boolean
   onContinue: () => void
 }) {
-  const { t } = useI18n()
-  const directionLabel = useDirectionLabels()
   const [index, setIndex] = useState(0)
-  const [selected, setSelected] = useState<string | null>(null)
   const current = instructions[index]
   if (!current) return null
-  const actions = ["straight", "right", "left", "stop", "arrive"] as const
-  const correct = selected === current.action
   const last = index === instructions.length - 1
+
+  return (
+    <GpsInstructionStep
+      key={index}
+      packId={packId}
+      prompt={prompt}
+      instruction={current}
+      instructionNumber={index + 1}
+      instructionTotal={instructions.length}
+      showTranslation={showTranslation}
+      last={last}
+      onNext={() => {
+        if (last) onContinue()
+        else setIndex((value) => value + 1)
+      }}
+    />
+  )
+}
+
+function GpsInstructionStep({
+  packId,
+  prompt,
+  instruction,
+  instructionNumber,
+  instructionTotal,
+  showTranslation,
+  last,
+  onNext,
+}: {
+  packId: string
+  prompt: string
+  instruction: GpsInstruction
+  instructionNumber: number
+  instructionTotal: number
+  showTranslation: boolean
+  last: boolean
+  onNext: () => void
+}) {
+  const { t } = useI18n()
+  const directionLabel = useDirectionLabels()
+  const { solved, select, optionState, selectedId } = useMcqAnswer(instruction.action)
+  const actions = ["straight", "right", "left", "stop", "arrive"] as const
+
   return (
     <div className="space-y-4">
-      <MiniMap highlight={correct ? current.action : undefined} />
+      <MiniMap highlight={solved ? instruction.action : undefined} />
       <p className="text-sm text-muted-foreground">{prompt}</p>
       <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft">
-        Instruction {index + 1} of {instructions.length}
+        Instruction {instructionNumber} of {instructionTotal}
       </p>
-      {current.audioId ? (
-        <PlayAudioButton
-          key={`${index}-${current.audioId}`}
-          packId={packId}
-          clipId={current.audioId}
-          autoPlay
-          size="default"
-          label={t("play.listenAgain")}
-        />
+      {instruction.audioId ? (
+        <div className="flex justify-center py-0.5">
+          <PlayAudioButton
+            packId={packId}
+            clipId={instruction.audioId}
+            size="icon"
+            variant="secondary"
+            label={t("play.listen")}
+          />
+        </div>
       ) : null}
-      {selected ? <p className="arabic-text text-center text-3xl leading-relaxed">{current.arabic}</p> : null}
-      {showTranslation ? <p className="text-center text-sm text-muted-foreground">{current.meaning}</p> : null}
+      {selectedId ? <p className="arabic-text text-center text-3xl leading-relaxed">{instruction.arabic}</p> : null}
+      {showTranslation ? <p className="text-center text-sm text-muted-foreground">{instruction.meaning}</p> : null}
       <div className="grid grid-cols-2 gap-2">
         {actions.map((action) => (
           <OptionButton
             key={action}
-            selected={selected === action}
-            correct={action === current.action}
-            revealed={Boolean(selected)}
-            onClick={() => setSelected(action)}
+            state={optionState(action)}
+            disabled={solved}
+            onClick={() => select(action)}
           >
             {directionLabel[action]}
           </OptionButton>
         ))}
       </div>
-      <Button
-        className="w-full"
-        disabled={!correct}
-        onClick={() => {
-          if (last) onContinue()
-          else {
-            setIndex((value) => value + 1)
-            setSelected(null)
-          }
-        }}
-      >
+      <Button className="w-full" disabled={!solved} onClick={onNext}>
         {last ? t("play.arrive") : t("play.nextInstruction")}
       </Button>
     </div>
@@ -687,11 +851,12 @@ function Completion({
 
   return (
     <div className="space-y-5 pb-10">
-      <BackButton />
+      <MissionCelebration active={isMission} />
+      <BackButton to={returnTo} />
       {!isStudy && experienceId ? (
         <ExperienceScene scene={sceneForExperience(experienceId)} missionId={experienceId} className="h-36" />
       ) : null}
-      <header className={isStudy ? "rounded-[1.75rem] bg-sky/10 p-5" : "rounded-[1.75rem] bg-sage/10 p-5"}>
+      <header className={isStudy ? "rounded-[1.75rem] bg-sky/10 p-5" : "rounded-[1.75rem] bg-sage/10 p-5 motion-safe:animate-in motion-safe:fade-in motion-safe:zoom-in-95 motion-safe:duration-500"}>
         <p
           className={
             isStudy

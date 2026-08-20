@@ -68,6 +68,8 @@ export type ChoiceOption = {
   id: string
   label: string
   arabic?: string
+  /** Spoken Arabic clip id within the mission audio pack. */
+  audioId?: string
 }
 
 export type StudyGroup = {
@@ -112,6 +114,12 @@ export type MissionStep =
       type: "choice"
       prompt: string
       arabic?: string
+      /** Officer speech clip — enables immersive audio + hint flow. */
+      audioId?: string
+      /** English translation of the spoken audio — hint level 2 only. */
+      promptEnglish?: string
+      /** Question before answer options. */
+      question?: string
       options: ChoiceOption[]
       correctId: string
       feedback?: string
@@ -126,8 +134,24 @@ export type MissionStep =
   | {
       type: "phrase"
       prompt: string
+      /** Officer question audio before building the reply. */
+      audioId?: string
+      officerArabic?: string
+      promptEnglish?: string
+      /** Question before the phrase builder. */
+      question?: string
       tokens: string[]
       correctOrder: string[]
+      feedback?: string
+    }
+  | {
+      type: "match"
+      prompt: string
+      /** Question above the matching board. */
+      question?: string
+      /** Vocab word ids — each needs an image in the items map. */
+      itemIds: string[]
+      feedback?: string
     }
   | {
       type: "listen"
@@ -135,8 +159,13 @@ export type MissionStep =
       arabic: string
       /** Clip id within the mission audio pack. */
       audioId?: string
+      /** English translation of the spoken audio — hint level 2 only. */
+      promptEnglish?: string
+      /** Question before answer options. */
+      question?: string
       options: ChoiceOption[]
       correctId: string
+      feedback?: string
     }
   | {
       type: "decision"

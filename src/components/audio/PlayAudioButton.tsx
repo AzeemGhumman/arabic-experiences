@@ -12,14 +12,16 @@ export function PlayAudioButton({
   variant = "secondary",
   className,
   label,
+  disabled = false,
 }: {
   packId: string
   clipId: string
   autoPlay?: boolean
-  size?: "icon" | "default"
+  size?: "icon" | "default" | "inline" | "zone"
   variant?: "secondary" | "terracotta" | "outline" | "ghost"
   className?: string
   label?: string
+  disabled?: boolean
 }) {
   const { play, playingId } = useAudioPack(packId)
   const playing = playingId === clipId
@@ -34,6 +36,40 @@ export function PlayAudioButton({
     autoPlayed.current = true
     void play(clipId)
   }, [autoPlay, clipId, packId, play])
+
+  if (size === "inline") {
+    return (
+      <Button
+        type="button"
+        size="icon"
+        variant={playing ? "terracotta" : variant}
+        className={cn("size-7 shrink-0 rounded-full", className)}
+        aria-label={label ?? "Play pronunciation"}
+        disabled={disabled}
+        onClick={() => void play(clipId)}
+      >
+        <Volume2 className="size-3.5" />
+      </Button>
+    )
+  }
+
+  if (size === "zone") {
+    return (
+      <button
+        type="button"
+        disabled={disabled}
+        aria-label={label ?? "Play pronunciation"}
+        className={cn(
+          "flex min-w-14 shrink-0 items-center justify-center self-stretch border-r border-border/60 bg-secondary/45 transition hover:bg-secondary disabled:cursor-not-allowed disabled:opacity-60",
+          playing && "bg-terracotta/15 text-terracotta",
+          className,
+        )}
+        onClick={() => void play(clipId)}
+      >
+        <Volume2 className={cn("size-4", playing && "animate-pulse")} />
+      </button>
+    )
+  }
 
   if (size === "default") {
     return (
