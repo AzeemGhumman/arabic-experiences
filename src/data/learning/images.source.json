@@ -4,9 +4,11 @@
   "sheetSize": 1024,
   "grid": { "cols": 2, "rows": 2 },
   "gutterInset": 0.04,
+  "defaultKind": "study",
   "sheets": [
     {
       "id": "arrive",
+      "kind": "study",
       "tiles": [
         { "id": "packing", "subject": "closed brown leather suitcase with a small gold clasp" },
         { "id": "airport", "subject": "simple cream airport terminal silhouette with a small dusty-blue doorway" },
@@ -16,6 +18,7 @@
     },
     {
       "id": "city",
+      "kind": "study",
       "tiles": [
         { "id": "hotel", "subject": "cream hotel building with a few dusty-blue windows and a terracotta door" },
         { "id": "room-service", "subject": "neatly folded cream towels on a simple hotel bed" },
@@ -25,6 +28,7 @@
     },
     {
       "id": "market",
+      "kind": "study",
       "tiles": [
         { "id": "shopping", "subject": "terracotta market tote bag with a simple ink handle" },
         { "id": "colors", "subject": "four paint circles: terracotta, sage, gold, dusty sky on cream" },
@@ -34,6 +38,7 @@
     },
     {
       "id": "people",
+      "kind": "study",
       "tiles": [
         { "id": "polite", "subject": "two small faceless cream figures slightly bowing toward each other" },
         { "id": "family", "subject": "three small faceless cream figures standing together, simple silhouettes" },
@@ -43,6 +48,7 @@
     },
     {
       "id": "worship",
+      "kind": "study",
       "tiles": [
         { "id": "haram", "subject": "distant respectful view of the Kaaba as a small black cube with a gold band in a cream courtyard, no crowds, no faces" },
         { "id": "ritual", "subject": "two soft beige hills with a terracotta dashed walking path between them" },
@@ -52,6 +58,7 @@
     },
     {
       "id": "words",
+      "kind": "study",
       "tiles": [
         { "id": "numbers", "subject": "a single cream ceramic tile showing a large ink Arabic eight, no other characters" },
         { "id": "geography", "subject": "two simple city silhouettes: a cream cube shrine and a sage-green dome on a tan ridge" },
@@ -61,11 +68,52 @@
     },
     {
       "id": "outdoors",
+      "kind": "study",
       "tiles": [
         { "id": "nature", "subject": "gold sun over a sage tree casting a cool blue pool of shade" },
         { "id": "hajj", "subject": "cluster of simple white peaked tents on beige ground, Mina camp, no people" },
         { "id": "nature-alt", "subject": "clay water jug in shade under a sage tree" },
         { "id": "hajj-alt", "subject": "simple cream Hajj bus near white tents, no people" }
+      ]
+    },
+    {
+      "id": "mission-arrival",
+      "kind": "missions",
+      "tiles": [
+        { "id": "taxi-hotel", "subject": "gold Saudi taxi sedan seen from the front three-quarter at a hotel curb, small cream hotel sign post with terracotta cap, sage-tinted road, no people" },
+        { "id": "airport-arrival", "subject": "brown rolling suitcase standing beside a cream airport exit door with dusty-blue glass panels, bright arrivals hall, no people" },
+        { "id": "immigration", "subject": "open cream passport showing blank pages beside a small terracotta desk window with a sage-green shade, no text, no numerals" },
+        { "id": "find-haram", "subject": "cream pointed arch gate with a terracotta lantern hanging in the opening, dusty sky, no crowds" }
+      ]
+    },
+    {
+      "id": "mission-haram",
+      "kind": "missions",
+      "tiles": [
+        { "id": "enter-haram", "subject": "simple cream mosque doorway with open wooden doors onto a pale empty courtyard, distant, respectful, no crowds" },
+        { "id": "begin-tawaf", "subject": "distant respectful view of the Kaaba as a small black cube with a gold band in an empty cream circular courtyard, no crowds, no faces" },
+        { "id": "find-zamzam", "subject": "cream clay water jug and a small cup on sage-tinted stone, still life" },
+        { "id": "complete-sai", "subject": "two soft beige hills with a terracotta dashed walking path between them, empty, respectful, no crowds" }
+      ]
+    },
+    {
+      "id": "mission-city",
+      "kind": "missions",
+      "tiles": [
+        { "id": "order-dinner", "subject": "round brown table with a cream plate, a terracotta bowl, and a small glass of water, no people" },
+        { "id": "lost-group", "subject": "one small faceless cream figure in the foreground looking toward two tiny faceless figures far away, simple silhouettes" },
+        { "id": "something-wrong", "subject": "cream first-aid kit box with a sage plus mark, still life, no text" },
+        { "id": "barber", "subject": "terracotta-handled scissors crossed over a folded white cloth, modest still life, no people" }
+      ]
+    },
+    {
+      "id": "mission-beyond",
+      "kind": "missions",
+      "tiles": [
+        { "id": "day-madinah", "subject": "simple cream mosque with a single sage-green dome and one date palm, respectful and uncrowded" },
+        { "id": "hajj-bus", "subject": "simple cream Hajj bus with dusty-blue windows beside white peaked tents, no people" },
+        { "id": "lantern-alt", "subject": "simple gold hanging lantern on cream ground, still life" },
+        { "id": "basin-alt", "subject": "round clay wash basin on cream ground, still life" }
       ]
     }
   ]

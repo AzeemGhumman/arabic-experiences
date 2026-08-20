@@ -1,0 +1,31 @@
+import type { TopicId } from "@/lib/learning-types"
+
+/** Study thumbs that have generated files under public/images/study/. */
+export const topicImageSrc: Partial<Record<TopicId, string>> = {
+  packing: "/images/study/packing.webp",
+  airport: "/images/study/airport.webp",
+  transport: "/images/study/transport.webp",
+  navigation: "/images/study/navigation.webp",
+  hotel: "/images/study/hotel.webp",
+  "room-service": "/images/study/room-service.webp",
+  money: "/images/study/money.webp",
+  food: "/images/study/food.webp",
+  shopping: "/images/study/shopping.webp",
+  colors: "/images/study/colors.webp",
+  clothes: "/images/study/clothes.webp",
+  time: "/images/study/time.webp",
+  polite: "/images/study/polite.webp",
+  family: "/images/study/family.webp",
+  health: "/images/study/health.webp",
+  body: "/images/study/body.webp",
+  haram: "/images/study/haram.webp",
+  ritual: "/images/study/ritual.webp",
+  nabawi: "/images/study/nabawi.webp",
+  barber: "/images/study/barber.webp",
+  numbers: "/images/study/numbers.webp",
+  geography: "/images/study/geography.webp",
+  actions: "/images/study/actions.webp",
+  adjectives: "/images/study/adjectives.webp",
+  nature: "/images/study/nature.webp",
+  hajj: "/images/study/hajj.webp",
+}

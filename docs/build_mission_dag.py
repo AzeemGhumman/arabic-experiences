@@ -18,34 +18,34 @@ COL_GAP = 56
 ROW_H = 150
 
 UMRAH_NODES = [
-    {"id": "immigration", "label": "Passport", "row": 0, "col": 1, "kind": "core", "requires": []},
-    {"id": "airport-arrival", "label": "Airport", "row": 1, "col": 1, "kind": "core", "requires": ["immigration"]},
-    {"id": "taxi-hotel", "label": "Taxi", "row": 2, "col": 1, "kind": "core", "requires": ["airport-arrival"]},
-    {"id": "find-haram", "label": "Gate", "row": 3, "col": 1, "kind": "core", "requires": ["taxi-hotel"]},
-    {"id": "enter-haram", "label": "Enter", "row": 4, "col": 1, "kind": "core", "requires": ["find-haram"]},
+    {"id": "immigration", "label": "Passport", "row": 0, "col": 1, "kind": "mission", "requires": []},
+    {"id": "airport-arrival", "label": "Airport", "row": 1, "col": 1, "kind": "mission", "requires": ["immigration"]},
+    {"id": "taxi-hotel", "label": "Taxi", "row": 2, "col": 1, "kind": "mission", "requires": ["airport-arrival"]},
+    {"id": "find-haram", "label": "Gate", "row": 3, "col": 1, "kind": "mission", "requires": ["taxi-hotel"]},
+    {"id": "enter-haram", "label": "Enter", "row": 4, "col": 1, "kind": "mission", "requires": ["find-haram"]},
     {"id": "order-dinner", "label": "Dinner", "row": 4, "col": 0, "kind": "side", "requires": ["taxi-hotel"]},
-    {"id": "begin-tawaf", "label": "Tawaf", "row": 5, "col": 1, "kind": "core", "requires": ["enter-haram"]},
+    {"id": "begin-tawaf", "label": "Tawaf", "row": 5, "col": 1, "kind": "mission", "requires": ["enter-haram"]},
     {"id": "lost-group", "label": "Lost?", "row": 5, "col": 0, "kind": "side", "requires": ["enter-haram"]},
     {"id": "something-wrong", "label": "Help", "row": 5, "col": 2, "kind": "side", "requires": ["enter-haram"]},
-    {"id": "find-zamzam", "label": "Zamzam", "row": 6, "col": 1, "kind": "core", "requires": ["begin-tawaf"]},
-    {"id": "complete-sai", "label": "Sa'i", "row": 7, "col": 1, "kind": "core", "requires": ["find-zamzam"]},
-    {"id": "barber", "label": "Barber", "row": 8, "col": 1, "kind": "core", "requires": ["complete-sai"]},
-    {"id": "day-madinah", "label": "Madinah", "row": 9, "col": 1, "kind": "core", "requires": ["barber"]},
+    {"id": "find-zamzam", "label": "Zamzam", "row": 6, "col": 1, "kind": "mission", "requires": ["begin-tawaf"]},
+    {"id": "complete-sai", "label": "Sa'i", "row": 7, "col": 1, "kind": "mission", "requires": ["find-zamzam"]},
+    {"id": "barber", "label": "Barber", "row": 8, "col": 1, "kind": "mission", "requires": ["complete-sai"]},
+    {"id": "day-madinah", "label": "Madinah", "row": 9, "col": 1, "kind": "mission", "requires": ["barber"]},
 ]
 
 UMRAH_EDGES = [
-    ("immigration", "airport-arrival", "core"),
-    ("airport-arrival", "taxi-hotel", "core"),
-    ("taxi-hotel", "find-haram", "core"),
+    ("immigration", "airport-arrival", "mission"),
+    ("airport-arrival", "taxi-hotel", "mission"),
+    ("taxi-hotel", "find-haram", "mission"),
     ("taxi-hotel", "order-dinner", "side"),
-    ("find-haram", "enter-haram", "core"),
-    ("enter-haram", "begin-tawaf", "core"),
+    ("find-haram", "enter-haram", "mission"),
+    ("enter-haram", "begin-tawaf", "mission"),
     ("enter-haram", "lost-group", "side"),
     ("enter-haram", "something-wrong", "side"),
-    ("begin-tawaf", "find-zamzam", "core"),
-    ("find-zamzam", "complete-sai", "core"),
-    ("complete-sai", "barber", "core"),
-    ("barber", "day-madinah", "core"),
+    ("begin-tawaf", "find-zamzam", "mission"),
+    ("find-zamzam", "complete-sai", "mission"),
+    ("complete-sai", "barber", "mission"),
+    ("barber", "day-madinah", "mission"),
 ]
 
 STAGES = [
@@ -55,14 +55,14 @@ STAGES = [
 ]
 
 ARABIC_NODES = [
-    {"id": "taxi-hotel", "label": "Taxi", "row": 0, "col": 0, "kind": "core", "requires": []},
-    {"id": "find-haram", "label": "Gate", "row": 0, "col": 2, "kind": "core", "requires": []},
-    {"id": "order-dinner", "label": "Dinner", "row": 1, "col": 0, "kind": "core", "requires": ["taxi-hotel"]},
-    {"id": "enter-haram", "label": "Enter", "row": 1, "col": 2, "kind": "core", "requires": ["find-haram"]},
+    {"id": "taxi-hotel", "label": "Taxi", "row": 0, "col": 0, "kind": "mission", "requires": []},
+    {"id": "find-haram", "label": "Gate", "row": 0, "col": 2, "kind": "mission", "requires": []},
+    {"id": "order-dinner", "label": "Dinner", "row": 1, "col": 0, "kind": "mission", "requires": ["taxi-hotel"]},
+    {"id": "enter-haram", "label": "Enter", "row": 1, "col": 2, "kind": "mission", "requires": ["find-haram"]},
 ]
 ARABIC_EDGES = [
-    ("taxi-hotel", "order-dinner", "core"),
-    ("find-haram", "enter-haram", "core"),
+    ("taxi-hotel", "order-dinner", "mission"),
+    ("find-haram", "enter-haram", "mission"),
 ]
 
 
@@ -315,7 +315,7 @@ def main() -> None:
         600,
         660,
         140,
-        "Unplayable places: Prep → Continue the journey\nso the path can still move.",
+        "Unplayable places: Continue the journey\nso the path can still move.",
         "#d0ebff",
         frame=nid_frame,
         size=16,

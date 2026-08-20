@@ -1,59 +1,41 @@
 import { Link } from "react-router-dom"
 import type { ReactNode } from "react"
 import { ProgressRing } from "@/components/progress/ProgressRing"
-import { BookmarksSummaryLink } from "@/components/prep/BookmarksSummaryLink"
+import { BookmarksSummaryLink } from "@/components/study/BookmarksSummaryLink"
 import { capabilities } from "@/data/learning/capabilities"
-import { adventures } from "@/data/learning/adventures"
-import { getVocabByIds } from "@/data/vocabulary"
+import { missions } from "@/data/learning/missions"
 import { getLearningWord } from "@/data/learning/words"
-import { graphForJourney, nextPlayableAdventure } from "@/data/learning/mission-graph"
+import { graphForJourney, nextPlayableMission } from "@/data/learning/mission-graph"
 import { useActiveJourney, useAppState } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
 
 export function ProgressPage() {
   const { state } = useAppState()
   const { journey, progress, stats } = useActiveJourney()
-  const { t, journey: journeyCopy, adventure: adventureCopy, capability: capabilityCopy, depthLabel, word } =
+  const { t, journey: journeyCopy, missionDetail, capability: capabilityCopy, depthLabel, word } =
     useI18n()
   const journeyStrings = journeyCopy(journey.category)
 
-  const sceneWords = getVocabByIds(progress.discoveredVocab)
-  const adventureWords = progress.discoveredVocab
+  const journeyWords = progress.discoveredVocab
     .map((id) => getLearningWord(id))
     .filter((item): item is NonNullable<typeof item> => Boolean(item))
-    .filter((item) => !sceneWords.some((scene) => scene.id === item.id))
-  const groupedScene = sceneWords.reduce<Record<string, typeof sceneWords>>((acc, item) => {
-    acc[item.category] = acc[item.category] ?? []
-    acc[item.category].push(item)
-    return acc
-  }, {})
-  const groupedAdventure = adventureWords.reduce<Record<string, typeof adventureWords>>((acc, item) => {
+  const groupedJourney = journeyWords.reduce<Record<string, typeof journeyWords>>((acc, item) => {
     const key = item.domains[0] ?? "journey"
     acc[key] = acc[key] ?? []
     acc[key].push(item)
     return acc
   }, {})
-  const wordCount = sceneWords.length + adventureWords.length
+  const wordCount = journeyWords.length
   const bookmarkCount = progress.bookmarkedVocab.length
 
-  const canDo = [
-    ...adventures
-      .filter((item) => progress.completedAdventureIds.includes(item.id))
-      .map((item) => adventureCopy(item.id)?.canNowDo ?? item.canNowDo),
-    state.activeJourneyId === "arabic" &&
-    state.restaurantAsked.includes("water") &&
-    state.restaurantAsked.includes("rice")
-      ? "Order from a restaurant table by tapping what you see"
-      : null,
-    state.activeJourneyId === "quran" && state.gardenCelebrated
-      ? "Recognize a handful of Quranic garden words"
-      : null,
-  ].filter((item): item is string => Boolean(item))
+  const canDo = missions
+    .filter((item) => progress.completedMissionIds.includes(item.id))
+    .map((item) => missionDetail(item.id)?.canNowDo ?? item.canNowDo)
 
   const startedSkills = capabilities.filter((item) => (progress.capabilities[item.id] ?? 0) > 0)
   const graph = graphForJourney(state.activeJourneyId)
   const nextId = graph
-    ? nextPlayableAdventure([...progress.completedAdventureIds, ...progress.completedSideMissionIds], graph)
+    ? nextPlayableMission(progress.completedMissionIds, graph)
     : undefined
   const empty = canDo.length === 0 && wordCount === 0 && bookmarkCount === 0
 
@@ -84,7 +66,7 @@ export function ProgressPage() {
           <p className="font-display text-xl">{t("progress.emptyTitle")}</p>
           <p className="mt-2 text-sm text-muted-foreground">{t("progress.emptyBody")}</p>
           <Link
-            to={nextId ? `/adventures/${nextId}` : "/"}
+            to={nextId ? `/play/${nextId}` : "/"}
             className="mt-4 inline-block text-sm font-semibold text-terracotta"
           >
             {t("progress.continueJourney")}
@@ -153,27 +135,13 @@ export function ProgressPage() {
               <p className="text-sm text-muted-foreground">{t("progress.wordsEmpty")}</p>
             ) : (
               <>
-                {Object.entries(groupedAdventure).map(([category, words]) => (
+                {Object.entries(groupedJourney).map(([category, words]) => (
                   <WordGroup key={category} title={category}>
                     {words.map((item) => (
                       <article key={item.id} className="rounded-3xl border border-border bg-card p-4">
                         <p className="arabic-text text-2xl">{item.arabic}</p>
                         <p className="mt-1 text-sm text-muted-foreground">{word(item.id, item.meaning)}</p>
                       </article>
-                    ))}
-                  </WordGroup>
-                ))}
-                {Object.entries(groupedScene).map(([category, words]) => (
-                  <WordGroup key={category} title={category}>
-                    {words.map((item) => (
-                      <Link
-                        key={item.id}
-                        to={`/vocabulary/${item.id}`}
-                        className="rounded-3xl border border-border bg-card p-4"
-                      >
-                        <p className="arabic-text text-2xl">{item.arabic}</p>
-                        <p className="mt-1 text-sm text-muted-foreground">{word(item.id, item.meaning)}</p>
-                      </Link>
                     ))}
                   </WordGroup>
                 ))}

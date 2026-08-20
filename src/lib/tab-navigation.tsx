@@ -10,11 +10,11 @@ import {
 } from "react"
 import { useLocation, useNavigate, useNavigationType } from "react-router-dom"
 
-export type TabId = "home" | "prep" | "progress" | "companion" | "profile"
+export type TabId = "home" | "study" | "progress" | "companion" | "profile"
 
 const TAB_ROOTS: Record<TabId, string> = {
   home: "/",
-  prep: "/prep",
+  study: "/study",
   progress: "/progress",
   companion: "/companion",
   profile: "/profile",
@@ -23,7 +23,7 @@ const TAB_ROOTS: Record<TabId, string> = {
 function initialStacks(): Record<TabId, string[]> {
   return {
     home: [TAB_ROOTS.home],
-    prep: [TAB_ROOTS.prep],
+    study: [TAB_ROOTS.study],
     progress: [TAB_ROOTS.progress],
     companion: [TAB_ROOTS.companion],
     profile: [TAB_ROOTS.profile],
@@ -31,10 +31,10 @@ function initialStacks(): Record<TabId, string[]> {
 }
 
 export function getTabForPath(pathname: string): TabId {
-  if (pathname.startsWith("/profile") || pathname === "/journeys") return "profile"
-  if (pathname.startsWith("/progress") || pathname === "/learn") return "progress"
+  if (pathname.startsWith("/profile")) return "profile"
+  if (pathname.startsWith("/progress")) return "progress"
   if (pathname.startsWith("/companion")) return "companion"
-  if (pathname.startsWith("/prep") || pathname.startsWith("/side-missions")) return "prep"
+  if (pathname.startsWith("/study") || pathname.startsWith("/lessons")) return "study"
   return "home"
 }
 

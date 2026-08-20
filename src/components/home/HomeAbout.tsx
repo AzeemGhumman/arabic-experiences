@@ -4,9 +4,9 @@ import { useAppState } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
 import { useTabNavigation, type TabId } from "@/lib/tab-navigation"
 
-const tabMeta: { tab: TabId; key: "home" | "prep" | "progress" | "trip" | "profile"; icon: typeof Home; tripOnly?: boolean }[] = [
+const tabMeta: { tab: TabId; key: "home" | "study" | "progress" | "trip" | "profile"; icon: typeof Home; tripOnly?: boolean }[] = [
   { tab: "home", key: "home", icon: Home },
-  { tab: "prep", key: "prep", icon: Compass },
+  { tab: "study", key: "study", icon: Compass },
   { tab: "progress", key: "progress", icon: BookOpen },
   { tab: "companion", key: "trip", icon: ScrollText, tripOnly: true },
   { tab: "profile", key: "profile", icon: User },
@@ -14,7 +14,7 @@ const tabMeta: { tab: TabId; key: "home" | "prep" | "progress" | "trip" | "profi
 
 const featureMeta = [
   { id: "missions", icon: MapPinned },
-  { id: "toolkit", icon: Library },
+  { id: "study", icon: Library },
   { id: "listen", icon: Headphones },
   { id: "progress", icon: Sparkles },
   { id: "journeys", icon: Globe2 },

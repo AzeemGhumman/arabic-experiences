@@ -69,7 +69,7 @@ export function getCapability(id: string) {
 
 export function depthLabel(level: number) {
   if (level >= 3) return "Master"
-  if (level >= 2) return "Explore"
-  if (level >= 1) return "Core"
+  if (level >= 2) return "Advanced"
+  if (level >= 1) return "Basic"
   return "Not started"
 }

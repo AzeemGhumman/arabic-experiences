@@ -55,7 +55,7 @@ export const umrahSteps: UmrahStep[] = [
 export const haramExperience = {
   id: "haram",
   title: "Entering Masjid al-Haram",
-  kicker: "Guide",
+  kicker: "Trip companion",
   atmosphere: "Dusk light on white marble. The courtyard opens slowly, then all at once.",
   context:
     "You have arrived at one of the most visited places on earth. This moment is less about rushing to the next rite and more about arriving with your attention. Notice the scale, the sound, and the way people move toward the center.",

@@ -1,7 +1,7 @@
 import type { JourneyCategory } from "@/lib/storage"
 
-/** One localized adventure / mission card. */
-export type AdventureStrings = {
+/** Localized mission place-page copy. */
+export type MissionStrings = {
   title: string
   subtitle: string
   description: string
@@ -35,7 +35,7 @@ export type LanguagePack = {
   ui: {
     nav: {
       home: string
-      prep: string
+      study: string
       progress: string
       trip: string
       profile: string
@@ -63,11 +63,11 @@ export type LanguagePack = {
       backToMap: string
       percentComplete: string
     }
-    prep: {
+    study: {
       kicker: string
       title: string
       body: string
-      sessionsDone: string
+      lessonsDone: string
       footer: string
       stage: string
       forMission: string
@@ -99,7 +99,7 @@ export type LanguagePack = {
       tabsTitle: string
       tabs: {
         home: string
-        prep: string
+        study: string
         progress: string
         trip: string
         profile: string
@@ -107,7 +107,7 @@ export type LanguagePack = {
       featuresTitle: string
       features: {
         missions: { title: string; body: string }
-        toolkit: { title: string; body: string }
+        study: { title: string; body: string }
         listen: { title: string; body: string }
         progress: { title: string; body: string }
         journeys: { title: string; body: string }
@@ -174,8 +174,8 @@ export type LanguagePack = {
       lede: string
       howTitle: string
       howMission: string
-      howPrep: string
-      howGuide: string
+      howStudy: string
+      howTrip: string
       howDismiss: string
       howStart: string
     }
@@ -193,9 +193,9 @@ export type LanguagePack = {
       comingSoonDismiss: string
       lockedBody: string
     }
-    adventure: {
+    play: {
       mission: string
-      prep: string
+      study: string
       listen: string
       listenAgain: string
       continue: string
@@ -209,7 +209,7 @@ export type LanguagePack = {
       wordsUsed: string
       wordsInLesson: string
       backToMission: string
-      backToPrep: string
+      backToStudy: string
       studyAgain: string
       directions: {
         left: string
@@ -223,8 +223,8 @@ export type LanguagePack = {
     }
     depth: {
       master: string
-      explore: string
-      core: string
+      advanced: string
+      basic: string
       notStarted: string
     }
     companion: {
@@ -239,7 +239,7 @@ export type LanguagePack = {
       hajjDaysBody: string
       laterTitle: string
       laterBody: string
-      backToGuide: string
+      backToCompanion: string
       disclaimer: string
     }
     auth: {
@@ -252,9 +252,9 @@ export type LanguagePack = {
     }
   }
   journeys: Record<JourneyCategory, JourneyStrings>
-  stages: Record<string, string>
+  chapters: Record<string, string>
   missions: Record<string, string>
-  adventures: Record<string, AdventureStrings>
+  missionDetails: Record<string, MissionStrings>
   capabilities: Record<string, CapabilityStrings>
   /** Optional word glosses keyed by vocabulary id. Falls back to English data when missing. */
   words: Record<string, string>

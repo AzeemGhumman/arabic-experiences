@@ -14,7 +14,7 @@ export function UmrahExperiencePage() {
     useAppState()
 
   if (state.activeJourneyId !== "umrah") {
-    return <Navigate to={state.activeJourneyId === "hajj" ? "/companion" : "/"} replace />
+    return <Navigate to="/" replace />
   }
 
   return (
@@ -68,7 +68,7 @@ export function UmrahExperiencePage() {
         variant="terracotta"
         asChild
       >
-        <Link to="/companion">{t("companion.backToGuide")}</Link>
+        <Link to="/companion">{t("companion.backToCompanion")}</Link>
       </Button>
       <p className="text-xs leading-relaxed text-muted-foreground">{haramExperience.disclaimer}</p>
     </div>

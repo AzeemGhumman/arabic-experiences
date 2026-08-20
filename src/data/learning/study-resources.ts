@@ -79,8 +79,8 @@ const resources: Record<string, StudyResource[]> = {
   ],
 }
 
-export function getStudyResources(sessionId: string): StudyResource[] {
-  return resources[sessionId] ?? []
+export function getStudyResources(lessonId: string): StudyResource[] {
+  return resources[lessonId] ?? []
 }
 
 export const studyResourcesAreMock = true

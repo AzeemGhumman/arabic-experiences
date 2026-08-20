@@ -1,5 +1,5 @@
-import { ActivityMap } from "@/components/adventure/ActivityMap"
-import { MapHowTo } from "@/components/adventure/MapHowTo"
+import { ActivityMap } from "@/components/mission/ActivityMap"
+import { MapHowTo } from "@/components/mission/MapHowTo"
 import { missionAvailability } from "@/data/learning/availability"
 import { umrahGraph } from "@/data/learning/mission-graph"
 import { useActiveJourney, useAppState } from "@/lib/app-state"
@@ -10,9 +10,9 @@ export function UmrahJourneyPage() {
   const { progress } = useActiveJourney()
   const { mission } = useI18n()
   const next = umrahGraph.nodes.find(
-    (node) => missionAvailability(node.id, progress.completedAdventureIds, node) === "open",
+    (node) => missionAvailability(node.id, progress.completedMissionIds, node) === "open",
   )
-  const showHowTo = !state.mapIntroDismissed && progress.completedAdventureIds.length === 0
+  const showHowTo = !state.mapIntroDismissed && progress.completedMissionIds.length === 0
 
   return (
     <div className="space-y-3 pb-8">
@@ -23,7 +23,7 @@ export function UmrahJourneyPage() {
           onDismiss={dismissMapIntro}
         />
       ) : null}
-      <ActivityMap graph={umrahGraph} completedIds={progress.completedAdventureIds} />
+      <ActivityMap graph={umrahGraph} completedIds={progress.completedMissionIds} />
     </div>
   )
 }

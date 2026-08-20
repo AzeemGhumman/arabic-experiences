@@ -1,6 +1,6 @@
 # Image resources
 
-Hand-off for agents: generate still images the same way prep-list thumbs were built. Treat this like the audio pipeline — **one locked style, a source file, skip or replace files on disk, ship a manifest**.
+Hand-off for agents: generate still images the same way Study topic thumbs were built. Treat this like the audio pipeline — **one locked style, a source file, skip or replace files on disk, ship a manifest**.
 
 Audio analog:
 
@@ -39,7 +39,7 @@ Do not invent a new look per batch. Copy the prompt boilerplate. Do not jump to 
 - Sacred places: distant, simple, respectful. Kaaba = small black cube + gold band. Nabawi = one sage-green dome. No crowds, no tourist photography.
 - Modest still lifes for ihram, barber, body, family.
 
-If a new image does not match existing thumbs in `public/images/prep/`, regenerate that sheet. Consistency beats novelty.
+If a new image does not match existing thumbs in `public/images/study/`, regenerate that sheet. Consistency beats novelty.
 
 ---
 
@@ -62,15 +62,20 @@ One generation, four tiles — cheaper than four calls.
 
 | Path | Role |
 | --- | --- |
-| `src/data/learning/images.source.json` | Style string, 2×2 grid, per-sheet subjects |
-| `src/data/learning/prep-topic-images.ts` | Maps `PrepTopicId` → `/images/prep/{id}.webp` (what the UI uses) |
-| `src/components/prep/PrepTopicPicture.tsx` | Shows the webp if mapped, else SVG fallback |
+| `src/data/learning/images.source.json` | Style string, 2×2 grid, per-sheet subjects, `kind` |
+| `src/data/learning/topic-images.ts` | Maps `TopicId` → `/images/study/{id}.webp` |
+| `src/data/learning/mission-images.ts` | Maps mission id → `/images/missions/{id}.webp` |
+| `src/components/study/TopicPicture.tsx` | Study thumb: webp if mapped, else SVG |
+| `src/components/mission/ExperienceScenes.tsx` | `SceneMark` / non-interactive scenes use mission webps |
 | `scripts/crop_image_sheet.py` | Splits a sheet into 512px webps, updates the public manifest |
 | `public/images/sheets/{sheetId}.png` | Saved contact sheets |
-| `public/images/prep/{topicId}.webp` | Cropped thumbs used in the app |
-| `public/images/manifest.json` | Inventory of generated prep thumbs |
+| `public/images/study/{topicId}.webp` | Study topic thumbs |
+| `public/images/missions/{missionId}.webp` | Map stamps and mission thumbs |
+| `public/images/manifest.json` | Inventory by kind (`study`, `missions`) |
 
-Current prep coverage: **all 26 `PrepTopicId`s** have webps. SVG art in `PrepTopicPicture` remains as fallback for ids not in `prepTopicImageSrc`.
+Each sheet in source has `"kind": "study"` or `"kind": "missions"`. Crop writes to `public/images/{kind}/` and merges that key in the manifest.
+
+Current Study coverage: **all 26 `TopicId`s** have webps. Current mission coverage: **all 14 mission ids** have webps. SVG art remains as fallback when an id is missing from the map.
 
 ---
 
@@ -82,35 +87,36 @@ Edit `src/data/learning/images.source.json`. Add or replace a sheet:
 
 ```json
 {
-  "id": "city",
+  "id": "mission-arrival",
+  "kind": "missions",
   "tiles": [
-    { "id": "hotel", "subject": "cream hotel building with a few dusty-blue windows and a terracotta door" },
-    { "id": "room-service", "subject": "neatly folded cream towels on a simple hotel bed" },
-    { "id": "money", "subject": "two gold riyal coins overlapping, no numerals" },
-    { "id": "food", "subject": "round brown table with a cream plate and a terracotta bowl" }
+    { "id": "taxi-hotel", "subject": "gold Saudi taxi sedan parked beside a cream hotel doorway with a terracotta awning, no people" },
+    { "id": "airport-arrival", "subject": "cream luggage carousel with one brown suitcase, dusty-blue arrivals hall, no people" },
+    { "id": "immigration", "subject": "closed cream passport and a terracotta ink pad on a simple wooden desk, no text, no numerals" },
+    { "id": "find-haram", "subject": "cream pointed arch gate with a terracotta lantern hanging in the opening, dusty sky, no crowds" }
   ]
 }
 ```
 
-`id` on each tile should be the `PrepTopicId` (or a throwaway filler like `nature-alt` that you will not map in TypeScript).
+`kind` is `study` or `missions`. Tile `id` should be the `TopicId` or mission id (or a throwaway filler like `lantern-alt` that you will not map in TypeScript).
 
 ### 2. Generate one 1:1 contact sheet
 
 Use Cursor **GenerateImage**:
 
 - `aspect_ratio`: `"1:1"`
-- `filename`: `prep-sheet-{sheetId}.png` (example: `prep-sheet-city.png`)
+- `filename`: `study-sheet-{sheetId}.png` or `mission-sheet-{id}.png` (examples: `study-sheet-city.png`, `mission-sheet-arrival.png`)
 - `description`: **boilerplate + four panel lines** (template below)
 
 The tool writes something like:
 
-`/Users/azeem/.cursor/projects/Users-azeem-workspace-code-personal-arabic/assets/prep-sheet-{sheetId}.png`
+`/Users/azeem/.cursor/projects/Users-azeem-workspace-code-personal-arabic/assets/study-sheet-{sheetId}.png`
 
-Copy it into the repo:
+Copy it into the repo using the source sheet id:
 
 ```bash
-cp /Users/azeem/.cursor/projects/Users-azeem-workspace-code-personal-arabic/assets/prep-sheet-city.png \
-  public/images/sheets/city.png
+cp /Users/azeem/.cursor/projects/Users-azeem-workspace-code-personal-arabic/assets/mission-sheet-arrival.png \
+  public/images/sheets/mission-arrival.png
 ```
 
 Inspect the sheet. If tiles spilled, subjects swapped, or style drifted, **regenerate the whole sheet** before cropping.
@@ -127,26 +133,30 @@ cd arabic-experiences
 This:
 
 - Insets each cell by `gutterInset` (0.04) to drop cream gutters
-- Writes `public/images/prep/{tileId}.webp` at 512×512
-- Merges paths into `public/images/manifest.json`
+- Writes `public/images/{kind}/{tileId}.webp` at 512×512 (`study` or `missions`)
+- Merges paths into `public/images/manifest.json` under that kind
 
 **Skip existing:** crop always overwrites those four webps. To keep a good tile, do not recrop that sheet, or copy the good webp aside first.
 
 ### 4. Wire the UI
 
-Add or update entries in `src/data/learning/prep-topic-images.ts`:
+Study: add entries in `src/data/learning/topic-images.ts`. `TopicPicture` reads that map.
 
 ```ts
-hotel: "/images/prep/hotel.webp",
+hotel: "/images/study/hotel.webp",
 ```
 
-`PrepTopicPicture` reads that map. No other component changes for prep thumbs.
+Missions: add entries in `src/data/learning/mission-images.ts`. Pass `missionId` into `SceneMark` / `ExperienceScene`. Interactive gameplay scenes stay SVG.
 
-Delete filler files (`*-alt.webp`) if they are not real topic ids. Do not add them to `prepTopicImageSrc`.
+```ts
+"taxi-hotel": "/images/missions/taxi-hotel.webp",
+```
+
+Delete filler files (`*-alt.webp`) if they are not real ids. Do not add them to the TypeScript maps.
 
 ### 5. Check in the product
 
-Open **Prep**. Thumbs are ~52px rounded squares. Zoom one webp if a subject looks empty or cropped.
+Open **Study**. Thumbs are ~52px rounded squares. Open the **map** for mission stamps (~56px circles). Zoom one webp if a subject looks empty or cropped.
 
 ---
 
@@ -175,6 +185,8 @@ For worship sheets, add: `no crowds, respectful, distant`. For Kaaba / green dom
 
 ## Existing sheets
 
+Study (`kind: "study"`):
+
 | Sheet id | Tiles (TL, TR, BL, BR) |
 | --- | --- |
 | `arrive` | packing, airport, transport, navigation |
@@ -185,6 +197,15 @@ For worship sheets, add: `no crowds, respectful, distant`. For Kaaba / green dom
 | `words` | numbers, geography, actions, adjectives |
 | `outdoors` | nature, hajj, nature-alt, hajj-alt (alts were cropped then removed; only nature + hajj are wired) |
 
+Missions (`kind: "missions"`):
+
+| Sheet id | Tiles (TL, TR, BL, BR) |
+| --- | --- |
+| `mission-arrival` | taxi-hotel, airport-arrival, immigration, find-haram |
+| `mission-haram` | enter-haram, begin-tawaf, find-zamzam, complete-sai |
+| `mission-city` | order-dinner, lost-group, something-wrong, barber |
+| `mission-beyond` | day-madinah, hajj-bus, lantern-alt, basin-alt (alts were cropped then removed; only the two mission ids are wired) |
+
 ---
 
 ## Regenerating one topic
@@ -192,7 +213,7 @@ For worship sheets, add: `no crowds, respectful, distant`. For Kaaba / green dom
 You cannot recrop a single cell without the sheet. To replace `airport`:
 
 1. Keep the same `arrive` `tiles[]` order.
-2. Generate a new `prep-sheet-arrive.png` with the same four subjects (tweak only the weak panel’s sentence).
+2. Generate a new `study-sheet-arrive.png` with the same four subjects (tweak only the weak panel’s sentence).
 3. Copy over `public/images/sheets/arrive.png` and recrop `--sheet-id arrive`.
 4. All four webps in that sheet are overwritten.
 
@@ -202,22 +223,24 @@ If three tiles were good, copy those webps aside, recrop, then restore the three
 
 ## Next image kinds (same rules)
 
-When adding mission scenes, map stamps, or word pictures:
+When adding word pictures:
 
-1. New folder under `public/images/` (e.g. `public/images/missions/`).
-2. New key in `manifest.json` (do not dump everything into `prep`).
+1. New folder under `public/images/` (e.g. `public/images/words/`).
+2. New key in `manifest.json` (do not dump everything into `study` or `missions`).
 3. Still **2×2 + style bible + source JSON**.
 4. Do not auto-image every vocab row until a scene truly needs it.
+
+Interactive mission play art stays SVG. Do not replace direction-hit scenes with these square stamps.
 
 ---
 
 ## Agent checklist
 
-- [ ] Subjects live in `images.source.json` before generating
+- [ ] Subjects live in `images.source.json` before generating, with the right `kind`
 - [ ] Prompt uses the boilerplate and the four hex colors
 - [ ] `aspect_ratio` is `1:1`; four panels; no 3×3
 - [ ] Sheet copied to `public/images/sheets/{id}.png`
 - [ ] Cropped with `--sheet-id` matching source
-- [ ] Real topic ids added to `prep-topic-images.ts`
+- [ ] Real topic ids added to `topic-images.ts`; real mission ids to `mission-images.ts`
 - [ ] Fillers not mapped; unused webps deleted
-- [ ] Looked at thumbs in the Prep toolkit at real size
+- [ ] Looked at thumbs in Study (~52px) or map stamps (~56px) at real size

@@ -23,16 +23,13 @@ type AppStateContextValue = {
   setShowTranslation: (value: boolean) => void
   discoverWord: (id: string) => void
   setConfidence: (id: string, confidence: Confidence) => void
-  toggleBookmark: (sessionId: string, wordId: string) => void
+  toggleBookmark: (lessonId: string, wordId: string) => void
   setBookmarkedVocab: (items: VocabBookmark[]) => void
-  setPrepCompleted: (id: string, completed: boolean) => void
-  completeScenario: (id: string) => void
-  askRestaurantItem: (id: string) => void
-  markGardenCelebrated: () => void
+  setLessonCompleted: (id: string, completed: boolean) => void
   practiceSupplication: (id: string) => void
-  completeAdventure: (input: {
+  completeMission: (input: {
     id: string
-    kind: "adventure" | "side"
+    kind: "mission" | "lesson"
     vocabularyIds: string[]
     rewards?: Partial<Record<CapabilityId, number>>
     capabilityId?: CapabilityId
@@ -65,13 +62,12 @@ export function missionStats(journeyId: JourneyCategory, progress: JourneyProgre
   if (graph) {
     const done = graph.nodes.filter(
       (node) =>
-        progress.completedAdventureIds.includes(node.id) || progress.completedSideMissionIds.includes(node.id),
+        progress.completedMissionIds.includes(node.id),
     ).length
     return { done, total: graph.nodes.length, percent: Math.round((done / graph.nodes.length) * 100) }
   }
-  const done = progress.completedAdventureIds.length + progress.completedSideMissionIds.length
-  const total = journeyId === "quran" ? 4 : 8
-  return { done, total, percent: Math.round((done / total) * 100) }
+  const done = progress.completedMissionIds.length
+  return { done, total: done, percent: 0 }
 }
 
 export function AppStateProvider({ children }: { children: ReactNode }) {
@@ -140,11 +136,11 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
           })),
         )
       },
-      toggleBookmark: (sessionId, wordId) => {
+      toggleBookmark: (lessonId, wordId) => {
         setState((current) =>
           patchActiveProgress(current, (progress) => ({
             ...progress,
-            bookmarkedVocab: toggleBookmarkInList(progress.bookmarkedVocab, sessionId, wordId),
+            bookmarkedVocab: toggleBookmarkInList(progress.bookmarkedVocab, lessonId, wordId),
           })),
         )
       },
@@ -156,38 +152,17 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
           })),
         )
       },
-      setPrepCompleted: (id, completed) => {
+      setLessonCompleted: (id, completed) => {
         setState((current) =>
           patchActiveProgress(current, (progress) => ({
             ...progress,
-            completedSideMissionIds: completed
-              ? progress.completedSideMissionIds.includes(id)
-                ? progress.completedSideMissionIds
-                : [...progress.completedSideMissionIds, id]
-              : progress.completedSideMissionIds.filter((item) => item !== id),
+            completedLessonIds: completed
+              ? progress.completedLessonIds.includes(id)
+                ? progress.completedLessonIds
+                : [...progress.completedLessonIds, id]
+              : progress.completedLessonIds.filter((item) => item !== id),
           })),
         )
-      },
-      completeScenario: (id) => {
-        setState((current) => {
-          if (current.completedScenarios.includes(id)) return current
-          return {
-            ...current,
-            completedScenarios: [...current.completedScenarios, id],
-          }
-        })
-      },
-      askRestaurantItem: (id) => {
-        setState((current) => {
-          if (current.restaurantAsked.includes(id)) return current
-          return {
-            ...current,
-            restaurantAsked: [...current.restaurantAsked, id],
-          }
-        })
-      },
-      markGardenCelebrated: () => {
-        setState((current) => ({ ...current, gardenCelebrated: true }))
       },
       practiceSupplication: (id) => {
         setState((current) => {
@@ -198,7 +173,7 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
           }
         })
       },
-      completeAdventure: ({ id, kind, vocabularyIds, rewards, capabilityId, capabilityLevel, outcome }) => {
+      completeMission: ({ id, kind, vocabularyIds, rewards, capabilityId, capabilityLevel, outcome }) => {
         setState((current) =>
           patchActiveProgress(current, (progress) => {
             const discoveredVocab = [...progress.discoveredVocab]
@@ -225,19 +200,19 @@ export function AppStateProvider({ children }: { children: ReactNode }) {
               discoveredVocab,
               wordConfidence,
               capabilities,
-              adventureOutcomes: { ...progress.adventureOutcomes, [id]: outcome },
-              adventurePlayCounts: {
-                ...progress.adventurePlayCounts,
-                [id]: (progress.adventurePlayCounts[id] ?? 0) + 1,
+              missionOutcomes: { ...progress.missionOutcomes, [id]: outcome },
+              missionPlayCounts: {
+                ...progress.missionPlayCounts,
+                [id]: (progress.missionPlayCounts[id] ?? 0) + 1,
               },
-              completedAdventureIds:
-                kind === "adventure" && !progress.completedAdventureIds.includes(id)
-                  ? [...progress.completedAdventureIds, id]
-                  : progress.completedAdventureIds,
-              completedSideMissionIds:
-                kind === "side" && !progress.completedSideMissionIds.includes(id)
-                  ? [...progress.completedSideMissionIds, id]
-                  : progress.completedSideMissionIds,
+              completedMissionIds:
+                kind === "mission" && !progress.completedMissionIds.includes(id)
+                  ? [...progress.completedMissionIds, id]
+                  : progress.completedMissionIds,
+              completedLessonIds:
+                kind === "lesson" && !progress.completedLessonIds.includes(id)
+                  ? [...progress.completedLessonIds, id]
+                  : progress.completedLessonIds,
             }
           }),
         )

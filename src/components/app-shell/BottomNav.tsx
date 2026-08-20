@@ -6,9 +6,9 @@ import { useI18n } from "@/lib/i18n"
 import { isTabActive, type TabId, useTabNavigation } from "@/lib/tab-navigation"
 import { cn } from "@/lib/utils"
 
-const tabs: { tab: TabId; key: "home" | "prep" | "progress" | "trip" | "profile"; icon: typeof Home; tripOnly?: boolean }[] = [
+const tabs: { tab: TabId; key: "home" | "study" | "progress" | "trip" | "profile"; icon: typeof Home; tripOnly?: boolean }[] = [
   { tab: "home", key: "home", icon: Home },
-  { tab: "prep", key: "prep", icon: Compass },
+  { tab: "study", key: "study", icon: Compass },
   { tab: "progress", key: "progress", icon: BookOpen },
   { tab: "companion", key: "trip", icon: ScrollText, tripOnly: true },
   { tab: "profile", key: "profile", icon: User },

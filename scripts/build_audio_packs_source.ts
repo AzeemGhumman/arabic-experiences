@@ -1,14 +1,14 @@
 #!/usr/bin/env npx tsx
-/** Regenerate audio-packs.source.json from prep sessions, words, and mission builders. */
+/** Regenerate audio-packs.source.json from study lessons, words, and mission builders. */
 
 import { writeFileSync } from "fs"
 import { join, dirname } from "path"
 import { fileURLToPath } from "url"
-import { sideMissions } from "../src/data/learning/side-missions.ts"
+import { lessons } from "../src/data/learning/lessons.ts"
 import { getLearningWord } from "../src/data/learning/words.ts"
-import { adventures } from "../src/data/learning/adventures.ts"
-import { createRunById } from "../src/lib/adventure-engine.ts"
-import type { AdventureRun } from "../src/lib/learning-types.ts"
+import { missions } from "../src/data/learning/missions.ts"
+import { createRunById } from "../src/lib/mission-engine.ts"
+import type { MissionRun } from "../src/lib/learning-types.ts"
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..")
 const outPath = join(root, "src/data/learning/audio-packs.source.json")
@@ -51,7 +51,7 @@ function arabicForTts(wordId: string) {
     .trim()
 }
 
-type PackDef = { kind: "prep" | "mission"; clips: Record<string, string> }
+type PackDef = { kind: "lesson" | "mission"; clips: Record<string, string> }
 
 const packs: Record<string, PackDef> = {}
 
@@ -64,7 +64,7 @@ function addClip(packId: string, kind: PackDef["kind"], clipId: string, arabic: 
   packs[packId].clips[clipId] = arabic
 }
 
-function collectMissionAudio(run: AdventureRun, packId: string) {
+function collectMissionAudio(run: MissionRun, packId: string) {
   for (const step of run.steps) {
     if (step.type === "listen" && step.audioId) {
       addClip(packId, "mission", step.audioId, step.arabic)
@@ -82,37 +82,37 @@ function collectMissionAudio(run: AdventureRun, packId: string) {
   }
 }
 
-// Prep sessions: pack id = session id
-for (const session of sideMissions) {
-  if (!session.buildRun) continue
+// Study lessons: pack id = lesson id
+for (const lesson of lessons) {
+  if (!lesson.buildRun) continue
   try {
-    const run = session.buildRun(emptyCtx as never)
-    run.adventureId = session.id
+    const run = lesson.buildRun(emptyCtx as never)
+    run.missionId = lesson.id
     for (const step of run.steps) {
       if (step.type !== "study") continue
       for (const group of step.groups) {
         for (const id of group.vocabIds) {
-          addClip(session.id, "prep", id, arabicForTts(id))
+          addClip(lesson.id, "lesson", id, arabicForTts(id))
         }
       }
     }
-    const count = Object.keys(packs[session.id]?.clips ?? {}).length
-    console.log(`prep ${session.id}: ${count} clips`)
+    const count = Object.keys(packs[lesson.id]?.clips ?? {}).length
+    console.log(`lesson ${lesson.id}: ${count} clips`)
   } catch (err) {
-    console.warn(`prep ${session.id}: failed`, err)
+    console.warn(`lesson ${lesson.id}: failed`, err)
   }
 }
 
-// Playable missions: pack id = adventure id
-for (const adventure of adventures) {
-  if (!adventure.playable || !adventure.buildRun) continue
+// Playable missions: pack id = mission id
+for (const mission of missions) {
+  if (!mission.playable || !mission.buildRun) continue
   try {
-    const bundle = createRunById(adventure.id, {}, `audio-${adventure.id}`)
-    collectMissionAudio(bundle.run, adventure.id)
-    const count = Object.keys(packs[adventure.id]?.clips ?? {}).length
-    if (count) console.log(`mission ${adventure.id}: ${count} clips`)
+    const bundle = createRunById(mission.id, {}, `audio-${mission.id}`)
+    collectMissionAudio(bundle.run, mission.id)
+    const count = Object.keys(packs[mission.id]?.clips ?? {}).length
+    if (count) console.log(`mission ${mission.id}: ${count} clips`)
   } catch (err) {
-    console.warn(`mission ${adventure.id}: failed`, err)
+    console.warn(`mission ${mission.id}: failed`, err)
   }
 }
 

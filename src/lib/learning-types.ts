@@ -44,7 +44,7 @@ export type VocabularyPool = {
   depth: 1 | 2 | 3
 }
 
-export type AdventureType =
+export type MissionType =
   | "navigation"
   | "recognition"
   | "conversation"
@@ -52,13 +52,13 @@ export type AdventureType =
   | "ritual-navigation"
   | "emergency"
 
-export type AdventurePoolRequest = {
+export type MissionPoolRequest = {
   poolId: string
   count: number
   required?: boolean
 }
 
-export type AdventureComplication = {
+export type MissionComplication = {
   id: string
   title: string
   description?: string
@@ -74,7 +74,7 @@ export type ChoiceOption = {
 export type StudyGroup = {
   title: string
   intro?: string
-  scene?: AdventureScene
+  scene?: MissionScene
   vocabIds: string[]
 }
 
@@ -93,12 +93,12 @@ export type StudyResource = {
   youtubePlaylistId?: string
 }
 
-export type AdventureStep =
+export type MissionStep =
   | {
       type: "context"
       title: string
       body: string
-      scene: AdventureScene
+      scene: MissionScene
     }
   | {
       type: "discover"
@@ -163,7 +163,7 @@ export type GpsInstruction = {
   audioId?: string
 }
 
-export type AdventureScene =
+export type MissionScene =
   | "street"
   | "haram-gate"
   | "crowd"
@@ -193,47 +193,49 @@ export type AdventureScene =
 
 export type SceneFocus = "place" | "guard" | "plaque" | "doors" | "stairs"
 
-export type Adventure = {
+export type Mission = {
   id: string
   title: string
   subtitle: string
   description: string
   journeyId: "umrah" | "hajj" | "travel"
+  /** Chapter on the map. Match `Chapter.id`: arrival, makkah, madinah. */
   chapterId: string
-  type: AdventureType
+  type: MissionType
   capabilityRewards: Partial<Record<CapabilityId, number>>
-  requiredPools: AdventurePoolRequest[]
-  optionalPools?: AdventurePoolRequest[]
-  complications: AdventureComplication[]
-  sideMissionIds: string[]
+  requiredPools: MissionPoolRequest[]
+  optionalPools?: MissionPoolRequest[]
+  complications: MissionComplication[]
+  /** Study lessons this mission links to — not map side missions. */
+  lessonIds: string[]
   estimatedMinutes: number
   replayable?: boolean
   playable: boolean
   canNowDo: string
-  buildRun?: (ctx: AdventureBuildContext) => AdventureRun
+  buildRun?: (ctx: MissionBuildContext) => MissionRun
 }
 
-export type AdventureBuildContext = {
+export type MissionBuildContext = {
   rand: () => number
   capabilities: Record<string, number>
   pickFromPool: (poolId: string, count: number) => LearningWord[]
   word: (id: string) => LearningWord
 }
 
-export type AdventureRun = {
+export type MissionRun = {
   id: string
-  adventureId: string
+  missionId: string
   seed: string
   selectedVocabularyIds: string[]
   selectedComplicationId?: string
   variables: Record<string, string | number>
-  steps: AdventureStep[]
+  steps: MissionStep[]
   outcome: string
   advanced?: boolean
 }
 
-/** Topic bucket for the prep catalog, e.g. numbers, navigation, colors. */
-export type PrepTopicId =
+/** Topic bucket for the Study catalog, e.g. numbers, navigation, colors. */
+export type TopicId =
   | "numbers"
   | "navigation"
   | "food"
@@ -261,34 +263,35 @@ export type PrepTopicId =
   | "room-service"
   | "hajj"
 
-export type PrepTopic = {
-  id: PrepTopicId
+export type Topic = {
+  id: TopicId
   title: string
   description: string
   order: number
 }
 
-export type SideMission = {
+/** A Study word list. Not a map side mission. */
+export type Lesson = {
   id: string
   title: string
   eyebrow: string
   description: string
-  /** Catalog topic — groups sessions in the Prep library. */
-  topicId: PrepTopicId
-  /** Order within the topic (1 = first stage). */
+  /** Catalog topic — groups lessons in Study. */
+  topicId: TopicId
+  /** Order within the topic (1 = first). */
   level: number
-  /** Short level name used in titles, e.g. "Basic", "More". */
+  /** Short level name used in titles, e.g. "Basic", "Advanced". */
   levelName: string
-  /** Adventures this prep supports. Canonical many-to-one mapping. */
-  adventureIds: string[]
-  unlockAfterAdventureIds: string[]
+  /** Missions this lesson supports. */
+  missionIds: string[]
+  unlockAfterMissionIds: string[]
   vocabularyGain: number
   estimatedMinutes: number
   capabilityId: CapabilityId
   capabilityLevel: number
   playable: boolean
   canNowDo: string
-  buildRun?: (ctx: AdventureBuildContext) => AdventureRun
+  buildRun?: (ctx: MissionBuildContext) => MissionRun
 }
 
 export type CapabilityDef = {

@@ -3,7 +3,7 @@
   "register": "msa",
   "packs": {
     "numbers-everywhere": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "n1": "واحد",
         "n2": "اثنان",
@@ -31,7 +31,7 @@
       }
     },
     "numbers-to-100": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "n20": "عشرون",
         "n30": "ثلاثون",
@@ -54,7 +54,7 @@
       }
     },
     "polite-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "greeting": "السلام عليكم",
         "greeting-response": "وعليكم السلام",
@@ -71,7 +71,7 @@
       }
     },
     "packing-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "passport": "جواز سفر",
         "visa": "تأشيرة",
@@ -93,7 +93,7 @@
       }
     },
     "master-navigation": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "hotel": "فندق",
         "please": "لو سمحت",
@@ -110,7 +110,7 @@
       }
     },
     "navigation-gps": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "turn-right": "انعطف يمينًا",
         "turn-left": "انعطف يسارًا",
@@ -126,7 +126,7 @@
       }
     },
     "transport-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "taxi": "تاكسي",
         "bus": "باص",
@@ -143,7 +143,7 @@
       }
     },
     "airport-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "passport": "جواز سفر",
         "officer": "موظف",
@@ -161,7 +161,7 @@
       }
     },
     "geography-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "makkah": "مكة",
         "madinah": "المدينة",
@@ -174,7 +174,7 @@
       }
     },
     "hotel-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "hotel": "فندق",
         "reception": "استقبال",
@@ -194,7 +194,7 @@
       }
     },
     "room-service-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "towel": "منشفة",
         "clean": "نظيف",
@@ -213,7 +213,7 @@
       }
     },
     "money-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "how-much": "كم؟",
         "how-much-price": "كم السعر؟",
@@ -232,7 +232,7 @@
       }
     },
     "explore-food": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "without": "بدون",
         "with": "مع",
@@ -246,7 +246,7 @@
       }
     },
     "food-menu": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "chicken": "دجاج",
         "meat": "لحم",
@@ -270,7 +270,7 @@
       }
     },
     "shopping-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "market": "سوق",
         "shop": "محل",
@@ -291,7 +291,7 @@
       }
     },
     "colors-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "color-red": "أحمر",
         "color-green": "أخضر",
@@ -304,7 +304,7 @@
       }
     },
     "colors-extended": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "color-light": "فاتح",
         "color-dark": "غامق",
@@ -319,7 +319,7 @@
       }
     },
     "clothes-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "ihram": "إحرام",
         "sandals": "نعال",
@@ -337,7 +337,7 @@
       }
     },
     "time-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "now": "الآن",
         "today": "اليوم",
@@ -355,7 +355,7 @@
       }
     },
     "family-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "my-family": "عائلتي",
         "my-group": "مجموعتي",
@@ -375,7 +375,7 @@
       }
     },
     "family-more": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "father": "أب",
         "mother": "أم",
@@ -395,7 +395,7 @@
       }
     },
     "haram-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "haram": "الحرم",
         "kaaba": "الكعبة",
@@ -419,7 +419,7 @@
       }
     },
     "haram-more": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "walk": "امشِ",
         "wait": "انتظر",
@@ -444,7 +444,7 @@
       }
     },
     "ritual-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "ihram": "إحرام",
         "tawaf": "طواف",
@@ -466,7 +466,7 @@
       }
     },
     "nabawi-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "nabawi": "المسجد النبوي",
         "madinah": "المدينة",
@@ -487,7 +487,7 @@
       }
     },
     "barber-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "shave": "حلق",
         "trim": "تقصير",
@@ -503,7 +503,7 @@
       }
     },
     "health-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "sick": "مريض",
         "tired": "تعبان",
@@ -521,7 +521,7 @@
       }
     },
     "body-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "head": "رأس",
         "hair": "شعر",
@@ -541,7 +541,7 @@
       }
     },
     "actions-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "walk": "امشِ",
         "come": "تعال",
@@ -561,7 +561,7 @@
       }
     },
     "adjectives-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "big": "كبير",
         "small": "صغير",
@@ -579,7 +579,7 @@
       }
     },
     "nature-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "sun": "شمس",
         "hot": "حار",
@@ -594,7 +594,7 @@
       }
     },
     "hajj-places-basic": {
-      "kind": "prep",
+      "kind": "lesson",
       "clips": {
         "mina": "منى",
         "arafat": "عرفات",

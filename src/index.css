@@ -193,7 +193,7 @@
 }
 
 /*
- * Desert adventure map — see README-arabic-experiences-desert-map.md
+ * Map path — see README-arabic-experiences-desert-map.md
  *
  * desert-border.webp is the decorative layer: illustrated scenery hugging
  * the left/right edges with a clear sandy corridor down the middle for the
@@ -202,7 +202,7 @@
  * seam or flash shows before the image loads.
  */
 
-.adventure-map {
+.journey-map {
   position: relative;
   background-color: #fbf4e6;
 }
@@ -217,7 +217,7 @@
  * and the horizontal mask fades the art across the whole play area so it only
  * gains strength at the extreme edges, framing the map instead of crowding it.
  */
-.adventure-map::before {
+.journey-map::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -244,6 +244,6 @@
 }
 
 /* Soft halo so labels stay crisp wherever scenery sits behind them. */
-.adventure-map .map-label {
+.journey-map .map-label {
   text-shadow: 0 1px 4px rgba(255, 253, 248, 0.9);
 }

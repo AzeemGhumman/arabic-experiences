@@ -3,7 +3,7 @@ import type { LanguagePack } from "@/locales/types"
 export const ur: LanguagePack = {
   meta: { code: "ur", name: "Urdu", nativeName: "اردو" },
   ui: {
-    nav: { home: "ہوم", prep: "تیاری", progress: "ترقی", trip: "گائیڈ", profile: "پروفائل" },
+    nav: { home: "ہوم", study: "مطالعہ", progress: "ترقی", trip: "ساتھی", profile: "پروفائل" },
     common: {
       active: "فعال",
       back: "واپس",
@@ -27,22 +27,22 @@ export const ur: LanguagePack = {
       backToMap: "نقشے پر واپس",
       percentComplete: "{percent}% مکمل",
     },
-    prep: {
-      kicker: "تیاری",
-      title: "ٹول کٹ",
+    study: {
+      kicker: "مطالعہ",
+      title: "مطالعہ",
       body: "مشن سے پہلے — یا جب ضرورت ہو — کھولنے کے لیے فہرستیں۔",
-      sessionsDone: "سیشن مکمل",
-      footer: "ہر تیاری کئی مشن میں مدد کر سکتی ہے۔ مشن یہاں بھی واپس لنک کرتے ہیں۔",
+      lessonsDone: "سبق مکمل",
+      footer: "ہر سبق کئی مشن میں مدد کر سکتا ہے۔ مشن یہاں بھی واپس لنک کرتے ہیں۔",
       stage: "مرحلہ {level}",
       forMission: "اس مشن کے لیے",
-      viewAll: "تمام تیاری",
+      viewAll: "تمام سبق",
       markComplete: "مکمل نشان لگائیں",
       markIncomplete: "نامکمل نشان لگائیں",
       bookmarksTitle: "نشان زد",
       bookmarksEmpty: "مطالعے میں الفاظ بُک مارک کریں — یہاں جمع ہوں گے۔",
       bookmarksSummary: "جائزے کے لیے {count}",
       bookmarksPageTitle: "جائزے کے لیے نشان زد",
-      bookmarksPageBody: "تیاری میں نشان زد الفاظ۔ محفوظ کرنے کے لیے Save changes دبائیں۔",
+      bookmarksPageBody: "مطالعہ میں نشان زد الفاظ۔ محفوظ کرنے کے لیے Save changes دبائیں۔",
       saveBookmarks: "تبدیلیاں محفوظ کریں ({count})",
       shelves: {
         arrive: { title: "سفر", body: "سڑکیں، دروازے، اور پہلی بات چیت۔" },
@@ -82,7 +82,7 @@ export const ur: LanguagePack = {
     onboarding: {
       title: "عربی سیکھیں",
       subtitle: "حقیقی سفر کے ذریعے",
-      body: "ہوائی اڈے، ٹیکسی، ہوٹل پر کیا کہنا ہے — یہی سبق ہے۔ عمرہ، حج، یا مصر جیسا سفر وہ کہانی ہے جس میں آپ عربی بولنا سیکھتے ہیں۔",
+      body: "ٹیکسی، ہوائی اڈے، ہوٹل پر کیا کہنا ہے — یہی سبق ہے۔ عمرہ کی عربی سے شروع کریں۔ حج، روزمرہ سفر، اور قرآنی عربی جلد آ رہے ہیں۔",
       cta: "سیکھنا شروع کریں",
     },
     homeAbout: {
@@ -96,9 +96,9 @@ export const ur: LanguagePack = {
       tabsTitle: "ٹیبز میں کیا ہے",
       tabs: {
         home: "یہ نقشہ۔ ہر جگہ سفر پر بولنے کا مشن ہے۔",
-        prep: "الفاظ کا ٹول کٹ۔ مشن سے پہلے، یا جب جملہ درکار ہو۔",
+        study: "مطالعہ — الفاظ کی فہرستیں۔ مشن سے پہلے، یا جب جملہ درکار ہو۔",
         progress: "اب آپ کیا کر سکتے ہیں، اور جو الفاظ ملے ہیں۔",
-        trip: "مناسک اور سفر کی نوٹس — زبان کے راستے سے الگ۔",
+        trip: "سفری ساتھی — مناسک اور سفر کی نوٹس، زبان کے راستے سے الگ۔",
         profile: "انٹرفیس کی زبان، کون سا سفر، اور اس آلہ پر ڈیٹا۔",
       },
       featuresTitle: "اندر کیا ہے",
@@ -107,9 +107,9 @@ export const ur: LanguagePack = {
           title: "راستے پر مشن",
           body: "آمد، مکہ، مدینہ۔ بند جگہیں پچھلی کے بعد کھلتی ہیں۔",
         },
-        toolkit: {
+        study: {
           title: "الفاظ جب چاہییں",
-          body: "تیاری اختیاری مطالعہ ہے۔ فہرستیں مشن کی خدمت کرتی ہیں، الٹ نہیں۔",
+          body: "مطالعہ اختیاری ہے۔ فہرستیں مشن کی خدمت کرتی ہیں، الٹ نہیں۔",
         },
         listen: {
           title: "سن کر سیکھیں",
@@ -159,7 +159,7 @@ export const ur: LanguagePack = {
       wordsBody: "سفر بدلنے پر یہ یہیں رہتے ہیں۔ دوسرے راستے کی اپنی فہرست ہے۔",
       wordsEmpty: "ابھی کوئی لفظ جمع نہیں — منظر یا مشن کے بعد آتے ہیں۔",
       bookmarksTitle: "دوبارہ دیکھنے کے لیے",
-      bookmarksBody: "تیاری میں نشان زد الفاظ — نشان ہٹانے کے لیے ٹیپ کریں۔",
+      bookmarksBody: "مطالعہ میں نشان زد الفاظ — نشان ہٹانے کے لیے ٹیپ کریں۔",
       bookmarksEmpty: "یہاں جمع کرنے کے لیے مطالعے میں الفاظ بُک مارک کریں۔",
     },
     journeys: {
@@ -187,11 +187,11 @@ export const ur: LanguagePack = {
     map: {
       yourJourney: "آپ کا سفر",
       youreIn: "آپ {stage} میں ہیں",
-      lede: "ہر جگہ اس سفر پر ایک عربی مشن ہے۔",
+      lede: "اس سفر پر مختصر مشن کھیلتے ہوئے عربی سیکھیں۔",
       howTitle: "یہاں کیسے سیکھیں",
       howMission: "چمکتی ہوئی جگہ ٹیپ کریں — اگلا عربی مشن وہی ہے۔",
-      howPrep: "تیاری الفاظ کا ٹول کٹ ہے۔ بولنے سے پہلے وہاں پڑھ سکتے ہیں۔",
-      howGuide: "گائیڈ مناسک کے لیے ہے۔ عربی سیکھنے آئے ہیں تو اسے چھوڑ دیں۔",
+      howStudy: "مطالعہ الفاظ کی لائبریری ہے۔ بولنے سے پہلے وہاں پڑھ سکتے ہیں۔",
+      howTrip: "سفری ساتھی مناسک کے لیے ہے۔ عربی سیکھنے آئے ہیں تو اسے چھوڑ دیں۔",
       howDismiss: "سمجھ گیا",
       howStart: "{place} سے شروع کریں",
     },
@@ -209,9 +209,9 @@ export const ur: LanguagePack = {
       comingSoonDismiss: "ٹھیک ہے",
       lockedBody: "نقشے پر پچھلی جگہ مکمل کرنے کے بعد کھلے گا۔",
     },
-    adventure: {
+    play: {
       mission: "مشن",
-      prep: "تیاری",
+      study: "مطالعہ",
       listen: "سنیں",
       listenAgain: "دوبارہ سنیں",
       continue: "جاری رکھیں",
@@ -225,7 +225,7 @@ export const ur: LanguagePack = {
       wordsUsed: "استعمال شدہ الفاظ",
       wordsInLesson: "اس سبق کے الفاظ",
       backToMission: "مشن پر واپس",
-      backToPrep: "تیاری پر واپس",
+      backToStudy: "مطالعہ پر واپس",
       studyAgain: "دوبارہ پڑھیں",
       directions: {
         left: "بائیں",
@@ -239,12 +239,12 @@ export const ur: LanguagePack = {
     },
     depth: {
       master: "ماہر",
-      explore: "دریافت",
-      core: "بنیادی",
+      advanced: "اعلیٰ",
+      basic: "بنیادی",
       notStarted: "شروع نہیں",
     },
     companion: {
-      kicker: "گائیڈ",
+      kicker: "سفری ساتھی",
       titleUmrah: "عمرہ کے دنوں کے لیے",
       titleHajj: "حج کے دنوں کے لیے",
       body: "مناسک کا فوری حوالہ — زبان کے مشن سے الگ۔",
@@ -255,7 +255,7 @@ export const ur: LanguagePack = {
       hajjDaysBody: "دنوں کا تسلسل۔ ہر لمحے کی شیٹ یہاں آئے گی۔",
       laterTitle: "بعد میں",
       laterBody: "وہ اوزار جو وہاں درکار ہو سکتے ہیں، مشن کے اندر نہیں بلکہ یہاں۔",
-      backToGuide: "گائیڈ پر واپس",
+      backToCompanion: "ساتھی پر واپس",
       disclaimer:
         "صرف ابتدائی مواد۔ مذہبی رہنمائی استعمال سے پہلے اہل علما سے تصدیق ہونی چاہیے۔ یہ نسک یا سرکاری رہنمائی کا متبادل نہیں۔",
     },
@@ -288,13 +288,13 @@ export const ur: LanguagePack = {
       onboardingHint: "سفر، بازار، شہر",
     },
     quran: {
-      title: "قرآنی الفاظ کے مہمات",
+      title: "قرآنی عربی",
       description: "باغ، جانور، گھر، اور حرکت کے مناظر سے الفاظ سیکھیں۔",
       onboardingLabel: "قرآن کی عربی",
       onboardingHint: "مناظر سے الفاظ",
     },
   },
-  stages: {
+  chapters: {
     arrival: "آمد",
     makkah: "مکہ",
     madinah: "مدینہ",
@@ -316,7 +316,7 @@ export const ur: LanguagePack = {
     barber: "حجام",
     "day-madinah": "مدینہ",
   },
-  adventures: {
+  missionDetails: {
     immigration: {
       title: "پاسپورٹ کنٹرول",
       subtitle: "پاسپورٹ دیں اور مختصر ہدایت پر عمل کریں۔",

@@ -33,7 +33,7 @@ export const journeys: Journey[] = [
   },
   {
     id: "quran",
-    title: "Quranic Vocabulary Adventures",
+    title: "Quranic Arabic",
     description: "Discover words through gardens, animals, homes, and motion.",
     category: "quran",
     progress: 0,

@@ -1,7 +1,7 @@
 import { createContext, createElement, useContext, useMemo } from "react"
 import type { ReactNode } from "react"
 import { getLanguagePack } from "@/locales"
-import type { AdventureStrings, LanguagePack, SupportedLanguage } from "@/locales"
+import type { MissionStrings, LanguagePack, SupportedLanguage } from "@/locales"
 import { useAppState } from "@/lib/app-state"
 import type { JourneyCategory, UiLanguage } from "@/lib/storage"
 
@@ -11,9 +11,9 @@ type I18nContextValue = {
   /** UI strings under `pack.ui`, e.g. t('nav.home') or t('profile.title', { done: 3 }) */
   t: (path: string, params?: Record<string, string | number>) => string
   journey: (id: JourneyCategory) => LanguagePack["journeys"][JourneyCategory]
-  stage: (id: string, fallback?: string) => string
+  chapter: (id: string, fallback?: string) => string
   mission: (id: string, fallback?: string) => string
-  adventure: (id: string) => AdventureStrings | undefined
+  missionDetail: (id: string) => MissionStrings | undefined
   capability: (id: string) => LanguagePack["capabilities"][string] | undefined
   depthLabel: (level: number) => string
   word: (id: string, fallback: string) => string
@@ -49,14 +49,14 @@ function buildI18n(language: UiLanguage): I18nContextValue {
     pack,
     t,
     journey: (id) => pack.journeys[id],
-    stage: (id, fallback = id) => pack.stages[id] ?? fallback,
+    chapter: (id, fallback = id) => pack.chapters[id] ?? fallback,
     mission: (id, fallback = id) => pack.missions[id] ?? fallback,
-    adventure: (id) => pack.adventures[id],
+    missionDetail: (id) => pack.missionDetails[id],
     capability: (id) => pack.capabilities[id],
     depthLabel: (level) => {
       if (level >= 3) return pack.ui.depth.master
-      if (level >= 2) return pack.ui.depth.explore
-      if (level >= 1) return pack.ui.depth.core
+      if (level >= 2) return pack.ui.depth.advanced
+      if (level >= 1) return pack.ui.depth.basic
       return pack.ui.depth.notStarted
     },
     word: (id, fallback) => pack.words[id] ?? fallback,

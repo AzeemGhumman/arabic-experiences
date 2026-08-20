@@ -1,6 +1,6 @@
 import { getLearningWord } from "@/data/learning/words"
 import { BookmarkButton } from "@/components/vocabulary/BookmarkButton"
-import { RegisterBadge } from "@/components/adventure/AdventureBits"
+import { RegisterBadge } from "@/components/mission/MissionBits"
 import { useI18n } from "@/lib/i18n"
 
 /** Room for images, video, or audio attachments as bookmarks grow beyond plain words. */

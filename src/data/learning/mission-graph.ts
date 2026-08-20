@@ -1,10 +1,10 @@
-import { getAdventure } from "@/data/learning/adventures"
-import { getSideMission } from "@/data/learning/side-missions"
+import { getMission } from "@/data/learning/missions"
+import { getLesson } from "@/data/learning/lessons"
 
-export type MissionKind = "core" | "side"
+export type MissionKind = "mission" | "side"
 export type PathCol = 0 | 1 | 2
 
-export type PathStage = {
+export type Chapter = {
   id: string
   label: string
   /** First row of this part of the journey. */
@@ -15,7 +15,7 @@ export type MissionNode = {
   id: string
   label: string
   kind: MissionKind
-  /** Stage from the top of the path. */
+  /** Chapter from the top of the path. */
   row: number
   /** At most three places side by side. */
   col: PathCol
@@ -34,7 +34,7 @@ export type MissionEdge = {
 export type MissionGraph = {
   nodes: MissionNode[]
   edges: MissionEdge[]
-  stages?: PathStage[]
+  chapters?: Chapter[]
 }
 
 export const PATH_COLS = 3
@@ -83,17 +83,17 @@ function enforceSpineSpacing(layout: Map<string, PathPoint>, chains: MissionNode
 
 export function buildAllSpineChains(nodes: MissionNode[], edges: MissionEdge[]): MissionNode[][] {
   const byId = new Map(nodes.map((node) => [node.id, node]))
-  const coreEdges = edges.filter((edge) => edge.kind !== "side")
+  const spineEdges = edges.filter((edge) => edge.kind !== "side")
   const outgoing = new Map<string, string[]>()
   const incoming = new Set<string>()
-  for (const edge of coreEdges) {
+  for (const edge of spineEdges) {
     if (!byId.has(edge.from) || !byId.has(edge.to)) continue
     outgoing.set(edge.from, [...(outgoing.get(edge.from) ?? []), edge.to])
     incoming.add(edge.to)
   }
 
   const starts = nodes
-    .filter((node) => node.kind === "core" && !incoming.has(node.id) && outgoing.has(node.id))
+    .filter((node) => node.kind === "mission" && !incoming.has(node.id) && outgoing.has(node.id))
     .sort((a, b) => a.row - b.row || a.col - b.col)
 
   const chains: MissionNode[][] = []
@@ -120,14 +120,14 @@ export function buildAllSpineChains(nodes: MissionNode[], edges: MissionEdge[]):
 export function buildModuleLayout(
   nodes: MissionNode[],
   edges: MissionEdge[],
-  stage: PathStage,
+  stage: Chapter,
   width = PATH_WIDTH,
 ): Map<string, PathPoint> {
   const layout = new Map<string, PathPoint>()
-  const core = nodes.filter((node) => node.kind !== "side")
+  const spine = nodes.filter((node) => node.kind !== "side")
   const sides = nodes.filter((node) => node.kind === "side")
 
-  for (const node of core) {
+  for (const node of spine) {
     const placed = NODE_POS[node.id]
     layout.set(
       node.id,
@@ -168,7 +168,7 @@ export function buildModuleLayout(
   return layout
 }
 
-export function localCenter(node: MissionNode, layout: Map<string, PathPoint>, stage: PathStage) {
+export function localCenter(node: MissionNode, layout: Map<string, PathPoint>, stage: Chapter) {
   return (
     layout.get(node.id) ?? {
       x: ((node.col + 0.5) / PATH_COLS) * PATH_WIDTH,
@@ -177,34 +177,34 @@ export function localCenter(node: MissionNode, layout: Map<string, PathPoint>, s
   )
 }
 
-export function moduleHeight(nodes: MissionNode[], edges: MissionEdge[], stage: PathStage) {
+export function moduleHeight(nodes: MissionNode[], edges: MissionEdge[], stage: Chapter) {
   const layout = buildModuleLayout(nodes, edges, stage)
   let maxY = PATH_ROW_HEIGHT
   for (const point of layout.values()) maxY = Math.max(maxY, point.y)
   return maxY + 70
 }
 
-export function graphStages(graph: MissionGraph): PathStage[] {
-  if (graph.stages?.length) return [...graph.stages].sort((a, b) => a.row - b.row)
+export function graphChapters(graph: MissionGraph): Chapter[] {
+  if (graph.chapters?.length) return [...graph.chapters].sort((a, b) => a.row - b.row)
   return [{ id: "path", label: "Path", row: 0 }]
 }
 
-export function stageForNode(graph: MissionGraph, node: MissionNode) {
-  const stages = graphStages(graph)
-  let current = stages[0]
-  for (const stage of stages) {
+export function chapterForNode(graph: MissionGraph, node: MissionNode) {
+  const chapters = graphChapters(graph)
+  let current = chapters[0]
+  for (const stage of chapters) {
     if (stage.row <= node.row) current = stage
   }
   return current
 }
 
-export function nodesInStage(graph: MissionGraph, stage: PathStage, next?: PathStage) {
+export function nodesInChapter(graph: MissionGraph, stage: Chapter, next?: Chapter) {
   const end = next?.row ?? Number.POSITIVE_INFINITY
   return graph.nodes.filter((node) => node.row >= stage.row && node.row < end)
 }
 
-export function edgesInStage(graph: MissionGraph, stage: PathStage, next?: PathStage) {
-  const ids = new Set(nodesInStage(graph, stage, next).map((node) => node.id))
+export function edgesInChapter(graph: MissionGraph, stage: Chapter, next?: Chapter) {
+  const ids = new Set(nodesInChapter(graph, stage, next).map((node) => node.id))
   return graph.edges.filter((edge) => ids.has(edge.from) && ids.has(edge.to))
 }
 
@@ -221,13 +221,13 @@ export function isModuleReached(nodes: MissionNode[], completedIds: string[]) {
 }
 
 export function isModuleDone(nodes: MissionNode[], completedIds: string[]) {
-  const core = nodes.filter((node) => node.kind === "core")
-  const targets = core.length ? core : nodes
+  const spine = nodes.filter((node) => node.kind === "mission")
+  const targets = spine.length ? spine : nodes
   return targets.length > 0 && targets.every((node) => completedIds.includes(node.id))
 }
 
 export function currentModuleId(
-  modules: { stage: PathStage; nodes: MissionNode[] }[],
+  modules: { stage: Chapter; nodes: MissionNode[] }[],
   completedIds: string[],
 ) {
   const reached = modules.filter((item) => isModuleReached(item.nodes, completedIds))
@@ -246,39 +246,39 @@ export function statusForModule(
   return "ahead"
 }
 
-function core(id: string, label: string, row: number, col: PathCol, requires: string[]): MissionNode {
-  return { id, label, kind: "core", row, col, requires }
+function spine(id: string, label: string, row: number, col: PathCol, requires: string[]): MissionNode {
+  return { id, label, kind: "mission", row, col, requires }
 }
 
 function side(id: string, label: string, row: number, col: PathCol, requires: string[]): MissionNode {
   return { id, label, kind: "side", row, col, requires }
 }
 
-function walk(from: string, to: string, kind: MissionKind = "core"): MissionEdge {
+function walk(from: string, to: string, kind: MissionKind = "mission"): MissionEdge {
   return { from, to, kind }
 }
 
 /** Umrah as a trip: arrival, Makkah rites, then Madinah. Side nodes do not block the spine. */
 export const umrahGraph: MissionGraph = {
-  stages: [
+  chapters: [
     { id: "arrival", label: "Arrival", row: 0 },
     { id: "makkah", label: "Makkah", row: 3 },
     { id: "madinah", label: "Madinah", row: 9 },
   ],
   nodes: [
-    core("taxi-hotel", "Taxi", 0, 1, []),
-    core("airport-arrival", "Airport", 1, 1, ["taxi-hotel"]),
-    core("immigration", "Passport", 2, 1, ["airport-arrival"]),
-    core("find-haram", "Gate", 3, 1, ["immigration"]),
+    spine("taxi-hotel", "Taxi", 0, 1, []),
+    spine("airport-arrival", "Airport", 1, 1, ["taxi-hotel"]),
+    spine("immigration", "Passport", 2, 1, ["airport-arrival"]),
+    spine("find-haram", "Gate", 3, 1, ["immigration"]),
     side("order-dinner", "Dinner", 3, 0, ["find-haram"]),
-    core("enter-haram", "Enter", 4, 1, ["find-haram"]),
+    spine("enter-haram", "Enter", 4, 1, ["find-haram"]),
     side("lost-group", "Lost?", 4, 0, ["enter-haram"]),
     side("something-wrong", "Help", 4, 2, ["enter-haram"]),
-    core("begin-tawaf", "Tawaf", 5, 1, ["enter-haram"]),
-    core("find-zamzam", "Zamzam", 6, 1, ["begin-tawaf"]),
-    core("complete-sai", "Sa'i", 7, 1, ["find-zamzam"]),
-    core("barber", "Barber", 8, 1, ["complete-sai"]),
-    core("day-madinah", "Madinah", 9, 1, ["barber"]),
+    spine("begin-tawaf", "Tawaf", 5, 1, ["enter-haram"]),
+    spine("find-zamzam", "Zamzam", 6, 1, ["begin-tawaf"]),
+    spine("complete-sai", "Sa'i", 7, 1, ["find-zamzam"]),
+    spine("barber", "Barber", 8, 1, ["complete-sai"]),
+    spine("day-madinah", "Madinah", 9, 1, ["barber"]),
   ],
   edges: [
     walk("taxi-hotel", "airport-arrival"),
@@ -293,19 +293,6 @@ export const umrahGraph: MissionGraph = {
     walk("find-zamzam", "complete-sai"),
     walk("complete-sai", "barber"),
     walk("barber", "day-madinah"),
-  ],
-}
-
-export const arabicGraph: MissionGraph = {
-  nodes: [
-    { id: "taxi-hotel", label: "Taxi", kind: "core", row: 0, col: 0, requires: [] },
-    { id: "find-haram", label: "Gate", kind: "core", row: 0, col: 2, requires: [] },
-    { id: "order-dinner", label: "Dinner", kind: "core", row: 1, col: 0, requires: ["taxi-hotel"] },
-    { id: "enter-haram", label: "Enter", kind: "core", row: 1, col: 2, requires: ["find-haram"] },
-  ],
-  edges: [
-    { from: "taxi-hotel", to: "order-dinner", kind: "core" },
-    { from: "find-haram", to: "enter-haram", kind: "core" },
   ],
 }
 
@@ -336,26 +323,20 @@ function playableAncestorIds(node: MissionNode, seen = new Set<string>()): strin
 }
 
 function nodesFor(node: MissionNode): MissionNode[] {
-  const umrah = umrahGraph.nodes.find((item) => item.id === node.id)
-  if (umrah && sameRequires(umrah, node)) return umrahGraph.nodes
-  const arabic = arabicGraph.nodes.find((item) => item.id === node.id)
-  if (arabic && sameRequires(arabic, node)) return arabicGraph.nodes
-  if (umrah) return umrahGraph.nodes
-  if (arabic) return arabicGraph.nodes
+  if (umrahGraph.nodes.some((item) => item.id === node.id)) return umrahGraph.nodes
   return []
 }
 
-function sameRequires(a: MissionNode, b: MissionNode) {
-  return a.requires.length === b.requires.length && a.requires.every((id, index) => id === b.requires[index])
-}
-
-/** Missions available in the current preview release. Expand as content ships. */
+/** Map missions available in the current preview. Expand as content ships. */
 const PREVIEW_RELEASED_MISSION_IDS = new Set([
   "taxi-hotel",
   "find-haram",
   "enter-haram",
   "order-dinner",
-  // Prep catalog — all implemented sessions
+])
+
+/** Study lessons available in the current preview. */
+const PREVIEW_RELEASED_LESSON_IDS = new Set([
   "numbers-everywhere",
   "numbers-to-100",
   "polite-basic",
@@ -394,16 +375,28 @@ export function isMissionReleased(id: string) {
   return PREVIEW_RELEASED_MISSION_IDS.has(id)
 }
 
+export function isLessonReleased(id: string) {
+  return PREVIEW_RELEASED_LESSON_IDS.has(id)
+}
+
 export function isMissionPlayable(id: string) {
   if (!isMissionReleased(id)) return false
-  return Boolean(getAdventure(id)?.playable || getSideMission(id)?.playable)
+  return Boolean(getMission(id)?.playable)
+}
+
+export function isLessonPlayable(id: string) {
+  if (!isLessonReleased(id)) return false
+  return Boolean(getLesson(id)?.playable)
 }
 
 export function missionHref(id: string) {
-  if (!isMissionReleased(id)) return undefined
-  if (getSideMission(id)) return `/side-missions/${id}`
-  if (getAdventure(id)?.playable) return `/adventures/${id}`
-  return undefined
+  if (!isMissionPlayable(id)) return undefined
+  return `/play/${id}`
+}
+
+export function lessonHref(id: string) {
+  if (!isLessonPlayable(id)) return undefined
+  return `/lessons/${id}`
 }
 
 export function availableMissions(graph: MissionGraph, completedIds: string[]) {
@@ -419,12 +412,11 @@ export function openMissions(graph: MissionGraph, completedIds: string[]) {
   })
 }
 
-export function nextPlayableAdventure(completedIds: string[], graph: MissionGraph = umrahGraph) {
+export function nextPlayableMission(completedIds: string[], graph: MissionGraph = umrahGraph) {
   return openMissions(graph, completedIds)[0]?.id
 }
 
 export function graphForJourney(id: string): MissionGraph | undefined {
   if (id === "umrah") return umrahGraph
-  if (id === "arabic") return arabicGraph
   return undefined
 }

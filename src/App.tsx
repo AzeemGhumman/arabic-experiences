@@ -7,14 +7,11 @@ import { HomePage } from "@/pages/HomePage"
 import { CompanionPage } from "@/pages/CompanionPage"
 import { JourneySwitchPage } from "@/pages/JourneysPage"
 import { UmrahExperiencePage } from "@/pages/UmrahExperiencePage"
-import { RestaurantScenarioPage } from "@/pages/RestaurantScenarioPage"
-import { GardenScenarioPage } from "@/pages/GardenScenarioPage"
-import { VocabularyDetailPage } from "@/pages/VocabularyDetailPage"
 import { ProgressPage } from "@/pages/ProgressPage"
-import { PrepPage } from "@/pages/PrepPage"
-import { PrepBookmarksPage } from "@/pages/PrepBookmarksPage"
+import { StudyBookmarksPage } from "@/pages/StudyBookmarksPage"
+import { StudyPage } from "@/pages/StudyPage"
 import { ProfilePage } from "@/pages/ProfilePage"
-import { AdventurePage, SideMissionPage } from "@/pages/AdventurePage"
+import { LessonPage, MissionPlayPage } from "@/pages/MissionPlayPage"
 import { MissionPlacePage } from "@/pages/MissionPlacePage"
 
 export default function App() {
@@ -28,21 +25,11 @@ export default function App() {
             <Route path="/" element={<HomePage />} />
             <Route path="/companion" element={<CompanionPage />} />
             <Route path="/companion/umrah/haram" element={<UmrahExperiencePage />} />
-            <Route path="/journeys" element={<Navigate to="/profile/journeys" replace />} />
-            <Route path="/journeys/umrah" element={<Navigate to="/" replace />} />
-            <Route path="/journeys/umrah/haram" element={<Navigate to="/companion/umrah/haram" replace />} />
-            <Route path="/journeys/hajj" element={<Navigate to="/" replace />} />
-            <Route path="/journeys/arabic" element={<Navigate to="/" replace />} />
-            <Route path="/journeys/arabic/restaurant" element={<RestaurantScenarioPage />} />
-            <Route path="/adventures/:id" element={<AdventurePage />} />
+            <Route path="/play/:id" element={<MissionPlayPage />} />
             <Route path="/missions/:id" element={<MissionPlacePage />} />
-            <Route path="/side-missions/:id" element={<SideMissionPage />} />
-            <Route path="/journeys/quran" element={<Navigate to="/" replace />} />
-            <Route path="/journeys/quran/garden" element={<GardenScenarioPage />} />
-            <Route path="/vocabulary/:id" element={<VocabularyDetailPage />} />
-            <Route path="/learn" element={<Navigate to="/progress" replace />} />
-            <Route path="/prep" element={<PrepPage />} />
-            <Route path="/prep/bookmarks" element={<PrepBookmarksPage />} />
+            <Route path="/lessons/:id" element={<LessonPage />} />
+            <Route path="/study" element={<StudyPage />} />
+            <Route path="/study/bookmarks" element={<StudyBookmarksPage />} />
             <Route path="/progress" element={<ProgressPage />} />
             <Route path="/profile" element={<ProfilePage />} />
             <Route path="/profile/journeys" element={<JourneySwitchPage />} />

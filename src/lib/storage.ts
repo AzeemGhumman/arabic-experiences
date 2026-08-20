@@ -59,32 +59,12 @@ export type UmrahStep = {
   href?: string
 }
 
-export type Scenario = {
-  id: string
-  title: string
-  description: string
-  setting: string
-  status: JourneyStatus
-  hotspotCount: number
-}
-
-export type Hotspot = {
-  id: string
-  vocabId: string
-  label: string
-  x: number
-  y: number
-  w?: number
-  h?: number
-  notice?: string
-}
-
 export type JourneyProgress = {
-  completedAdventureIds: string[]
-  completedSideMissionIds: string[]
+  completedMissionIds: string[]
+  completedLessonIds: string[]
   capabilities: Record<string, 0 | 1 | 2 | 3>
-  adventureOutcomes: Record<string, string>
-  adventurePlayCounts: Record<string, number>
+  missionOutcomes: Record<string, string>
+  missionPlayCounts: Record<string, number>
   discoveredVocab: string[]
   wordConfidence: Record<string, Confidence>
   bookmarkedVocab: VocabBookmark[]
@@ -98,25 +78,22 @@ export type AppState = {
   showTransliteration: boolean
   showTranslation: boolean
   journeyProgress: Partial<Record<JourneyCategory, JourneyProgress>>
-  completedUmrahSteps: string[]
-  completedScenarios: string[]
-  restaurantAsked: string[]
-  gardenCelebrated: boolean
   practicedSupplications: string[]
   visitCount: number
   mapIntroDismissed: boolean
   mockSignedIn: boolean
 }
 
-export const STORAGE_KEY = "arabic-experiences-state"
+/** New key: previous `arabic-experiences-state` blobs are ignored. */
+export const STORAGE_KEY = "arabic-experiences-state-v2"
 
 export function emptyJourneyProgress(): JourneyProgress {
   return {
-    completedAdventureIds: [],
-    completedSideMissionIds: [],
+    completedMissionIds: [],
+    completedLessonIds: [],
     capabilities: {},
-    adventureOutcomes: {},
-    adventurePlayCounts: {},
+    missionOutcomes: {},
+    missionPlayCounts: {},
     discoveredVocab: [],
     wordConfidence: {},
     bookmarkedVocab: [],
@@ -131,89 +108,59 @@ export const defaultAppState: AppState = {
   showTransliteration: false,
   showTranslation: false,
   journeyProgress: {},
-  completedUmrahSteps: [],
-  completedScenarios: [],
-  restaurantAsked: [],
-  gardenCelebrated: false,
   practicedSupplications: [],
   visitCount: 1,
   mapIntroDismissed: false,
   mockSignedIn: false,
 }
 
-type LegacyState = Partial<AppState> & {
-  completedAdventureIds?: string[]
-  completedSideMissionIds?: string[]
-  capabilities?: Record<string, 0 | 1 | 2 | 3>
-  adventureOutcomes?: Record<string, string>
-  adventurePlayCounts?: Record<string, number>
-  discoveredVocab?: string[]
-  wordConfidence?: Record<string, Confidence>
-  bookmarkedVocab?: unknown
+function readJourneyProgress(raw: unknown): JourneyProgress {
+  const progress = (raw ?? {}) as Partial<JourneyProgress>
+  return {
+    completedMissionIds: Array.isArray(progress.completedMissionIds) ? progress.completedMissionIds : [],
+    completedLessonIds: Array.isArray(progress.completedLessonIds) ? progress.completedLessonIds : [],
+    capabilities: progress.capabilities ?? {},
+    missionOutcomes: progress.missionOutcomes ?? {},
+    missionPlayCounts: progress.missionPlayCounts ?? {},
+    discoveredVocab: progress.discoveredVocab ?? [],
+    wordConfidence: progress.wordConfidence ?? {},
+    bookmarkedVocab: normalizeBookmarks(progress.bookmarkedVocab),
+  }
 }
 
 export function getJourneyProgress(state: AppState, journeyId = state.activeJourneyId): JourneyProgress {
   return state.journeyProgress[journeyId] ?? emptyJourneyProgress()
 }
 
-export function migrateState(parsed: LegacyState): AppState {
-  const base: AppState = {
-    ...defaultAppState,
-    ...parsed,
-    journeyProgress: parsed.journeyProgress ?? {},
-  }
-
-  const hasLegacyProgress =
-    (parsed.completedAdventureIds?.length ?? 0) > 0 ||
-    (parsed.completedSideMissionIds?.length ?? 0) > 0 ||
-    (parsed.discoveredVocab?.length ?? 0) > 0
-
-  if (Object.keys(base.journeyProgress).length === 0 && hasLegacyProgress) {
-    const id = parsed.activeJourneyId ?? parsed.goals?.[0] ?? "umrah"
-    base.activeJourneyId = id
-    base.journeyProgress = {
-      [id]: {
-        completedAdventureIds: parsed.completedAdventureIds ?? [],
-        completedSideMissionIds: parsed.completedSideMissionIds ?? [],
-        capabilities: parsed.capabilities ?? {},
-        adventureOutcomes: parsed.adventureOutcomes ?? {},
-        adventurePlayCounts: parsed.adventurePlayCounts ?? {},
-        discoveredVocab: parsed.discoveredVocab ?? [],
-        wordConfidence: parsed.wordConfidence ?? {},
-        bookmarkedVocab: normalizeBookmarks(parsed.bookmarkedVocab),
-      },
-    }
-  }
-
-  if (!base.activeJourneyId) base.activeJourneyId = "umrah"
-  if (!isJourneyReleased(base.activeJourneyId)) base.activeJourneyId = "umrah"
-  if (!supportedLanguages.includes(base.language)) base.language = "en"
-  if (typeof base.mapIntroDismissed !== "boolean") base.mapIntroDismissed = false
-  if (typeof base.mockSignedIn !== "boolean") base.mockSignedIn = false
-  if (!base.journeyProgress[base.activeJourneyId]) {
-    base.journeyProgress = {
-      ...base.journeyProgress,
-      [base.activeJourneyId]: emptyJourneyProgress(),
-    }
-  }
-
-  for (const id of Object.keys(base.journeyProgress)) {
-    const progress = base.journeyProgress[id as JourneyCategory]
-    if (!progress) continue
-    base.journeyProgress[id as JourneyCategory] = {
-      ...progress,
-      bookmarkedVocab: normalizeBookmarks(progress.bookmarkedVocab),
-    }
-  }
-
-  return base
-}
-
 export function loadState(): AppState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (!raw) return { ...defaultAppState }
-    return migrateState(JSON.parse(raw) as LegacyState)
+    const parsed = JSON.parse(raw) as Partial<AppState>
+    const journeyProgress: AppState["journeyProgress"] = {}
+    for (const [id, progress] of Object.entries(parsed.journeyProgress ?? {})) {
+      journeyProgress[id as JourneyCategory] = readJourneyProgress(progress)
+    }
+    const next: AppState = {
+      ...defaultAppState,
+      onboardingComplete: Boolean(parsed.onboardingComplete),
+      activeJourneyId: parsed.activeJourneyId ?? "umrah",
+      goals: parsed.goals ?? [],
+      language: parsed.language ?? "en",
+      showTransliteration: Boolean(parsed.showTransliteration),
+      showTranslation: Boolean(parsed.showTranslation),
+      journeyProgress,
+      practicedSupplications: parsed.practicedSupplications ?? [],
+      visitCount: typeof parsed.visitCount === "number" ? parsed.visitCount : 1,
+      mapIntroDismissed: Boolean(parsed.mapIntroDismissed),
+      mockSignedIn: Boolean(parsed.mockSignedIn),
+    }
+    if (!isJourneyReleased(next.activeJourneyId)) next.activeJourneyId = "umrah"
+    if (!supportedLanguages.includes(next.language)) next.language = "en"
+    if (!next.journeyProgress[next.activeJourneyId]) {
+      next.journeyProgress[next.activeJourneyId] = emptyJourneyProgress()
+    }
+    return next
   } catch {
     return { ...defaultAppState }
   }
@@ -228,10 +175,6 @@ export function saveState(state: AppState) {
     showTransliteration: state.showTransliteration,
     showTranslation: state.showTranslation,
     journeyProgress: state.journeyProgress,
-    completedUmrahSteps: state.completedUmrahSteps,
-    completedScenarios: state.completedScenarios,
-    restaurantAsked: state.restaurantAsked,
-    gardenCelebrated: state.gardenCelebrated,
     practicedSupplications: state.practicedSupplications,
     visitCount: state.visitCount,
     mapIntroDismissed: Boolean(state.mapIntroDismissed),

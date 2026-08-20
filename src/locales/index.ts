@@ -23,4 +23,4 @@ export function languageOptions() {
   }))
 }
 
-export type { AdventureStrings, CapabilityStrings, JourneyStrings, LanguagePack, SupportedLanguage } from "@/locales/types"
+export type { MissionStrings, CapabilityStrings, JourneyStrings, LanguagePack, SupportedLanguage } from "@/locales/types"

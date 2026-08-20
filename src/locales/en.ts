@@ -3,7 +3,7 @@ import type { LanguagePack } from "@/locales/types"
 export const en: LanguagePack = {
   meta: { code: "en", name: "English", nativeName: "English" },
   ui: {
-    nav: { home: "Home", prep: "Prep", progress: "Progress", trip: "Guide", profile: "Profile" },
+    nav: { home: "Home", study: "Study", progress: "Progress", trip: "Trip", profile: "Profile" },
     common: {
       active: "Active",
       back: "Back",
@@ -27,22 +27,22 @@ export const en: LanguagePack = {
       backToMap: "Back to map",
       percentComplete: "{percent}% completed",
     },
-    prep: {
-      kicker: "Prep",
-      title: "Toolkit",
+    study: {
+      kicker: "Study",
+      title: "Study",
       body: "Word lists to open before a mission — or whenever you need them.",
-      sessionsDone: "sessions complete",
-      footer: "Each prep can support several missions. Missions link back here too.",
+      lessonsDone: "lessons complete",
+      footer: "Each lesson can support several missions. Missions link back here too.",
       stage: "Stage {level}",
       forMission: "For this mission",
-      viewAll: "All prep sessions",
+      viewAll: "All lessons",
       markComplete: "Mark as done",
       markIncomplete: "Mark as not done",
       bookmarksTitle: "Bookmarked",
       bookmarksEmpty: "Bookmark words while studying to collect them here.",
       bookmarksSummary: "{count} saved for review",
       bookmarksPageTitle: "Bookmarked for review",
-      bookmarksPageBody: "Words you flagged in prep. Changes are saved when you tap Save changes.",
+      bookmarksPageBody: "Words you flagged in Study. Changes are saved when you tap Save changes.",
       saveBookmarks: "Save changes ({count})",
       shelves: {
         arrive: { title: "Getting there", body: "Roads, gates, and the first conversations." },
@@ -82,7 +82,7 @@ export const en: LanguagePack = {
     onboarding: {
       title: "Learn Arabic",
       subtitle: "Through real journeys",
-      body: "You'll learn what to say at the airport, in a taxi, at the hotel. Umrah, Hajj, or a trip to Egypt is the journey you speak through.",
+      body: "You'll learn what to say in a taxi, at the airport, at the hotel. Start with Arabic for Umrah. Hajj, everyday travel, and Quranic Arabic are coming soon.",
       cta: "Start learning",
     },
     homeAbout: {
@@ -96,9 +96,9 @@ export const en: LanguagePack = {
       tabsTitle: "What's in the tabs",
       tabs: {
         home: "This map. Each place is a speaking mission on the journey.",
-        prep: "A toolkit of words. Open it before a mission, or whenever you need a phrase.",
+        study: "Study — word lists. Open them before a mission, or whenever you need a phrase.",
         progress: "What you can do now, and the words you have met.",
-        trip: "Rites and trip notes — kept separate from the language path.",
+        trip: "Trip companion — rites and trip notes, kept separate from the language path.",
         profile: "Interface language, which journey you're on, and data on this device.",
       },
       featuresTitle: "What's inside",
@@ -107,9 +107,9 @@ export const en: LanguagePack = {
           title: "Missions on a path",
           body: "Follow Arrival, Makkah, and Madinah. Locked places open after the one before.",
         },
-        toolkit: {
+        study: {
           title: "Words when you want them",
-          body: "Prep is optional study. Lists serve the mission, not the other way around.",
+          body: "Study is optional. Lists serve the mission, not the other way around.",
         },
         listen: {
           title: "Hear it spoken",
@@ -159,7 +159,7 @@ export const en: LanguagePack = {
       wordsBody: "They stay here if you switch journeys. The other path has its own list.",
       wordsEmpty: "No words collected yet — they appear after a scene or mission.",
       bookmarksTitle: "Bookmarked for review",
-      bookmarksBody: "Words you flagged in prep — tap to remove the bookmark.",
+      bookmarksBody: "Words you flagged in Study — tap to remove the bookmark.",
       bookmarksEmpty: "Bookmark words while studying to collect them here.",
     },
     journeys: {
@@ -187,11 +187,11 @@ export const en: LanguagePack = {
     map: {
       yourJourney: "Your journey",
       youreIn: "You're in {stage}",
-      lede: "Each place is an Arabic mission on this trip.",
+      lede: "Learn Arabic by playing short missions along this trip.",
       howTitle: "How to learn here",
       howMission: "Tap the glowing place — that's your next Arabic mission.",
-      howPrep: "Prep is a word toolkit. Study there first if you want the words before you speak.",
-      howGuide: "Guide is for the rites. Skip it if you're here to learn Arabic.",
+      howStudy: "Study is the word library. Open it first if you want the words before you speak.",
+      howTrip: "Trip companion is for the rites. Skip it if you're here to learn Arabic.",
       howDismiss: "Got it",
       howStart: "Start with {place}",
     },
@@ -209,9 +209,9 @@ export const en: LanguagePack = {
       comingSoonDismiss: "Got it",
       lockedBody: "Opens after the previous place on the map.",
     },
-    adventure: {
+    play: {
       mission: "Mission",
-      prep: "Prep",
+      study: "Study",
       listen: "Listen",
       listenAgain: "Listen again",
       continue: "Continue",
@@ -225,7 +225,7 @@ export const en: LanguagePack = {
       wordsUsed: "Words you used",
       wordsInLesson: "Words in this lesson",
       backToMission: "Back to mission",
-      backToPrep: "Back to prep",
+      backToStudy: "Back to Study",
       studyAgain: "Study again",
       directions: {
         left: "Left",
@@ -239,12 +239,12 @@ export const en: LanguagePack = {
     },
     depth: {
       master: "Master",
-      explore: "Explore",
-      core: "Core",
+      advanced: "Advanced",
+      basic: "Basic",
       notStarted: "Not started",
     },
     companion: {
-      kicker: "Guide",
+      kicker: "Trip companion",
       titleUmrah: "For the days of Umrah",
       titleHajj: "For the days of Hajj",
       body: "A quick reference for the rites — separate from your language missions.",
@@ -255,7 +255,7 @@ export const en: LanguagePack = {
       hajjDaysBody: "The sequence of the days. Sheets for each moment will land here.",
       laterTitle: "Coming later",
       laterBody: "Tools you might want on the ground, kept here rather than inside a mission.",
-      backToGuide: "Back to guide",
+      backToCompanion: "Back to trip companion",
       disclaimer:
         "Prototype content only. Religious guidance should be reviewed by qualified scholars before production use. This is not a replacement for Nusuk or official guidance.",
     },
@@ -288,13 +288,13 @@ export const en: LanguagePack = {
       onboardingHint: "Trips, markets, cities",
     },
     quran: {
-      title: "Quranic Vocabulary Adventures",
+      title: "Quranic Arabic",
       description: "Discover words through gardens, animals, homes, and motion.",
       onboardingLabel: "Quranic Arabic",
       onboardingHint: "Words through scenes",
     },
   },
-  stages: {
+  chapters: {
     arrival: "Arrival",
     makkah: "Makkah",
     madinah: "Madinah",
@@ -316,7 +316,7 @@ export const en: LanguagePack = {
     barber: "Barber",
     "day-madinah": "Madinah",
   },
-  adventures: {
+  missionDetails: {
     immigration: {
       title: "Passport control",
       subtitle: "Hand over your passport and follow a short instruction.",
@@ -350,7 +350,7 @@ export const en: LanguagePack = {
     "find-zamzam": {
       title: "Find Zamzam",
       subtitle: "Ask for water and recognize Zamzam.",
-      description: "A short micro-adventure: water, cup, cold, please.",
+      description: "A short scene: water, cup, cold, please.",
       canNowDo: "Ask for water and recognize Zamzam.",
     },
     "complete-sai": {

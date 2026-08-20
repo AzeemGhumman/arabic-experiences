@@ -1,26 +1,24 @@
-import { getAdventure } from "@/data/learning/adventures"
-import { getSideMission } from "@/data/learning/side-missions"
-import { isMissionReleased, isNodeUnlocked, type MissionNode } from "@/data/learning/mission-graph"
+import { getMission } from "@/data/learning/missions"
+import { getLesson } from "@/data/learning/lessons"
+import { isLessonReleased, isMissionReleased, isNodeUnlocked, type MissionNode } from "@/data/learning/mission-graph"
 
-/** Shared availability for missions and prep sessions. */
+/** Shared availability for missions and study lessons. */
 export type ContentAvailability = "done" | "open" | "locked" | "coming-soon"
 
-export function isPrepImplemented(id: string) {
-  const session = getSideMission(id)
-  if (!session) return false
-  return isMissionReleased(id) && session.playable && Boolean(session.buildRun)
+export function isLessonImplemented(id: string) {
+  const lesson = getLesson(id)
+  if (!lesson) return false
+  return isLessonReleased(id) && lesson.playable && Boolean(lesson.buildRun)
 }
 
 export function isMissionImplemented(id: string) {
-  const adventure = getAdventure(id)
-  const side = getSideMission(id)
-  if (side) return isPrepImplemented(id)
-  if (!adventure) return false
-  return isMissionReleased(id) && adventure.playable
+  const mission = getMission(id)
+  if (!mission) return false
+  return isMissionReleased(id) && mission.playable
 }
 
-export function prepAvailability(sessionId: string): ContentAvailability {
-  if (!isPrepImplemented(sessionId)) return "coming-soon"
+export function lessonAvailability(lessonId: string): ContentAvailability {
+  if (!isLessonImplemented(lessonId)) return "coming-soon"
   return "open"
 }
 

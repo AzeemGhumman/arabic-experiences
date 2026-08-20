@@ -1,4 +1,4 @@
-import type { AdventureBuildContext, AdventureRun, AdventureStep, DirectionAction } from "@/lib/learning-types"
+import type { MissionBuildContext, MissionRun, MissionStep, DirectionAction } from "@/lib/learning-types"
 import { getLearningWord } from "@/data/learning/words"
 
 function pick<T>(rand: () => number, items: T[]): T {
@@ -13,7 +13,7 @@ function arabicOf(id: string) {
   return getLearningWord(id)?.arabic ?? id
 }
 
-export function buildFindHaram(ctx: AdventureBuildContext): AdventureRun {
+export function buildFindHaram(ctx: MissionBuildContext): MissionRun {
   const gate = pick(ctx.rand, [79, 84, 1, 5, 8])
   const dir1 = pick(ctx.rand, ["right", "left", "straight"] as const)
   const dir2 = pick(
@@ -36,7 +36,7 @@ export function buildFindHaram(ctx: AdventureBuildContext): AdventureRun {
     up: "upstairs",
   }
 
-  const steps: AdventureStep[] = [
+  const steps: MissionStep[] = [
     {
       type: "context",
       title: "Find your way to the Haram",
@@ -104,7 +104,7 @@ export function buildFindHaram(ctx: AdventureBuildContext): AdventureRun {
 
   return {
     id: `find-haram-${gate}-${dir1}`,
-    adventureId: "find-haram",
+    missionId: "find-haram",
     seed: "",
     selectedVocabularyIds: vocabIds,
     selectedComplicationId: complication.id,
@@ -114,7 +114,7 @@ export function buildFindHaram(ctx: AdventureBuildContext): AdventureRun {
   }
 }
 
-export function buildEnterHaram(ctx: AdventureBuildContext): AdventureRun {
+export function buildEnterHaram(ctx: MissionBuildContext): MissionRun {
   const group = pick(ctx.rand, [
     { id: "men", label: "men", arabic: "رجال" },
     { id: "women", label: "women", arabic: "نساء" },
@@ -132,7 +132,7 @@ export function buildEnterHaram(ctx: AdventureBuildContext): AdventureRun {
     "enter",
   ])
 
-  const steps: AdventureStep[] = [
+  const steps: MissionStep[] = [
     {
       type: "context",
       title: "Enter Masjid al-Haram",
@@ -188,7 +188,7 @@ export function buildEnterHaram(ctx: AdventureBuildContext): AdventureRun {
 
   return {
     id: `enter-haram-${group.id}`,
-    adventureId: "enter-haram",
+    missionId: "enter-haram",
     seed: "",
     selectedVocabularyIds: vocabIds,
     selectedComplicationId: "closed-door",
@@ -198,7 +198,7 @@ export function buildEnterHaram(ctx: AdventureBuildContext): AdventureRun {
   }
 }
 
-export function buildTaxi(ctx: AdventureBuildContext): AdventureRun {
+export function buildTaxi(ctx: MissionBuildContext): MissionRun {
   const advanced = (ctx.capabilities.navigation ?? 0) >= 2
   const dest = pick(ctx.rand, ["hotel", "haram", "airport"])
   const destWord = dest === "hotel" ? "الفندق" : dest === "haram" ? "الحرم" : "المطار"
@@ -214,7 +214,7 @@ export function buildTaxi(ctx: AdventureBuildContext): AdventureRun {
       "hotel",
       "how-much",
     ])
-    const steps: AdventureStep[] = [
+    const steps: MissionStep[] = [
       {
         type: "context",
         title: "Taxi with richer directions",
@@ -264,7 +264,7 @@ export function buildTaxi(ctx: AdventureBuildContext): AdventureRun {
     ]
     return {
       id: `taxi-advanced-${dest}`,
-      adventureId: "taxi-hotel",
+      missionId: "taxi-hotel",
       seed: "",
       selectedVocabularyIds: vocabIds,
       variables: { destination: dest, variant: "advanced" },
@@ -302,7 +302,7 @@ export function buildTaxi(ctx: AdventureBuildContext): AdventureRun {
     .filter((place) => place !== dest)
     .map((place) => (place === "hotel" ? "الفندق" : place === "haram" ? "الحرم" : "المطار"))
 
-  const steps: AdventureStep[] = [
+  const steps: MissionStep[] = [
     {
       type: "context",
       title: "Take a taxi back to the hotel",
@@ -343,7 +343,7 @@ export function buildTaxi(ctx: AdventureBuildContext): AdventureRun {
 
   return {
     id: `taxi-${dest}-${dir}`,
-    adventureId: "taxi-hotel",
+    missionId: "taxi-hotel",
     seed: "",
     selectedVocabularyIds: vocabIds,
     selectedComplicationId: complication,
@@ -353,7 +353,7 @@ export function buildTaxi(ctx: AdventureBuildContext): AdventureRun {
   }
 }
 
-export function buildDinner(ctx: AdventureBuildContext): AdventureRun {
+export function buildDinner(ctx: MissionBuildContext): MissionRun {
   const chickens = pick(ctx.rand, [1, 2])
   const waters = pick(ctx.rand, [1, 2, 3])
   const extra = pick(ctx.rand, ["plain", "no-sugar", "extra-bread"])
@@ -362,7 +362,7 @@ export function buildDinner(ctx: AdventureBuildContext): AdventureRun {
   const extraLine =
     extra === "no-sugar" ? "Tea without sugar." : extra === "extra-bread" ? "Extra bread." : "Rice with the chicken."
 
-  const steps: AdventureStep[] = [
+  const steps: MissionStep[] = [
     {
       type: "context",
       title: "Order dinner",
@@ -416,7 +416,7 @@ export function buildDinner(ctx: AdventureBuildContext): AdventureRun {
 
   return {
     id: `dinner-${chickens}-${waters}-${extra}`,
-    adventureId: "order-dinner",
+    missionId: "order-dinner",
     seed: "",
     selectedVocabularyIds: vocabIds,
     variables: { chickens, waters, extra },
@@ -425,7 +425,7 @@ export function buildDinner(ctx: AdventureBuildContext): AdventureRun {
   }
 }
 
-export function buildNumbers(_ctx: AdventureBuildContext): AdventureRun {
+export function buildNumbers(_ctx: MissionBuildContext): MissionRun {
   const oneToTen = ["n1", "n2", "n3", "n4", "n5", "n6", "n7", "n8", "n9", "n10"] as const
   const ordinals = ["first", "second", "third"] as const
   const elevenToTwenty = [
@@ -441,7 +441,7 @@ export function buildNumbers(_ctx: AdventureBuildContext): AdventureRun {
     "n20",
   ] as const
   const vocabIds = uniqueIds([...oneToTen, ...ordinals, ...elevenToTwenty])
-  const steps: AdventureStep[] = [
+  const steps: MissionStep[] = [
     {
       type: "study",
       groups: [
@@ -464,7 +464,7 @@ export function buildNumbers(_ctx: AdventureBuildContext): AdventureRun {
 
   return {
     id: "numbers-everywhere-study",
-    adventureId: "numbers-everywhere",
+    missionId: "numbers-everywhere",
     seed: "",
     selectedVocabularyIds: vocabIds,
     variables: {},
@@ -473,7 +473,7 @@ export function buildNumbers(_ctx: AdventureBuildContext): AdventureRun {
   }
 }
 
-export function buildNavigation(_ctx: AdventureBuildContext): AdventureRun {
+export function buildNavigation(_ctx: MissionBuildContext): MissionRun {
   const vocabIds = uniqueIds([
     "hotel",
     "please",
@@ -488,7 +488,7 @@ export function buildNavigation(_ctx: AdventureBuildContext): AdventureRun {
     "turn-right",
     "you-arrived",
   ])
-  const steps: AdventureStep[] = [
+  const steps: MissionStep[] = [
     {
       type: "study",
       groups: [
@@ -516,7 +516,7 @@ export function buildNavigation(_ctx: AdventureBuildContext): AdventureRun {
 
   return {
     id: "master-navigation-study",
-    adventureId: "master-navigation",
+    missionId: "master-navigation",
     seed: "",
     selectedVocabularyIds: vocabIds,
     variables: {},
@@ -525,9 +525,9 @@ export function buildNavigation(_ctx: AdventureBuildContext): AdventureRun {
   }
 }
 
-export function buildFood(_ctx: AdventureBuildContext): AdventureRun {
+export function buildFood(_ctx: MissionBuildContext): MissionRun {
   const vocabIds = uniqueIds(["without", "with", "spicy", "cold", "hot", "juice", "vegetables", "the-bill", "plate"])
-  const steps: AdventureStep[] = [
+  const steps: MissionStep[] = [
     {
       type: "study",
       groups: [
@@ -555,7 +555,7 @@ export function buildFood(_ctx: AdventureBuildContext): AdventureRun {
 
   return {
     id: "explore-food-study",
-    adventureId: "explore-food",
+    missionId: "explore-food",
     seed: "",
     selectedVocabularyIds: vocabIds,
     variables: {},

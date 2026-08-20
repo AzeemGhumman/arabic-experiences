@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Crop a square NxN contact sheet into per-topic webp tiles."""
+"""Crop a square NxN contact sheet into per-id webp tiles."""
 
 from __future__ import annotations
 
@@ -11,8 +11,12 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "src/data/learning/images.source.json"
-OUT_DIR = ROOT / "public/images/prep"
 MANIFEST = ROOT / "public/images/manifest.json"
+
+KIND_FOLDERS = {
+    "study": "study",
+    "missions": "missions",
+}
 
 
 def crop_sheet(image: Image.Image, cols: int, rows: int, inset_ratio: float) -> list[Image.Image]:
@@ -30,6 +34,11 @@ def crop_sheet(image: Image.Image, cols: int, rows: int, inset_ratio: float) -> 
             )
             tiles.append(image.crop(box).resize((512, 512), Image.Resampling.LANCZOS))
     return tiles
+
+
+def folder_for(sheet: dict, source: dict) -> str:
+    kind = sheet.get("kind") or source.get("defaultKind") or "study"
+    return KIND_FOLDERS.get(kind, kind)
 
 
 def main() -> None:
@@ -52,20 +61,22 @@ def main() -> None:
     if len(sheet["tiles"]) != expected:
         raise SystemExit(f"Sheet {args.sheet_id} has {len(sheet['tiles'])} tiles, grid is {expected}")
 
-    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    folder = folder_for(sheet, source)
+    out_dir = ROOT / "public/images" / folder
+    out_dir.mkdir(parents=True, exist_ok=True)
     written: dict[str, str] = {}
     for spec, tile in zip(sheet["tiles"], tiles, strict=True):
-        rel = f"/images/prep/{spec['id']}.webp"
-        dest = OUT_DIR / f"{spec['id']}.webp"
+        rel = f"/images/{folder}/{spec['id']}.webp"
+        dest = out_dir / f"{spec['id']}.webp"
         tile.save(dest, "WEBP", quality=86, method=6)
         written[spec["id"]] = rel
         print(f"  {spec['id']} → {dest} ({dest.stat().st_size} bytes)")
 
-    manifest = {"version": 1, "prep": {}}
+    manifest = {"version": 1}
     if MANIFEST.exists():
         manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
-        manifest.setdefault("prep", {})
-    manifest["prep"].update(written)
+    manifest.setdefault(folder, {})
+    manifest[folder].update(written)
     MANIFEST.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     print(f"Updated {MANIFEST}")
 
