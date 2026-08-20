@@ -36,15 +36,17 @@ export function StudyWordCard({
         )}
       >
         <div className="flex items-center gap-2 px-3 py-2">
-          <div className="min-w-0 flex-1">
-            <p className="text-sm font-medium leading-snug text-ink">{word.meaning}</p>
+          <p className="min-w-0 flex-1 text-sm font-medium leading-snug text-ink">{word.meaning}</p>
+          <div className="min-w-0 shrink-0 text-right">
+            <p className="arabic-text text-xl leading-none" dir="rtl">
+              {word.arabic}
+            </p>
             {word.transliteration ? (
-              <p className="mt-0.5 text-[11px] italic leading-snug text-ink-soft">{word.transliteration}</p>
+              <p className="mt-1 text-[11px] italic leading-snug text-ink-soft">
+                {word.transliteration}
+              </p>
             ) : null}
           </div>
-          <p className="arabic-text shrink-0 text-xl leading-none" dir="rtl">
-            {word.arabic}
-          </p>
           {showAudio ? <PlayAudioButton packId={packId} clipId={wordId} variant="ghost" /> : null}
           {onToggleBookmark ? (
             <BookmarkButton bookmarked={bookmarked} onToggle={() => onToggleBookmark(wordId)} />
@@ -63,23 +65,27 @@ export function StudyWordCard({
       )}
     >
       <div className="grid grid-cols-2">
-        <div className="flex min-w-0 flex-col justify-center border-r border-border px-3 py-3">
-          <p className="text-sm font-medium text-ink">{word.meaning}</p>
-          {word.transliteration ? (
-            <p className="mt-0.5 text-[11px] italic text-ink-soft">{word.transliteration}</p>
-          ) : null}
-          <div className="mt-1">
-            <RegisterBadge register={word.register} />
-          </div>
+        <div className="flex min-w-0 flex-col justify-center gap-1 border-r border-border px-3 py-3">
+          <p className="text-sm font-medium leading-snug text-ink">{word.meaning}</p>
+          <RegisterBadge register={word.register} />
         </div>
-        <div className="flex min-w-0 items-center justify-end gap-1 px-2 py-3">
-          <p className="arabic-text text-2xl leading-none" dir="rtl">
-            {word.arabic}
-          </p>
-          {showAudio ? <PlayAudioButton packId={packId} clipId={wordId} variant="ghost" /> : null}
-          {onToggleBookmark ? (
-            <BookmarkButton bookmarked={bookmarked} onToggle={() => onToggleBookmark(wordId)} />
-          ) : null}
+        <div className="flex min-w-0 items-start gap-1 px-3 py-3">
+          <div className="min-w-0 flex-1 text-right">
+            <p className="arabic-text text-2xl leading-none" dir="rtl">
+              {word.arabic}
+            </p>
+            {word.transliteration ? (
+              <p className="mt-1 text-[11px] italic leading-snug text-ink-soft">
+                {word.transliteration}
+              </p>
+            ) : null}
+          </div>
+          <div className="flex shrink-0 items-center gap-0.5 pt-0.5">
+            {showAudio ? <PlayAudioButton packId={packId} clipId={wordId} variant="ghost" /> : null}
+            {onToggleBookmark ? (
+              <BookmarkButton bookmarked={bookmarked} onToggle={() => onToggleBookmark(wordId)} />
+            ) : null}
+          </div>
         </div>
       </div>
     </article>

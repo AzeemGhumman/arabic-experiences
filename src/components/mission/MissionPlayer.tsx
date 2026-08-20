@@ -78,9 +78,10 @@ export function MissionPlayer({
   const stepNumber = skipsContext ? stepIndex : stepIndex + 1
 
   useEffect(() => {
-    setMissionInProgress(!finished)
+    const active = runBundle.kind === "mission" && !finished
+    setMissionInProgress(active)
     return () => setMissionInProgress(false)
-  }, [finished, setMissionInProgress])
+  }, [finished, runBundle.kind, setMissionInProgress])
 
   function saveProgress() {
     if (saved) return
