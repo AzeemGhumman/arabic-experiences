@@ -71,9 +71,9 @@
       "kind": "study",
       "tiles": [
         { "id": "nature", "subject": "gold sun over a sage tree casting a cool blue pool of shade" },
-        { "id": "hajj", "subject": "cluster of simple white peaked tents on beige ground, Mina camp, no people" },
+        { "id": "tents-alt", "subject": "cluster of simple white peaked tents on beige ground, no people" },
         { "id": "nature-alt", "subject": "clay water jug in shade under a sage tree" },
-        { "id": "hajj-alt", "subject": "simple cream Hajj bus near white tents, no people" }
+        { "id": "bus-alt", "subject": "simple cream bus near white tents, no people" }
       ]
     },
     {
@@ -111,7 +111,7 @@
       "kind": "missions",
       "tiles": [
         { "id": "day-madinah", "subject": "simple cream mosque with a single sage-green dome and one date palm, respectful and uncrowded" },
-        { "id": "hajj-bus", "subject": "simple cream Hajj bus with dusty-blue windows beside white peaked tents, no people" },
+        { "id": "tents-alt", "subject": "simple cream bus with dusty-blue windows beside white peaked tents, no people" },
         { "id": "lantern-alt", "subject": "simple gold hanging lantern on cream ground, still life" },
         { "id": "basin-alt", "subject": "round clay wash basin on cream ground, still life" }
       ]

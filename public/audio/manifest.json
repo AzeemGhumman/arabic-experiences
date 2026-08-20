@@ -166,13 +166,13 @@
           "src": "/audio/packs/numbers-to-100/gate.mp3",
           "arabic": "باب"
         },
-        "camp": {
-          "src": "/audio/packs/numbers-to-100/camp.mp3",
-          "arabic": "مخيم"
-        },
         "room-number": {
           "src": "/audio/packs/numbers-to-100/room-number.mp3",
           "arabic": "رقم"
+        },
+        "bus": {
+          "src": "/audio/packs/numbers-to-100/bus.mp3",
+          "arabic": "باص"
         }
       }
     },
@@ -1869,74 +1869,6 @@
         "please": {
           "src": "/audio/packs/nature-basic/please.mp3",
           "arabic": "لو سمحت"
-        }
-      }
-    },
-    "hajj-places-basic": {
-      "clips": {
-        "mina": {
-          "src": "/audio/packs/hajj-places-basic/mina.mp3",
-          "arabic": "منى"
-        },
-        "arafat": {
-          "src": "/audio/packs/hajj-places-basic/arafat.mp3",
-          "arabic": "عرفات"
-        },
-        "muzdalifah": {
-          "src": "/audio/packs/hajj-places-basic/muzdalifah.mp3",
-          "arabic": "مزدلفة"
-        },
-        "jamarat": {
-          "src": "/audio/packs/hajj-places-basic/jamarat.mp3",
-          "arabic": "الجمرات"
-        },
-        "makkah": {
-          "src": "/audio/packs/hajj-places-basic/makkah.mp3",
-          "arabic": "مكة"
-        },
-        "camp": {
-          "src": "/audio/packs/hajj-places-basic/camp.mp3",
-          "arabic": "مخيم"
-        },
-        "tent": {
-          "src": "/audio/packs/hajj-places-basic/tent.mp3",
-          "arabic": "خيمة"
-        },
-        "bus": {
-          "src": "/audio/packs/hajj-places-basic/bus.mp3",
-          "arabic": "باص"
-        },
-        "seat": {
-          "src": "/audio/packs/hajj-places-basic/seat.mp3",
-          "arabic": "مقعد"
-        },
-        "station": {
-          "src": "/audio/packs/hajj-places-basic/station.mp3",
-          "arabic": "محطة"
-        },
-        "number": {
-          "src": "/audio/packs/hajj-places-basic/number.mp3",
-          "arabic": "رقم"
-        },
-        "wait": {
-          "src": "/audio/packs/hajj-places-basic/wait.mp3",
-          "arabic": "انتظر"
-        },
-        "throw-stones": {
-          "src": "/audio/packs/hajj-places-basic/throw-stones.mp3",
-          "arabic": "رمي"
-        },
-        "day-of-arafah": {
-          "src": "/audio/packs/hajj-places-basic/day-of-arafah.mp3",
-          "arabic": "يوم عرفة"
-        },
-        "walk": {
-          "src": "/audio/packs/hajj-places-basic/walk.mp3",
-          "arabic": "امشِ"
-        },
-        "stop": {
-          "src": "/audio/packs/hajj-places-basic/stop.mp3",
-          "arabic": "وقف"
         }
       }
     },

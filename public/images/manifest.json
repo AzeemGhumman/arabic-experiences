@@ -25,8 +25,7 @@
     "geography": "/images/study/geography.webp",
     "actions": "/images/study/actions.webp",
     "adjectives": "/images/study/adjectives.webp",
-    "nature": "/images/study/nature.webp",
-    "hajj": "/images/study/hajj.webp"
+    "nature": "/images/study/nature.webp"
   },
   "missions": {
     "taxi-hotel": "/images/missions/taxi-hotel.webp",
@@ -41,7 +40,6 @@
     "lost-group": "/images/missions/lost-group.webp",
     "something-wrong": "/images/missions/something-wrong.webp",
     "barber": "/images/missions/barber.webp",
-    "day-madinah": "/images/missions/day-madinah.webp",
-    "hajj-bus": "/images/missions/hajj-bus.webp"
+    "day-madinah": "/images/missions/day-madinah.webp"
   }
 }

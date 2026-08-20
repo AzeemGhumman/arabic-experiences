@@ -70,7 +70,7 @@ export const studyShelves: { id: StudyShelfId; topicIds: TopicId[] }[] = [
   },
   {
     id: "worship",
-    topicIds: ["haram", "ritual", "nabawi", "barber", "clothes", "hajj"],
+    topicIds: ["haram", "ritual", "nabawi", "barber", "clothes"],
   },
   {
     id: "speak",

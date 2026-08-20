@@ -257,15 +257,6 @@ function TopicArt({ id, uid }: { id: TopicId; uid: string }) {
           <ellipse cx="28" cy="58" rx="18" ry="8" fill="#6e8b74" opacity="0.5" />
         </g>
       )
-    case "hajj":
-      return (
-        <g>
-          <Sky uid={uid} from="#ead9c4" to="#c4b39a" />
-          <path d="M10 58 L26 28 L42 58 Z" fill="#fffdf8" stroke="#3a2f26" />
-          <path d="M38 58 L54 32 L70 58 Z" fill="#efe4d4" stroke="#3a2f26" />
-          <rect x="18" y="58" width="44" height="8" fill="#9bb0a4" />
-        </g>
-      )
   }
 }
 

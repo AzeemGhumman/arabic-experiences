@@ -15,7 +15,6 @@ export const missionScenes: Record<string, MissionScene> = {
   "taxi-hotel": "taxi",
   "order-dinner": "restaurant",
   barber: "barber",
-  "hajj-bus": "bus",
   "something-wrong": "emergency",
   "day-madinah": "madinah",
   "numbers-everywhere": "numbers",

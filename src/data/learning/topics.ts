@@ -26,7 +26,6 @@ export const studyTopics: Topic[] = [
   { id: "actions", title: "Actions", description: "Walk, wait, stop, enter — by situation.", order: 23 },
   { id: "adjectives", title: "Adjectives", description: "Big, small, clean, hot, and cold.", order: 24 },
   { id: "nature", title: "Heat & comfort", description: "Sun, shade, water, and tired outdoors.", order: 25 },
-  { id: "hajj", title: "Hajj places", description: "Mina, Arafat, buses, and camps.", order: 26 },
 ]
 
 export function getTopic(id: Topic["id"]) {

@@ -230,13 +230,10 @@ export type LanguagePack = {
     companion: {
       kicker: string
       titleUmrah: string
-      titleHajj: string
       body: string
       ritesTitle: string
       ritesBody: string
       openHaram: string
-      hajjDaysTitle: string
-      hajjDaysBody: string
       laterTitle: string
       laterBody: string
       backToCompanion: string

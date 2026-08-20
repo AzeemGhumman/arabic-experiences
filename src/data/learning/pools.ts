@@ -22,8 +22,6 @@ const defs: Omit<VocabularyPool, "vocabularyIds">[] = [
   { id: "barber.basic", title: "Barber", description: "Shave or trim.", capabilityId: "haram", depth: 1 },
   { id: "emergency.basic", title: "Emergency", description: "Help, doctor, lost.", capabilityId: "emergency", depth: 1 },
   { id: "health.basic", title: "Health", description: "Sick, pharmacy, it hurts.", capabilityId: "health", depth: 1 },
-  { id: "hajj.places", title: "Hajj places", description: "Mina, Arafat, Muzdalifah.", capabilityId: "hajj-locations", depth: 1 },
-  { id: "hajj.transport", title: "Hajj transport", description: "Bus, camp, seat.", capabilityId: "hajj-locations", depth: 1 },
   { id: "ritual.basic", title: "Ritual words", description: "Language around rites, not rulings.", capabilityId: "haram", depth: 1 },
   { id: "colors.basic", title: "Basic colors", description: "Red, blue, green, white, black.", capabilityId: "navigation", depth: 1 },
   { id: "colors.extended", title: "Color shades", description: "Light, dark, and mixed shades.", capabilityId: "navigation", depth: 2 },

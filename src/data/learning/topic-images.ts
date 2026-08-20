@@ -27,5 +27,4 @@ export const topicImageSrc: Partial<Record<TopicId, string>> = {
   actions: "/images/study/actions.webp",
   adjectives: "/images/study/adjectives.webp",
   nature: "/images/study/nature.webp",
-  hajj: "/images/study/hajj.webp",
 }

@@ -13,5 +13,4 @@ export const missionImageSrc: Record<string, string> = {
   "something-wrong": "/images/missions/something-wrong.webp",
   barber: "/images/missions/barber.webp",
   "day-madinah": "/images/missions/day-madinah.webp",
-  "hajj-bus": "/images/missions/hajj-bus.webp",
 }

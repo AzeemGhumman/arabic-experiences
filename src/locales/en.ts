@@ -76,7 +76,6 @@ export const en: LanguagePack = {
         actions: { title: "Actions", body: "Walk, wait, stop, enter — by situation." },
         adjectives: { title: "Adjectives", body: "Big, small, clean, hot, and cold." },
         nature: { title: "Heat & comfort", body: "Sun, shade, water, and tired outdoors." },
-        hajj: { title: "Hajj places", body: "Mina, Arafat, buses, and camps." },
       },
     },
     onboarding: {
@@ -246,13 +245,10 @@ export const en: LanguagePack = {
     companion: {
       kicker: "Trip companion",
       titleUmrah: "For the days of Umrah",
-      titleHajj: "For the days of Hajj",
       body: "A quick reference for the rites — separate from your language missions.",
       ritesTitle: "Umrah rites",
       ritesBody: "An outline you can keep open on the trip. Sheets open where content exists.",
       openHaram: "Open: Entering Masjid al-Haram",
-      hajjDaysTitle: "Hajj days",
-      hajjDaysBody: "The sequence of the days. Sheets for each moment will land here.",
       laterTitle: "Coming later",
       laterBody: "Tools you might want on the ground, kept here rather than inside a mission.",
       backToCompanion: "Back to trip companion",
@@ -289,9 +285,9 @@ export const en: LanguagePack = {
     },
     quran: {
       title: "Quranic Arabic",
-      description: "Discover words through gardens, animals, homes, and motion.",
+      description: "Learn Quranic vocabulary through missions and Study lists.",
       onboardingLabel: "Quranic Arabic",
-      onboardingHint: "Words through scenes",
+      onboardingHint: "Mission by mission",
     },
   },
   chapters: {
@@ -384,12 +380,6 @@ export const en: LanguagePack = {
       description: "Keep this short: حلق كامل or تقصير فقط.",
       canNowDo: "Ask for a shave or a trim and check the price.",
     },
-    "hajj-bus": {
-      title: "Hajj Bus Chaos",
-      subtitle: "Find the right bus, camp, and destination.",
-      description: "Mina, Arafat, Muzdalifah. Bus numbers and camp numbers.",
-      canNowDo: "Name Hajj places and ask which bus it is.",
-    },
     "something-wrong": {
       title: "Something Goes Wrong",
       subtitle: "Ask for urgent basic help.",
@@ -443,10 +433,6 @@ export const en: LanguagePack = {
     haram: {
       title: "The Haram",
       depths: ["Recognize gates and crowd signs", "Follow movement instructions", "Name ritual places"],
-    },
-    "hajj-locations": {
-      title: "Hajj places",
-      depths: ["Name Mina and Arafat", "Find a bus or camp", "Move between the days"],
     },
     time: {
       title: "Time",

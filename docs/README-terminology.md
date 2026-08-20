@@ -126,7 +126,7 @@ Progress uses `localStorage` key `arabic-experiences-state-v2`. Old keys are not
 
 **Side mission** — Same, but `kind: "side"` and a `side` edge. Not in `lessons.ts`.
 
-**Study lesson** — Row in `lessons.ts` with `topicId`, `levelName` (`Basic` / `Advanced`), study `buildRun`. Link from a mission via `Mission.lessonIds`.
+**Study lesson** — Row in `lessons.ts` with `topicId`, `levelName` (`Basic` / `Advanced`), and a `buildRun` from `lesson-builders.ts`. Link from a mission via `Mission.lessonIds`.
 
 **Chapter** — `Chapter` on `umrahGraph.chapters` + `locales.*.chapters`. Set `chapterId` on each `Mission`.
 

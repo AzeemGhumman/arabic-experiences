@@ -24,33 +24,6 @@ export type Journey = {
   accent: string
 }
 
-export type VocabPhrase = {
-  arabic: string
-  transliteration: string
-  meaning: string
-  category?: string | null
-}
-
-export type VocabularyItem = {
-  id: string
-  arabic: string
-  transliteration: string
-  meaning: string
-  category: string
-  confidence: Confidence
-  quranFrequency?: number
-  quranPos?: string
-  quranLemma?: string
-  ipa?: string
-  msaRank?: number
-  msaGloss?: string
-  phrases?: VocabPhrase[]
-  swadeshNo?: number
-  sourceScene?: string
-  example?: string
-  relatedIds?: string[]
-}
-
 export type UmrahStep = {
   id: string
   title: string

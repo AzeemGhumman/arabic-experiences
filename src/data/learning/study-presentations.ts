@@ -45,7 +45,6 @@ export const studyPresentationByLesson: Record<string, StudyPresentationConfig> 
   "actions-basic": { kind: "sort-buckets" },
   "adjectives-basic": { kind: "compare-pairs" },
   "nature-basic": { kind: "compare-pairs" },
-  "hajj-places-basic": { kind: "timeline" },
 }
 
 export function getStudyPresentation(lessonId: string): StudyPresentationConfig {

@@ -6,7 +6,7 @@ Public Arabic word lists collected for the prototype. Each resource is its own J
 
 These are research extracts, not a replacement for a reviewed lexicon. Frequency numbers come from the named corpora. Do not treat Quran counts as a new scholarly tally.
 
-The app does not load these lists as a word bank. `build_lexicon.py` joins Swadesh, Quran lemmas, MSA glosses, and Wikivoyage phrases onto the words that appear in scenes, and writes `src/lexicon/words.json`. Rebuild with `npm run lexicon`.
+The app does not load these lists as a word bank. They are research extracts for later review.
 
 ## Files
 

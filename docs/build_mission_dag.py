@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate docs/mission-dag.excalidraw from the Umrah / Arabic mission graphs."""
+"""Generate docs/mission-dag.excalidraw from the Umrah mission graph (plus a Real Life sketch)."""
 
 from __future__ import annotations
 

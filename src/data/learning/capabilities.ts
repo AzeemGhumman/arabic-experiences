@@ -52,11 +52,6 @@ export const capabilities: CapabilityDef[] = [
     depths: ["Recognize gates and crowd signs", "Follow movement instructions", "Name ritual places"],
   },
   {
-    id: "hajj-locations",
-    title: "Hajj places",
-    depths: ["Name Mina and Arafat", "Find a bus or camp", "Move between the days"],
-  },
-  {
     id: "time",
     title: "Time",
     depths: ["Ask how many minutes", "Understand a simple schedule", "Plan a meeting time"],

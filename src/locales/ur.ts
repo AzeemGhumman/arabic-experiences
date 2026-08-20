@@ -76,7 +76,6 @@ export const ur: LanguagePack = {
         actions: { title: "افعال", body: "چلو، رuko، داخل — حالات کے مطابق۔" },
         adjectives: { title: "صفات", body: "بڑا، چھوٹا، صاف، گرم، ٹھنڈا۔" },
         nature: { title: "گرمی و آرام", body: "سورج، سaya، پانی، thakawat" },
-        hajj: { title: "حج کے مقامات", body: "منیٰ، عرفات، بس، اور کیمپ۔" },
       },
     },
     onboarding: {
@@ -246,13 +245,10 @@ export const ur: LanguagePack = {
     companion: {
       kicker: "سفری ساتھی",
       titleUmrah: "عمرہ کے دنوں کے لیے",
-      titleHajj: "حج کے دنوں کے لیے",
       body: "مناسک کا فوری حوالہ — زبان کے مشن سے الگ۔",
       ritesTitle: "عمرہ کے مناسک",
       ritesBody: "ایک خاکہ جو سفر پر کھلا رکھ سکتے ہیں۔ جہاں مواد ہے وہاں شیٹ کھلتی ہے۔",
       openHaram: "کھولیں: مسجد الحرام میں داخلہ",
-      hajjDaysTitle: "حج کے دن",
-      hajjDaysBody: "دنوں کا تسلسل۔ ہر لمحے کی شیٹ یہاں آئے گی۔",
       laterTitle: "بعد میں",
       laterBody: "وہ اوزار جو وہاں درکار ہو سکتے ہیں، مشن کے اندر نہیں بلکہ یہاں۔",
       backToCompanion: "ساتھی پر واپس",
@@ -289,9 +285,9 @@ export const ur: LanguagePack = {
     },
     quran: {
       title: "قرآنی عربی",
-      description: "باغ، جانور، گھر، اور حرکت کے مناظر سے الفاظ سیکھیں۔",
+      description: "مشن اور مطالعہ کی فہرستوں سے قرآنی الفاظ سیکھیں۔",
       onboardingLabel: "قرآن کی عربی",
-      onboardingHint: "مناظر سے الفاظ",
+      onboardingHint: "مشن بہ مشن",
     },
   },
   chapters: {
@@ -384,12 +380,6 @@ export const ur: LanguagePack = {
       description: "مختصر: حلق کامل یا تقصیر فقط۔",
       canNowDo: "منڈوا یا چھوٹا کٹوان سکتے ہیں اور قیمت پوچھ سکتے ہیں۔",
     },
-    "hajj-bus": {
-      title: "حج بس کا ہجوم",
-      subtitle: "صحیح بس، کیمپ، اور منزل تلاش کریں۔",
-      description: "منی، عرفات، مزدلفہ۔ بس اور کیمپ نمبر۔",
-      canNowDo: "حج کی جگہیں نام لے سکتے ہیں اور کون سی بس ہے پوچھ سکتے ہیں۔",
-    },
     "something-wrong": {
       title: "کچھ غلط ہو گیا",
       subtitle: "فوری بنیادی مدد مانگیں۔",
@@ -443,10 +433,6 @@ export const ur: LanguagePack = {
     haram: {
       title: "حرم",
       depths: ["دروازے اور ہجوم نشانات", "حرکت ہدایات", "عبادتی جگہیں نام"],
-    },
-    "hajj-locations": {
-      title: "حج کی جگہیں",
-      depths: ["منی اور عرفات نام", "بس یا کیمپ تلاش", "دنوں کے درمیان حرکت"],
     },
     time: {
       title: "وقت",

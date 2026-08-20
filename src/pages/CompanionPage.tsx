@@ -2,16 +2,15 @@ import { Link, Navigate } from "react-router-dom"
 import { JourneyMap } from "@/components/journey/JourneyMap"
 import { Badge } from "@/components/ui/badge"
 import { companionTools, hasTripCompanion } from "@/data/companion"
-import { hajjMoments, umrahSteps } from "@/data/umrah"
+import { umrahSteps } from "@/data/umrah"
 import { useAppState } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
 
 export function CompanionPage() {
   const { state } = useAppState()
   const { t } = useI18n()
-  const trip = state.activeJourneyId
 
-  if (!hasTripCompanion(trip)) {
+  if (!hasTripCompanion(state.activeJourneyId)) {
     return <Navigate to="/" replace />
   }
 
@@ -19,44 +18,21 @@ export function CompanionPage() {
     <div className="space-y-6 pb-8">
       <header>
         <p className="text-[11px] font-semibold tracking-[0.2em] text-terracotta uppercase">{t("companion.kicker")}</p>
-        <h1 className="font-display mt-2 text-3xl leading-tight">
-          {trip === "umrah" ? t("companion.titleUmrah") : t("companion.titleHajj")}
-        </h1>
+        <h1 className="font-display mt-2 text-3xl leading-tight">{t("companion.titleUmrah")}</h1>
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t("companion.body")}</p>
       </header>
 
-      {trip === "umrah" ? (
-        <section>
-          <h2 className="font-display text-xl">{t("companion.ritesTitle")}</h2>
-          <p className="mt-1 mb-4 text-sm text-muted-foreground">{t("companion.ritesBody")}</p>
-          <JourneyMap steps={umrahSteps} />
-          <Link
-            to="/companion/umrah/haram"
-            className="mt-4 flex min-h-11 items-center justify-center rounded-full border border-border font-semibold"
-          >
-            {t("companion.openHaram")}
-          </Link>
-        </section>
-      ) : (
-        <section>
-          <h2 className="font-display text-xl">{t("companion.hajjDaysTitle")}</h2>
-          <p className="mt-1 mb-4 text-sm text-muted-foreground">{t("companion.hajjDaysBody")}</p>
-          <div className="space-y-3">
-            {hajjMoments.map((moment, index) => (
-              <article key={moment.id} className="rounded-3xl border border-border bg-card p-4">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <p className="text-xs font-semibold text-ink-soft">{String(index + 1).padStart(2, "0")}</p>
-                    <h3 className="font-display text-xl">{moment.title}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{moment.description}</p>
-                  </div>
-                  <Badge className="bg-gold-soft/70 text-ink">{t("journeys.statusComingSoon")}</Badge>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-      )}
+      <section>
+        <h2 className="font-display text-xl">{t("companion.ritesTitle")}</h2>
+        <p className="mt-1 mb-4 text-sm text-muted-foreground">{t("companion.ritesBody")}</p>
+        <JourneyMap steps={umrahSteps} />
+        <Link
+          to="/companion/umrah/haram"
+          className="mt-4 flex min-h-11 items-center justify-center rounded-full border border-border font-semibold"
+        >
+          {t("companion.openHaram")}
+        </Link>
+      </section>
 
       <section>
         <h2 className="font-display text-xl">{t("companion.laterTitle")}</h2>

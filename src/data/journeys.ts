@@ -34,7 +34,7 @@ export const journeys: Journey[] = [
   {
     id: "quran",
     title: "Quranic Arabic",
-    description: "Discover words through gardens, animals, homes, and motion.",
+    description: "Learn Quranic vocabulary through missions and Study lists.",
     category: "quran",
     progress: 0,
     status: "coming-soon",

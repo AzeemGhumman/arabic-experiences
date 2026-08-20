@@ -9,7 +9,6 @@ export type CapabilityId =
   | "emergency"
   | "health"
   | "haram"
-  | "hajj-locations"
   | "time"
 
 export type VocabularyKind =
@@ -198,7 +197,7 @@ export type Mission = {
   title: string
   subtitle: string
   description: string
-  journeyId: "umrah" | "hajj" | "travel"
+  journeyId: "umrah" | "travel"
   /** Chapter on the map. Match `Chapter.id`: arrival, makkah, madinah. */
   chapterId: string
   type: MissionType
@@ -261,7 +260,6 @@ export type TopicId =
   | "transport"
   | "airport"
   | "room-service"
-  | "hajj"
 
 export type Topic = {
   id: TopicId

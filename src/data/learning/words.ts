@@ -228,7 +228,7 @@ export const learningWords: LearningWord[] = [
   word("riyal", "ريال", "riyal", "riyal", ["money.basic"]),
 
   word("taxi", "تاكسي", "taxi", "taxi", ["transport.basic"]),
-  word("bus", "باص", "baas", "bus", ["transport.basic", "hajj.transport"]),
+  word("bus", "باص", "baas", "bus", ["transport.basic"]),
   word("car", "سيارة", "sayyara", "car", ["transport.basic"]),
   word("station", "محطة", "mahatta", "station", ["transport.basic"]),
   word("airport", "المطار", "al-matar", "the airport", ["transport.basic", "taxi.basic", "airport.basic"]),
@@ -237,11 +237,10 @@ export const learningWords: LearningWord[] = [
   word("officer", "موظف", "muwazzaf", "officer", ["airport.basic"]),
   word("window-counter", "شباك", "shubbak", "window / counter", ["airport.basic"]),
   word("train-station", "محطة القطار", "mahattat al-qitar", "train station", ["transport.basic", "taxi.basic"]),
-  word("makkah", "مكة", "makkah", "Makkah", ["taxi.basic", "hajj.places"]),
-  word("madinah", "المدينة", "al-madinah", "Madinah", ["taxi.basic", "hajj.places"]),
+  word("makkah", "مكة", "makkah", "Makkah", ["taxi.basic", "geography.basic"]),
+  word("madinah", "المدينة", "al-madinah", "Madinah", ["taxi.basic", "geography.basic"]),
   word("stop-here", "وقف هنا", "waqqif huna", "stop here", ["taxi.basic"], { kind: "instruction" }),
-  word("seat", "مقعد", "maq'ad", "seat", ["transport.basic", "hajj.transport"]),
-  word("camp", "مخيم", "mukhayyam", "camp", ["hajj.transport", "hajj.places"]),
+  word("seat", "مقعد", "maq'ad", "seat", ["transport.basic"]),
 
   word("shave", "حلق", "halq", "shave", ["barber.basic"]),
   word("trim", "تقصير", "taqseer", "trim", ["barber.basic"]),
@@ -263,10 +262,6 @@ export const learningWords: LearningWord[] = [
   word("child", "طفل", "tifl", "child", ["emergency.basic", "family.basic"]),
   word("passport", "جواز سفر", "jawaz safar", "passport", ["emergency.basic", "airport.basic"]),
 
-  word("mina", "منى", "mina", "Mina", ["hajj.places"], { kind: "ritual-term" }),
-  word("arafat", "عرفات", "arafat", "Arafat", ["hajj.places"], { kind: "ritual-term" }),
-  word("muzdalifah", "مزدلفة", "muzdalifah", "Muzdalifah", ["hajj.places"], { kind: "ritual-term" }),
-  word("jamarat", "الجمرات", "al-jamarat", "Jamarat", ["hajj.places"], { kind: "ritual-term" }),
   word("nabawi", "المسجد النبوي", "al-masjid an-nabawi", "Masjid an-Nabawi", ["haram.places", "nabawi.basic"], {
     kind: "ritual-term",
   }),
@@ -428,10 +423,6 @@ export const learningWords: LearningWord[] = [
   word("daughter", "ابنة", "ibna", "daughter", ["family.deep"]),
   word("grandfather", "جد", "jadd", "grandfather", ["family.deep"], { difficulty: 2 }),
   word("uncle", "عم", "amm", "uncle (paternal)", ["family.deep"], { difficulty: 2 }),
-
-  word("throw-stones", "رمي", "ramy", "throwing (stones)", ["hajj.places"], { kind: "ritual-term", difficulty: 2 }),
-  word("day-of-arafah", "يوم عرفة", "yawm arafah", "Day of Arafah", ["hajj.places"], { kind: "ritual-term", difficulty: 2 }),
-  word("tent", "خيمة", "khayma", "tent", ["hajj.places"], { difficulty: 2 }),
 ]
 
 export const learningWordById = Object.fromEntries(learningWords.map((item) => [item.id, item]))

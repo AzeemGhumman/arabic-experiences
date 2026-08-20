@@ -368,7 +368,6 @@ const PREVIEW_RELEASED_LESSON_IDS = new Set([
   "actions-basic",
   "adjectives-basic",
   "nature-basic",
-  "hajj-places-basic",
 ])
 
 export function isMissionReleased(id: string) {

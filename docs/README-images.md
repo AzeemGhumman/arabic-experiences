@@ -75,7 +75,7 @@ One generation, four tiles — cheaper than four calls.
 
 Each sheet in source has `"kind": "study"` or `"kind": "missions"`. Crop writes to `public/images/{kind}/` and merges that key in the manifest.
 
-Current Study coverage: **all 26 `TopicId`s** have webps. Current mission coverage: **all 14 mission ids** have webps. SVG art remains as fallback when an id is missing from the map.
+Current Study coverage: **all 25 `TopicId`s** have webps. Current mission coverage: **all 13 mission ids** have webps. SVG art remains as fallback when an id is missing from the map.
 
 ---
 
@@ -195,7 +195,7 @@ Study (`kind: "study"`):
 | `people` | polite, family, health, body |
 | `worship` | haram, ritual, nabawi, barber |
 | `words` | numbers, geography, actions, adjectives |
-| `outdoors` | nature, hajj, nature-alt, hajj-alt (alts were cropped then removed; only nature + hajj are wired) |
+| `outdoors` | nature, tents-alt, nature-alt, bus-alt (only `nature` is wired) |
 
 Missions (`kind: "missions"`):
 
@@ -204,7 +204,7 @@ Missions (`kind: "missions"`):
 | `mission-arrival` | taxi-hotel, airport-arrival, immigration, find-haram |
 | `mission-haram` | enter-haram, begin-tawaf, find-zamzam, complete-sai |
 | `mission-city` | order-dinner, lost-group, something-wrong, barber |
-| `mission-beyond` | day-madinah, hajj-bus, lantern-alt, basin-alt (alts were cropped then removed; only the two mission ids are wired) |
+| `mission-beyond` | day-madinah, tents-alt, lantern-alt, basin-alt (only `day-madinah` is wired) |
 
 ---
 

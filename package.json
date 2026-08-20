@@ -7,7 +7,6 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "oxlint",
-    "lexicon": "python3 dataset/build_lexicon.py",
     "audio:source": "npx tsx scripts/build_audio_packs_source.ts",
     "audio:generate": "test -x .venv-audio/bin/python || (python3 -m venv .venv-audio && .venv-audio/bin/pip install -q edge-tts); .venv-audio/bin/python scripts/generate_audio.py",
     "audio:build": "npm run audio:source && npm run audio:generate",

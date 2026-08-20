@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Batch-generate MSA audio clips per mission/prep pack (offline-first assets)."""
+"""Batch-generate MSA audio clips per lesson and mission pack (offline-first assets)."""
 
 from __future__ import annotations
 

@@ -63,9 +63,9 @@ export function buildNumbersTo100(_ctx: MissionBuildContext): MissionRun {
     },
     {
       title: "On signs",
-      intro: "Gate numbers and camp numbers.",
+      intro: "Gate numbers and room numbers.",
       scene: "haram-gate",
-      vocabIds: ["number", "gate", "camp", "room-number"],
+      vocabIds: ["number", "gate", "bus", "room-number"],
     },
   ])
 }
@@ -481,25 +481,6 @@ export function buildRoomServiceBasic(_ctx: MissionBuildContext): MissionRun {
     {
       title: "Delivery words",
       vocabIds: ["here", "there", "room", "floor"],
-    },
-  ])
-}
-
-export function buildHajjPlacesBasic(_ctx: MissionBuildContext): MissionRun {
-  return studyRun("hajj-places-basic", "You studied Hajj place names and transport words.", [
-    {
-      title: "Places",
-      scene: "bus",
-      vocabIds: ["mina", "arafat", "muzdalifah", "jamarat", "makkah", "camp", "tent"],
-    },
-    {
-      title: "Transport",
-      vocabIds: ["bus", "seat", "station", "number", "wait"],
-    },
-    {
-      title: "Words you hear",
-      intro: "Language only — not a fiqh lesson.",
-      vocabIds: ["throw-stones", "day-of-arafah", "walk", "stop"],
     },
   ])
 }

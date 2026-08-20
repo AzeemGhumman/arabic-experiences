@@ -49,7 +49,7 @@
         "n99": "تسعة وتسعون",
         "number": "رقم",
         "gate": "باب",
-        "camp": "مخيم",
+        "bus": "باص",
         "room-number": "رقم"
       }
     },
@@ -591,27 +591,6 @@
         "water": "ماء",
         "water-saudi": "موية",
         "please": "لو سمحت"
-      }
-    },
-    "hajj-places-basic": {
-      "kind": "lesson",
-      "clips": {
-        "mina": "منى",
-        "arafat": "عرفات",
-        "muzdalifah": "مزدلفة",
-        "jamarat": "الجمرات",
-        "makkah": "مكة",
-        "camp": "مخيم",
-        "tent": "خيمة",
-        "bus": "باص",
-        "seat": "مقعد",
-        "station": "محطة",
-        "number": "رقم",
-        "wait": "انتظر",
-        "throw-stones": "رمي",
-        "day-of-arafah": "يوم عرفة",
-        "walk": "امشِ",
-        "stop": "وقف"
       }
     },
     "find-haram": {

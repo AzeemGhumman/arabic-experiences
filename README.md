@@ -43,15 +43,19 @@ Open [http://localhost:3000](http://localhost:3000).
 | `src/data/journeys.ts` | Journey cards; `isJourneyReleased` = Umrah |
 | `src/data/learning/mission-graph.ts` | Umrah map (`umrahGraph.chapters`) |
 | `src/data/learning/missions.ts` | Speaking scenes |
+| `src/data/learning/builders.ts` | Playable mission runs |
 | `src/data/learning/lessons.ts` | Study lists |
+| `src/data/learning/lesson-builders.ts` | Study lesson runs |
 | `src/data/learning/topics.ts` | Study folders |
 | `src/data/learning/words.ts` | Shared vocabulary |
+| `src/data/companion.ts` | Trip companion (Umrah-only tab gate) |
+| `src/data/umrah.ts` | Umrah rites outline for Trip companion |
 | `src/lib/app-state.tsx` | React state |
 | `src/lib/storage.ts` | `localStorage` key `arabic-experiences-state-v2` |
 
 ### Routes
 
-`/`, `/missions/:id`, `/play/:id`, `/study`, `/study/bookmarks`, `/lessons/:id`, `/progress`, `/companion`, `/profile`, `/profile/journeys`.
+`/`, `/missions/:id`, `/play/:id`, `/study`, `/study/bookmarks`, `/lessons/:id`, `/progress`, `/companion`, `/companion/umrah/haram`, `/profile`, `/profile/journeys`.
 
 Unknown paths go home.
 
@@ -62,8 +66,25 @@ Progress is per journey: `completedMissionIds`, `completedLessonIds`, skills, bo
 ### Audio and images
 
 - Audio: `npm run audio:build` — `src/data/learning/audio-packs.source.json`, clips in `public/audio/`.
-- Images: [`docs/README-images.md`](docs/README-images.md).
+- Images: [`docs/README-images.md`](docs/README-images.md) — crop with `npm run images:crop`.
 
-### Historical files
+### Scripts
 
-Old content specs and boards sit in [`docs/archive/`](docs/archive/). Parent-folder notes under `../READMEs/` are not current. Do not copy names from them.
+| Command | Role |
+| --- | --- |
+| `npm run dev` | Local dev server |
+| `npm run build` | Typecheck + production bundle |
+| `npm run lint` | Oxlint |
+| `npm run preview` | Serve the production build locally |
+| `npm run audio:source` | Regenerate `audio-packs.source.json` from vocabulary |
+| `npm run audio:generate` | Synthesize missing clips (edge-tts) |
+| `npm run audio:build` | Source + generate |
+| `npm run images:crop` | Split a contact sheet into webps (see images doc) |
+| `npm run deploy` | Build, upload to S3, invalidate CloudFront |
+
+### Design artifacts (`docs/`)
+
+| File | Role |
+| --- | --- |
+| [`mission-dag.excalidraw`](docs/mission-dag.excalidraw) | Umrah map diagram. Regenerate: `python docs/build_mission_dag.py` |
+| [`taxi-mission-pathways.excalidraw`](docs/taxi-mission-pathways.excalidraw) | Taxi mission layout sketch (reference only) |

@@ -1,9 +1,7 @@
 import type { JourneyCategory } from "@/lib/storage"
 
-export type CompanionTrip = "umrah" | "hajj"
-
-export function hasTripCompanion(journeyId: JourneyCategory): journeyId is CompanionTrip {
-  return journeyId === "umrah" || journeyId === "hajj"
+export function hasTripCompanion(journeyId: JourneyCategory) {
+  return journeyId === "umrah"
 }
 
 export const companionTools = [
