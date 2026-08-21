@@ -2,6 +2,7 @@ import { RegisterBadge } from "@/components/mission/MissionBits"
 import { PlayAudioButton } from "@/components/audio/PlayAudioButton"
 import { BookmarkButton } from "@/components/vocabulary/BookmarkButton"
 import { getLearningWord } from "@/data/learning/words"
+import { useI18n } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
 export function StudyWordCard({
@@ -23,8 +24,11 @@ export function StudyWordCard({
   className?: string
   compact?: boolean
 }) {
+  const { word: gloss, language } = useI18n()
   const word = getLearningWord(wordId)
   if (!word) return null
+  const meaning = gloss(wordId, word.meaning)
+  const showTransliteration = language === "en" && Boolean(word.transliteration)
 
   if (compact) {
     return (
@@ -36,12 +40,12 @@ export function StudyWordCard({
         )}
       >
         <div className="flex items-center gap-2 px-3 py-2">
-          <p className="min-w-0 flex-1 text-sm font-medium leading-snug text-ink">{word.meaning}</p>
+          <p className="min-w-0 flex-1 text-sm font-medium leading-snug text-ink">{meaning}</p>
           <div className="min-w-0 shrink-0 text-right">
             <p className="arabic-text text-xl leading-none" dir="rtl">
               {word.arabic}
             </p>
-            {word.transliteration ? (
+            {showTransliteration ? (
               <p className="mt-1 text-[11px] italic leading-snug text-ink-soft">
                 {word.transliteration}
               </p>
@@ -65,8 +69,8 @@ export function StudyWordCard({
       )}
     >
       <div className="grid grid-cols-2">
-        <div className="flex min-w-0 flex-col justify-center gap-1 border-r border-border px-3 py-3">
-          <p className="text-sm font-medium leading-snug text-ink">{word.meaning}</p>
+        <div className="flex min-w-0 flex-col justify-center gap-1 border-e border-border px-3 py-3">
+          <p className="text-sm font-medium leading-snug text-ink">{meaning}</p>
           <RegisterBadge register={word.register} />
         </div>
         <div className="flex min-w-0 items-start gap-1 px-3 py-3">
@@ -74,7 +78,7 @@ export function StudyWordCard({
             <p className="arabic-text text-2xl leading-none" dir="rtl">
               {word.arabic}
             </p>
-            {word.transliteration ? (
+            {showTransliteration ? (
               <p className="mt-1 text-[11px] italic leading-snug text-ink-soft">
                 {word.transliteration}
               </p>
@@ -109,8 +113,11 @@ export function StudyWordTile({
   swatch?: string
   className?: string
 }) {
+  const { word: gloss, language } = useI18n()
   const word = getLearningWord(wordId)
   if (!word) return null
+  const meaning = gloss(wordId, word.meaning)
+  const showTransliteration = language === "en" && Boolean(word.transliteration)
 
   return (
     <article
@@ -130,8 +137,10 @@ export function StudyWordTile({
       <p className="arabic-text text-2xl leading-none" dir="rtl">
         {word.arabic}
       </p>
-      <p className="mt-1.5 text-sm font-medium text-ink">{word.meaning}</p>
-      <p className="text-[11px] italic text-ink-soft">{word.transliteration}</p>
+      <p className="mt-1.5 text-sm font-medium text-ink">{meaning}</p>
+      {showTransliteration ? (
+        <p className="text-[11px] italic text-ink-soft">{word.transliteration}</p>
+      ) : null}
       <div className="mt-auto flex items-center justify-end gap-1 pt-2">
         {showAudio ? <PlayAudioButton packId={packId} clipId={wordId} variant="ghost" /> : null}
         {onToggleBookmark ? (

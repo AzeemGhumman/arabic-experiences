@@ -38,17 +38,25 @@ export function CompanionPage() {
         <h2 className="font-display text-xl">{t("companion.laterTitle")}</h2>
         <p className="mt-1 mb-3 text-sm text-muted-foreground">{t("companion.laterBody")}</p>
         <div className="space-y-3">
-          {companionTools.map((tool) => (
+          {companionTools.map((tool) => {
+            const title = t(`companion.tools.${tool.id}.title`)
+            const subtitle = t(`companion.tools.${tool.id}.subtitle`)
+            return (
             <article key={tool.id} className="rounded-3xl border border-dashed border-border bg-card/70 p-4">
               <div className="flex items-start justify-between gap-3">
                 <div>
-                  <h3 className="font-display text-lg">{tool.title}</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">{tool.subtitle}</p>
+                  <h3 className="font-display text-lg">
+                    {title.startsWith("companion.tools.") ? tool.title : title}
+                  </h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    {subtitle.startsWith("companion.tools.") ? tool.subtitle : subtitle}
+                  </p>
                 </div>
                 <Badge className="bg-gold-soft/70 text-ink">{t("journeys.statusComingSoon")}</Badge>
               </div>
             </article>
-          ))}
+            )
+          })}
         </div>
       </section>
 

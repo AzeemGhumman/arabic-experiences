@@ -22,6 +22,30 @@ export type CapabilityStrings = {
   depths: [string, string, string]
 }
 
+/** Localized strings for one mission step (keyed from builder `copyKey`). */
+export type MissionStepCopy = {
+  title?: string
+  body?: string
+  prompt?: string
+  /** UI-language gloss of spoken Arabic (hint / subtitle). */
+  audioMeaning?: string
+  question?: string
+  feedback?: string
+  situation?: string
+}
+
+/** Localized lesson description / can-now-do. */
+export type LessonStrings = {
+  description: string
+  canNowDo: string
+}
+
+/** Localized study-run outcome and group headers. */
+export type LessonRunCopy = {
+  outcome?: string
+  groups?: Record<string, { title: string; intro?: string }>
+}
+
 /**
  * Full language pack. Duplicate this shape for each locale file — TypeScript
  * will flag any missing keys when a new locale is added.
@@ -31,6 +55,21 @@ export type LanguagePack = {
     code: string
     name: string
     nativeName: string
+    /** UI chrome text direction. Learning Arabic stays RTL in its own islands. */
+    dir: "ltr" | "rtl"
+    /** BCP 47 tag for document.documentElement.lang */
+    htmlLang: string
+    /**
+     * UI typefaces for this language (body + headings).
+     * Learning Arabic uses `--font-arabic` / `.arabic-text`, not these.
+     * Add a new pack (tr, fa, …) with its own stacks — never reuse another language’s font.
+     */
+    fonts: {
+      /** Stack assigned to `--font-sans` (body / UI chrome). */
+      sans: string
+      /** Stack assigned to `--font-display` (headings). */
+      display: string
+    }
   }
   ui: {
     nav: {
@@ -62,6 +101,11 @@ export type LanguagePack = {
       playAgain: string
       backToMap: string
       percentComplete: string
+      saudiEveryday: string
+      formalArabic: string
+      close: string
+      bookmark: string
+      removeBookmark: string
     }
     study: {
       kicker: string
@@ -80,6 +124,15 @@ export type LanguagePack = {
       bookmarksPageTitle: string
       bookmarksPageBody: string
       saveBookmarks: string
+      levelBasic: string
+      levelAdvanced: string
+      resourcesTitle: string
+      resourcesBody: string
+      resourcesMock: string
+      openOnYoutube: string
+      resourceWebsite: string
+      resourceYoutube: string
+      resourcePdf: string
       shelves: Record<string, { title: string; body: string }>
       topics: Record<string, { title: string; body: string }>
     }
@@ -193,6 +246,9 @@ export type LanguagePack = {
       comingSoonBody: string
       comingSoonDismiss: string
       lockedBody: string
+      notPlayableYet: string
+      notPlayableBody: string
+      lessonNotFound: string
       lessonsBeforeStart: string
       lessonsBeforeStartBody: string
       lessonsProgress: string
@@ -206,6 +262,9 @@ export type LanguagePack = {
       study: string
       listen: string
       listenAgain: string
+      playing: string
+      playPronunciation: string
+      playAudio: string
       showArabicHint: string
       showTranslationHint: string
       howWouldYouRespond: string
@@ -228,6 +287,10 @@ export type LanguagePack = {
       leaveMission: string
       continue: string
       noticeWords: string
+      tapToNotice: string
+      stayWithArabic: string
+      enterScene: string
+      richerVocabEnabled: string
       arrive: string
       nextInstruction: string
       missionComplete: string
@@ -266,6 +329,49 @@ export type LanguagePack = {
       laterBody: string
       backToCompanion: string
       disclaimer: string
+      openSheet: string
+      tools: {
+        checklist: { title: string; subtitle: string }
+        duas: { title: string; subtitle: string }
+        reading: { title: string; subtitle: string }
+      }
+      steps: {
+        prepare: { title: string; subtitle: string }
+        ihram: { title: string; subtitle: string }
+        travel: { title: string; subtitle: string }
+        arrive: { title: string; subtitle: string }
+        haram: { title: string; subtitle: string }
+        tawaf: { title: string; subtitle: string }
+        sai: { title: string; subtitle: string }
+        complete: { title: string; subtitle: string }
+      }
+      haramExperience: {
+        title: string
+        kicker: string
+        atmosphere: string
+        context: string
+        momentTitle: string
+        historicalNote: string
+        noticeTitle: string
+        notice1: string
+        notice2: string
+        notice3: string
+        notice4: string
+        historyTitle: string
+        illustrationPlaceholder: string
+        duaTitle: string
+        duaTranslation: string
+        duaNote: string
+        disclaimer: string
+      }
+      dua: {
+        transliteration: string
+        translation: string
+        listen: string
+        listening: string
+        practice: string
+        practiced: string
+      }
     }
     auth: {
       logIn: string
@@ -280,8 +386,14 @@ export type LanguagePack = {
   chapters: Record<string, string>
   missions: Record<string, string>
   missionDetails: Record<string, MissionStrings>
+  /** Immersion copy for playable mission runs, keyed by mission id then step copyKey. */
+  missionRuns: Record<string, MissionRunCopy>
+  /** Lesson descriptions and can-now-do lines. */
+  lessonDetails: Record<string, LessonStrings>
+  /** Study-run outcomes and group headers keyed by lesson id. */
+  lessonRuns: Record<string, LessonRunCopy>
   capabilities: Record<string, CapabilityStrings>
-  /** Optional word glosses keyed by vocabulary id. Falls back to English data when missing. */
+  /** Word glosses keyed by vocabulary id. Falls back to English data when missing. */
   words: Record<string, string>
 }
 

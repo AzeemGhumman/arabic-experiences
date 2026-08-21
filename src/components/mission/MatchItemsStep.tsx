@@ -50,7 +50,7 @@ export function MatchItemsStep({
   feedback?: string
   onContinue: () => void
 }) {
-  const { t } = useI18n()
+  const { t, word: gloss, dir } = useI18n()
   const labelOrder = useShuffledOptions(itemIds)
   const [poolOrder] = useState(() => shuffleInPlace([...itemIds]))
   const [assignment, setAssignment] = useState<Record<string, string>>({})
@@ -67,15 +67,15 @@ export function MatchItemsStep({
   const items = useMemo(
     () =>
       itemIds.map((id) => {
-        const word = getLearningWord(id)
+        const entry = getLearningWord(id)
         return {
           id,
-          arabic: word?.arabic ?? id,
-          meaning: word?.meaning ?? id,
+          arabic: entry?.arabic ?? id,
+          meaning: gloss(id, entry?.meaning ?? id),
           imageSrc: vocabItemImage(id),
         }
       }),
-    [itemIds],
+    [gloss, itemIds],
   )
 
   const byId = useMemo(() => Object.fromEntries(items.map((item) => [item.id, item])), [items])
@@ -322,7 +322,7 @@ export function MatchItemsStep({
                   variant="secondary"
                   label={t("play.listen")}
                   className={cn(
-                    "rounded-l-2xl",
+                    "rounded-s-2xl",
                     state === "correct" && "border-sage-deep/30 bg-sage/20",
                     state === "wrong" && "border-destructive/20 bg-destructive/5",
                   )}
@@ -332,7 +332,7 @@ export function MatchItemsStep({
                     type="button"
                     disabled={!droppable}
                     className={cn(
-                      "relative w-14 shrink-0 self-stretch touch-none overflow-hidden border-r border-border/60 bg-secondary/35",
+                      "relative w-14 shrink-0 self-stretch touch-none overflow-hidden border-e border-border/60 bg-secondary/35",
                       draggingPictureId === picture.id ? "opacity-30" : "",
                       droppable ? "cursor-grab active:cursor-grabbing" : "cursor-default",
                     )}
@@ -348,12 +348,12 @@ export function MatchItemsStep({
                 <div className="flex min-w-0 flex-1 flex-col justify-center px-3 py-2.5">
                   <MissionArabicLine className="w-full text-right">{label?.arabic}</MissionArabicLine>
                   {state === "correct" || solved ? (
-                    <p dir="ltr" className="mt-0.5 text-left text-xs text-muted-foreground">
+                    <p dir={dir} className="mt-0.5 text-start text-xs text-muted-foreground">
                       {label?.meaning}
                     </p>
                   ) : null}
                   {state === "wrong" && picture ? (
-                    <p dir="ltr" className="mt-0.5 text-left text-xs text-terracotta">
+                    <p dir={dir} className="mt-0.5 text-start text-xs text-terracotta">
                       {t("play.matchWrongPair", {
                         name: label?.meaning ?? "",
                         item: byId[picture.id]?.meaning ?? "",

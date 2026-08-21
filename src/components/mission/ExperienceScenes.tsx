@@ -1,5 +1,6 @@
 import { useId } from "react"
 import { missionImageSrc, missionSceneImage } from "@/data/learning/mission-images"
+import { useI18n } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 import type { MissionScene, DirectionAction, SceneFocus } from "@/lib/learning-types"
 
@@ -136,11 +137,12 @@ function DirectionHits({
   correct?: DirectionAction
   onChoose?: (direction: DirectionAction) => void
 }) {
+  const { t } = useI18n()
   const areas: { id: DirectionAction; label: string; className: string }[] = [
-    { id: "left", label: "Go left", className: "left-[4%] top-[40%] h-[54%] w-[28%]" },
-    { id: "straight", label: "Go straight", className: "left-[36%] top-[32%] h-[62%] w-[28%]" },
-    { id: "right", label: "Go right", className: "left-[67%] top-[40%] h-[54%] w-[28%]" },
-    { id: "up", label: "Go upstairs", className: "right-[3%] top-[6%] h-[34%] w-[22%]" },
+    { id: "left", label: t("play.directions.left"), className: "left-[4%] top-[40%] h-[54%] w-[28%]" },
+    { id: "straight", label: t("play.directions.straight"), className: "left-[36%] top-[32%] h-[62%] w-[28%]" },
+    { id: "right", label: t("play.directions.right"), className: "left-[67%] top-[40%] h-[54%] w-[28%]" },
+    { id: "up", label: t("play.directions.up"), className: "right-[3%] top-[6%] h-[34%] w-[22%]" },
   ]
 
   return (

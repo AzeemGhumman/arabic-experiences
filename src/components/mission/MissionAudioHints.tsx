@@ -184,6 +184,8 @@ export function McqAudioOption({
   packId,
   audioId,
   arabic,
+  imageSrc,
+  imageAlt,
   showArabic = true,
   state,
   disabled,
@@ -194,6 +196,9 @@ export function McqAudioOption({
   packId: string
   audioId: string
   arabic?: string
+  /** When set, the option is chosen by picture; Arabic is a reveal label. */
+  imageSrc?: string
+  imageAlt?: string
   /** When false, the answer area stays blank until a hint or reveal rule shows it. */
   showArabic?: boolean
   state: OptionVisualState
@@ -205,6 +210,34 @@ export function McqAudioOption({
   onSelect: () => void
 }) {
   const { t } = useI18n()
+  const pictureChoice = Boolean(imageSrc)
+
+  const answerBody = pictureChoice ? (
+    <div className="flex w-full items-center gap-3">
+      <div className="size-16 shrink-0 overflow-hidden rounded-xl border border-border/60 bg-secondary/35 sm:size-[4.5rem]">
+        <img src={imageSrc} alt={imageAlt ?? ""} className="size-full object-cover" draggable={false} />
+      </div>
+      <div className="min-w-0 flex-1">
+        {arabic && showArabic ? (
+          <MissionArabicLine className="w-full">{arabic}</MissionArabicLine>
+        ) : (
+          <span className="sr-only">{t("play.hiddenArabicOption")}</span>
+        )}
+      </div>
+    </div>
+  ) : (
+    <>
+      {arabic && showArabic ? (
+        <MissionArabicLine className="w-full">{arabic}</MissionArabicLine>
+      ) : null}
+      {arabic && !showArabic ? (
+        <>
+          <ArabicHiddenTape />
+          <span className="sr-only">{t("play.hiddenArabicOption")}</span>
+        </>
+      ) : null}
+    </>
+  )
 
   return (
     <div className="relative">
@@ -222,7 +255,7 @@ export function McqAudioOption({
             : state === "wrong"
               ? "border-destructive/40 bg-destructive/10"
               : "border-border bg-paper",
-          disabled && state === "idle" && !showArabic && "opacity-60",
+          disabled && state === "idle" && !showArabic && !pictureChoice && "opacity-60",
         )}
       >
         <PlayAudioButton
@@ -232,7 +265,7 @@ export function McqAudioOption({
           label={t("play.listen")}
           disabled={audioDisabled}
           className={cn(
-            "rounded-l-2xl",
+            "rounded-s-2xl",
             state === "correct" && "border-sage-deep/30 bg-sage/20",
             state === "wrong" && "border-destructive/20 bg-destructive/5",
           )}
@@ -240,17 +273,12 @@ export function McqAudioOption({
 
       {disabled ? (
         <div
-          className="relative flex min-h-11 min-w-0 flex-1 items-center rounded-r-2xl px-3 py-2.5"
+          className={cn(
+            "relative flex min-w-0 flex-1 items-center rounded-r-2xl px-3",
+            pictureChoice ? "min-h-[4.75rem] py-2" : "min-h-11 py-2.5",
+          )}
         >
-          {arabic && showArabic ? (
-            <MissionArabicLine className="w-full">{arabic}</MissionArabicLine>
-          ) : null}
-          {arabic && !showArabic ? (
-            <>
-              <ArabicHiddenTape />
-              <span className="sr-only">{t("play.hiddenArabicOption")}</span>
-            </>
-          ) : null}
+          {answerBody}
         </div>
       ) : (
         <div
@@ -263,17 +291,12 @@ export function McqAudioOption({
               onSelect()
             }
           }}
-          className="relative flex min-h-11 min-w-0 flex-1 cursor-pointer items-center rounded-r-2xl px-3 py-2.5 hover:bg-secondary/25"
+          className={cn(
+            "relative flex min-w-0 flex-1 cursor-pointer items-center rounded-r-2xl px-3 hover:bg-secondary/25",
+            pictureChoice ? "min-h-[4.75rem] py-2" : "min-h-11 py-2.5",
+          )}
         >
-          {arabic && showArabic ? (
-            <MissionArabicLine className="w-full">{arabic}</MissionArabicLine>
-          ) : null}
-          {arabic && !showArabic ? (
-            <>
-              <ArabicHiddenTape />
-              <span className="sr-only">{t("play.hiddenArabicOption")}</span>
-            </>
-          ) : null}
+          {answerBody}
         </div>
       )}
       </div>
@@ -346,7 +369,7 @@ export function PlayAllButton({
       {isSequencing ? (
         <>
           <Volume2 className="size-3.5 animate-pulse" />
-          <span className="text-xs">Playing…</span>
+          <span className="text-xs">{t("play.playing")}</span>
         </>
       ) : (
         <>

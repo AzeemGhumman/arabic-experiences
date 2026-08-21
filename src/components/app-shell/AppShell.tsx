@@ -4,7 +4,7 @@ import { BottomNav } from "@/components/app-shell/BottomNav"
 import { JourneyTracker } from "@/components/app-shell/JourneyTracker"
 import { Onboarding } from "@/components/app-shell/Onboarding"
 import { useAppState } from "@/lib/app-state"
-import { isRtlLanguage } from "@/lib/locale"
+import { applyLocaleToDocument, isRtlLanguage, resetLocaleDocument } from "@/lib/locale"
 
 export function AppShell() {
   const { state } = useAppState()
@@ -13,13 +13,11 @@ export function AppShell() {
   const onCompanion = location.pathname.startsWith("/companion")
 
   useEffect(() => {
-    document.documentElement.dir = rtl ? "rtl" : "ltr"
-    document.documentElement.lang = state.language === "ur" ? "ur" : "en"
+    applyLocaleToDocument(state.language)
     return () => {
-      document.documentElement.dir = "ltr"
-      document.documentElement.lang = "en"
+      resetLocaleDocument()
     }
-  }, [rtl, state.language])
+  }, [state.language])
 
   return (
     <div className="min-h-dvh" dir={rtl ? "rtl" : "ltr"}>

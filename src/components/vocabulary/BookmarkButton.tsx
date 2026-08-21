@@ -1,4 +1,5 @@
 import { Bookmark } from "lucide-react"
+import { useI18n } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
 export function BookmarkButton({
@@ -10,11 +11,12 @@ export function BookmarkButton({
   onToggle: () => void
   className?: string
 }) {
+  const { t } = useI18n()
   return (
     <button
       type="button"
       aria-pressed={bookmarked}
-      aria-label={bookmarked ? "Remove bookmark" : "Bookmark for review"}
+      aria-label={bookmarked ? t("common.removeBookmark") : t("common.bookmark")}
       onClick={(event) => {
         event.stopPropagation()
         onToggle()

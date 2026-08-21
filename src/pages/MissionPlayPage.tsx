@@ -27,8 +27,8 @@ export function MissionPlayPage() {
       <div className="py-16">
         <BackButton to={returnTo} />
         <div className="text-center">
-          <p className="font-display text-2xl">This mission is not playable yet</p>
-          <p className="mt-2 text-sm text-muted-foreground">It is on the path as a placeholder card.</p>
+          <p className="font-display text-2xl">{t("mission.notPlayableYet")}</p>
+          <p className="mt-2 text-sm text-muted-foreground">{t("mission.notPlayableBody")}</p>
         </div>
       </div>
     )
@@ -74,7 +74,7 @@ export function LessonPage() {
     return (
       <div className="py-16 text-center">
         <BackButton to={returnTo} />
-        <p className="font-display text-2xl">Lesson not found</p>
+        <p className="font-display text-2xl">{t("mission.lessonNotFound")}</p>
       </div>
     )
   }

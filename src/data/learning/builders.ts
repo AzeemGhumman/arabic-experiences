@@ -66,12 +66,14 @@ export function buildImmigration(ctx: MissionBuildContext): MissionRun {
   const steps: MissionStep[] = [
     {
       type: "context",
+      copyKey: "context",
       title: "Passport control",
       body: "You have just landed in Saudi Arabia for Umrah. An immigration officer calls you forward to the desk.",
       scene: "immigration",
     },
     {
       type: "listen",
+      copyKey: "greeting",
       prompt: "The officer looks up and greets you.",
       promptEnglish: "Peace be upon you",
       question: "How would you respond?",
@@ -87,6 +89,7 @@ export function buildImmigration(ctx: MissionBuildContext): MissionRun {
     },
     {
       type: "listen",
+      copyKey: "passport",
       prompt: "The officer holds out his hand.",
       promptEnglish: "Your passport, please",
       question: "What does he want?",
@@ -102,6 +105,7 @@ export function buildImmigration(ctx: MissionBuildContext): MissionRun {
     },
     {
       type: "match",
+      copyKey: "match",
       prompt: "While he checks your papers, he glances at the open bag beside you.",
       question: "Match each item to its Arabic name.",
       itemIds: ["ihram", "sandals", "charger", "medicine"],
@@ -109,6 +113,7 @@ export function buildImmigration(ctx: MissionBuildContext): MissionRun {
     },
     {
       type: "phrase",
+      copyKey: "whyHere",
       prompt: "The officer asks why you are here.",
       audioId: "why-here",
       officerArabic: "لماذا أنت هنا؟",
@@ -119,6 +124,7 @@ export function buildImmigration(ctx: MissionBuildContext): MissionRun {
     },
     {
       type: "listen",
+      copyKey: "proceed",
       prompt: "The officer stamps your passport and hands it back.",
       promptEnglish: "Go ahead",
       question: "How do you reply?",
@@ -583,15 +589,18 @@ export function buildNumbers(_ctx: MissionBuildContext): MissionRun {
       groups: [
         {
           title: "1–10",
+      copyKey: "1-10",
           scene: "numbers",
           vocabIds: [...oneToTen],
         },
         {
           title: "First, second, third",
+      copyKey: "first-second-third",
           vocabIds: [...ordinals],
         },
         {
           title: "11–20",
+      copyKey: "11-20",
           vocabIds: [...elevenToTwenty],
         },
       ],
@@ -630,18 +639,21 @@ export function buildNavigation(_ctx: MissionBuildContext): MissionRun {
       groups: [
         {
           title: "In the taxi",
+      copyKey: "in-the-taxi",
           intro: "A few words get you into a taxi and back to the hotel.",
           scene: "taxi",
           vocabIds: ["hotel", "please", "stop-here", "how-much"],
         },
         {
           title: "On the route",
+      copyKey: "on-the-route",
           intro: "Words you hear when a driver gives directions.",
           scene: "map",
           vocabIds: ["right", "left", "continue-straight", "turn-right", "you-arrived"],
         },
         {
           title: "Around landmarks",
+      copyKey: "around-landmarks",
           intro: "Useful when the route passes signals and buildings.",
           scene: "street",
           vocabIds: ["opposite", "behind", "signal"],
@@ -669,18 +681,21 @@ export function buildFood(_ctx: MissionBuildContext): MissionRun {
       groups: [
         {
           title: "With and without",
+      copyKey: "with-and-without",
           intro: "Customize a meal — spice, sugar, and what to leave out.",
           scene: "food",
           vocabIds: ["without", "with", "spicy", "hot", "cold"],
         },
         {
           title: "More on the table",
+      copyKey: "more-on-the-table",
           intro: "Juice, vegetables, and plates when ordering for a group.",
           scene: "restaurant",
           vocabIds: ["juice", "vegetables", "plate"],
         },
         {
           title: "Closing the meal",
+      copyKey: "closing-the-meal",
           intro: "Ask for the bill when you are done.",
           scene: "restaurant",
           vocabIds: ["the-bill"],

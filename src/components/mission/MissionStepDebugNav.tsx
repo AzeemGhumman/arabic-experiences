@@ -26,6 +26,7 @@ function stepDebugLabel(step: MissionStep, index: number): string {
   return short ? `${index + 1}. ${step.type} — ${short}` : `${index + 1}. ${step.type}`
 }
 
+/** Dev-only step jumper. Always English / LTR / Latin fonts, even when UI language is Urdu. */
 export function MissionStepDebugNav({
   steps,
   stepIndex,
@@ -41,8 +42,10 @@ export function MissionStepDebugNav({
 
   return (
     <section
+      lang="en"
+      dir="ltr"
       aria-label="Mission step debug navigation"
-      className="rounded-xl border border-dashed border-amber-400/70 bg-amber-50/80 p-3 text-xs dark:border-amber-500/50 dark:bg-amber-950/30"
+      className="dev-english-panel rounded-xl border border-dashed border-amber-400/70 bg-amber-50/80 p-3 text-left text-xs dark:border-amber-500/50 dark:bg-amber-950/30"
     >
       <div className="flex items-center justify-between gap-2">
         <p className="font-semibold tracking-wide text-amber-900 uppercase dark:text-amber-200">

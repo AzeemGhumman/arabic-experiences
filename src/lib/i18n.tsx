@@ -1,19 +1,25 @@
 import { createContext, createElement, useContext, useMemo } from "react"
 import type { ReactNode } from "react"
 import { getLanguagePack } from "@/locales"
-import type { MissionStrings, LanguagePack, SupportedLanguage } from "@/locales"
+import type { LessonStrings, MissionStrings, LanguagePack, SupportedLanguage } from "@/locales"
 import { useAppState } from "@/lib/app-state"
+import { lessonDisplayTitle } from "@/lib/lesson-copy"
 import type { JourneyCategory, UiLanguage } from "@/lib/storage"
+import type { Lesson } from "@/lib/learning-types"
 
 type I18nContextValue = {
   language: UiLanguage
   pack: LanguagePack
+  /** UI text direction from the active language pack. */
+  dir: "ltr" | "rtl"
   /** UI strings under `pack.ui`, e.g. t('nav.home') or t('profile.title', { done: 3 }) */
   t: (path: string, params?: Record<string, string | number>) => string
   journey: (id: JourneyCategory) => LanguagePack["journeys"][JourneyCategory]
   chapter: (id: string, fallback?: string) => string
   mission: (id: string, fallback?: string) => string
   missionDetail: (id: string) => MissionStrings | undefined
+  lessonDetail: (id: string) => LessonStrings | undefined
+  lessonTitle: (lesson: Pick<Lesson, "id" | "topicId" | "level" | "levelName" | "title">) => string
   capability: (id: string) => LanguagePack["capabilities"][string] | undefined
   depthLabel: (level: number) => string
   word: (id: string, fallback: string) => string
@@ -47,11 +53,14 @@ function buildI18n(language: UiLanguage): I18nContextValue {
   return {
     language,
     pack,
+    dir: pack.meta.dir,
     t,
     journey: (id) => pack.journeys[id],
     chapter: (id, fallback = id) => pack.chapters[id] ?? fallback,
     mission: (id, fallback = id) => pack.missions[id] ?? fallback,
     missionDetail: (id) => pack.missionDetails[id],
+    lessonDetail: (id) => pack.lessonDetails[id],
+    lessonTitle: (lesson) => lessonDisplayTitle(pack, lesson),
     capability: (id) => pack.capabilities[id],
     depthLabel: (level) => {
       if (level >= 3) return pack.ui.depth.master

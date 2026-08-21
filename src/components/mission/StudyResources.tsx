@@ -1,17 +1,12 @@
 import { ExternalLink, FileText, Globe, Play } from "lucide-react"
 import { studyResourcesAreMock } from "@/data/learning/study-resources"
+import { useI18n } from "@/lib/i18n"
 import type { StudyResource, StudyResourceKind } from "@/lib/learning-types"
 
 const iconFor: Record<StudyResourceKind, typeof Globe> = {
   website: Globe,
   youtube: Play,
   pdf: FileText,
-}
-
-const labelFor: Record<StudyResourceKind, string> = {
-  website: "Website",
-  youtube: "YouTube",
-  pdf: "PDF",
 }
 
 function youtubeEmbedSrc(item: StudyResource) {
@@ -25,6 +20,7 @@ function youtubeEmbedSrc(item: StudyResource) {
 }
 
 function YouTubeEmbed({ item }: { item: StudyResource }) {
+  const { t } = useI18n()
   const src = youtubeEmbedSrc(item)
   if (!src) return null
 
@@ -51,7 +47,7 @@ function YouTubeEmbed({ item }: { item: StudyResource }) {
           rel="noopener noreferrer"
           className="mt-2 inline-flex items-center gap-1 text-xs font-semibold text-sky-deep hover:underline"
         >
-          Open on YouTube
+          {t("study.openOnYoutube")}
           <ExternalLink className="size-3" aria-hidden />
         </a>
       </div>
@@ -60,24 +56,27 @@ function YouTubeEmbed({ item }: { item: StudyResource }) {
 }
 
 export function StudyResources({ items }: { items: StudyResource[] }) {
+  const { t } = useI18n()
   if (!items.length) return null
 
   const embedVideo = items.find((item) => item.kind === "youtube" && youtubeEmbedSrc(item))
   const links = embedVideo ? items.filter((item) => item !== embedVideo) : items
+  const labelFor: Record<StudyResourceKind, string> = {
+    website: t("study.resourceWebsite"),
+    youtube: t("study.resourceYoutube"),
+    pdf: t("study.resourcePdf"),
+  }
 
   return (
     <section className="space-y-3">
       <div>
         <p className="text-[11px] font-semibold tracking-[0.16em] text-sky-deep uppercase">
-          Keep practicing
+          {t("study.resourcesTitle")}
         </p>
-        <p className="mt-1 text-sm text-muted-foreground">
-          External sources to go deeper after this study session.
-        </p>
+        <p className="mt-1 text-sm text-muted-foreground">{t("study.resourcesBody")}</p>
         {studyResourcesAreMock ? (
           <p className="mt-2 rounded-2xl border border-gold-soft/80 bg-gold-soft/35 px-3 py-2 text-xs leading-relaxed text-ink-soft">
-            Mock data for now — links and videos are placeholders until we curate
-            mission-specific resources.
+            {t("study.resourcesMock")}
           </p>
         ) : null}
       </div>

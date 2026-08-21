@@ -125,6 +125,16 @@
         { "id": "charger", "subject": "cream phone charger brick and coiled cable with a terracotta tip, still life" },
         { "id": "medicine", "subject": "cream medicine bottle with a sage plus mark, no text, still life" }
       ]
+    },
+    {
+      "id": "passport-objects",
+      "kind": "items",
+      "tiles": [
+        { "id": "passport", "subject": "closed navy-blue passport booklet standing upright, large gold capital letters PASSPORT across the center of the cover, thin gold band near the top, still life on cream, no emblems, no other text, no numerals" },
+        { "id": "bag", "subject": "simple brown travel suitcase standing upright with a small terracotta handle, still life on cream" },
+        { "id": "phone", "subject": "simple cream smartphone front view with a sage screen rectangle, still life on cream, no text, no icons" },
+        { "id": "water-bottle-alt", "subject": "simple cream water bottle with a terracotta cap, still life on cream, no text, no labels" }
+      ]
     }
   ]
 }

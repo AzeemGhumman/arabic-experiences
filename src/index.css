@@ -87,22 +87,21 @@
       radial-gradient(800px 400px at 80% 110%, #e8dcc8 0%, transparent 50%);
   }
 
-  html[lang="ur"] .font-display {
-    font-family: "Noto Sans Arabic", var(--font-display);
-    line-height: 1.55;
+  /*
+   * UI fonts come from language-pack meta.fonts → --font-sans / --font-display
+   * (set on <html> by applyLocaleToDocument). Learning Arabic stays on --font-arabic.
+   */
+  html[lang="ur"] body {
+    line-height: 1.75;
   }
 
-  /* Nastaliq breaks Latin spaces; Noto Sans Arabic handles Urdu UI text cleanly. */
-  html[lang="ur"] .font-urdu {
-    font-family: "Noto Sans Arabic", sans-serif;
-  }
-
-  html[lang="ur"] .uppercase {
-    text-transform: none;
-  }
-
-  html[lang="ur"] .uppercase[class*="tracking-"] {
-    letter-spacing: 0.02em;
+  /* Dev-only English islands: never inherit UI-language fonts (Nastaliq mashes Latin spaces). */
+  .dev-english-panel,
+  .dev-english-panel * {
+    direction: ltr;
+    unicode-bidi: isolate;
+    font-family: "Figtree", ui-sans-serif, system-ui, sans-serif;
+    text-align: left;
   }
 
   #root {
@@ -129,14 +128,15 @@
     @apply cursor-not-allowed opacity-50;
   }
 
+  /* Learning Arabic only — never swap this for the UI language font. */
   .font-arabic {
-    font-family: "Noto Sans Arabic", sans-serif;
+    font-family: var(--font-arabic);
     direction: rtl;
     unicode-bidi: isolate;
   }
 
   .arabic-text {
-    font-family: "Noto Sans Arabic", sans-serif;
+    font-family: var(--font-arabic);
     direction: rtl;
     unicode-bidi: isolate;
     font-size: 1.4em;
@@ -169,6 +169,38 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /*
+   * Urdu UI tweaks. Fonts themselves come from --font-sans / --font-display
+   * (language pack). These rules must sit in `utilities` so they beat Tailwind
+   * utilities in `@layer base`.
+   */
+  html[lang="ur"] .font-display {
+    line-height: 1.7;
+  }
+
+  html[lang="ur"] .uppercase {
+    text-transform: none;
+  }
+
+  /* Wide Latin tracking destroys Nastaliq joining. */
+  html[lang="ur"] [class*="tracking-"] {
+    letter-spacing: normal;
+  }
+
+  html[lang="ur"] .dev-english-panel .uppercase {
+    text-transform: uppercase;
+  }
+
+  html[lang="ur"] .dev-english-panel [class*="tracking-"] {
+    letter-spacing: 0.05em;
+  }
+
+  /* Keep learning Arabic on the Arabic face even when UI is Urdu/Nastaliq. */
+  .font-arabic,
+  .arabic-text {
+    font-family: "Noto Sans Arabic", var(--font-arabic), sans-serif;
   }
 }
 

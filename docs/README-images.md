@@ -65,15 +65,17 @@ One generation, four tiles — cheaper than four calls.
 | `src/data/learning/images.source.json` | Style string, 2×2 grid, per-sheet subjects, `kind` |
 | `src/data/learning/topic-images.ts` | Maps `TopicId` → `/images/study/{id}.webp` |
 | `src/data/learning/mission-images.ts` | Maps mission id → `/images/missions/{id}.webp` |
+| `src/data/learning/vocab-item-images.ts` | Maps vocab id → `/images/items/{id}.webp` |
 | `src/components/study/TopicPicture.tsx` | Study thumb: webp if mapped, else SVG |
 | `src/components/mission/ExperienceScenes.tsx` | `SceneMark` / non-interactive scenes use mission webps |
 | `scripts/crop_image_sheet.py` | Splits a sheet into 512px webps, updates the public manifest |
 | `public/images/sheets/{sheetId}.png` | Saved contact sheets |
 | `public/images/study/{topicId}.webp` | Study topic thumbs |
 | `public/images/missions/{missionId}.webp` | Map stamps and mission thumbs |
-| `public/images/manifest.json` | Inventory by kind (`study`, `missions`) |
+| `public/images/items/{vocabId}.webp` | Match / picture-choice still lifes |
+| `public/images/manifest.json` | Inventory by kind (`study`, `missions`, `items`) |
 
-Each sheet in source has `"kind": "study"` or `"kind": "missions"`. Crop writes to `public/images/{kind}/` and merges that key in the manifest.
+Each sheet in source has `"kind": "study"`, `"missions"`, or `"items"`. Crop writes to `public/images/{kind}/` and merges that key in the manifest.
 
 Current Study coverage: **all 25 `TopicId`s** have webps. Current mission coverage: **all 13 mission ids** have webps. SVG art remains as fallback when an id is missing from the map.
 
@@ -206,6 +208,15 @@ Missions (`kind: "missions"`):
 | `mission-city` | order-dinner, lost-group, something-wrong, barber |
 | `mission-beyond` | day-madinah, tents-alt, lantern-alt, basin-alt (only `day-madinah` is wired) |
 
+Items (`kind: "items"`):
+
+| Sheet id | Tiles (TL, TR, BL, BR) |
+| --- | --- |
+| `umrah-pack` | ihram, sandals, charger, medicine |
+| `passport-objects` | passport, bag, phone, water-bottle-alt (filler — not wired) |
+
+Wire item tiles in `src/data/learning/vocab-item-images.ts`.
+
 ---
 
 ## Regenerating one topic
@@ -223,7 +234,9 @@ If three tiles were good, copy those webps aside, recrop, then restore the three
 
 ## Next image kinds (same rules)
 
-When adding word pictures:
+Item still lifes for match / picture-choice steps already use `kind: "items"` → `public/images/items/` + `vocab-item-images.ts`.
+
+When adding another image kind (e.g. word pictures beyond items):
 
 1. New folder under `public/images/` (e.g. `public/images/words/`).
 2. New key in `manifest.json` (do not dump everything into `study` or `missions`).
@@ -241,6 +254,6 @@ Interactive mission play art stays SVG. Do not replace direction-hit scenes with
 - [ ] `aspect_ratio` is `1:1`; four panels; no 3×3
 - [ ] Sheet copied to `public/images/sheets/{id}.png`
 - [ ] Cropped with `--sheet-id` matching source
-- [ ] Real topic ids added to `topic-images.ts`; real mission ids to `mission-images.ts`
+- [ ] Real topic ids added to `topic-images.ts`; real mission ids to `mission-images.ts`; real item ids to `vocab-item-images.ts`
 - [ ] Fillers not mapped; unused webps deleted
-- [ ] Looked at thumbs in Study (~52px) or map stamps (~56px) at real size
+- [ ] Looked at thumbs in Study (~52px), map stamps (~56px), or item cards (~64px) at real size

@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react"
 import { Volume2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useAudioPack } from "@/lib/audio/use-audio-pack"
+import { useI18n } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
 export function PlayAudioButton({
@@ -23,9 +24,12 @@ export function PlayAudioButton({
   label?: string
   disabled?: boolean
 }) {
+  const { t } = useI18n()
   const { play, playingId } = useAudioPack(packId)
   const playing = playingId === clipId
   const autoPlayed = useRef(false)
+  const listenLabel = label ?? t("play.listen")
+  const pronunciationLabel = label ?? t("play.playPronunciation")
 
   useEffect(() => {
     autoPlayed.current = false
@@ -44,7 +48,7 @@ export function PlayAudioButton({
         size="icon"
         variant={playing ? "terracotta" : variant}
         className={cn("size-7 shrink-0 rounded-full", className)}
-        aria-label={label ?? "Play pronunciation"}
+        aria-label={pronunciationLabel}
         disabled={disabled}
         onClick={() => void play(clipId)}
       >
@@ -58,9 +62,9 @@ export function PlayAudioButton({
       <button
         type="button"
         disabled={disabled}
-        aria-label={label ?? "Play pronunciation"}
+        aria-label={pronunciationLabel}
         className={cn(
-          "flex min-w-14 shrink-0 items-center justify-center self-stretch border-r border-border/60 bg-secondary/45 transition hover:bg-secondary disabled:cursor-not-allowed disabled:opacity-60",
+          "flex min-w-14 shrink-0 items-center justify-center self-stretch border-e border-border/60 bg-secondary/45 transition hover:bg-secondary disabled:cursor-not-allowed disabled:opacity-60",
           playing && "bg-terracotta/15 text-terracotta",
           className,
         )}
@@ -77,11 +81,11 @@ export function PlayAudioButton({
         type="button"
         variant={playing ? "terracotta" : variant}
         className={cn("w-full", className)}
-        aria-label={label ?? "Play audio"}
+        aria-label={label ?? t("play.playAudio")}
         onClick={() => void play(clipId)}
       >
         <Volume2 />
-        {playing ? "Playing…" : label ?? "Listen"}
+        {playing ? t("play.playing") : listenLabel}
       </Button>
     )
   }
@@ -92,7 +96,7 @@ export function PlayAudioButton({
       size="icon"
       variant={playing ? "terracotta" : variant}
       className={className}
-      aria-label={label ?? "Play pronunciation"}
+      aria-label={pronunciationLabel}
       onClick={() => void play(clipId)}
     >
       <Volume2 className="size-4" />

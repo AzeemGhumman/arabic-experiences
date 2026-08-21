@@ -23,9 +23,10 @@ import { createRunById } from "@/lib/mission-engine"
 import { getStudyResources } from "@/data/learning/study-resources"
 import { StudyResources } from "@/components/mission/StudyResources"
 import { useI18n } from "@/lib/i18n"
+import { resolveMissionOutcome, resolveMissionStepCopy } from "@/lib/mission-copy"
 import type { VocabBookmark } from "@/lib/bookmarks"
 import { hasBookmark } from "@/lib/bookmarks"
-import type { MissionStep, DirectionAction, GpsInstruction, SceneFocus, StudyGroup, StudyResource } from "@/lib/learning-types"
+import type { ChoiceOption, MissionStep, DirectionAction, GpsInstruction, SceneFocus, StudyGroup, StudyResource } from "@/lib/learning-types"
 
 function useDirectionLabels() {
   const { t } = useI18n()
@@ -53,7 +54,7 @@ export function MissionPlayer({
 }) {
   const { completeMission, discoverWord, toggleBookmark } = useAppState()
   const { progress } = useActiveJourney()
-  const { t } = useI18n()
+  const { t, missionDetail, lessonDetail, lessonTitle, pack, language } = useI18n()
   const { setMissionInProgress } = useMissionNavigationGuard()
   const [session, setSession] = useState(0)
   const [runBundle, setRunBundle] = useState(() =>
@@ -72,10 +73,24 @@ export function MissionPlayer({
   const isLast = stepIndex >= steps.length - 1
   const isStudySession = runBundle.kind === "lesson" && steps.every((item) => item.type === "study")
   const isPractice = runBundle.kind === "lesson"
-  const showTransliteration = isPractice
+  const showTransliteration = isPractice && language === "en"
   const showTranslation = isPractice
   const stepTotal = skipsContext ? steps.length - 1 : steps.length
   const stepNumber = skipsContext ? stepIndex : stepIndex + 1
+  const placeCopy = missionDetail(experienceId)
+  const lessonCopy = lessonDetail(experienceId)
+  const displayTitle = lesson
+    ? lessonTitle(lesson)
+    : (placeCopy?.title ?? runBundle.title)
+  const displayCanNowDo = lesson
+    ? (lessonCopy?.canNowDo ?? runBundle.canNowDo)
+    : (placeCopy?.canNowDo ?? runBundle.canNowDo)
+  const displayOutcome = lesson
+    ? (pack.lessonRuns[experienceId]?.outcome ?? runBundle.run.outcome)
+    : resolveMissionOutcome(pack, experienceId, runBundle.run.outcome)
+  const displayDescription = lesson
+    ? (lessonCopy?.description ?? lesson.description)
+    : undefined
 
   useEffect(() => {
     const active = runBundle.kind === "mission" && !finished
@@ -126,9 +141,9 @@ export function MissionPlayer({
     return (
       <Completion
         experienceId={experienceId}
-        title={runBundle.title}
-        outcome={runBundle.run.outcome}
-        canNowDo={runBundle.canNowDo}
+        title={displayTitle}
+        outcome={displayOutcome}
+        canNowDo={displayCanNowDo}
         vocabIds={runBundle.run.selectedVocabularyIds}
         advanced={runBundle.run.advanced}
         kind={runBundle.kind}
@@ -157,15 +172,15 @@ export function MissionPlayer({
         <p className="text-[11px] font-semibold tracking-[0.18em] text-terracotta uppercase">
           {runBundle.kind === "lesson" ? t("play.study") : t("play.mission")}
         </p>
-        <h1 className="font-display mt-1 text-2xl leading-tight">{runBundle.title}</h1>
-        {isStudySession && lesson?.description ? (
-          <p className="mt-2 text-sm text-muted-foreground">{lesson.description}</p>
+        <h1 className="font-display mt-1 text-2xl leading-tight">{displayTitle}</h1>
+        {isStudySession && displayDescription ? (
+          <p className="mt-2 text-sm text-muted-foreground">{displayDescription}</p>
         ) : null}
         {!isStudySession ? (
           <>
             <p className="mt-1 text-xs text-muted-foreground">
-              {stepNumber} of {stepTotal}
-              {runBundle.run.advanced ? " · Richer vocabulary enabled" : ""}
+              {stepNumber} {t("common.of")} {stepTotal}
+              {runBundle.run.advanced ? ` · ${t("play.richerVocabEnabled")}` : ""}
             </p>
             <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-secondary">
               <div
@@ -241,6 +256,25 @@ function StepView({
   onContinue: () => void
   onFinishStudy: () => void
 }) {
+  const { t, pack, word } = useI18n()
+  const copyKey = "copyKey" in step ? step.copyKey : undefined
+  const copy = resolveMissionStepCopy(pack, experienceId, copyKey, {
+    title: step.type === "context" ? step.title : undefined,
+    body: step.type === "context" ? step.body : undefined,
+    prompt: "prompt" in step ? step.prompt : undefined,
+    promptEnglish: "promptEnglish" in step ? step.promptEnglish : undefined,
+    question: "question" in step ? step.question : undefined,
+    feedback: "feedback" in step ? step.feedback : undefined,
+    situation: step.type === "decision" ? step.situation : undefined,
+  })
+
+  function localizeOptions(options: ChoiceOption[]) {
+    return options.map((option) => ({
+      ...option,
+      label: word(option.id, option.label),
+    }))
+  }
+
   const ownsScene = step.type === "context" || step.type === "direction" || step.type === "gps"
   const sceneFrame = !ownsScene ? (
     <ExperienceScene
@@ -268,10 +302,10 @@ function StepView({
           gateNumber={variables.gateNumber}
           focus="place"
         />
-        <h2 className="font-display text-2xl">{step.title}</h2>
-        <p className="text-sm leading-relaxed text-muted-foreground">{step.body}</p>
+        <h2 className="font-display text-2xl">{copy.title ?? step.title}</h2>
+        <p className="text-sm leading-relaxed text-muted-foreground">{copy.body ?? step.body}</p>
         <Button className="w-full" variant="terracotta" onClick={onContinue}>
-          Enter the scene
+          {t("play.enterScene")}
         </Button>
       </div>
     )
@@ -282,7 +316,7 @@ function StepView({
       <div className="space-y-4">
         {sceneFrame}
         <DiscoverStep
-          prompt={step.prompt}
+          prompt={copy.prompt ?? step.prompt}
           vocabIds={step.vocabIds}
           showTransliteration={showTransliteration}
           showTranslation={showTranslation}
@@ -313,12 +347,12 @@ function StepView({
         {sceneFrame}
         <PhraseReplyStep
           packId={experienceId}
-          prompt={step.prompt}
+          prompt={copy.prompt ?? step.prompt}
           audioId={step.audioId}
           officerArabic={step.officerArabic}
-          audioTranslation={step.promptEnglish}
-          question={step.question}
-          feedback={step.feedback}
+          audioTranslation={copy.promptEnglish ?? step.promptEnglish}
+          question={copy.question ?? step.question}
+          feedback={copy.feedback ?? step.feedback}
           tokens={step.tokens}
           correctOrder={step.correctOrder}
           onContinue={onContinue}
@@ -332,10 +366,10 @@ function StepView({
       <div className="space-y-4">
         {sceneFrame}
         <MatchItemsStep
-          prompt={step.prompt}
-          question={step.question}
+          prompt={copy.prompt ?? step.prompt}
+          question={copy.question ?? step.question}
           itemIds={step.itemIds}
-          feedback={step.feedback}
+          feedback={copy.feedback ?? step.feedback}
           onContinue={onContinue}
         />
       </div>
@@ -348,14 +382,14 @@ function StepView({
         {sceneFrame}
         <OfficerPromptStep
           packId={experienceId}
-          prompt={step.prompt}
-          audioTranslation={step.promptEnglish}
+          prompt={copy.prompt ?? step.prompt}
+          audioTranslation={copy.promptEnglish ?? step.promptEnglish}
           officerArabic={step.arabic}
           audioId={step.audioId}
-          question={step.question}
-          options={step.options}
+          question={copy.question ?? step.question}
+          options={localizeOptions(step.options)}
           correctId={step.correctId}
-          feedback={step.feedback}
+          feedback={copy.feedback ?? step.feedback}
           onContinue={onContinue}
         />
       </div>
@@ -368,14 +402,14 @@ function StepView({
         {sceneFrame}
         <OfficerPromptStep
           packId={experienceId}
-          prompt={step.prompt}
-          audioTranslation={step.promptEnglish}
+          prompt={copy.prompt ?? step.prompt}
+          audioTranslation={copy.promptEnglish ?? step.promptEnglish}
           officerArabic={step.arabic}
           audioId={step.audioId}
-          question={step.question}
-          options={step.options}
+          question={copy.question ?? step.question}
+          options={localizeOptions(step.options)}
           correctId={step.correctId}
-          feedback={step.feedback}
+          feedback={copy.feedback ?? step.feedback}
           onContinue={onContinue}
         />
       </div>
@@ -386,7 +420,7 @@ function StepView({
     return (
       <GpsStep
         packId={experienceId}
-        prompt={step.prompt}
+        prompt={copy.prompt ?? step.prompt}
         instructions={step.instructions}
         showTranslation={showTranslation}
         onContinue={onContinue}
@@ -410,14 +444,14 @@ function StepView({
       {sceneFrame}
       <ChoiceStep
         packId={experienceId}
-        prompt={step.prompt}
+        prompt={copy.prompt ?? ("prompt" in step ? step.prompt : "")}
         arabic={"arabic" in step ? step.arabic : undefined}
         audioId={step.type === "listen" ? step.audioId : undefined}
-        situation={step.type === "decision" ? step.situation : undefined}
-        options={step.options}
+        situation={copy.situation}
+        options={localizeOptions("options" in step ? step.options : [])}
         correctId={"correctId" in step ? step.correctId : ""}
         listen={step.type === "listen"}
-        feedback={"feedback" in step ? step.feedback : undefined}
+        feedback={copy.feedback}
         showTransliteration={showTransliteration}
         showTranslation={showTranslation}
         onContinue={onContinue}
@@ -537,6 +571,7 @@ function DiscoverStep({
   onDiscover: (id: string) => void
   onContinue: () => void
 }) {
+  const { t, word: gloss } = useI18n()
   const [open, setOpen] = useState<string[]>([])
   const allOpen = vocabIds.every((id) => open.includes(id))
   return (
@@ -567,19 +602,21 @@ function DiscoverStep({
                   {showTransliteration ? (
                     <p className="mt-1 text-sm italic text-ink-soft">{word?.transliteration}</p>
                   ) : (
-                    <p className="mt-1 text-xs text-muted-foreground">Stay with the Arabic first.</p>
+                    <p className="mt-1 text-xs text-muted-foreground">{t("play.stayWithArabic")}</p>
                   )}
-                  {showTranslation ? <p className="mt-1 font-medium">{word?.meaning}</p> : null}
+                  {showTranslation && word ? (
+                    <p className="mt-1 font-medium">{gloss(id, word.meaning)}</p>
+                  ) : null}
                 </>
               ) : (
-                <p className="mt-2 text-xs text-muted-foreground">Tap to notice this word</p>
+                <p className="mt-2 text-xs text-muted-foreground">{t("play.tapToNotice")}</p>
               )}
             </button>
           )
         })}
       </div>
       <Button className="w-full" disabled={!allOpen} onClick={onContinue}>
-        {allOpen ? "Continue" : "Notice each word first"}
+        {allOpen ? t("play.continue") : t("play.noticeWords")}
       </Button>
     </div>
   )

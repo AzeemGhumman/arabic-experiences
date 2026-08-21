@@ -74,6 +74,8 @@ export type ChoiceOption = {
 
 export type StudyGroup = {
   title: string
+  /** Locale key under pack.lessonRuns[lessonId].groups */
+  copyKey?: string
   intro?: string
   scene?: MissionScene
   vocabIds: string[]
@@ -97,12 +99,15 @@ export type StudyResource = {
 export type MissionStep =
   | {
       type: "context"
+      /** Locale key under pack.missionRuns[missionId].steps */
+      copyKey?: string
       title: string
       body: string
       scene: MissionScene
     }
   | {
       type: "discover"
+      copyKey?: string
       prompt: string
       vocabIds: string[]
     }
@@ -112,11 +117,12 @@ export type MissionStep =
     }
   | {
       type: "choice"
+      copyKey?: string
       prompt: string
       arabic?: string
       /** Officer speech clip — enables immersive audio + hint flow. */
       audioId?: string
-      /** English translation of the spoken audio — hint level 2 only. */
+      /** UI-language gloss of the spoken audio — hint level 2 only. */
       promptEnglish?: string
       /** Question before answer options. */
       question?: string
@@ -126,6 +132,7 @@ export type MissionStep =
     }
   | {
       type: "direction"
+      copyKey?: string
       prompt: string
       arabic: string
       options: DirectionAction[]
@@ -133,6 +140,7 @@ export type MissionStep =
     }
   | {
       type: "phrase"
+      copyKey?: string
       prompt: string
       /** Officer question audio before building the reply. */
       audioId?: string
@@ -146,6 +154,7 @@ export type MissionStep =
     }
   | {
       type: "match"
+      copyKey?: string
       prompt: string
       /** Question above the matching board. */
       question?: string
@@ -155,11 +164,12 @@ export type MissionStep =
     }
   | {
       type: "listen"
+      copyKey?: string
       prompt: string
       arabic: string
       /** Clip id within the mission audio pack. */
       audioId?: string
-      /** English translation of the spoken audio — hint level 2 only. */
+      /** UI-language gloss of the spoken audio — hint level 2 only. */
       promptEnglish?: string
       /** Question before answer options. */
       question?: string
@@ -169,6 +179,7 @@ export type MissionStep =
     }
   | {
       type: "decision"
+      copyKey?: string
       prompt: string
       situation: string
       options: ChoiceOption[]
@@ -177,6 +188,7 @@ export type MissionStep =
     }
   | {
       type: "gps"
+      copyKey?: string
       prompt: string
       instructions: GpsInstruction[]
     }

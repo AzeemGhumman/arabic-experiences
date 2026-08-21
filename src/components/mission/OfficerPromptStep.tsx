@@ -7,6 +7,7 @@ import {
 } from "@/components/mission/MissionAudioHints"
 import { OptionButton, useMcqAnswer, useMcqArabicHints, useShuffledOptions } from "@/components/mission/MissionBits"
 import { Button } from "@/components/ui/button"
+import { vocabItemImage } from "@/data/learning/vocab-item-images"
 import { useI18n } from "@/lib/i18n"
 import type { ChoiceOption } from "@/lib/learning-types"
 
@@ -77,6 +78,8 @@ export function OfficerPromptStep({
                 packId={packId}
                 audioId={option.audioId!}
                 arabic={option.arabic}
+                imageSrc={vocabItemImage(option.id)}
+                imageAlt={option.label}
                 showArabic={showArabicForOption(option.id)}
                 state={optionState(option.id)}
                 disabled={solved}

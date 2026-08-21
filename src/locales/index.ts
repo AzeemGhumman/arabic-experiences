@@ -23,4 +23,14 @@ export function languageOptions() {
   }))
 }
 
-export type { MissionStrings, CapabilityStrings, JourneyStrings, LanguagePack, SupportedLanguage } from "@/locales/types"
+export type {
+  MissionStrings,
+  MissionStepCopy,
+  MissionRunCopy,
+  LessonStrings,
+  LessonRunCopy,
+  CapabilityStrings,
+  JourneyStrings,
+  LanguagePack,
+  SupportedLanguage,
+} from "@/locales/types"

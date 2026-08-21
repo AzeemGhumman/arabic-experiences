@@ -136,7 +136,7 @@ export function ProgressPage() {
             ) : (
               <>
                 {Object.entries(groupedJourney).map(([category, words]) => (
-                  <WordGroup key={category} title={category}>
+                  <WordGroup key={category} title={capabilityCopy(category)?.title ?? category}>
                     {words.map((item) => (
                       <article key={item.id} className="rounded-3xl border border-border bg-card p-4">
                         <p className="arabic-text text-2xl">{item.arabic}</p>

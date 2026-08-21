@@ -3,7 +3,6 @@ import { ContextCard } from "@/components/scene/ContextCard"
 import { HaramScene } from "@/components/scene/Scenes"
 import { SupplicationCard } from "@/components/vocabulary/SupplicationCard"
 import { Button } from "@/components/ui/button"
-import { haramExperience } from "@/data/umrah"
 import { useAppState } from "@/lib/app-state"
 import { useI18n } from "@/lib/i18n"
 import { BackButton } from "@/components/app-shell/BackButton"
@@ -17,26 +16,41 @@ export function UmrahExperiencePage() {
     return <Navigate to="/" replace />
   }
 
+  const notices = [
+    t("companion.haramExperience.notice1"),
+    t("companion.haramExperience.notice2"),
+    t("companion.haramExperience.notice3"),
+    t("companion.haramExperience.notice4"),
+  ]
+
   return (
     <div className="space-y-5 pb-10">
       <header>
         <BackButton />
         <p className="text-[11px] font-semibold tracking-[0.2em] text-terracotta uppercase">
-          {t("companion.kicker")}
+          {t("companion.haramExperience.kicker")}
         </p>
-        <h1 className="font-display mt-2 text-3xl leading-tight">{haramExperience.title}</h1>
-        <p className="mt-2 text-sm italic text-ink-soft">{haramExperience.atmosphere}</p>
+        <h1 className="font-display mt-2 text-3xl leading-tight">
+          {t("companion.haramExperience.title")}
+        </h1>
+        <p className="mt-2 text-sm italic text-ink-soft">
+          {t("companion.haramExperience.atmosphere")}
+        </p>
       </header>
 
       <div className="overflow-hidden rounded-[1.75rem] border border-border shadow-sm">
         <HaramScene />
       </div>
-      <p className="text-center text-xs text-muted-foreground">Atmospheric illustration placeholder</p>
+      <p className="text-center text-xs text-muted-foreground">
+        {t("companion.haramExperience.illustrationPlaceholder")}
+      </p>
 
-      <ContextCard title="In this moment">{haramExperience.context}</ContextCard>
+      <ContextCard title={t("companion.haramExperience.momentTitle")}>
+        {t("companion.haramExperience.context")}
+      </ContextCard>
 
-      <ContextCard title="A historical note">
-        <p>{haramExperience.historicalNote}</p>
+      <ContextCard title={t("companion.haramExperience.historyTitle")}>
+        <p>{t("companion.haramExperience.historicalNote")}</p>
       </ContextCard>
 
       <SupplicationCard
@@ -50,10 +64,10 @@ export function UmrahExperiencePage() {
 
       <section className="rounded-3xl border border-border bg-card p-5">
         <p className="text-[11px] font-semibold tracking-[0.18em] text-ink-soft uppercase">
-          What should I notice?
+          {t("companion.haramExperience.noticeTitle")}
         </p>
         <ul className="mt-3 space-y-2.5">
-          {haramExperience.notice.map((item) => (
+          {notices.map((item) => (
             <li key={item} className="flex gap-3 text-sm leading-relaxed">
               <span className="mt-2 size-1.5 shrink-0 rounded-full bg-gold" />
               {item}
@@ -62,15 +76,12 @@ export function UmrahExperiencePage() {
         </ul>
       </section>
 
-      <Button
-        className="w-full"
-        size="lg"
-        variant="terracotta"
-        asChild
-      >
+      <Button className="w-full" size="lg" variant="terracotta" asChild>
         <Link to="/companion">{t("companion.backToCompanion")}</Link>
       </Button>
-      <p className="text-xs leading-relaxed text-muted-foreground">{haramExperience.disclaimer}</p>
+      <p className="text-xs leading-relaxed text-muted-foreground">
+        {t("companion.haramExperience.disclaimer")}
+      </p>
     </div>
   )
 }

@@ -17,7 +17,7 @@ export function MissionPrerequisiteList({
   completedLessonIds: string[]
 }) {
   const { setLessonCompleted } = useAppState()
-  const { t } = useI18n()
+  const { t, lessonTitle } = useI18n()
 
   if (lessons.length === 0) return null
 
@@ -39,7 +39,7 @@ export function MissionPrerequisiteList({
           <>
             <Compass className="size-4 shrink-0 text-sky-deep" />
             <span className="min-w-0 flex-1">
-              <span className="font-display block text-base leading-tight">{lesson.title}</span>
+              <span className="font-display block text-base leading-tight">{lessonTitle(lesson)}</span>
             </span>
             <LessonCompleteCheckbox
               lessonId={lesson.id}

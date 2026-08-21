@@ -47,6 +47,9 @@
     "ihram": "/images/items/ihram.webp",
     "sandals": "/images/items/sandals.webp",
     "charger": "/images/items/charger.webp",
-    "medicine": "/images/items/medicine.webp"
+    "medicine": "/images/items/medicine.webp",
+    "passport": "/images/items/passport.webp",
+    "bag": "/images/items/bag.webp",
+    "phone": "/images/items/phone.webp"
   }
 }

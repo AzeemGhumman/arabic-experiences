@@ -1,6 +1,7 @@
 import { useState } from "react"
 import type { ReactNode } from "react"
 import { getLearningWord } from "@/data/learning/words"
+import { useI18n } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
 export type OptionVisualState = "idle" | "wrong" | "correct"
@@ -94,11 +95,20 @@ export function useMcqArabicHints(correctId: string) {
 }
 
 export function RegisterBadge({ register }: { register?: string }) {
+  const { t } = useI18n()
   if (register === "saudi-colloquial") {
-    return <span className="rounded-full bg-gold-soft/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Saudi everyday</span>
+    return (
+      <span className="rounded-full bg-gold-soft/80 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">
+        {t("common.saudiEveryday")}
+      </span>
+    )
   }
   if (register === "msa") {
-    return <span className="rounded-full bg-secondary px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">Formal Arabic</span>
+    return (
+      <span className="rounded-full bg-secondary px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide">
+        {t("common.formalArabic")}
+      </span>
+    )
   }
   return null
 }
@@ -112,6 +122,7 @@ export function VocabularyChip({
   showTransliteration: boolean
   showTranslation: boolean
 }) {
+  const { word: gloss } = useI18n()
   const word = getLearningWord(id)
   if (!word) return null
   return (
@@ -121,7 +132,7 @@ export function VocabularyChip({
         <RegisterBadge register={word.register} />
       </div>
       {showTransliteration ? <p className="mt-1 text-sm italic text-ink-soft">{word.transliteration}</p> : null}
-      {showTranslation ? <p className="mt-1 text-sm">{word.meaning}</p> : null}
+      {showTranslation ? <p className="mt-1 text-sm">{gloss(id, word.meaning)}</p> : null}
     </div>
   )
 }

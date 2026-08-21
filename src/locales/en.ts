@@ -1,7 +1,20 @@
 import type { LanguagePack } from "@/locales/types"
+import { words } from "@/locales/words/en"
+import { lessonDetails } from "@/locales/lessons/en"
+import { lessonRuns } from "@/locales/lessons/runs-en"
 
 export const en: LanguagePack = {
-  meta: { code: "en", name: "English", nativeName: "English" },
+  meta: {
+    code: "en",
+    name: "English",
+    nativeName: "English",
+    dir: "ltr",
+    htmlLang: "en",
+    fonts: {
+      sans: '"Figtree", ui-sans-serif, system-ui, sans-serif',
+      display: '"Fraunces", ui-serif, Georgia, serif',
+    },
+  },
   ui: {
     nav: { home: "Home", study: "Study", progress: "Progress", trip: "Trip", profile: "Profile" },
     common: {
@@ -26,6 +39,11 @@ export const en: LanguagePack = {
       playAgain: "Play again",
       backToMap: "Back to map",
       percentComplete: "{percent}% completed",
+      saudiEveryday: "Saudi everyday",
+      formalArabic: "Formal Arabic",
+      close: "Close",
+      bookmark: "Bookmark for review",
+      removeBookmark: "Remove bookmark",
     },
     study: {
       kicker: "Study",
@@ -44,6 +62,15 @@ export const en: LanguagePack = {
       bookmarksPageTitle: "Bookmarked for review",
       bookmarksPageBody: "Words you flagged in Study. Changes are saved when you tap Save changes.",
       saveBookmarks: "Save changes ({count})",
+      levelBasic: "Basic",
+      levelAdvanced: "Advanced",
+      resourcesTitle: "Keep practicing",
+      resourcesBody: "External sources to go deeper after this study session.",
+      resourcesMock: "Mock data for now — links and videos are placeholders until we curate mission-specific resources.",
+      openOnYoutube: "Open on YouTube",
+      resourceWebsite: "Website",
+      resourceYoutube: "YouTube",
+      resourcePdf: "PDF",
       shelves: {
         arrive: { title: "Getting there", body: "Roads, gates, and the first conversations." },
         stay: { title: "In the city", body: "Hotel, food, money, and errands." },
@@ -208,6 +235,9 @@ export const en: LanguagePack = {
       comingSoonBody: "This mission is not in the preview yet. For now, try Passport control.",
       comingSoonDismiss: "Got it",
       lockedBody: "Opens after the previous place on the map.",
+      notPlayableYet: "This mission is not playable yet",
+      notPlayableBody: "It is on the path as a placeholder card.",
+      lessonNotFound: "Lesson not found",
       lessonsBeforeStart: "Study first",
       lessonsBeforeStartBody: "Complete every study lesson below before you start this mission. Open a lesson first — the done checkbox appears after you have opened it.",
       lessonsProgress: "{done} of {total} lessons done",
@@ -221,6 +251,9 @@ export const en: LanguagePack = {
       study: "Study",
       listen: "Listen",
       listenAgain: "Listen again",
+      playing: "Playing…",
+      playPronunciation: "Play pronunciation",
+      playAudio: "Play audio",
       showArabicHint: "Show Arabic",
       showTranslationHint: "Show meaning in {language}",
       howWouldYouRespond: "How would you respond?",
@@ -243,6 +276,10 @@ export const en: LanguagePack = {
       leaveMission: "Leave mission",
       continue: "Continue",
       noticeWords: "Notice each word first",
+      tapToNotice: "Tap to notice this word",
+      stayWithArabic: "Stay with the Arabic first",
+      richerVocabEnabled: "Richer vocabulary enabled",
+      enterScene: "Enter the scene",
       arrive: "Arrive",
       nextInstruction: "Next instruction",
       missionComplete: "Mission complete",
@@ -282,6 +319,49 @@ export const en: LanguagePack = {
       backToCompanion: "Back to trip companion",
       disclaimer:
         "Prototype content only. Religious guidance should be reviewed by qualified scholars before production use. This is not a replacement for Nusuk or official guidance.",
+      openSheet: "Open sheet",
+      tools: {
+        checklist: { title: "Checklist", subtitle: "A todo list for each stage of the trip" },
+        duas: { title: "Supplications", subtitle: "Duas you can open while you are there" },
+        reading: { title: "Reading", subtitle: "PDFs and notes for offline use" },
+      },
+      steps: {
+        prepare: { title: "Prepare", subtitle: "Intention, packing, and the days before you leave" },
+        ihram: { title: "Ihram", subtitle: "Entering a state of simplicity and focus" },
+        travel: { title: "Travel", subtitle: "Airport, arrival, and the road toward Makkah" },
+        arrive: { title: "Arrive in Makkah", subtitle: "First sights, hotel, and settling in" },
+        haram: { title: "Enter the Haram", subtitle: "Walking toward Masjid al-Haram" },
+        tawaf: { title: "Tawaf", subtitle: "Circling the Kaaba with presence" },
+        sai: { title: "Sa'i", subtitle: "Between Safa and Marwah" },
+        complete: { title: "Complete Umrah", subtitle: "Closing the journey with gratitude" },
+      },
+      haramExperience: {
+        title: "Entering Masjid al-Haram",
+        kicker: "Trip companion",
+        atmosphere: "Dusk light on white marble. The courtyard opens slowly, then all at once.",
+        context: "You have arrived at one of the most visited places on earth. This moment is less about rushing to the next rite and more about arriving with your attention. Notice the scale, the sound, and the way people move toward the center.",
+        momentTitle: "In this moment",
+        historicalNote: "Placeholder historical note: Masjid al-Haram has been expanded across many centuries. Exact dates, names, and rulings will be curated with qualified scholars before production.",
+        noticeTitle: "What should I notice?",
+        notice1: "The first glimpse of the Kaaba often arrives later than you expect. Give yourself time.",
+        notice2: "Marble can be cool underfoot. The space is large; orientation takes a moment.",
+        notice3: "People enter from many directions. Follow the flow rather than forcing a path.",
+        notice4: "This is a place of worship and gathering. Keep your phone use quiet and brief.",
+        historyTitle: "A historical note",
+        illustrationPlaceholder: "Atmospheric illustration placeholder",
+        duaTitle: "A moment of arrival",
+        duaTranslation: "O Allah, open for me the doors of Your mercy.",
+        duaNote: "Placeholder wording for prototype exploration only. Verify authentic wording and context with qualified scholars before production use.",
+        disclaimer: "Prototype content only. Religious guidance should be reviewed by qualified scholars before production use.",
+      },
+      dua: {
+        transliteration: "Transliteration",
+        translation: "Translation",
+        listen: "Listen",
+        listening: "Listening…",
+        practice: "Practice",
+        practiced: "Practiced",
+      },
     },
     auth: {
       logIn: "Log in",
@@ -421,6 +501,45 @@ export const en: LanguagePack = {
       canNowDo: "Handle a quiet day in Madinah with Arabic you already have.",
     },
   },
+  missionRuns: {
+    immigration: {
+      outcome: "You passed passport control and introduced yourself in Arabic.",
+      steps: {
+        context: {
+          title: "Passport control",
+          body: "You have just landed in Saudi Arabia for Umrah. An immigration officer calls you forward to the desk.",
+        },
+        greeting: {
+          prompt: "The officer looks up and greets you.",
+          audioMeaning: "Peace be upon you",
+          question: "How would you respond?",
+          feedback: "The officer nods and continues.",
+        },
+        passport: {
+          prompt: "The officer holds out his hand.",
+          audioMeaning: "Your passport, please",
+          question: "What does he want?",
+          feedback: "You hand over your passport.",
+        },
+        match: {
+          prompt: "While he checks your papers, he glances at the open bag beside you.",
+          question: "Match each item to its Arabic name.",
+          feedback: "Good packing for Umrah — the officer nods and keeps typing.",
+        },
+        whyHere: {
+          prompt: "The officer asks why you are here.",
+          audioMeaning: "Why are you here?",
+          feedback: "You say: أنا هنا للعمرة. The officer nods.",
+        },
+        proceed: {
+          prompt: "The officer stamps your passport and hands it back.",
+          audioMeaning: "Go ahead",
+          question: "How do you reply?",
+          feedback: "You step away from the desk. Passport control is done.",
+        },
+      },
+    },
+  },
   capabilities: {
     navigation: {
       title: "Navigation",
@@ -467,20 +586,7 @@ export const en: LanguagePack = {
       depths: ["Ask how many minutes", "Understand a simple schedule", "Plan a meeting time"],
     },
   },
-  words: {
-    "greeting-response": "And upon you peace",
-    "thank-you": "Thank you",
-    please: "Please",
-    passport: "Passport",
-    bag: "Suitcase",
-    phone: "Phone",
-    yes: "Yes",
-    no: "No",
-    "with-family": "I am with my family.",
-    "with-father": "I am with my father.",
-    umrah: "I am here for Umrah.",
-    family: "I am with my family.",
-    country: "I am from my country.",
-    name: "My name is …",
-  },
+  lessonDetails,
+  lessonRuns,
+  words,
 }

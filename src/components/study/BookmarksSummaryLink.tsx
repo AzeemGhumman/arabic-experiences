@@ -34,7 +34,7 @@ export function BookmarksSummaryLink({ count }: { count: number }) {
       </span>
       <span className="flex shrink-0 items-center gap-1 text-xs font-semibold text-ink-soft">
         {count}
-        <ChevronRight className="size-4" />
+        <ChevronRight className="size-4 rtl:rotate-180" />
       </span>
     </Link>
   )

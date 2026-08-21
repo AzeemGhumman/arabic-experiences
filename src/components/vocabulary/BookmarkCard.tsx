@@ -11,9 +11,10 @@ export function BookmarkCard({
   wordId: string
   onToggle: () => void
 }) {
-  const { word } = useI18n()
+  const { word, language } = useI18n()
   const item = getLearningWord(wordId)
   if (!item) return null
+  const showTransliteration = language === "en" && Boolean(item.transliteration)
 
   return (
     <article className="rounded-2xl border border-gold/25 bg-gold/[0.06] p-4">
@@ -23,7 +24,7 @@ export function BookmarkCard({
             {item.arabic}
           </p>
           <p className="mt-2 text-base font-medium leading-snug">{word(item.id, item.meaning)}</p>
-          {item.transliteration ? (
+          {showTransliteration ? (
             <p className="mt-1 text-sm italic text-ink-soft">{item.transliteration}</p>
           ) : null}
           {item.register ? (

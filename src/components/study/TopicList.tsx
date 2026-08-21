@@ -45,6 +45,7 @@ export function TopicList({ catalog }: { catalog: CatalogTopic[] }) {
 }
 
 function TopicRow({ group }: { group: CatalogTopic }) {
+  const { t } = useI18n()
   const { title, body } = useTopicCopy(group.topic)
   const multi = group.lessons.length > 1
   const only = group.lessons[0]
@@ -70,7 +71,9 @@ function TopicRow({ group }: { group: CatalogTopic }) {
               <LessonRow
                 key={item.lesson.id}
                 item={item}
-                label={item.lesson.levelName}
+                label={
+                  item.lesson.level >= 2 ? t("study.levelAdvanced") : t("study.levelBasic")
+                }
                 compact
               />
             ))}
